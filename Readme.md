@@ -1,11 +1,9 @@
-Aplication server Taller II
+7552 - Application server
 
-Tecnologias
+Para ejecutarlo correr el comando: "source env/bin/activate".
 
-Application Server:
-Lenguaje: Python 3 (3.6.4)
-Web Framework: Flask
-WSGI HTTP Server: Gunicorn
-Database: MongoDB
+Al hacerlo deberia aparecer "(env)" al comienzo de la linea en la terminal.
+
+Una vez que el ambiente virtual esta activado correr el script con el comando: "python app2.py".
 
 
