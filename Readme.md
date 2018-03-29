@@ -52,12 +52,28 @@ API APP SERVER
 	⁃	PUT: Permite comentar una story determinada. In: {Usr: Token, Story: informacion de la story(id), Comment: Comentario}. Out: Id del comentario.
 	⁃	DELETE: Permite eliminar el comentario a una story determinada. In: {Usr: Token, Story: Informacion de la story(id), Comment: Id del comentario}. Out: undefined
 
-	/messages:
 
-	
+	/conversations:
+	⁃	GET: Permite obtener todas las conversaciones que tiene un usuario. In: User Token. Out: Conversaciones del usuario.
+	⁃	PUT: Permite crear una nueva conversacion con un usuario. In: {Usr: Token, Id: Destinatario}. Out: Id de la conversacion.
+
+	/conversations/{id}:
+	⁃	GET: Permite obtener una conversacion especifica de un usuario con otro. In:{Usr: token, Conversation: Id de la conversacion}. Out: Conversacion e informacion.
+	⁃	PUT: Permite enviar un mensaje en una conversacion especifica. In:{Usr: token, Conversation: Id, Message: Mensaje}. Out: Undefined.
+	⁃	DELET: Permite eliminar una conversacion. In:{Usr: Token, Conversation: Id}. Out: Undefined
+
+	/ping:
+	⁃	GET: Permite obtener el estado del servidor
+
+	/stats:
+	⁃	GET: Permite Obetener datos acerca del uso del application server
+
+
 Bases de Datos en App server
-
+	Todavia por resolver
 Puntos a resolver: 
 	•	Autenticacion.
+
+
 
 
