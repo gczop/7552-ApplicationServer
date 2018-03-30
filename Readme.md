@@ -1,10 +1,21 @@
-7552 - Application server
++h7552 - Application server
 
 Para ejecutarlo correr el comando: "source env/bin/activate".
 
 Al hacerlo deberia aparecer "(env)" al comienzo de la linea en la terminal.
 
 Una vez que el ambiente virtual esta activado correr el script con el comando: "python app2.py".
+
+Las instrucciones de arriba ya estan agregadas en el Procfile que es lo que ejecuta Heroku al subir un nuevo push
+
+Para correrlo en heroku de forma local:
+
+$ pipenv --three
+$ pipenv install
+$ pipenv shell #Ahi se abre un shell que simula heroku
+
+$ heroku local web #Lo corre en localhost:5000
+
 
 API APP SERVER
 
