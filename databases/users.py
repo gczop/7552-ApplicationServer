@@ -1,13 +1,14 @@
 import os
 import pymongo
 from pymongo import MongoClient
-from urlparse import urlparse
+
 import pymongo
 
 MONGO_URL = os.environ.get('MONGODB_URI')
 print(MONGO_URL)
 
 if MONGO_URL:
+	from urllib.parse import urlparse
     # Get a connection
     conn = pymongo.MongoClient(MONGO_URL)
     
