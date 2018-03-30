@@ -1,7 +1,7 @@
 import os
 import pymongo
 from pymongo import MongoClient
-
+from urlparse import urlparse
 import pymongo
 
 MONGO_URL = os.environ.get('MONGODB_URI')
