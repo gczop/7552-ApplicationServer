@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+Flask = "==0.12.2"
+Flask-HTTPAuth = "==3.2.3"
+Flask-RESTful = "==0.3.6"
+"Jinja2" = "==2.10"
+MarkupSafe = "==1.0"
+Werkzeug = "==0.14.1"
+"aniso8601" = "==3.0.0"
+click = "==6.7"
+itsdangerous = "==0.24"
+pytz = "==2018.3"
+six = "==1.11.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
