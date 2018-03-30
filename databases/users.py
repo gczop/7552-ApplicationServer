@@ -8,10 +8,9 @@ MONGO_URL = os.environ.get('MONGODB_URI')
 print(MONGO_URL)
 
 if MONGO_URL:
-	from urllib.parse import urlparse
     # Get a connection
     conn = pymongo.MongoClient(MONGO_URL)
-    
+    from urllib.parse import urlparse
     # Get the database
     db = conn[urlparse(MONGO_URL).path[1:]]
 else:
