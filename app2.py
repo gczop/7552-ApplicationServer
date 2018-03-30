@@ -5,7 +5,7 @@ from json import dumps
 from flask import request
 from flask import Response
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 # see https://flask-httpauth.readthedocs.io/en/latest/
 auth = HTTPBasicAuth()
@@ -20,15 +20,15 @@ def get_pw(username):
         return users.get(username)
     return None
 
-@app.route('/secret')
+@application.route('/secret')
 @auth.login_required
 def secret_page():
     return "Hello, %s!" % auth.username()
 
-@app.route('/')
+@application.route('/')
 def hello_world():
     return "Hi, I'm root!"
 
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0')
+	application.run(host='0.0.0.0')
