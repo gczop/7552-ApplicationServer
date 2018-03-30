@@ -4,8 +4,6 @@ from flask_api import status
 from json import dumps
 from flask import request
 from flask import Response
-import sys
-print (sys.argv[1])
 
 app = Flask(__name__)
 
@@ -33,4 +31,4 @@ def hello_world():
 
 
 if __name__ == '__main__':
-	app.run(port=int(sys.argv[1]))
+	app.run(host='0.0.0.0')
