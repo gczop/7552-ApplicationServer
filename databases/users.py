@@ -4,7 +4,8 @@ from pymongo import MongoClient
 
 import pymongo
 
-MONGO_URL = os.environ.get('MONGO_URI')
+MONGO_URL = os.environ.get('MONGOHQ_URL')
+print(MONGO_URL)
 
 if MONGO_URL:
     # Get a connection
@@ -14,6 +15,7 @@ if MONGO_URL:
     db = conn[urlparse(MONGO_URL).path[1:]]
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
+    prin
     conn = pymongo.MongoClient('localhost', 27017)
     db = conn['StoriesAppServer']
 
