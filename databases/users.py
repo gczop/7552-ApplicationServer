@@ -4,7 +4,7 @@ from pymongo import MongoClient
 
 import pymongo
 
-MONGO_URL = os.environ.get('MONGOHQ_URL')
+MONGO_URL = os.environ.get('MONGODB_URI')
 print(MONGO_URL)
 
 if MONGO_URL:
