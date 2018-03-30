@@ -15,7 +15,7 @@ if MONGO_URL:
     db = conn[urlparse(MONGO_URL).path[1:]]
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
-    prin
+    print("Conectamos local")
     conn = pymongo.MongoClient('localhost', 27017)
     db = conn['StoriesAppServer']
 
