@@ -1,5 +1,5 @@
 
 
-worker: source env/bin/activate
-worker: pip install flask_api
-worker: python app2.py
+web: source env/bin/activate
+web: pip install flask_api
+web: python app2.py
