@@ -25,8 +25,8 @@ userCollection = db.User
 
 
 
-def authenticate_user(token= None):
-	print("LLegamos a auth" + token + email + password)
+def authenticateUser(token= None):
+	print("LLegamos a auth" + token)
 	if(token != None):
 		return userCollection.find_one({"app_token":token})
 	return None

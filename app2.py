@@ -2,19 +2,19 @@ from flask import Flask
 from flask_restful import Resource, Api
 
 
-import json
-from flask_httpauth import HTTPBasicAuth
+
 from flask_api import status
-from json import dumps
-from flask import request
-from flask import Response
-from api.usersRouter import UserRouter
+from api.usersLoginRouter import UsersLoginRouter
+from api.usersSignUpRouter import UsersSignupRouter
+from api.friendsRouter import FriendsRouter
 
 application = Flask(__name__)
 
 api = Api(application, prefix="/api")
 
-api.add_resource(UserRouter,'/users')
+api.add_resource(UsersLoginRouter,'/users/login')
+api.add_resource(UsersSignupRouter,'/users/signup')
+api.add_resource(FriendsRouter,'/friends')
 
 # see https://flask-httpauth.readthedocs.io/en/latest/
 # auth = HTTPBasicAuth()

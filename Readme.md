@@ -21,11 +21,13 @@ API APP SERVER
 
 /App:
 	
-	/users:
-	⁃	GET: Login de Usuarios.  In: User, Password | Out: Token
-	⁃	PUT: Creacion de Usuarios. In: Mail, Password | Out: Token
+	/users/login:
+	⁃	POST: Login de Usuarios.  In: LoginInfo| Out: Token Errores: 401 (Fallo login), 400 (Falta de parametros)
 
-	/relation:
+	/user/signup 
+	⁃	POST: Creacion de Usuarios. In: LoginInfo| Out: Token
+
+	/friends:
 	⁃	GET: Conseguir todos los amigos de un Usuario. In: User Token | Out: Lista de amigos
 	⁃	PUT: Agregar un amigo a un usuario. In: { Usr:Token de usuario, Friend: Usuario al cual se desea agregar} | Out: undefined
 	⁃	DELETE: Permite eliminar a un usuario de tu lista de amigos. In: { Usr: Token de usuario, Friendo: Usuario al que se desea elminar}. Out: Undefined 
@@ -78,6 +80,15 @@ API APP SERVER
 
 	/stats:
 	⁃	GET: Permite Obetener datos acerca del uso del application server
+
+
+DEFINITIONS
+
+LoginInfo = {
+	user: user
+	password: password
+	fbToken: fbToken
+}
 
 
 Bases de Datos en App server

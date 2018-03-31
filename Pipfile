@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 Flask = "==0.12.2"
+requests = "==2.18.4"
 Flask-HTTPAuth = "==3.2.3"
 Flask-RESTful = "==0.3.6"
 "Jinja2" = "==2.10"
