@@ -44,18 +44,22 @@ API APP SERVER
 /App:
 	
 	/users/login:
-	⁃	POST: Login de Usuarios.  In: LoginInfo| Out: Token Errores: 401 (Fallo login), 400 (Falta de parametros)
+	⁃	POST: Login de Usuarios.  In: LoginInfo| Out: Token. Errores: 401 (Fallo login), 400 (Falta de parametros)
 
 	/user/signup 
 	⁃	POST: Creacion de Usuarios. In: LoginInfo| Out: Token
 
+
+	/friends/{id}:
+	⁃	GET: Conseguir todos los amigos de un usuario. In: User Token | Out: Lista de amigos
+
 	/friends:
-	⁃	GET: Conseguir todos los amigos de un Usuario. In: User Token | Out: Lista de amigos
-	⁃	PUT: Agregar un amigo a un usuario. In: { Usr:Token de usuario, Friend: Usuario al cual se desea agregar} | Out: undefined
+	⁃	GET: Conseguir todos tus amigos. In: User Token | Out: Lista de amigos. Errores: 400 (Falta de Parametros)
 	⁃	DELETE: Permite eliminar a un usuario de tu lista de amigos. In: { Usr: Token de usuario, Friendo: Usuario al que se desea elminar}. Out: Undefined 
 
 	/invitations:
 	⁃	GET: Devuelve todas las invitaciones de amistad de un usuario. In: User Token | Out: Lista de invitaciones
+	⁃	POST: Permite aceptar invitacion de amigo. In: { Usr:Token de usuario, Friend: Usuario al cual se desea agregar} | Out: undefined
 	⁃	PUT: Acepta una invitacion de amistad determinada. In: { Usr: Token de usuario, Invitation: Invitacion especifica} | Out: undefined
 
 	/people:
@@ -115,7 +119,13 @@ LoginInfo = {
 
 Bases de Datos en App server
 	Tentativa:
-		Users: Aca metemos de todo, users y amigos
+		Users: Informacion basica de los usuarios
+
+		Amistades: Amistades de cada usuario
+
+		AmistadesPendientes: Amistades por aceptar
+
+		Conversaciones: Informacion de los usuarios y sus conversaciones
 
 		Stories Largas: Metemos todo de las stories largas, reacciones comentarios etc etc
 

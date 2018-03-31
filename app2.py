@@ -4,9 +4,9 @@ from flask_restful import Resource, Api
 
 
 from flask_api import status
-from api.usersLoginRouter import UsersLoginRouter
-from api.usersSignUpRouter import UsersSignupRouter
-from api.friendsRouter import FriendsRouter
+from api.routers.usersLoginRouter import UsersLoginRouter
+from api.routers.usersSignUpRouter import UsersSignupRouter
+from api.routers.friendsRouter import FriendsRouter
 
 application = Flask(__name__)
 
