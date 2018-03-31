@@ -23,15 +23,38 @@ else:
 friendsCollection = db.Friends
 
 
-def getUserFriends(username):
-    return friendsCollection.find_one({"username":username})
+def DbgetUserFriends(username):
+    print("AAAAAAACA")
+    return friendsCollection.find_one({"username":username})["friends"]
 
-def removeFriend(username,friend):
+def DbremoveFriend(username,friend):
     userFriends = friendsCollection.find_one({"username":username})["friends"]
-    userToRemoveIndex = userFriends.index(friend)
-    userFriends.remove(userToRemoveIndex)
+    userFriends.remove(friend)
     friendsCollection.find_one_and_update({"username":username},
         {"$set": {"friends": userFriends}},upsert=True)
+    return "Okey"
+
+def DbaddNewFriend(username,newFriend):
+    try:
+        print("Pasamos por el try")
+        userFriends = friendsCollection.find_one({"username":username})["friends"]
+        print("Pasamos por el try")
+        userFriends.append(newFriend)
+        friendsCollection.find_one_and_update({"username":username},
+            {"$set": {"friends": userFriends}},upsert=True)
+    except:
+        print("Vamos al except")
+        friendsCollection.insert_one({"username":username, "friends":[newFriend]})
+        print("Funco")
+    try:
+        userFriends = friendsCollection.find_one({"username":newFriend})["friends"]
+        userFriends.append(username)
+        friendsCollection.find_one_and_update({"username":newFriend},
+            {"$set": {"friends": userFriends}},upsert=True)
+    except:
+        print("Vamos al except")
+        friendsCollection.insert_one({"username":newFriend, "friends":[username]})
+        print("Funco")
 # def authenticateUser(token= None):
 # 	print("LLegamos a auth" + token)
 # 	if(token != None):

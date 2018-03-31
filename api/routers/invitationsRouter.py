@@ -1,10 +1,10 @@
 from flask_restful import Resource
 from flask_httpauth import HTTPBasicAuth
 from flask import request
-from api.controllers.friendsController import getUserFriends, removeFriend
 from SharedServerRequests.userLogin import *
 from databases.users import *
 from databases.loginedUsers import loginedUsers
+from api.controllers.invitationsController import getUserInvitations, addFriendInvitation, acceptFriendInvitation
 
 auth = HTTPBasicAuth()
 
@@ -14,14 +14,16 @@ def get_token(username):
 
 
 
-class FriendsRouter(Resource):
+class InvitationsRouter(Resource):
 
 	@auth.login_required
 	def get(self):
-		return getUserFriends(request)
+		return getUserInvitations(request)
 
 	@auth.login_required
-	def delete(self):
-		return removeFriend(request)
+	def post(self):
+		return addFriendInvitation(request)
 
-		
+	@auth.login_required
+	def put(self):
+		return acceptFriendInvitation(request)		

@@ -7,6 +7,7 @@ from flask_api import status
 from api.routers.usersLoginRouter import UsersLoginRouter
 from api.routers.usersSignUpRouter import UsersSignupRouter
 from api.routers.friendsRouter import FriendsRouter
+from api.routers.invitationsRouter import InvitationsRouter
 
 application = Flask(__name__)
 
@@ -15,6 +16,7 @@ api = Api(application, prefix="/api")
 api.add_resource(UsersLoginRouter,'/users/login')
 api.add_resource(UsersSignupRouter,'/users/signup')
 api.add_resource(FriendsRouter,'/friends')
+api.add_resource(InvitationsRouter,'/invitations')
 
 # see https://flask-httpauth.readthedocs.io/en/latest/
 # auth = HTTPBasicAuth()
