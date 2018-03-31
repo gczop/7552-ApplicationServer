@@ -14,7 +14,29 @@ $ pipenv --three
 $ pipenv install
 $ pipenv shell #Ahi se abre un shell que simula heroku
 
+#Correrlo heroku local
 $ heroku local web #Lo corre en localhost:5000
+
+#Correrlo de forma local
+$ source env/bin/activate
+$ gunicorn wsgi
+
+#Correrlo en heroku web
+Fijarse si funciona con su cuenta de heroku, sino avisarme A MI (GUIDO PEIRANO)
+Para correrlo en heroku hay que pushearlo al git de heroku
+$ git push heroku master
+
+Lo ideal seria fijarse si esta corriendo de forma correcta, para eso
+$ heroku logs
+Ahi fijarse que es lo que imprimer de app
+
+Si no tira nada nuevo es porque los workers de heroku estan inactivos
+$ heroku ps
+Asi se fijan como estan los workers de heroku
+
+$ heroku ps:scale web=1
+Ahi prenden un worker de heroku
+
 
 
 API APP SERVER
@@ -92,7 +114,12 @@ LoginInfo = {
 
 
 Bases de Datos en App server
-	Todavia por resolver
+	Tentativa:
+		Users: Aca metemos de todo, users y amigos
+
+		Stories Largas: Metemos todo de las stories largas, reacciones comentarios etc etc
+
+		Stories Rapidas: Metemos todo de las stories rapidas, reacciones comentarios etc etc
 Puntos a resolver: 
 	•	Autenticacion.
 
