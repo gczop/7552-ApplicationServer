@@ -14,14 +14,18 @@ $ pipenv --three
 $ pipenv install
 $ pipenv shell #Ahi se abre un shell que simula heroku
 
-#Correrlo heroku local
+##Correrlo heroku local
+```
 $ heroku local web #Lo corre en localhost:5000
+```
 
-#Correrlo de forma local
+##Correrlo de forma local
+```
 $ source env/bin/activate
 $ gunicorn wsgi
-
-#Correrlo en heroku web
+```
+##Correrlo en heroku web
+```
 Fijarse si funciona con su cuenta de heroku, sino avisarme A MI (GUIDO PEIRANO)
 Para correrlo en heroku hay que pushearlo al git de heroku
 $ git push heroku master
@@ -36,7 +40,7 @@ Asi se fijan como estan los workers de heroku
 
 $ heroku ps:scale web=1
 Ahi prenden un worker de heroku
-
+```
 
 
 API APP SERVER
