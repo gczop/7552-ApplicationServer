@@ -22,27 +22,59 @@ else:
 
 invitationsCollection = db.Invitations
 
+class Singleton(object):
+    _instance = None
+    def __new__(class_, *args, **kwargs):
+        if not isinstance(class_._instance, class_):
+            class_._instance = object.__new__(class_, *args, **kwargs)
+        return class_._instance
 
-def DbgetUserInvitations(username):
-    return invitationsCollection.find_one({"username":username})["invitations"]
+class InvitationsDb(Singleton):
+    invitationsList = invitationsCollection
 
-def DbaddFriendInvitation(username,friend):
-    try:
-        userInvitations = invitationsCollection.find_one({"username":friend})["invitations"]
-        userInvitations.append(username)
-        invitationsCollection.find_one_and_update({"username":friend},
-            {"$set": {"friends": userInvitations}},upsert=True)
+    def getUserInvitations(self,username):
+        return self.invitationsList.find_one({"username":username})["invitations"]
+
+    def addFriendInvitation(self,username,friend):
+        try:
+            userInvitations = self.invitationsList.find_one({"username":friend})["invitations"]
+            userInvitations.append(username)
+            self.invitationsList.find_one_and_update({"username":friend},
+                {"$set": {"friends": userInvitations}},upsert=True)
+            return "Okey"
+        except:
+            self.invitationsList.insert_one({"username":friend, "invitations":[username]})
+            return "Okey"
+
+    def acceptFriendInvitation(self,username,friend):
+        userInvitations = self.invitationsList.find_one({"username":username})["invitations"]
+        userInvitations.remove(friend)
+        self.invitationsList.find_one_and_update({"username":username},
+            {"$set": {"invitations": userInvitations}},upsert=True)
         return "Okey"
-    except:
-        invitationsCollection.insert_one({"username":friend, "invitations":[username]})
-        return "Okey"
 
-def DbacceptFriendInvitation(username,friend):
-    userInvitations = invitationsCollection.find_one({"username":username})["invitations"]
-    userInvitations.remove(friend)
-    invitationsCollection.find_one_and_update({"username":username},
-        {"$set": {"invitations": userInvitations}},upsert=True)
-    return "Okey"
+invitationsDb = InvitationsDb()
+
+# def DbgetUserInvitations(username):
+#     return invitationsCollection.find_one({"username":username})["invitations"]
+
+# def DbaddFriendInvitation(username,friend):
+#     try:
+#         userInvitations = invitationsCollection.find_one({"username":friend})["invitations"]
+#         userInvitations.append(username)
+#         invitationsCollection.find_one_and_update({"username":friend},
+#             {"$set": {"friends": userInvitations}},upsert=True)
+#         return "Okey"
+#     except:
+#         invitationsCollection.insert_one({"username":friend, "invitations":[username]})
+#         return "Okey"
+
+# def DbacceptFriendInvitation(username,friend):
+#     userInvitations = invitationsCollection.find_one({"username":username})["invitations"]
+#     userInvitations.remove(friend)
+#     invitationsCollection.find_one_and_update({"username":username},
+#         {"$set": {"invitations": userInvitations}},upsert=True)
+#     return "Okey"
 
 # def authenticateUser(token= None):
 # 	print("LLegamos a auth" + token)

@@ -22,13 +22,59 @@ else:
 
 userCollection = db.User
 
+class Singleton(object):
+    _instance = None
+    def __new__(class_, *args, **kwargs):
+        if not isinstance(class_._instance, class_):
+            class_._instance = object.__new__(class_, *args, **kwargs)
+        return class_._instance
+
+class UsersDB(Singleton):
+    users = userCollection
+
+    def registerUserToken(self,user, token):
+        self.users.find_one_and_update({"username":user},
+            {"$set": {"token": token}},upsert=True)
+
+    def addNewUser(self,username= None,token= None):
+        if(username == None):
+            return
+        self.users.insert_one({"username":username,"token":token})
+
+    def searchForSingleUser(self,username):
+        return self.users.find_one({"username": username},projection={'_id':False})
+
+    def searchForUsers(self,username):
+        matchCursor = self.users.find({"username" : {'$regex' : ".*"+username+".*"}},projection={'_id':False, 'username':True})
+        matchList = []
+        for match in matchCursor:
+           matchList.append(match)
+        return match
+
+    def authenticateUser(self,token= None):
+        print("LLegamos a auth" + token)
+        if(token != None):
+            return self.users.find_one({"token":token})
+        return None
+
+usersDb = UsersDB()
+
+# def DbSearchForUsers(username):
+
+#     matchCursor = userCollection.find({"username" : {'$regex' : ".*"+username+".*"}},projection={'_id':False, 'username':True})
+#     matchList = []
+#     for match in matchCursor:
+#         matchList.append(match)
+#     return match
+    
+# def DbSearchForSingleUser(username):
+#     return userCollection.find_one({"username": username},projection={'_id':False})
+
+# def DbAddNewUser(username= None,token= None):
+#     if(username == None):
+#         return
+#     userCollection.insert_one({"username":username,"token":token})
 
 
-
-def authenticateUser(token= None):
-	print("LLegamos a auth" + token)
-	if(token != None):
-		return userCollection.find_one({"app_token":token})
-	return None
 
 

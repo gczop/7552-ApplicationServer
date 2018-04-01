@@ -2,7 +2,7 @@ import string
 import random
 import json
 from SharedServerRequests.userSignUp import *
-from databases.users import *
+from databases.users import usersDb
 
 
 def authenticateSignUp(request):
@@ -11,8 +11,10 @@ def authenticateSignUp(request):
 	responseData = json.loads(response.text)
 	try:
 		responseData["code"]
-		return {"Error": "Login Incorrecto"}, 401
+		print responseData
+		return {"Error": "Login Incorrecto (Error code: 1)"}, 401
 	except:
+		usersDb.addNewUser(user)
 		return {"Message": "Bienvenido {}".format(user)}	
 
 def getRequestData(request):

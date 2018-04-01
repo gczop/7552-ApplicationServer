@@ -3,14 +3,14 @@ import json
 from flask import request
 import os,sys,inspect
 from SharedServerRequests.userLogin import *
-from databases.users import *
+from databases.users import usersDb
 from databases.loginedUsers import loginedUsers
 
 
 def validateUserLogin(request):
 		user,password,fbToken = getRequestData(request)
 		if(password == None and fbToken == None):
-			return {"Error": "Falta de informacion de login"}, 400
+			return {"Error": "Falta de informacion de login (Error code: 2)"}, 400
 		if(password != None):
 			response =  authenticateUserLogin(user,password)
 		else:
@@ -18,15 +18,13 @@ def validateUserLogin(request):
 		responseData = json.loads(response.text)
 		try:
 			responseData["code"]
-			return {"Error": "Login Incorrecto"}, 401
+			return {"Error": "Login Incorrecto (Error code: 3)"}, 401
 		except:
-			registerUserToken(user,responseData["token"])
+			usersDb.registerUserToken(user,responseData["token"])
 			loginedUsers.userLogin(user,responseData["token"])
 			return {"Message": "Bienvenido {}".format(user), "Token":responseData["token"]}	
 
-def registerUserToken(user, token):
-	userCollection.find_one_and_update({"username":user},
-		{"$set": {"app_token": token}},upsert=True)
+
 
 def getRequestData(request):
 	data = json.loads(request.data)
