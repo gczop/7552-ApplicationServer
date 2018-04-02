@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/guidoPeirano/SharedServerTaller.svg?branch=master)](https://travis-ci.org/guidoPeirano/SharedServerTaller)
-
+[![Build Status](https://travis-ci.org/gczop/7552-ApplicationServer.svg?branch=master)](https://travis-ci.org/gczop/7552-ApplicationServer)
 +h7552 - Application server
 
 Para ejecutarlo correr el comando: "source env/bin/activate".
