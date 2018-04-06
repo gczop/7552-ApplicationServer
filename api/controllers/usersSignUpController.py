@@ -11,7 +11,7 @@ def authenticateSignUp(request):
 	responseData = json.loads(response.text)
 	try:
 		responseData["code"]
-		print responseData
+		print(responseData)
 		return {"Error": "Login Incorrecto (Error code: 1)"}, 401
 	except:
 		usersDb.addNewUser(user)
