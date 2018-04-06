@@ -18,4 +18,4 @@ def registerNewUser(username,password,fbToken):
  	 "password": password,
  	 "facebookAuthToken": fbToken
 	}
-	return requests.post(sharedServerDir + '/api/authorize', data= payload)
+	return requests.post(sharedServerDir +  '/api/authorize', data= payload)
