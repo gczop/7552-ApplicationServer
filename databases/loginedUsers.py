@@ -14,7 +14,7 @@ def setLoginedUsers():
     for users in allUsers:
         if(users.get("token") != None):
             dictionary[users["username"]]=[users.get("token")]
-    print dictionary
+    print(dictionary)
     return dictionary
 
 class UsersTokens(Singleton):
