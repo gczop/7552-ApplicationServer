@@ -1,7 +1,7 @@
 import os
 import pymongo
 from pymongo import MongoClient
-
+from pymongo import ReturnDocument
 import pymongo
 
 MONGO_URL = os.environ.get('MONGODB_URI')
@@ -34,7 +34,11 @@ class FriendsDb(Singleton):
     friendsList = friendsCollection
 
     def getUserFriends(self,username):
-        return self.friendsList.find_one({"username":username})["friends"]
+        try:
+            return self.friendsList.find_one({"username":username})["friends"]
+        except:
+            return self.friendsList.find_one_and_update({"username":username},
+            {"$set": {"friends": []}},upsert=True,return_document=ReturnDocument.AFTER)["friends"]
 
     def removeFriend(self,username,friend):
         userFriends = self.friendsList.find_one({"username":username})["friends"]

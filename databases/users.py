@@ -32,6 +32,11 @@ class Singleton(object):
 class UsersDB(Singleton):
     users = userCollection
 
+    def getAllUsers(self):
+        a = self.users.find(projection ={'_id':False, "username":True, "token":True})
+        print(a)
+        return a
+
     def registerUserToken(self,user, token):
         self.users.find_one_and_update({"username":user},
             {"$set": {"token": token}},upsert=True)
@@ -40,6 +45,16 @@ class UsersDB(Singleton):
         if(username == None):
             return
         self.users.insert_one({"username":username,"token":token})
+
+    def getUserProfile(self, username):
+        return self.users.find_one({"username": username})["personalInformation"]
+
+    def updateUserProfile(self, username, updatedInfo):
+        oldInformation = self.users.find_one({"username": username})["personalInformation"]
+        update = createdUpdatedDictionary(updatedInfo,oldInformation)
+        self.users.find_one_and_update({"username":user},
+            {"$set": {"personalInformation": update}},upsert=True)
+
 
     def searchForSingleUser(self,username):
         return self.users.find_one({"username": username},projection={'_id':False})
@@ -58,6 +73,13 @@ class UsersDB(Singleton):
         return None
 
 usersDb = UsersDB()
+
+
+def createdUpdatedDictionary(newInformation, oldInormation):
+    update = []
+    for fields in oldInormation:
+        update[fields]= newInformation.get(fields) or oldInormation.get(fields)
+    return update
 
 # def DbSearchForUsers(username):
 

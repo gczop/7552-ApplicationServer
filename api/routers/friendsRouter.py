@@ -29,6 +29,7 @@ class SpecificUserFriendsRouter(Resource):
 
 	@auth.login_required
 	def get(self, username):
+		print("Estamos aca")
 		return getSpecificUserFriends(username)
 
 

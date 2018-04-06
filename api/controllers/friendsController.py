@@ -6,7 +6,7 @@ from databases.loginedUsers import loginedUsers
 
 def getUserFriends(request):
 	username = request.headers.get("username")
-	print("AAaaaaa" + username)
+	print(username)
 	if(username == None):
 		return {"Error": "Falta de informacion en header (Error code: 13)"}, 400
 	return friendsDb.getUserFriends(username)
@@ -18,7 +18,10 @@ def removeFriend(request):
 	friend = getRequestData(request)
 	if(friend == None):
 		return {"Error": "Amigo a eliminar no especificado (Error code: 15)"}, 400
-	return friendsDb.removeFriend(username,friend)
+	try:
+		return friendsDb.removeFriend(username,friend)
+	except:
+		return {"Error": "Esta persona no esta en tu lista de amigos (Error code: 25)"}, 401
 
 def getRequestData(request):
 	data = json.loads(request.data)

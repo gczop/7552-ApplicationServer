@@ -8,10 +8,10 @@ def searchForPerson(request):
 	searchedFor = request.headers.get("searchedFor")
 	if(searchedFor == None):
 		return {"Error": "Falta de informacion en header (Error code: 4)"}, 400
-	return usersDb.SearchForUsers(searchedFor)
+	return usersDb.searchForUsers(searchedFor)
 
 def searchForSinglePerson(username):
-	user = usersDb.SearchForSingleUser(username)
+	user = usersDb.searchForSingleUser(username)
 	if(user == None):
 		return {"Error": "Username del usuario incorrecto (Error code: 5)"}, 400
 	return user

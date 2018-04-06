@@ -1,5 +1,5 @@
 import datetime
-
+from databases.users import usersDb
 
 class Singleton(object):
     _instance = None
@@ -8,11 +8,21 @@ class Singleton(object):
             class_._instance = object.__new__(class_, *args, **kwargs)
         return class_._instance
 
+def setLoginedUsers():
+    allUsers = usersDb.getAllUsers()
+    dictionary = {} 
+    for users in allUsers:
+        if(users.get("token") != None):
+            dictionary[users["username"]]=[users.get("token")]
+    print dictionary
+    return dictionary
+
 class UsersTokens(Singleton):
-    users = {}
+    users = setLoginedUsers()
 
     def userLogin(self,user,token):
-    	self.users[user]=[token,datetime.datetime.now()+datetime.timedelta(hours=3)]
+        print self.users
+    	self.users[user]=[token]
     	print self.users
 
     def checkUserLogin(self,user):
@@ -20,5 +30,6 @@ class UsersTokens(Singleton):
     	if user in self.users:
     		return self.users.get(user)[0]
     	return None
+
 
 loginedUsers = UsersTokens()

@@ -1,5 +1,6 @@
 import os
 import pymongo
+from pymongo import ReturnDocument
 from pymongo import MongoClient
 
 import pymongo
@@ -32,8 +33,12 @@ class Singleton(object):
 class NotificationsDb(Singleton):
     notificationsList = notificationsCollection
 
-    def getUserNotifications(username):
-        return notificationsCollection.find_one({"username":username})["notifications"]
+    def getUserNotifications(self,username):
+        try:
+            return notificationsCollection.find_one({"username":username})["notifications"]
+        except:
+            return notificationsCollection.find_one_and_update({"username":username},
+            {"$set": {"notifications": []}},upsert=True,return_document=ReturnDocument.AFTER)["notifications"]
 
    
 notificationsDb = NotificationsDb()
