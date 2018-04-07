@@ -1,7 +1,7 @@
 from flask_restful import Resource
 from flask_httpauth import HTTPBasicAuth
 from flask import request
-from api.controllers.friendsController import getUserFriends, removeFriend
+from api.controllers.commentsController import getStoryComments, addStoryComments, removeComment
 from SharedServerRequests.userLogin import *
 from databases.users import *
 from databases.loginedUsers import loginedUsers
@@ -18,10 +18,14 @@ class CommentsRouter(Resource):
 
 	@auth.login_required
 	def get(self):
-		return getUserFriends(request)
+		return getStoryComments(request)
+
+	@auth.login_required
+	def put(self):
+		return addNewComment(request)
 
 	@auth.login_required
 	def delete(self):
-		return removeFriend(request)
+		return removeComment(request)
 
 		
