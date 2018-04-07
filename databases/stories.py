@@ -24,6 +24,39 @@ else:
 
 storiesCollection = db.Stories
 
+
+"""    DATABASES JSONs DEFINITIONS
+
+{   "_id" : ID autodefinido
+    "username" : Nombre de usuario
+    "date" : Fecha de la historia
+    "createdAt" : Fecha de creacion
+    "updatedAt" : Fecha de ultima edicion
+    "storyInfo" : 
+        {   "description" : 
+            "state" : Public | Private
+        }
+    "reactions" :
+        { "reacter" : "reaction" => "me gusta | no me gusta | me divierte | me aburre", ...}
+
+}
+
+comments {
+    "storyID" : FK a _id de stories
+    "content" : [
+    "comments": {
+        "_id"
+        "user"
+        "date"
+        "message"
+    }]
+}
+
+"""
+
+
+
+
 class Singleton(object):
     _instance = None
     def __new__(class_, *args, **kwargs):
@@ -38,13 +71,13 @@ class StoriesDb(Singleton):
         fromNewToOld = -1
         return self.storiesDb.find({"username":username},projection={'_id':False}).sort({"date":fromNewToOld}).limit(number)
 
-    def addNewStory(storyInfo):
+    def addNewStory(username, storyInfo):
         storyDict = createStoryDocument(storyInfo)
-        self.storiesDb.insert_one({"storyDetail":storyDict, "createdAt":str(datetime.datetime.now()), "updatedAt":str(datetime.datetime.now())})
+        self.storiesDb.insert_one({"username":username,"storyDetail":storyDict, "createdAt":str(datetime.datetime.now()), "updatedAt":str(datetime.datetime.now()),"reactions": {}})
         return "Okey"
 
     def updateStory(username, updateInfo):
-        storyDict = createStoryDocument(storyInfo)
+        storyDict = createStoryDocument(updateInfo)
         oldStoryInfo = self.storiesDb.find_one({"_id":updateInfo["storyId"]})
         if(oldStoryInfo == None):
             raise Exception("Story inexistente")
@@ -55,10 +88,16 @@ class StoriesDb(Singleton):
     def deleteStory(username, storyId):
         self.storiesDb.delete_one({"_id",storyId})
         return "Okey"
-   
+
+    def addStoryReaction(storyId, username ,reaction):
+        reactionData = { "reacter": username , "reaction": reaction }
+        self.storiesDb.find_one_and_update({"username": username} , projection={'_id':False}
+                                ,{"$push": {"reactions" : reactionData }} ,upsert=True)
+        return "Okey"
+
+
 def createStoryDocument(storyInfo):
     document = {}
-    document["owner"] = username["owner"]
     document["description"] = storyInfo["description"]
     document["state"]= storyInfo["state"]
     return document
@@ -68,5 +107,8 @@ def createdUpdatedDictionary(newInformation, oldInormation):
     for fields in oldInormation:
         update[fields]= newInformation.get(fields) or oldInormation.get(fields)
     return update
+
+def createReaction(username, reaction):
+    return
 
 storiesDb = StoriesDb()
