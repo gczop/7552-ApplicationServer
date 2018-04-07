@@ -2,6 +2,7 @@ import json
 from flask import request
 from SharedServerRequests.userLogin import *
 from databases.stories import storiesDb
+from databases.comments import commentsDb
 from databases.loginedUsers import loginedUsers
 
 numberOfStoriesToSee = 3
@@ -17,7 +18,9 @@ def addNewStory(username):
 	storyInfo = getRequestData(request)
 	if(username == None):
 		return {"Error": "Falta de informacion en header username no especificado (Error code: 22)"}, 400
-	return storiesDb.addNewStory(username,storyInfo)
+	newStory = storiesDb.addNewStory(username,storyInfo)
+	commentsDb.addComments(newStory['_id'])
+	return newStory
 
 def updateStory(username):
 	username = request.headers.get("username")
