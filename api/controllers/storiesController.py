@@ -17,7 +17,7 @@ def addNewStory(username):
 	storyInfo = getRequestData(request)
 	if(username == None):
 		return {"Error": "Falta de informacion en header username no especificado (Error code: 22)"}, 400
-	return storiesDb.addNewStory(user,storyInfo)
+	return storiesDb.addNewStory(username,storyInfo)
 
 def updateStory(username):
 	username = request.headers.get("username")
