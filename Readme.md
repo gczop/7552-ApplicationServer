@@ -15,6 +15,12 @@ $ pipenv --three
 $ pipenv install
 $ pipenv shell #Ahi se abre un shell que simula heroku
 
+##Correr Base de Datos
+~~~
+$ mongod
+    > use StoriesAppServer
+~~~
+
 ##Correrlo heroku local
 ```
 $ heroku local web #Lo corre en localhost:5000
