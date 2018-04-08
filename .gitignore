@@ -1,0 +1,7 @@
+# Python Imports:
+*.pyc
+
+# Tmp Files:
+*~
+
+
