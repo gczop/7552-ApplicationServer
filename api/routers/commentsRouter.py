@@ -1,7 +1,7 @@
 from flask_restful import Resource
 from flask_httpauth import HTTPBasicAuth
 from flask import request
-from api.controllers.commentsController import getStoryComments, addStoryComments, removeComment
+from api.controllers.commentsController import getStoryComments, addNewComment, removeComment
 from SharedServerRequests.userLogin import *
 from databases.users import *
 from databases.loginedUsers import loginedUsers
