@@ -23,9 +23,26 @@ class AppServerTestCase(unittest.TestCase):
         # on the specified path
         result = self.app.get('/')
 
+        print (result.data)
+
         # assert the status code of the response
         self.assertEqual(result.status_code, 200)
 
+
+    # def test_signup_post(self):
+    #     # sends HTTP GET request to the application
+    #     # on the specified path
+    #     loginInfo = {
+    #         "user": "user",
+    #         "password": "password",
+    #         "fbToken": "fbToken"
+    #     };
+    #     result = self.app.post('/users/signup', loginInfo)
+    #
+    #     print (result)
+    #
+    #     # assert the status code of the response
+    #     self.assertEqual(result.status_code, 200)
 
     def tearDown(self):
 
