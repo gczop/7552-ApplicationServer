@@ -1,8 +1,9 @@
 import json
 from flask import request
 from SharedServerRequests.userLogin import *
-from databases.conversations import conversationsDb
+#from databases.conversations import conversationsDb
 
+conversationsDb = 0
 def getUserConversations(request):
 	username = request.headers.get("username")
 	if (username == None):

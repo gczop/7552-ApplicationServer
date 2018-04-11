@@ -91,8 +91,7 @@ class StoriesDb(Singleton):
 
     def addStoryReaction(storyId, username ,reaction):
         reactionData = { "reacter": username , "reaction": reaction }
-        self.storiesDb.find_one_and_update({"username": username} , projection={'_id':False}
-                                ,{"$push": {"reactions" : reactionData }} ,upsert=True)
+        self.storiesDb.find_one_and_update({"username": username} ,{"$push": {"reactions" : reactionData }} , projection={'_id':False} ,upsert=True)
         return "Okey"
 
 
