@@ -17,6 +17,7 @@ def authenticateSignUp(request):
 		usersDb.addNewUser(user)
 		return {"Message": "Bienvenido {}".format(user)}	
 
+
 def getRequestData(request):
 	data = json.loads(request.data)
 	user = data.get("username")
