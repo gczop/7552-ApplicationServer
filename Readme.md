@@ -18,7 +18,7 @@ $ pipenv shell #Ahi se abre un shell que simula heroku
 ##Correr Base de Datos
 ~~~
 $ mongod
-    > use StoriesAppServer
+    > use StoriesAppServer;
 ~~~
 
 ##Correrlo heroku local

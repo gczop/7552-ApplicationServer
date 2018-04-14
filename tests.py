@@ -3,19 +3,23 @@ from app import application as app
 import unittest
 import tempfile
 
+from werkzeug.contrib.fixers import ProxyFix
+
 class AppServerTestCase(unittest.TestCase):
 
+    app.wsgi_app = ProxyFix(app.wsgi_app)
+
     def setUp(self):
-        self.db_fd, app.config['StoriesAppServer'] = tempfile.mkstemp()
-
-        # flaskr.app.testing = True
-        # self.app = flaskr.app.test_client()
-
-        # creates a test client
+        # self.db_fd, app.config['StoriesAppServer'] = tempfile.mkstemp()
+        #
+        # # flaskr.app.testing = True
+        # # self.app = flaskr.app.test_client()
+        #
+        # # creates a test client
         self.app = app.test_client()
-        # propagate the exceptions to the test client
-        self.app.testing = True
-
+        # # propagate the exceptions to the test client
+        # self.app.testing = True
+        return
 
 
     def test_home_status_code(self):
@@ -32,12 +36,13 @@ class AppServerTestCase(unittest.TestCase):
     def test_signup_post(self):
         # sends HTTP POST request to the application
         # on the specified path
+        print("Reqs to sign up")
         loginInfo = {
             "user": "user",
             "password": "password",
             "fbToken": "fbToken"
         };
-        result = self.app.post('/api/users/signup', loginInfo)
+        result = self.app.post('/api/users/signup',"http://localhost:10010", loginInfo)
 
         print (result)
 
@@ -46,9 +51,9 @@ class AppServerTestCase(unittest.TestCase):
 
     def tearDown(self):
 
-        os.close(self.db_fd)
-
-        os.unlink(app.config['StoriesAppServer'])
+        # os.close(self.db_fd)
+        #
+        # os.unlink(app.config['StoriesAppServer'])
         return
 
 if __name__ == '__main__':
