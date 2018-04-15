@@ -6,6 +6,9 @@ from SharedServerRequests.userLogin import authenticateUserLogin
 from databases.users import usersDb
 from databases.loginedUsers import loginedUsers
 
+
+# TODO fijarse de setear en tests.py
+
 if 'TEST_ENV' in os.environ:
 	from mockups.requests.usersLogInMockUp import *
 else:

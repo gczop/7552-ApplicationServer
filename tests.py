@@ -43,18 +43,17 @@ class AppServerTestCase(unittest.TestCase):
 
     def test_signup_and_login(self):
         signupInfo = {
-            "username": "user",
-            "password": "password"
+            "username": "user2",
+            "password": "password2"
         };
         loginInfo = {
-            "username": "user",
-            "password": "password"
+            "username": "user2",
+            "password": "password2"
         };
         result_signup = self.app.post('/api/users/signup', data=json.dumps(signupInfo), content_type='application/json')
         self.assertEqual(result_signup.status_code, 200)
         result_login = self.app.post('/api/users/login', data=json.dumps(loginInfo), content_type='application/json')
         # self.assertEqual(result_login.status_code, 200)
-
 
 
 if __name__ == '__main__':
