@@ -1,63 +1,64 @@
-import os
 from app import application as app
 import unittest
-import tempfile
+import json
 
-from werkzeug.contrib.fixers import ProxyFix
 
 class AppServerTestCase(unittest.TestCase):
 
-    app.wsgi_app = ProxyFix(app.wsgi_app)
-
     def setUp(self):
-        # self.db_fd, app.config['StoriesAppServer'] = tempfile.mkstemp()
-        #
-        # # flaskr.app.testing = True
-        # # self.app = flaskr.app.test_client()
-        #
-        # # creates a test client
+        # creates a test client
         self.app = app.test_client()
-        # # propagate the exceptions to the test client
-        # self.app.testing = True
+        # propagate the exceptions to the test client
+        self.app.testing = True
         return
 
 
     def test_home_status_code(self):
-        # sends HTTP GET request to the application
-        # on the specified path
         result = self.app.get('/')
 
-        print (result.data)
-
-        # assert the status code of the response
+        # Assert the server is running correctly
         self.assertEqual(result.status_code, 200)
 
 
-    def test_signup_post(self):
-        # sends HTTP POST request to the application
-        # on the specified path
-        print("Reqs to sign up")
+    def test_correct_signup_post(self):
+        signupInfo = {
+            "user": "user",
+            "password": "password",
+            "fbToken": "fbToken"
+        };
+        result = self.app.post('/api/users/signup', data=json.dumps(signupInfo), content_type='application/json')
+
+        print (result)
+
+        # Assert a correct sign up
+        self.assertEqual(result.status_code, 200)
+
+
+    def test_signup_post_without_pass_or_fbtoken(self):
+        signupInfo = { "user": "user" };
+        result = self.app.post('/api/users/signup', data=json.dumps(signupInfo), content_type='application/json')
+
+        # Assert an error from the server
+        # TODO ver que error es el que deberia tirar
+        self.assertNotEqual(result.status_code, 200)
+
+    def test_signup_and_login(self):
+        signupInfo = {
+            "user": "user",
+            "password": "password",
+            "fbToken": "fbToken"
+        };
         loginInfo = {
             "user": "user",
             "password": "password",
             "fbToken": "fbToken"
         };
-        result = self.app.post('/api/users/signup',data=dict(
-        user="username",
-        password="password"
-        ))
+        result_signup = self.app.post('/api/users/signup', data=json.dumps(signupInfo), content_type='application/json')
+        self.assertEqual(result_signup.status_code, 200)
+        result_login = self.app.post('/api/users/login', data=json.dumps(loginInfo), content_type='application/json')
+        # self.assertEqual(result_login.status_code, 200)
 
-        print (result)
 
-        # assert the status code of the response
-        self.assertEqual(result.status_code, 200)
-
-    def tearDown(self):
-
-        # os.close(self.db_fd)
-        #
-        # os.unlink(app.config['StoriesAppServer'])
-        return
 
 if __name__ == '__main__':
     unittest.main()

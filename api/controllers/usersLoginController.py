@@ -28,7 +28,7 @@ def validateUserLogin(request):
 
 def getRequestData(request):
 	data = json.loads(request.data)
-	user = data.get("username")
+	user = data.get("user")
 	password = data.get("password")
 	fbToken = data.get("fbToken")
 	return user,password,fbToken

@@ -7,8 +7,8 @@ from databases.users import usersDb
 
 def authenticateSignUp(request):
 	user,password,fbToken = getRequestData(request)
-	response = registerNewUser(user, password, fbToken)
-	print (response.text);
+	response = registerNewUser(user, password, fbToken);# {"id":4,"_rev":null,"applicationOwner":"String","username":null};
+	print (response.text)
 	responseData = json.loads(response.text)
 	try:
 		responseData["code"]
