@@ -42,7 +42,10 @@ class AppServerTestCase(unittest.TestCase):
             "password": "password",
             "fbToken": "fbToken"
         };
-        result = self.app.post('/api/users/signup',"http://localhost:10010", loginInfo)
+        result = self.app.post('/api/users/signup',data=dict(
+        user="username",
+        password="password"
+        ))
 
         print (result)
 

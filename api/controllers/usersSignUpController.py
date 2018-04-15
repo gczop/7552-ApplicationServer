@@ -20,6 +20,7 @@ def authenticateSignUp(request):
 
 
 def getRequestData(request):
+	print(request)
 	data = json.loads(request.data)
 	user = data.get("username")
 	password = data.get("password")
