@@ -21,12 +21,12 @@ class AppServerTestCase(unittest.TestCase):
 
 
     def test_correct_signup_post(self):
-        loginInfo = {
+        signupInfo = {
             "user": "user",
             "password": "password",
             "fbToken": "fbToken"
         };
-        result = self.app.post('/api/users/signup', data=json.dumps(loginInfo), content_type='application/json')
+        result = self.app.post('/api/users/signup', data=json.dumps(signupInfo), content_type='application/json')
 
         print (result)
 
@@ -35,11 +35,28 @@ class AppServerTestCase(unittest.TestCase):
 
 
     def test_signup_post_without_pass_or_fbtoken(self):
-        loginInfo = { "user": "user" };
-        result = self.app.post('/api/users/signup', data=json.dumps(loginInfo), content_type='application/json')
+        signupInfo = { "user": "user" };
+        result = self.app.post('/api/users/signup', data=json.dumps(signupInfo), content_type='application/json')
 
         # Assert an error from the server
+        # TODO ver que error es el que deberia tirar
         self.assertNotEqual(result.status_code, 200)
+
+    def test_signup_and_login(self):
+        signupInfo = {
+            "user": "user",
+            "password": "password",
+            "fbToken": "fbToken"
+        };
+        loginInfo = {
+            "user": "user",
+            "password": "password",
+            "fbToken": "fbToken"
+        };
+        result_signup = self.app.post('/api/users/signup', data=json.dumps(signupInfo), content_type='application/json')
+        self.assertEqual(result_signup.status_code, 200)
+        result_login = self.app.post('/api/users/login', data=json.dumps(loginInfo), content_type='application/json')
+        # self.assertEqual(result_login.status_code, 200)
 
 
 
