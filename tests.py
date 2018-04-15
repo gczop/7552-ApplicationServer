@@ -22,9 +22,8 @@ class AppServerTestCase(unittest.TestCase):
 
     def test_correct_signup_post(self):
         signupInfo = {
-            "user": "user",
-            "password": "password",
-            "fbToken": "fbToken"
+            "username": "user",
+            "password": "password"
         };
         result = self.app.post('/api/users/signup', data=json.dumps(signupInfo), content_type='application/json')
 
@@ -35,7 +34,7 @@ class AppServerTestCase(unittest.TestCase):
 
 
     def test_signup_post_without_pass_or_fbtoken(self):
-        signupInfo = { "user": "user" };
+        signupInfo = { "username": "user" };
         result = self.app.post('/api/users/signup', data=json.dumps(signupInfo), content_type='application/json')
 
         # Assert an error from the server
@@ -44,14 +43,12 @@ class AppServerTestCase(unittest.TestCase):
 
     def test_signup_and_login(self):
         signupInfo = {
-            "user": "user",
-            "password": "password",
-            "fbToken": "fbToken"
+            "username": "user",
+            "password": "password"
         };
         loginInfo = {
-            "user": "user",
-            "password": "password",
-            "fbToken": "fbToken"
+            "username": "user",
+            "password": "password"
         };
         result_signup = self.app.post('/api/users/signup', data=json.dumps(signupInfo), content_type='application/json')
         self.assertEqual(result_signup.status_code, 200)

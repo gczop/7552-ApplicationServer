@@ -64,12 +64,15 @@ class UsersDB(Singleton):
         matchList = []
         for match in matchCursor:
            matchList.append(match)
-        return match
+        return matchList
 
-    def authenticateUser(self,token= None):
+    def authenticateUser(self,username,token= None):
         print("LLegamos a auth" + token)
         if(token != None):
-            return self.users.find_one({"token":token})
+            return self.users.find_one({
+                "token":token,
+                "username":username
+                })
         return None
 
 usersDb = UsersDB()

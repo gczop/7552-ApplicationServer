@@ -6,6 +6,11 @@ from SharedServerRequests.userLogin import authenticateUserLogin
 from databases.users import usersDb
 from databases.loginedUsers import loginedUsers
 
+if 'TEST_ENV' in os.environ:
+	from mockups.requests.usersLogInMockUp import *
+else:
+	from SharedServerRequests.userLogin import authenticateUserLogin
+
 
 def validateUserLogin(request):
 		user,password,fbToken = getRequestData(request)
@@ -18,6 +23,7 @@ def validateUserLogin(request):
 		responseData = json.loads(response.text)
 		try:
 			responseData["code"]
+			print(responseData)
 			return {"Error": "Login Incorrecto (Error code: 3)"}, 401
 		except:
 			usersDb.registerUserToken(user,responseData["token"])
@@ -27,8 +33,10 @@ def validateUserLogin(request):
 
 
 def getRequestData(request):
+	print("LOGIN")
+	print(request.data)
 	data = json.loads(request.data)
-	user = data.get("user")
+	user = data.get("username")
 	password = data.get("password")
 	fbToken = data.get("fbToken")
 	return user,password,fbToken

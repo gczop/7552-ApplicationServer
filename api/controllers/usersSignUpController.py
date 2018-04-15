@@ -1,7 +1,14 @@
+import os
 import string
 import random
 import json
-from SharedServerRequests.userSignUp import *
+
+
+if 'TEST_ENV' in os.environ:
+	from mockups.requests.usersSignUpMockUp import *
+else:
+	from SharedServerRequests.userSignUp import *
+
 from databases.users import usersDb
 
 
@@ -13,14 +20,15 @@ def authenticateSignUp(request):
 	try:
 		responseData["code"]
 		print(responseData)
-		return {"Error": "Login Incorrecto (Error code: 1)"}, 401
+		return {"Error": "(Error code: 1)", "Message":responseData["message"]}, 401
 	except:
 		usersDb.addNewUser(user)
 		return {"Message": "Bienvenido {}".format(user)}	
 
 
 def getRequestData(request):
-	print(request)
+	print("SIGN UP")
+	print(request.data)
 	data = json.loads(request.data)
 	user = data.get("username")
 	password = data.get("password")
