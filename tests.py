@@ -2,6 +2,7 @@ import os
 from app import application as app
 import unittest
 import tempfile
+import json
 
 from werkzeug.contrib.fixers import ProxyFix
 
@@ -18,7 +19,7 @@ class AppServerTestCase(unittest.TestCase):
         # # creates a test client
         self.app = app.test_client()
         # # propagate the exceptions to the test client
-        # self.app.testing = True
+        self.app.testing = True
         return
 
 
@@ -42,7 +43,7 @@ class AppServerTestCase(unittest.TestCase):
             "password": "password",
             "fbToken": "fbToken"
         };
-        result = self.app.post('/api/users/signup',"http://localhost:10010", loginInfo)
+        result = self.app.post('/api/users/signup', data=json.dumps(loginInfo), content_type='application/json')
 
         print (result)
 
@@ -57,4 +58,7 @@ class AppServerTestCase(unittest.TestCase):
         return
 
 if __name__ == '__main__':
+    unittest.main()
+
+def run():
     unittest.main()
