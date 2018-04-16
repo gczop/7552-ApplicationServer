@@ -26,7 +26,6 @@ def validateUserLogin(request):
 			print(responseData)
 			return {"Error": "Login Incorrecto (Error code: 3)"}, 401
 		except:
-			print ("Reeeeesponse data token: ", responseData["token"])
 			usersDb.registerUserToken(user,responseData["token"])
 			loginedUsers.userLogin(user,responseData["token"])
 			return {"Message": "Bienvenido {}".format(user), "Token":responseData["token"]}	

@@ -70,6 +70,23 @@ class UserTestCase(unittest.TestCase):
         result_login = self.app.post('/api/users/login', data=json.dumps(loginInfo), content_type='application/json')
         self.assertNotEqual(result_login.status_code, 200)
 
+    def test_7_signup_and_login_with_fbtoken(self):
+        signupInfo = {
+            "username": "user3",
+            "fbToken": "987654321"
+        };
+        loginInfo = {
+            "username": "user3",
+            "fbToken": "987654321"
+        };
+        result_signup = self.app.post('/api/users/signup', data=json.dumps(signupInfo), content_type='application/json')
+        self.assertEqual(result_signup.status_code, 200)
+        result_login = self.app.post('/api/users/login', data=json.dumps(loginInfo), content_type='application/json')
+        self.assertEqual(result_login.status_code, 200)
+
+        dataDict = json.loads(result_login.data)
+        print(dataDict["Token"])
+
 
 if __name__ == '__main__':
     unittest.main()

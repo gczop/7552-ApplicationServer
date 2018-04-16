@@ -42,7 +42,6 @@ class UserSingupSharedServer(Singleton):
             return HttpReqMockUp({
                             "token": "eTKhUrPGek"
                         })
-        # return 0
 
 
     def registerUserToken(self, username, token):
