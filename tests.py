@@ -56,7 +56,31 @@ class AppServerTestCase(unittest.TestCase):
         result_signup = self.app.post('/api/users/signup', data=json.dumps(signupInfo), content_type='application/json')
         self.assertEqual(result_signup.status_code, 200)
         result_login = self.app.post('/api/users/login', data=json.dumps(loginInfo), content_type='application/json')
-        # self.assertEqual(result_login.status_code, 200)
+        self.assertEqual(result_login.status_code, 200)
+
+    def test_login_nonexistant_user(self):
+        loginInfo = {
+            "username": "fakeuser",
+            "password": "password"
+        };
+        result_login = self.app.post('/api/users/login', data=json.dumps(loginInfo), content_type='application/json')
+        self.assertNotEqual(result_login.status_code, 200)
+
+    def test_login_already_registered_user(self):
+        loginInfo = {
+            "username": "user",
+            "password": "password"
+        };
+        result_login = self.app.post('/api/users/login', data=json.dumps(loginInfo), content_type='application/json')
+        self.assertEqual(result_login.status_code, 200)
+
+    def test_wrong_pass_login(self):
+        loginInfo = {
+            "username": "user",
+            "password": "wrong_password"
+        };
+        result_login = self.app.post('/api/users/login', data=json.dumps(loginInfo), content_type='application/json')
+        self.assertNotEqual(result_login.status_code, 200)
 
 
 if __name__ == '__main__':
