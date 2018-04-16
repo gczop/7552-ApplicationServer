@@ -1,6 +1,10 @@
+#Set Test_Env Var to true
+import os
+os.environ["TEST_ENV"] = "true"
 from app import application as app
 import unittest
 import json
+
 
 
 class AppServerTestCase(unittest.TestCase):
@@ -10,7 +14,6 @@ class AppServerTestCase(unittest.TestCase):
         self.app = app.test_client()
         # propagate the exceptions to the test client
         self.app.testing = True
-        return
 
 
     def test_home_status_code(self):
@@ -34,7 +37,7 @@ class AppServerTestCase(unittest.TestCase):
 
 
     def test_signup_post_without_pass_or_fbtoken(self):
-        signupInfo = { "username": "user" };
+        signupInfo = { "username": "user2" };
         result = self.app.post('/api/users/signup', data=json.dumps(signupInfo), content_type='application/json')
 
         # Assert an error from the server
