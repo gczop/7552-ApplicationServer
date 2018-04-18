@@ -19,7 +19,14 @@ else:
     conn = pymongo.MongoClient('localhost', 27017)
     db = conn['StoriesAppServer']
 
-
+# users:{
+#     "username": username,
+#     "fisrt_name": name,
+#     "last_name": last name,
+#     "gender": gender,
+#     "age": age,
+#     "birthday": birthday
+# }
 userCollection = db.User
 
 class Singleton(object):
