@@ -45,15 +45,21 @@ class UsersDB(Singleton):
         return a
 
     def registerUserToken(self,user, token):
-        self.users.find_one_and_update({"username":user},
-            {"$set": {"token": token}},upsert=True)
+        if(self.users.find_one({"username":user}) != None):
+            self.users.find_one_and_update({"username":user},
+                {"$set": {"token": token}},upsert=True)
+        else:
+            self.addNewUser(user,token)
 
     def addNewUser(self,username= None,token= None):
         if(username == None):
             return
-        self.users.insert_one({"username":username,"token":token})
+        self.users.insert_one({"username":username,"token":token,"personalInformation": {}})
 
     def getUserProfile(self, username):
+        print(self.users.find_one({"username": username}).get("personalInformation"))
+        print('\n\n\n')
+        print(self.users.find_one({"username": username})["personalInformation"])
         return self.users.find_one({"username": username})["personalInformation"]
 
     def updateUserProfile(self, username, updatedInfo):

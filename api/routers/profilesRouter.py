@@ -18,6 +18,7 @@ class ProfilesRouter(Resource):
 
 	@auth.login_required
 	def get(self):
+		print("aaaa")
 		return getUserProfile(request)
 
 	@auth.login_required
