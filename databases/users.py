@@ -92,7 +92,7 @@ usersDb = UsersDB()
 
 
 def createdUpdatedDictionary(newInformation, oldInormation):
-    update = []
+    update = {}
     for fields in oldInormation:
         update[fields]= newInformation.get(fields) or oldInormation.get(fields)
     return update
