@@ -65,7 +65,7 @@ class UsersDB(Singleton):
     def updateUserProfile(self, username, updatedInfo):
         oldInformation = self.users.find_one({"username": username})["personalInformation"]
         update = createdUpdatedDictionary(updatedInfo,oldInformation)
-        self.users.find_one_and_update({"username":user},
+        self.users.find_one_and_update({"username":username},
             {"$set": {"personalInformation": update}},upsert=True)
 
 
