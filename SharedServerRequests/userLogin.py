@@ -22,5 +22,5 @@ def authenticateUserLogin(username,password):
   		"password": password
     }
     print(payload)
-    # print (sharedServerDir + '/api/token')
+    print (sharedServerDir + '/api/token')
     return requests.post(sharedServerDir + '/api/token', data= payload)
