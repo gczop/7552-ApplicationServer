@@ -26,4 +26,5 @@ def getRequestData(request):
 	personalInfo["age"] = data.get("age")
 	personalInfo["gender"] = data.get("gender")
 	personalInfo["birthday"] = data.get("birthday")
+	print(personalInfo, "En utils")
 	return personalInfo

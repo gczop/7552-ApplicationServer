@@ -93,8 +93,10 @@ usersDb = UsersDB()
 
 def createdUpdatedDictionary(newInformation, oldInormation):
     update = {}
-    for fields in oldInormation:
+    print(oldInormation)
+    for fields in newInformation:
         update[fields]= newInformation.get(fields) or oldInormation.get(fields)
+    print(update)
     return update
 
 # def DbSearchForUsers(username):
