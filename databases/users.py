@@ -51,10 +51,11 @@ class UsersDB(Singleton):
         else:
             self.addNewUser(user,token)
 
-    def addNewUser(self,username= None,token= None):
+    def addNewUser(self,username= None,token= None,personalInfo=None):
+        print(personalInfo)
         if(username == None):
             return
-        self.users.insert_one({"username":username,"token":token,"personalInformation": {}})
+        self.users.insert_one({"username":username,"token":token,"personalInformation": personalInfo or {}})
 
     def getUserProfile(self, username):
         print(self.users.find_one({"username": username}).get("personalInformation"))
