@@ -25,6 +25,7 @@ class UsersTokens(Singleton):
         self.users[user]=[token]
 
     def checkUserLogin(self,user):
+        print("Checking user LOGIN", user)
         print (self.users)
         if user in self.users:
             return self.users.get(user)[0]
