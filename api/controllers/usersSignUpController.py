@@ -19,19 +19,17 @@ def authenticateSignUp(request):
 	response = registerNewUser(user, password, fbToken);# {"id":4,"_rev":null,"applicationOwner":"String","username":null};
 	print (response.text)
 	signUpResponse = json.loads(response.text)
-	try:
-		signUpResponse["code"]
+	if(response.status_code != 200):
 		print(signUpResponse)
 		return {"Error": "(Error code: 1)", "Message":signUpResponse["message"]}, 401
-	except:
+	else:
 		sentPassword = password or fbToken
 		response = authenticateUserLogin(user,sentPassword)
 		loginResponse = json.loads(response.text)
-		try:
-			loginResponse["code"]
+		if(response.status_code != 200):
 			print(loginResponse)
-			return {"Error": "Error inseperado (Error code: 41)"}, 401
-		except:
+			return {"Error": loginResponse['message'] + "(Error code: 41)"}, response.status_code
+		else:
 			print(personalInfo)
 			usersDb.addNewUser(user,loginResponse["token"],personalInfo)
 			loginedUsers.userLogin(user,loginResponse["token"])

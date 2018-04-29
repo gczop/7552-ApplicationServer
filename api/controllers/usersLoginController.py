@@ -21,11 +21,10 @@ def validateUserLogin(request):
 		else:
 			response =  authenticateUserLogin(user,fbToken)
 		responseData = json.loads(response.text)
-		try:
-			responseData["code"]
+		if (response.status_code != 200):
 			print(responseData)
-			return {"Error": "Login Incorrecto (Error code: 3)"}, 401
-		except:
+			return {"Error": responseData['message'] + "(Error code: 3)"}, response.status_code
+		else:
 			usersDb.registerUserToken(user,responseData["token"])
 			loginedUsers.userLogin(user,responseData["token"])
 			return {"Message": "Bienvenido {}".format(user), "Token":responseData["token"]}	

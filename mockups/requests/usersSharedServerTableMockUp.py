@@ -16,11 +16,10 @@ class UserSingupSharedServer(Singleton):
     def signUpNewUser(self,username,password,fbToken):
         if(password == None and fbToken == None):
             return HttpReqMockUp({
-                            "code":400,
                             "message": 'Parametros de signup faltantes'
-                        })
+                        },400)
         if username in self.users:
-            return HttpReqMockUp({"code":401, "message":"User Already registerd"})
+            return HttpReqMockUp({"message":"User Already registerd"},401)
         newUser = generateNewUser(username,password,fbToken,self.ids)
         self.users[username] = newUser
         self.ids +=1
@@ -34,9 +33,8 @@ class UserSingupSharedServer(Singleton):
     def loginUser(self,username,password):
         if username not in self.users or self.users[username]["password"] != password:
             return HttpReqMockUp({
-                            "code":401,
                             "message": "Datos de login incorrectos"
-                        })
+                        },401)
         else:
             self.users[username]["token"]= "eTKhUrPGek"
             return HttpReqMockUp({
@@ -47,9 +45,8 @@ class UserSingupSharedServer(Singleton):
     def registerUserToken(self, username, token):
         if username not in self.users:
             return HttpReqMockUp({
-                "code":401,
                 "message": "Datos de register incorrectos"
-            })
+            },401)
         else:
             self.users[username]["token"]= token
             return HttpReqMockUp({
@@ -58,8 +55,10 @@ class UserSingupSharedServer(Singleton):
     
 class HttpReqMockUp(object):
     text = ""
-    def __init__(self,content):
+    status_code =0
+    def __init__(self,content, code =200):
         self.text = json.dumps(content)
+        self.status_code = code
 
 
 #         if username in self.users:
