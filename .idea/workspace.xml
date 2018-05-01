@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c03f92f9-8f09-4295-a48b-23e6c053f2d7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/controllers/storiesController.py" afterPath="$PROJECT_DIR$/api/controllers/storiesController.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/stories.py" afterPath="$PROJECT_DIR$/databases/stories.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_stories.py" afterPath="$PROJECT_DIR$/test/test_stories.py" />
     </list>
@@ -38,18 +37,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_friends.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_friends.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-978">
-              <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="storiesRouter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/routers/storiesRouter.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,8 +64,8 @@
       <file leaf-file-name="stories.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/databases/stories.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="98" column="63" lean-forward="false" selection-start-line="98" selection-start-column="63" selection-end-line="98" selection-end-column="63" />
+            <state relative-caret-position="225">
+              <caret line="78" column="106" lean-forward="true" selection-start-line="78" selection-start-column="106" selection-end-line="78" selection-end-column="106" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -89,8 +76,8 @@
       <file leaf-file-name="test_stories.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test_stories.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="150" column="22" lean-forward="false" selection-start-line="124" selection-start-column="22" selection-end-line="150" selection-end-column="22" />
+            <state relative-caret-position="3300">
+              <caret line="220" column="23" lean-forward="false" selection-start-line="220" selection-start-column="23" selection-end-line="220" selection-end-column="23" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -752,24 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/databases/friends.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="60" column="5" lean-forward="false" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_friends.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-978">
-          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -811,10 +780,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_friends.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="127" column="36" lean-forward="false" selection-start-line="127" selection-start-column="25" selection-end-line="127" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/friends.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="60" column="5" lean-forward="false" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/databases/stories.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="98" column="63" lean-forward="false" selection-start-line="98" selection-start-column="63" selection-end-line="98" selection-end-column="63" />
+        <state relative-caret-position="225">
+          <caret line="78" column="106" lean-forward="true" selection-start-line="78" selection-start-column="106" selection-end-line="78" selection-end-column="106" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -823,8 +810,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_stories.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="150" column="22" lean-forward="false" selection-start-line="124" selection-start-column="22" selection-end-line="150" selection-end-column="22" />
+        <state relative-caret-position="3300">
+          <caret line="220" column="23" lean-forward="false" selection-start-line="220" selection-start-column="23" selection-end-line="220" selection-end-column="23" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>

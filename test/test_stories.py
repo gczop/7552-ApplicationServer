@@ -83,7 +83,7 @@ class StoriesTestCase(unittest.TestCase):
         dataDict = json.loads(result.data)
         print ("Historias:\n",dataDict)
         self.assertEqual(result.status_code,200)
-        self.assertTrue(dataDict) # is not Empty
+        self.assertTrue(dataDict[0]) # is not Empty
 
     def test_4_update_my_story(self):
         # Asume user exists
@@ -103,7 +103,7 @@ class StoriesTestCase(unittest.TestCase):
 
         result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
         dataDict = json.loads(result.data)
-        id = dataDict["_id"]
+        id = dataDict[0]["_id"]
         # print ("\n\nHistoria ID: ",id)
         updatedInfo = {
             "username": "user",
@@ -118,11 +118,60 @@ class StoriesTestCase(unittest.TestCase):
         result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
         dataDict = json.loads(result.data)
         print (dataDict)
-        description = dataDict["storyDetail"]["description"]
+        description = dataDict[0]["storyDetail"]["description"]
         self.assertEqual(result.status_code,200)
         self.assertEqual(description,"Nueva descripcion")
 
-    def test_5_delete_my_story(self):
+    def test_5_upload_another_story(self):
+        # Asume user exists
+        loginInfo = {
+            "username": "userFriends",
+            "password": "password"
+        };
+        result_login = \
+            self.client.post('/api/users/login', data=json.dumps(loginInfo), content_type='application/json')
+
+        storyInfo = {
+            "username": "userFriends",
+            "url": "https://i.redd.it/gep59dz589a01.jpg",
+            "state": "Public",
+            "description": "Esto es un meme"
+        };
+
+        token = json.loads(result_login.data)["Token"]
+
+        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii")}
+
+        result = self.client.post('/api/stories', headers=headers, data=json.dumps(storyInfo), content_type='application/json')
+
+        dataDict = json.loads(result.data)
+        print (dataDict)
+        self.assertEqual(result.status_code,200)
+
+    def test_6_get_stories(self):
+        # Asume userFriends exists and is friends with user
+        loginInfo = {
+            "username": "userFriends",
+            "password": "password"
+        };
+        info = {
+            "username": "userFriends"
+        };
+        result_login = \
+            self.client.post('/api/users/login', data=json.dumps(loginInfo), content_type='application/json')
+
+        token = json.loads(result_login.data)["Token"]
+
+        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii")}
+
+        result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
+
+        dataDict = json.loads(result.data)
+        print ("Historias:\n",dataDict)
+        self.assertEqual(result.status_code,200)
+        self.assertTrue(dataDict) # is not Empty
+
+    def test_7_delete_my_story(self):
         # Asume user exists
         loginInfo = {
             "username": "user",
@@ -141,7 +190,35 @@ class StoriesTestCase(unittest.TestCase):
         result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
 
         dataDict = json.loads(result.data)
-        id = dataDict["_id"]
+        id = dataDict[1]["_id"]
+        print ("\n\nHistoria ID: ",id)
+        self.assertEqual(result.status_code,200)
+        self.assertTrue(dataDict) # is not Empty
+
+        result = self.client.delete('/api/stories', headers=headers, data=json.dumps({"id":id}), content_type='application/json')
+
+        self.assertEqual(result.status_code,200)
+
+    def test_8_delete_other_story(self):
+        # Asume user exists
+        loginInfo = {
+            "username": "userFriends",
+            "password": "password"
+        };
+        info = {
+            "username": "user"
+        };
+        result_login = \
+            self.client.post('/api/users/login', data=json.dumps(loginInfo), content_type='application/json')
+
+        token = json.loads(result_login.data)["Token"]
+
+        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii")}
+
+        result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
+
+        dataDict = json.loads(result.data)
+        id = dataDict[0]["_id"]
         print ("\n\nHistoria ID: ",id)
         self.assertEqual(result.status_code,200)
         self.assertTrue(dataDict) # is not Empty

@@ -76,7 +76,7 @@ class StoriesDb(Singleton):
         friends.append(username);
         # print (friends,"\n\n")
         # print (list(self.storiesList.find()),"\n\n")
-        return self.storiesList.find_one({ "username": {"$in" : friends }}) #.sort({"date":fromNewToOld}).limit(number)
+        return list(self.storiesList.find({ "username": {"$in" : friends }}).sort("createdAt",fromNewToOld).limit(number))
 
     def addNewStory(self, username, storyInfo):
         storyDict = createStoryDocument(storyInfo)
