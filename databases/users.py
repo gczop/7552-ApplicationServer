@@ -58,13 +58,13 @@ class UsersDB(Singleton):
         self.users.insert_one({"username":username,"token":token,"personalInformation": personalInfo or {}})
 
     def getUserProfile(self, username):
-        print(self.users.find_one({"username": username}).get("personalInformation"))
-        print('\n\n\n')
-        print(self.users.find_one({"username": username})["personalInformation"])
+        # print(self.users.find_one({"username": username}).get("personalInformation"))
+        # print('\n\n\n')
+        # print(self.users.find_one({"username": username})["personalInformation"])
         return self.users.find_one({"username": username})["personalInformation"]
 
     def updateUserProfile(self, username, updatedInfo):
-        oldInformation = self.users.find_one({"username": username})["personalInformation"]
+        oldInformation = self.users.find_one({"username": username}).get("personalInformation")
         update = createdUpdatedDictionary(updatedInfo,oldInformation)
         self.users.find_one_and_update({"username":username},
             {"$set": {"personalInformation": update}},upsert=True)
