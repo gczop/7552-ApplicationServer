@@ -5,33 +5,47 @@ from databases.friends import friendsDb
 from databases.loginedUsers import loginedUsers
 
 def getUserFriends(request):
-	username = request.headers.get("username")
+	username = getRequestData(request)
 	print(username)
 	if(username == None):
 		return {"Error": "Falta de informacion en header (Error code: 13)"}, 400
 	return friendsDb.getUserFriends(username)
 
-def removeFriend(request):
-	username = request.headers.get("username")
-	if(username == None):
+#For testing purposes
+def addFriend(request):
+	data = json.loads(request.data)
+	username = data.get("username")
+	friend = data.get("friend")
+	if(username == None or friend == None):
 		return {"Error": "Falta de informacion en header (Error code: 14)"}, 400
-	friend = getRequestData(request)
-	if(friend == None):
-		return {"Error": "Amigo a eliminar no especificado (Error code: 15)"}, 400
 	try:
-		return friendsDb.removeFriend(username,friend)
+		return friendsDb.addNewFriend(username,friend)
 	except:
-		return {"Error": "Esta persona no esta en tu lista de amigos (Error code: 25)"}, 401
+		return {"Error": "No se pudo agregar esta persona a tu lista de amigos (Error code: 26?)"}, 401
+
+
+def removeFriend(request):
+    data = json.loads(request.data)
+    username = data.get("username")
+    friend = data.get("friend")
+    if(username == None):
+        return {"Error": "Falta de informacion en header (Error code: 14)"}, 400
+    if(friend == None):
+        return {"Error": "Amigo a eliminar no especificado (Error code: 15)"}, 400
+    try:
+        return friendsDb.removeFriend(username,friend)
+    except:
+        return {"Error": "Esta persona no esta en tu lista de amigos (Error code: 25)"}, 401
 
 def getRequestData(request):
-	data = json.loads(request.data)
-	user = data.get("username")
-	return user
+    data = json.loads(request.data)
+    user = data.get("username")
+    return user
 
 def getSpecificUserFriends(username):
-	if(username == None):
-		return {"Error": "Usuario no especificado (Error code: 16)"}, 400
-	userFriends = friendsDb.getUserFriends(username)
-	if(userFriends == None):
-		return {"Error": "Usuario no registrado o aun sin amigos agregados (Error code: 17)"}, 400
-	return userFriends
+    if(username == None):
+        return {"Error": "Usuario no especificado (Error code: 16)"}, 400
+    userFriends = friendsDb.getUserFriends(username)
+    if(userFriends == None):
+        return {"Error": "Usuario no registrado o aun sin amigos agregados (Error code: 17)"}, 400
+    return userFriends

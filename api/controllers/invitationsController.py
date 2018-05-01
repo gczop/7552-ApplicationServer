@@ -6,7 +6,7 @@ from databases.invitations import invitationsDb
 from databases.loginedUsers import loginedUsers
 
 def getUserInvitations(request):
-	username = request.headers.get("username")
+	username , friend = getRequestData(request)
 	if(username == None):
 		return {"Error": "Falta de informacion en header (Error code: 6)"}, 400
 	try:
@@ -15,20 +15,17 @@ def getUserInvitations(request):
 		return {"Error": "Aun no tiene invitaciones (Error code: 7)"}
 
 def addFriendInvitation(request):
-	username = request.headers.get("username")
+	username, newFriend = getRequestData(request)
 	if(username == None):
 		return {"Error": "Falta de informacion en header (Error code: 8)"}, 400
-	newFriend = getRequestData(request)
 	if(newFriend == None):
 		return {"Error": "Amigo a agregar no especificado (Error code: 9)"}, 400
-	print(username,newFriend)
 	return invitationsDb.addFriendInvitation(username,newFriend)
 
 def acceptFriendInvitation(request):
-	username = request.headers.get("username")
+	username, newFriend = getRequestData(request)
 	if(username == None):
 		return {"Error": "Falta de informacion en header (Error code: 10)"}, 400
-	newFriend = getRequestData(request)
 	if(newFriend == None):
 		return {"Error": "Amigo a aceptar no especificado (Error code: 11)"}, 400
 	print(username,newFriend)
@@ -42,4 +39,5 @@ def acceptFriendInvitation(request):
 def getRequestData(request):
 	data = json.loads(request.data)
 	user = data.get("username")
-	return user
+	friend = data.get("friend")
+	return user, friend

@@ -4,7 +4,7 @@ import json
 from base64 import b64encode
 
 
-class UserTestCase(unittest.TestCase):
+class ProfileTestCase(unittest.TestCase):
 
     def setUp(self):
         # creates a test client

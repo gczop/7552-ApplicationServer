@@ -54,14 +54,16 @@ class FriendsDb(Singleton):
     def addNewFriend(self,username,newFriend):
         try:
             userFriends = self.friendsList.find_one({"username":username})["friends"]
-            userFriends.append(newFriend)
+            if newFriend not in userFriends:
+                userFriends.append(newFriend)
             self.friendsList.find_one_and_update({"username":username},
                 {"$set": {"friends": userFriends}},upsert=True)
         except:
             self.friendsList.insert_one({"username":username, "friends":[newFriend]})
         try:
             userFriends = self.friendsList.find_one({"username":newFriend})["friends"]
-            userFriends.append(username)
+            if username not in userFriends:
+                userFriends.append(username)
             self.friendsList.find_one_and_update({"username":newFriend},
                 {"$set": {"friends": userFriends}},upsert=True)
         except:
