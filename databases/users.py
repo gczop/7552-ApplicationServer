@@ -15,11 +15,18 @@ if MONGO_URL:
     db = conn[urlparse(MONGO_URL).path[1:]]
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
-    print("Conectamos local")
+    print("Conectamos local1")
     conn = pymongo.MongoClient('localhost', 27017)
     db = conn['StoriesAppServer']
 
-
+# users:{
+#     "username": username,
+#     "fisrt_name": name,
+#     "last_name": last name,
+#     "gender": gender,
+#     "age": age,
+#     "birthday": birthday
+# }
 userCollection = db.User
 
 class Singleton(object):
@@ -38,21 +45,28 @@ class UsersDB(Singleton):
         return a
 
     def registerUserToken(self,user, token):
-        self.users.find_one_and_update({"username":user},
-            {"$set": {"token": token}},upsert=True)
+        if(self.users.find_one({"username":user}) != None):
+            self.users.find_one_and_update({"username":user},
+                {"$set": {"token": token}},upsert=True)
+        else:
+            self.addNewUser(user,token)
 
-    def addNewUser(self,username= None,token= None):
+    def addNewUser(self,username= None,token= None,personalInfo=None):
+        print(personalInfo)
         if(username == None):
             return
-        self.users.insert_one({"username":username,"token":token})
+        self.users.insert_one({"username":username,"token":token,"personalInformation": personalInfo or {}})
 
     def getUserProfile(self, username):
+        # print(self.users.find_one({"username": username}).get("personalInformation"))
+        # print('\n\n\n')
+        # print(self.users.find_one({"username": username})["personalInformation"])
         return self.users.find_one({"username": username})["personalInformation"]
 
     def updateUserProfile(self, username, updatedInfo):
-        oldInformation = self.users.find_one({"username": username})["personalInformation"]
+        oldInformation = self.users.find_one({"username": username}).get("personalInformation")
         update = createdUpdatedDictionary(updatedInfo,oldInformation)
-        self.users.find_one_and_update({"username":user},
+        self.users.find_one_and_update({"username":username},
             {"$set": {"personalInformation": update}},upsert=True)
 
 
@@ -64,21 +78,26 @@ class UsersDB(Singleton):
         matchList = []
         for match in matchCursor:
            matchList.append(match)
-        return match
+        return matchList
 
-    def authenticateUser(self,token= None):
+    def authenticateUser(self,username,token= None):
         print("LLegamos a auth" + token)
         if(token != None):
-            return self.users.find_one({"token":token})
+            return self.users.find_one({
+                "token":token,
+                "username":username
+                })
         return None
 
 usersDb = UsersDB()
 
 
 def createdUpdatedDictionary(newInformation, oldInormation):
-    update = []
-    for fields in oldInormation:
+    update = {}
+    print(oldInormation)
+    for fields in newInformation:
         update[fields]= newInformation.get(fields) or oldInormation.get(fields)
+    print(update)
     return update
 
 # def DbSearchForUsers(username):

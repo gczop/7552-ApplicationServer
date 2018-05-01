@@ -17,7 +17,7 @@ if MONGO_URL:
     db = conn[urlparse(MONGO_URL).path[1:]]
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
-    print("Conectamos local")
+    print("Conectamos local6")
     conn = pymongo.MongoClient('localhost', 27017)
     db = conn['StoriesAppServer']
 
@@ -53,20 +53,16 @@ class Singleton(object):
 class CommentsDb(Singleton):
     commentsList = commentsCollection
 
-    # def getUserLastNComments(username, number = 5):
-    #     fromNewToOld = -1
-    #     return self.commentsDb.find({"username":username},projection={'_id':False}).sort({"date":fromNewToOld}).limit(number)
+    def addComments(self, storyId):
+        self.commentsList.insert_one({"storyId": storyId, "content": []})
 
-    def addComments(storyId):
-        self.commentsDb.insert_one({"storyId": storyId, "content": []})
-
-    def addNewComment(storyID, username, comment):
+    def addNewComment(self, storyID, username, comment):
         storyComment = createComment(username, comment)
-        self.commentsDb.insert_one_and_update({"stroryId":storyID},{"$push": {"content": {storyComment}}})
+        self.commentsList.insert_one_and_update({"stroryId":storyID},{"$push": {"content": {storyComment}}})
         return "Okey"
 
-    def removeComment(storyID, commentID):
-        self.commentsDb.find_one_and_update({"_id" : storyId} , { "$pull" : { "_id" : commentID}})
+    def removeComment(self, storyId, commentID):
+        self.commentsList.find_one_and_update({"_id" : storyId} , { "$pull" : { "_id" : commentID}})
         return "Okey"
 
 

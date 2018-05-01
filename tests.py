@@ -1,55 +1,21 @@
+#Set Test_Env Var to true
 import os
+os.environ["TEST_ENV"] = "true"
 from app import application as app
 import unittest
-import tempfile
+from test import test_users , test_server , test_profile , test_friends , test_invitations , test_stories
 
-class AppServerTestCase(unittest.TestCase):
+loader = unittest.TestLoader()
+suite  = unittest.TestSuite()
 
-    def setUp(self):
-        self.db_fd, app.config['StoriesAppServer'] = tempfile.mkstemp()
+# add tests to the test suite
+suite.addTests(loader.loadTestsFromModule(test_server))
+suite.addTests(loader.loadTestsFromModule(test_users))
+suite.addTests(loader.loadTestsFromModule(test_profile))
+suite.addTests(loader.loadTestsFromModule(test_friends))
+suite.addTests(loader.loadTestsFromModule(test_invitations))
+suite.addTests(loader.loadTestsFromModule(test_stories))
 
-        # flaskr.app.testing = True
-        # self.app = flaskr.app.test_client()
-
-        # creates a test client
-        self.app = app.test_client()
-        # propagate the exceptions to the test client
-        self.app.testing = True
-
-
-
-    def test_home_status_code(self):
-        # sends HTTP GET request to the application
-        # on the specified path
-        result = self.app.get('/')
-
-        print (result.data)
-
-        # assert the status code of the response
-        self.assertEqual(result.status_code, 200)
-
-
-    # def test_signup_post(self):
-    #     # sends HTTP GET request to the application
-    #     # on the specified path
-    #     loginInfo = {
-    #         "user": "user",
-    #         "password": "password",
-    #         "fbToken": "fbToken"
-    #     };
-    #     result = self.app.post('/users/signup', loginInfo)
-    #
-    #     print (result)
-    #
-    #     # assert the status code of the response
-    #     self.assertEqual(result.status_code, 200)
-
-    def tearDown(self):
-
-        os.close(self.db_fd)
-
-        os.unlink(app.config['StoriesAppServer'])
-        return
-
-if __name__ == '__main__':
-    unittest.main()
+# initialize a runner, pass it your suite and run it
+runner = unittest.TextTestRunner(verbosity=3)
+result = runner.run(suite)

@@ -15,7 +15,7 @@ if MONGO_URL:
     db = conn[urlparse(MONGO_URL).path[1:]]
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
-    print("Conectamos local")
+    print("Conectamos local5")
     conn = pymongo.MongoClient('localhost', 27017)
     db = conn['StoriesAppServer']
 
@@ -54,14 +54,16 @@ class FriendsDb(Singleton):
     def addNewFriend(self,username,newFriend):
         try:
             userFriends = self.friendsList.find_one({"username":username})["friends"]
-            userFriends.append(newFriend)
+            if newFriend not in userFriends:
+                userFriends.append(newFriend)
             self.friendsList.find_one_and_update({"username":username},
                 {"$set": {"friends": userFriends}},upsert=True)
         except:
             self.friendsList.insert_one({"username":username, "friends":[newFriend]})
         try:
             userFriends = self.friendsList.find_one({"username":newFriend})["friends"]
-            userFriends.append(username)
+            if username not in userFriends:
+                userFriends.append(username)
             self.friendsList.find_one_and_update({"username":newFriend},
                 {"$set": {"friends": userFriends}},upsert=True)
         except:

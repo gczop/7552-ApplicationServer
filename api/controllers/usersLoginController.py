@@ -2,9 +2,14 @@
 import json
 from flask import request
 import os,sys,inspect
-from SharedServerRequests.userLogin import authenticateUserLogin
+
 from databases.users import usersDb
 from databases.loginedUsers import loginedUsers
+
+if 'TEST_ENV' in os.environ:
+	from mockups.requests.usersLogInMockUp import *
+else:
+	from SharedServerRequests.userLogin import authenticateUserLogin
 
 
 def validateUserLogin(request):
@@ -16,10 +21,10 @@ def validateUserLogin(request):
 		else:
 			response =  authenticateUserLogin(user,fbToken)
 		responseData = json.loads(response.text)
-		try:
-			responseData["code"]
-			return {"Error": "Login Incorrecto (Error code: 3)"}, 401
-		except:
+		if (response.status_code != 200):
+			print(responseData)
+			return {"Error": responseData['message'] + "(Error code: 3)"}, response.status_code
+		else:
 			usersDb.registerUserToken(user,responseData["token"])
 			loginedUsers.userLogin(user,responseData["token"])
 			return {"Message": "Bienvenido {}".format(user), "Token":responseData["token"]}	
@@ -27,6 +32,8 @@ def validateUserLogin(request):
 
 
 def getRequestData(request):
+	print("LOGIN")
+	print(request.data)
 	data = json.loads(request.data)
 	user = data.get("username")
 	password = data.get("password")

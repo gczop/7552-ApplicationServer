@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/gczop/7552-ApplicationServer.svg?branch=master)](https://travis-ci.org/gczop/7552-ApplicationServer)
+[![Coverage Status](https://coveralls.io/repos/github/gczop/7552-ApplicationServer/badge.svg?branch=master)](https://coveralls.io/github/gczop/7552-ApplicationServer?branch=master)
 +h7552 - Application server
 
 Para ejecutarlo correr el comando: "source env/bin/activate".
@@ -17,8 +18,10 @@ $ pipenv shell #Ahi se abre un shell que simula heroku
 
 ##Correr Base de Datos
 ~~~
+$ mongo
+    > use StoriesAppServer;
+    
 $ mongod
-    > use StoriesAppServer
 ~~~
 
 ##Correrlo heroku local
