@@ -85,7 +85,44 @@ class StoriesTestCase(unittest.TestCase):
         self.assertEqual(result.status_code,200)
         self.assertTrue(dataDict) # is not Empty
 
-    def test_4_delete_my_story(self):
+    def test_4_update_my_story(self):
+        # Asume user exists
+        loginInfo = {
+            "username": "user",
+            "password": "password"
+        };
+        info = {
+            "username": "user"
+        };
+        result_login = \
+            self.client.post('/api/users/login', data=json.dumps(loginInfo), content_type='application/json')
+
+        token = json.loads(result_login.data)["Token"]
+
+        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii")}
+
+        result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
+        dataDict = json.loads(result.data)
+        id = dataDict["_id"]
+        # print ("\n\nHistoria ID: ",id)
+        updatedInfo = {
+            "username": "user",
+            "id": id,
+            "description": "Nueva descripcion"
+        }
+
+        result_update = self.client.put('/api/stories', headers=headers, data=json.dumps(updatedInfo), content_type='application/json')
+
+        self.assertEqual(result_update.status_code,200)
+
+        result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
+        dataDict = json.loads(result.data)
+        print (dataDict)
+        description = dataDict["storyDetail"]["description"]
+        self.assertEqual(result.status_code,200)
+        self.assertEqual(description,"Nueva descripcion")
+
+    def test_5_delete_my_story(self):
         # Asume user exists
         loginInfo = {
             "username": "user",

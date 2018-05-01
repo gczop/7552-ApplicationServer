@@ -37,6 +37,7 @@ storiesCollection = db.Stories
     "storyInfo" : 
         {   "description" : 
             "state" : Public | Private
+            "url" : 
         }
     "reactions" :
         { "reacter" : "reaction" => "me gusta | no me gusta | me divierte | me aburre", ...}
@@ -83,14 +84,24 @@ class StoriesDb(Singleton):
         self.storiesList.insert_one({"_id":id , "username":username,"storyDetail":storyDict, "createdAt":str(datetime.datetime.now()), "updatedAt":str(datetime.datetime.now()),"reactions": {}})
         return id
 
-    def updateStory(self, username, updateInfo):
-        storyDict = createStoryDocument(updateInfo)
-        oldStoryInfo = self.storiesList.find_one({"_id":updateInfo["storyId"]})
+    def updateStory(self, username, id, updateInfo):
+        oldStoryInfo = self.storiesList.find_one({"_id":id})
         if(oldStoryInfo == None):
             raise Exception("Story inexistente")
-        updatedInfo = createdUpdatedDictionary(storyDict,oldStoryInfo)
-        self.users.find_one_and_update({"_id":updateInfo["storyId"]},
-            {"$set": {"storyDetail": updatedInfo, "updatedAt": str(datetime.datetime.now())}},upsert=True)
+        storyDict = updateInfo;
+        print("STORY VIEJA\n",oldStoryInfo)
+
+        if(storyDict["state"] == None):
+            storyDict["state"] = oldStoryInfo["storyDetail"]["state"]
+        if(storyDict["description"] == None):
+            storyDict["description"] = oldStoryInfo["storyDetail"]["description"]
+        if(storyDict["url"] == None):
+            storyDict["url"] = oldStoryInfo["storyDetail"]["url"]
+
+        print("STORY NUEVA\n",storyDict)
+
+        self.storiesList.find_one_and_update({"_id":id},
+            {"$set": {"storyDetail": storyDict, "updatedAt": str(datetime.datetime.now())}},upsert=True)
 
     def deleteStory(self, id):
         self.storiesList.delete_one({"_id": id})
@@ -106,12 +117,13 @@ def createStoryDocument(storyInfo):
     document = {}
     document["description"] = storyInfo["description"]
     document["state"]= storyInfo["state"]
+    document["url"]= storyInfo["url"]
     return document
 
 def createdUpdatedDictionary(newInformation, oldInormation):
-    update = []
+    update = {}
     for fields in oldInormation:
-        update[fields]= newInformation.get(fields) or oldInormation.get(fields)
+        update[fields] = newInformation.get(fields) or oldInormation.get(fields)
     return update
 
 def createReaction(username, reaction):

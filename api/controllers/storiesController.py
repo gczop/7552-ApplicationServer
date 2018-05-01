@@ -23,13 +23,14 @@ def addNewStory(request):
 	return id
 
 def updateStory(request):
-	username = getUserName(request)
-	storyInfo = getRequestData(request)
-	if(username == None):
-		return {"Error": "Falta de informacion en header username no especificado (Error code: 23)"}, 400
-	if(storyInfo["url"] !=None or storyInfo["owner"] != None or storyInfo["storyId"] != None):
-		return {"Error": "No se puede modificar informacion vital del archivo mutlimedia (Error code: 25)"}, 401
-	return storiesDb.updateStory(username,storyInfo)
+    username = getUserName(request)
+    id = getID(request)
+    storyInfo = getRequestData(request)
+    if(id == None):
+        return {"Error": "Falta de informacion en header username no especificado (Error code: 23)"}, 400
+    if(storyInfo["url"] !=None):
+        return {"Error": "No se puede modificar informacion vital del archivo mutlimedia (Error code: 25)"}, 401
+    return storiesDb.updateStory(username, id,storyInfo)
 
 def removeStory(request):
 	# username = getUserName(request)
