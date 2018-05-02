@@ -23,5 +23,5 @@ EXPOSE 5000
 
 #Launch
 #sudo docker run appserver /bin/bash -c "pip install -r requirements.txt;gunicorn wsgi" -p 8000:5000
-CMD ["/bin/bash", "-c", "pip install -r requirements.txt;gunicorn wsgi"]
-#CMD ["/bin/bash", "-c", "pip install -r requirements.txt;python app.py"]
+#CMD ["/bin/bash", "-c", "pip install -r requirements.txt;gunicorn wsgi"]
+CMD ["/bin/bash", "-c", "pip install -r requirements.txt;python app.py"]
