@@ -8,9 +8,9 @@ from api.controllers.invitationsController import getUserInvitations, addFriendI
 
 auth = HTTPBasicAuth()
 
-@auth.get_password
-def get_token(username):
-    return loginedUsers.checkUserLogin(username)
+@auth.verify_password
+def get_token(username,password):
+    return loginedUsers.checkUserLogin(username,password)
 
 
 
