@@ -12,7 +12,7 @@ auth = HTTPBasicAuth()
 def get_token(username,password):
     a = loginedUsers.checkUserLogin(username,password)
     print(a, username, password)
-    return a
+    return true
 
 
 class FriendsRouter(Resource):
