@@ -38,6 +38,7 @@ def removeFriend(request):
         return {"Error": "Esta persona no esta en tu lista de amigos (Error code: 25)"}, 401
 
 def getRequestData(request):
+    print(request,'AAAAAA')
     data = json.loads(request.data)
     user = data.get("username")
     return user
