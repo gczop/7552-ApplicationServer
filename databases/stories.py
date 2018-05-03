@@ -4,6 +4,8 @@ import pymongo
 import datetime
 from pymongo import MongoClient
 
+from databases.friends import friendsDb
+
 import pymongo
 
 MONGO_URL = os.environ.get('MONGODB_URI')
@@ -35,6 +37,7 @@ storiesCollection = db.Stories
     "storyInfo" : 
         {   "description" : 
             "state" : Public | Private
+            "url" : 
         }
     "reactions" :
         { "reacter" : "reaction" => "me gusta | no me gusta | me divierte | me aburre", ...}
@@ -67,31 +70,46 @@ class Singleton(object):
 class StoriesDb(Singleton):
     storiesList = storiesCollection
 
-    def getUserLastNStories(username, number = 5):
+    def getUserLastNStories(self, username, number = 5):
         fromNewToOld = -1
-        return self.storiesDb.find({"username":username},projection={'_id':False}).sort({"date":fromNewToOld}).limit(number)
+        friends = friendsDb.getUserFriends(username);
+        friends.append(username);
+        # print (friends,"\n\n")
+        # print (list(self.storiesList.find()),"\n\n")
+        return list(self.storiesList.find({ "username": {"$in" : friends }}).sort("createdAt",fromNewToOld).limit(number))
 
-    def addNewStory(username, storyInfo):
+    def addNewStory(self, username, storyInfo):
         storyDict = createStoryDocument(storyInfo)
-        self.storiesDb.insert_one({"username":username,"storyDetail":storyDict, "createdAt":str(datetime.datetime.now()), "updatedAt":str(datetime.datetime.now()),"reactions": {}})
-        return "Okey"
+        id = str(uuid.uuid4())
+        self.storiesList.insert_one({"_id":id , "username":username,"storyDetail":storyDict, "createdAt":str(datetime.datetime.now()), "updatedAt":str(datetime.datetime.now()),"reactions": {}})
+        return id
 
-    def updateStory(username, updateInfo):
-        storyDict = createStoryDocument(updateInfo)
-        oldStoryInfo = self.storiesDb.find_one({"_id":updateInfo["storyId"]})
+    def updateStory(self, username, id, updateInfo):
+        oldStoryInfo = self.storiesList.find_one({"_id":id})
         if(oldStoryInfo == None):
             raise Exception("Story inexistente")
-        updatedInfo = createdUpdatedDictionary(storyDict,oldStoryInfo)
-        self.users.find_one_and_update({"_id":updateInfo["storyId"]},
-            {"$set": {"storyDetail": updatedInfo, "updatedAt": str(datetime.datetime.now())}},upsert=True)
+        storyDict = updateInfo;
+        print("STORY VIEJA\n",oldStoryInfo)
 
-    def deleteStory(username, storyId):
-        self.storiesDb.delete_one({"_id",storyId})
+        if(storyDict["state"] == None):
+            storyDict["state"] = oldStoryInfo["storyDetail"]["state"]
+        if(storyDict["description"] == None):
+            storyDict["description"] = oldStoryInfo["storyDetail"]["description"]
+        if(storyDict["url"] == None):
+            storyDict["url"] = oldStoryInfo["storyDetail"]["url"]
+
+        print("STORY NUEVA\n",storyDict)
+
+        self.storiesList.find_one_and_update({"_id":id},
+            {"$set": {"storyDetail": storyDict, "updatedAt": str(datetime.datetime.now())}},upsert=True)
+
+    def deleteStory(self, id):
+        self.storiesList.delete_one({"_id": id})
         return "Okey"
 
-    def addStoryReaction(storyId, username ,reaction):
+    def addStoryReaction(self, storyId, username ,reaction):
         reactionData = { "reacter": username , "reaction": reaction }
-        self.storiesDb.find_one_and_update({"username": username} ,{"$push": {"reactions" : reactionData }} , projection={'_id':False} ,upsert=True)
+        self.storiesList.find_one_and_update({"username": username} ,{"$push": {"reactions" : reactionData }} , projection={'_id':False} ,upsert=True)
         return "Okey"
 
 
@@ -99,12 +117,13 @@ def createStoryDocument(storyInfo):
     document = {}
     document["description"] = storyInfo["description"]
     document["state"]= storyInfo["state"]
+    document["url"]= storyInfo["url"]
     return document
 
 def createdUpdatedDictionary(newInformation, oldInormation):
-    update = []
+    update = {}
     for fields in oldInormation:
-        update[fields]= newInformation.get(fields) or oldInormation.get(fields)
+        update[fields] = newInformation.get(fields) or oldInormation.get(fields)
     return update
 
 def createReaction(username, reaction):

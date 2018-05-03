@@ -37,10 +37,11 @@ class InvitationsDb(Singleton):
 
     def addFriendInvitation(self,username,friend):
         try:
-            userInvitations = self.invitationsList.find_one({"username":friend})["invitations"]
-            userInvitations.append(username)
+            invitations = self.invitationsList.find_one({"username":friend})["invitations"]
+            invitations.append(username)
+            print("\n\nuserINVITATIONS",invitations);
             self.invitationsList.find_one_and_update({"username":friend},
-                {"$set": {"friends": userInvitations}},upsert=True)
+                                                     {"$set": {"friends": invitations}},upsert=True)
             return "Okey"
         except:
             self.invitationsList.insert_one({"username":friend, "invitations":[username]})
@@ -48,9 +49,10 @@ class InvitationsDb(Singleton):
 
     def acceptFriendInvitation(self,username,friend):
         userInvitations = self.invitationsList.find_one({"username":username})["invitations"]
-        userInvitations.remove(friend)
+        # NO SE PORQUE SE BORRA EN OTRO LADO
+        # userInvitations.remove(friend)
         self.invitationsList.find_one_and_update({"username":username},
-            {"$set": {"invitations": userInvitations}},upsert=True)
+                                                 {"$set": {"invitations": userInvitations}},upsert=True)
         return "Okey"
 
 invitationsDb = InvitationsDb()
