@@ -30,7 +30,10 @@ class FriendsTestCase(unittest.TestCase):
 
         token = json.loads(result_login.data)["Token"]
 
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(signupInfo["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = { 
+            'Authorization': 'Basic %s' % b64encode(bytes(signupInfo["username"] + ':' + token, "utf-8")).decode("ascii"),
+            'username': 'userFriends'
+        }
 
         result = self.client.get('/api/friends', headers=headers ,data=json.dumps(loginInfo), content_type='application/json')
 
@@ -53,7 +56,11 @@ class FriendsTestCase(unittest.TestCase):
 
         token = json.loads(result_login.data)["Token"]
 
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = { 
+            'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token, "utf-8")).decode("ascii"),
+            'username': 'userFriends',
+            "friend": "user"
+        }
 
         result = self.client.post('/api/friends', headers=headers ,data=json.dumps(info), content_type='application/json')
 
@@ -71,7 +78,10 @@ class FriendsTestCase(unittest.TestCase):
 
         token = json.loads(result_login.data)["Token"]
 
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = { 
+            'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token, "utf-8")).decode("ascii"),
+            'username': 'userFriends'
+        }
 
         result = self.client.get('/api/friends', headers=headers ,data=json.dumps(info), content_type='application/json')
 
@@ -91,7 +101,8 @@ class FriendsTestCase(unittest.TestCase):
 
         friendToDelete = {
             "username": "userFriends",
-            "friend": "user"}
+            "friend": "user"
+        }
 
         result_login = \
             self.client.post('/api/users/login', data=json.dumps(info), content_type='application/json')
@@ -99,7 +110,11 @@ class FriendsTestCase(unittest.TestCase):
 
         token = json.loads(result_login.data)["Token"]
 
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = { 
+            'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token, "utf-8")).decode("ascii"),
+            'username': 'userFriends',
+            "friend": "user"
+        }
 
         result = self.client.get('/api/friends', headers=headers ,data=json.dumps(info), content_type='application/json')
 
@@ -131,7 +146,11 @@ class FriendsTestCase(unittest.TestCase):
 
         token = json.loads(result_login.data)["Token"]
 
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = { 
+            'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token, "utf-8")).decode("ascii"),
+            'username': 'userFriends',
+            "friend": "user"
+        }
 
         self.client.post('/api/friends', headers=headers ,data=json.dumps(info), content_type='application/json')
 

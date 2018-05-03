@@ -1,11 +1,12 @@
 import json
 from flask import request
 from SharedServerRequests.userLogin import *
+from api.utils import *
 from databases.comments import commentsDb
 from databases.loginedUsers import loginedUsers
 
 def getStoryComments(request):
-	storyId = request.headers.get("story-id")
+	storyId = getRequestHeader(request,"story-id")
 	if (storyId == None):
 		return {"Error": "Falta de informacion en header. Story id no especificado (Error code: 32)"}, 400
 	return commentsDb.getStoryComments(storyId)	

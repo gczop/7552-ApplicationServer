@@ -1,19 +1,21 @@
 import json
 from flask import request
+from api.utils import *
 from SharedServerRequests.userLogin import *
 from databases.stories import storiesDb
 from databases.loginedUsers import loginedUsers
 
 def getStoryReactions(request):
-	storyID = request.headers.get("story-id")
+	storyID = getRequestHeader(request,"story-id") 
 	if (storyID == None):
 		return {"Error": "Falta de informacion en header. Story id no especificado (Error code: 26)"}, 400
 	return storiesDb.getStoryReactions(storyID)
 
 def addNewReaction(request):
-	storyID = request.headers.get("story-id")
-	username = request.headers.get("username")
-	reaction = request.headers.get("reaction")
+	storyID = getRequestHeader(request,"story-id")
+	username = getRequestHeader(request,"username")
+	#TODO corregir esto plox
+	reaction = getRequestHeader(request,"reaction")
 	if (storyID == None):
 		return {"Error": "Falta de informacion en header. Story id no especificado (Error code: 27)"}, 400
 	if (username == None):
@@ -24,8 +26,8 @@ def addNewReaction(request):
 		
 
 def removeReaction(request):
-	storyID = request.headers.get("story-id")
-	username = request.headers.get("username")
+	storyID = getRequestHeader(request,"story-id")
+	username = getRequestHeader(request,"username")
 	if (storyID == None):
 		return {"Error": "Falta de informacion en header. Story id no especificado (Error code: 30)"}, 400
 	if (username == None):

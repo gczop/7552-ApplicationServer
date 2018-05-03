@@ -1,6 +1,7 @@
 import json
 from flask import request
 from SharedServerRequests.userLogin import *
+from api.utils import *
 from databases.stories import storiesDb
 from databases.comments import commentsDb
 from databases.loginedUsers import loginedUsers
@@ -8,13 +9,13 @@ from databases.loginedUsers import loginedUsers
 numberOfStoriesToSee = 3
 
 def getHomepageFeed(request):
-	username = getUserName(request)
+	username = getRequestHeader(request,"username")
 	if(username == None):
 		return {"Error": "Falta de informacion en header username no especificado (Error code: 21)"}, 400
 	return storiesDb.getUserLastNStories(username,numberOfStoriesToSee)
 
 def addNewStory(request):
-	username = getUserName(request)
+	username = getRequestHeader(request,"username")
 	storyInfo = getRequestData(request)
 	if(username == None):
 		return {"Error": "Falta de informacion en header username no especificado (Error code: 22)"}, 400
@@ -23,7 +24,7 @@ def addNewStory(request):
 	return id
 
 def updateStory(request):
-    username = getUserName(request)
+    username = getRequestHeader(request,"username")
     id = getID(request)
     storyInfo = getRequestData(request)
     if(id == None):
@@ -34,7 +35,7 @@ def updateStory(request):
 
 def removeStory(request):
 	# username = getUserName(request)
-	id = getID(request)
+	id = getRequestHeader(request,"id")
 	if(id == None):
 		return {"Error": "Falta de informacion en header username no especificado (Error code: 24)"}, 400
 	return storiesDb.deleteStory(id)
