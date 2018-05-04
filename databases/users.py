@@ -58,7 +58,7 @@ class UsersDB(Singleton):
         self.users.insert_one({"username":username,"token":token,"personalInformation": personalInfo or {}})
 
     def getUserProfile(self, username):
-        print(self.users.find_one({"username": username}).get("personalInformation"))
+        print(self.users.find_one({"username": username}))
         # print('\n\n\n')
         # print(self.users.find_one({"username": username})["personalInformation"])
         return self.users.find_one({"username": username})["personalInformation"]
