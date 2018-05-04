@@ -10,6 +10,7 @@ auth = HTTPBasicAuth()
 
 @auth.verify_password
 def get_token(username,password):
+	print(loginedUsers.checkUserLogin(username,password),'BBBBBBB')
     return loginedUsers.checkUserLogin(username,password)
 
 
