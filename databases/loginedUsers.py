@@ -28,7 +28,9 @@ class UsersTokens(Singleton):
         print("Checking user LOGIN", user)
         print (self.users)
         if user in self.users:
+            print("Se checkea")
             return password == self.users.get(user)[0]
+        print("Fallo")
         return False
 
 
