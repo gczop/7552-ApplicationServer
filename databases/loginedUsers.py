@@ -1,13 +1,6 @@
 import datetime
 from databases.users import usersDb
 
-class Singleton(object):
-    _instance = None
-    def __new__(class_, *args, **kwargs):
-        if not isinstance(class_._instance, class_):
-            class_._instance = object.__new__(class_, *args, **kwargs)
-        return class_._instance
-
 def setLoginedUsers():
     allUsers = usersDb.getAllUsers()
     dictionary = {} 
@@ -16,9 +9,19 @@ def setLoginedUsers():
             dictionary[users["username"]]=users.get("token")
     print(dictionary)
     return dictionary
+    
+class Singleton(object):
+    _instance = None
+    users = setLoginedUsers()
+    def __new__(class_, *args, **kwargs):
+        if not isinstance(class_._instance, class_):
+            class_._instance = object.__new__(class_, *args, **kwargs)
+        return class_._instance
+
+
 
 class UsersTokens(Singleton):
-    users = setLoginedUsers()
+    
 
     def userLogin(self,user,token):
         print(self.users)
