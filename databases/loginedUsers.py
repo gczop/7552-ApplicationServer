@@ -13,7 +13,7 @@ def setLoginedUsers():
     dictionary = {} 
     for users in allUsers:
         if(users.get("token") != None):
-            dictionary[users["username"]]=[users.get("token")]
+            dictionary[users["username"]]=users.get("token")
     print(dictionary)
     return dictionary
 
