@@ -3,12 +3,12 @@ from databases.users import usersDb
 
 def setLoginedUsers():
     allUsers = usersDb.getAllUsers()
-    dictionary = {} 
+    usersList = [] 
     for users in allUsers:
         if(users.get("token") != None):
             print('Changing Token now HHHHHHH', users.get('token'))
-            dictionary[users["username"]]=[users.get("token")]
-    print(dictionary)
+            usersList.append(users['username'],users.get('token'))
+    print(usersList)
     return dictionary
 
 class Singleton(object):
@@ -26,20 +26,21 @@ class UsersTokens(Singleton):
 
     def userLogin(self,user,token):
         print('Changin tokenJJJJJJ',token ,user)
-        if user in self.users:
-            self.users[user].pop()
-            self.users[user].append(token)
-            return
-        self.users[user]=[token]
+        for connectedUser in self.users:
+            if connectedUser[0]==user:
+                self.users.remove(connectedUser)
+                self.users.append((user,token))
+                return
+        self.users.append((user,token))
+        return
 
 
     def checkUserLogin(self,user,password):
         print("Checking user LOGIN", user, password)
         print (self.users)
-        if user in self.users:
-            print("Se checkea")
-            print (self.users.get(user))
-            return password == self.users.get(user)[0]
+        for connectedUser in self.users:
+            if connectedUser[0]==user:
+                return connectedUser[1] == password
         print("Fallo")
         return False
 
