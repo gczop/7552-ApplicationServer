@@ -26,6 +26,7 @@ class Singleton(type):
 class UsersTokens(metaclass=Singleton):
     time = 0
     def userLogin(self,user,token):
+        global users
         print('Changin tokenJJJJJJ',token ,user, threading.get_ident(), self.time)
         self.time = self.time + 1
         for connectedUser in users:
