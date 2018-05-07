@@ -1,5 +1,6 @@
 import datetime
 from databases.users import usersDb
+import threading
 
 def setLoginedUsers():
     allUsers = usersDb.getAllUsers()
@@ -25,7 +26,7 @@ class UsersTokens(Singleton):
     
 
     def userLogin(self,user,token):
-        print('Changin tokenJJJJJJ',token ,user)
+        print('Changin tokenJJJJJJ',token ,user, threading.get_ident())
         for connectedUser in self.users:
             if connectedUser[0]==user:
                 self.users.remove(connectedUser)
