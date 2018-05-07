@@ -22,14 +22,14 @@ class UsersTokens(Singleton):
 
     def userLogin(self,user,token):
         print(self.users)
-        self.users[user]=[token]
+        self.users[user]=token
 
     def checkUserLogin(self,user,password):
         print("Checking user LOGIN", user)
         print (self.users)
         if user in self.users:
             print("Se checkea")
-            return password == self.users.get(user)[0]
+            return password == self.users.get(user)
         print("Fallo")
         return False
 
