@@ -38,7 +38,7 @@ class UsersTokens(Singleton):
 
     def checkUserLogin(self,user,password):
         print("Checking user LOGIN", user, password)
-        print (self.users, , threading.get_ident())
+        print (self.users,threading.get_ident())
         for connectedUser in self.users:
             if connectedUser[0]==user:
                 return connectedUser[1] == password
