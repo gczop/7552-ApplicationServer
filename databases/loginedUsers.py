@@ -38,7 +38,7 @@ class UsersTokens(Singleton):
         print (self.users)
         if user in self.users:
             print("Se checkea")
-            print self.users.get(user)
+            print (self.users.get(user))
             return password == self.users.get(user)[0]
         print("Fallo")
         return False
