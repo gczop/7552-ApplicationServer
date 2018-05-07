@@ -7,7 +7,7 @@ def setLoginedUsers():
     for users in allUsers:
         if(users.get("token") != None):
             print('Changing Token now HHHHHHH', users.get('token'))
-            usersList.append(users['username'],users.get('token'))
+            usersList.append((users['username'],users.get('token')))
     print(usersList)
     return dictionary
 
