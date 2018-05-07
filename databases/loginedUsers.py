@@ -9,7 +9,7 @@ def setLoginedUsers():
             print('Changing Token now HHHHHHH', users.get('token'))
             usersList.append((users['username'],users.get('token')))
     print(usersList)
-    return dictionary
+    return usersList
 
 class Singleton(object):
     _instance = None
