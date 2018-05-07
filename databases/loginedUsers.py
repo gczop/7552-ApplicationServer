@@ -2,6 +2,7 @@ import datetime
 from databases.users import usersDb
 import threading
 
+
 def setLoginedUsers():
     allUsers = usersDb.getAllUsers()
     usersList = [] 
@@ -12,6 +13,7 @@ def setLoginedUsers():
     print(usersList)
     return usersList
 
+users = setLoginedUsers()
 
 class Singleton(type):
     _instances = {}
@@ -23,26 +25,25 @@ class Singleton(type):
 
 class UsersTokens(metaclass=Singleton):
     time = 0
-    users = setLoginedUsers()
     def userLogin(self,user,token):
         print('Changin tokenJJJJJJ',token ,user, threading.get_ident(), self.time)
         self.time = self.time + 1
-        for connectedUser in self.users:
+        for connectedUser in users:
             if connectedUser[0]==user:
-                self.users.remove(connectedUser)
-                tempList = self.users
-                del self.users
-                self.users = tempList
-                self.users.append((user,token))
+                users.remove(connectedUser)
+                tempList = users
+                del users
+                users = tempList
+                users.append((user,token))
                 return
-        self.users.append((user,token))
+        users.append((user,token))
         return
 
 
     def checkUserLogin(self,user,password):
         print("Checking user LOGIN", user, password, self.time)
-        print (self.users,threading.get_ident(),self)
-        for connectedUser in self.users:
+        print (users,threading.get_ident(),self)
+        for connectedUser in users:
             if connectedUser[0]==user:
                 return connectedUser[1] == password
         print("Fallo")
