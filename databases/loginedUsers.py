@@ -15,8 +15,6 @@ def setLoginedUsers():
 
 class Singleton(type):
     _instances = {}
-    time = 0
-    users = setLoginedUsers()
     def __call__(cls, *args, **kwargs):
         if cls not in cls._instances:
             cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
@@ -24,7 +22,8 @@ class Singleton(type):
 
 
 class UsersTokens(metaclass=Singleton):
-
+    time = 0
+    users = setLoginedUsers()
     def userLogin(self,user,token):
         print('Changin tokenJJJJJJ',token ,user, threading.get_ident(), self.time)
         self.time = self.time + 1
