@@ -12,18 +12,18 @@ def setLoginedUsers():
     print(usersList)
     return usersList
 
-class Singleton(object):
-    _instance = None
+
+class Singleton(type):
+    _instances = {}
     time = 0
     users = setLoginedUsers()
-    def __new__(class_, *args, **kwargs):
-        if not isinstance(class_._instance, class_):
-            class_._instance = object.__new__(class_, *args, **kwargs)
-        return class_._instance
+    def __call__(cls, *args, **kwargs):
+        if cls not in cls._instances:
+            cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
+        return cls._instances[cls]
 
 
-
-class UsersTokens(Singleton):
+class UsersTokens(metaclass=Singleton):
 
     def userLogin(self,user,token):
         print('Changin tokenJJJJJJ',token ,user, threading.get_ident(), self.time)
