@@ -7,7 +7,7 @@ def setLoginedUsers():
     for users in allUsers:
         if(users.get("token") != None):
             print('Changing Token now HHHHHHH', users.get('token'))
-            dictionary[users["username"]]=users.get("token")
+            dictionary[users["username"]]=[users.get("token")]
     print(dictionary)
     return dictionary
 
@@ -25,15 +25,21 @@ class UsersTokens(Singleton):
     
 
     def userLogin(self,user,token):
-        print('Changin tokenJJJJJJ',self,user)
-        self.users[user]=token
+        print('Changin tokenJJJJJJ',token ,user)
+        if user in self.users:
+            self.users[user].pop()
+            self.users[user].append(token)
+            return
+        self.users[user]=[token]
+
 
     def checkUserLogin(self,user,password):
-        print("Checking user LOGIN", user)
+        print("Checking user LOGIN", user, password)
         print (self.users)
         if user in self.users:
             print("Se checkea")
-            return password == self.users.get(user)
+            print self.users.get(user)
+            return password == self.users.get(user)[0]
         print("Fallo")
         return False
 
