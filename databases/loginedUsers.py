@@ -50,5 +50,13 @@ class UsersTokens(metaclass=Singleton):
         print("Fallo")
         return False
 
+def checkUserLogin(user,password):
+    print("Checking user LOGIN", user, password)
+    print (users,threading.get_ident())
+    for connectedUser in users:
+        if connectedUser[0]==user:
+            return connectedUser[1] == password
+    print("Fallo")
+    return False
 
 loginedUsers = UsersTokens()
