@@ -30,6 +30,9 @@ class UsersTokens(metaclass=Singleton):
         for connectedUser in self.users:
             if connectedUser[0]==user:
                 self.users.remove(connectedUser)
+                tempList = self.users
+                del self.users
+                self.users = tempList
                 self.users.append((user,token))
                 return
         self.users.append((user,token))
