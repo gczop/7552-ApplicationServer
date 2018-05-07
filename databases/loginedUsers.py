@@ -14,6 +14,7 @@ def setLoginedUsers():
 
 class Singleton(object):
     _instance = None
+    time = 0
     users = setLoginedUsers()
     def __new__(class_, *args, **kwargs):
         if not isinstance(class_._instance, class_):
@@ -23,10 +24,10 @@ class Singleton(object):
 
 
 class UsersTokens(Singleton):
-    
 
     def userLogin(self,user,token):
-        print('Changin tokenJJJJJJ',token ,user, threading.get_ident())
+        print('Changin tokenJJJJJJ',token ,user, threading.get_ident(), self.time)
+        self.time = self.time + 1
         for connectedUser in self.users:
             if connectedUser[0]==user:
                 self.users.remove(connectedUser)
@@ -37,7 +38,7 @@ class UsersTokens(Singleton):
 
 
     def checkUserLogin(self,user,password):
-        print("Checking user LOGIN", user, password)
+        print("Checking user LOGIN", user, password, self.time)
         print (self.users,threading.get_ident(),self)
         for connectedUser in self.users:
             if connectedUser[0]==user:
