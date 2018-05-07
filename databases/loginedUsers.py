@@ -6,10 +6,11 @@ def setLoginedUsers():
     dictionary = {} 
     for users in allUsers:
         if(users.get("token") != None):
+            print('Changing Token now HHHHHHH', users.get('token'))
             dictionary[users["username"]]=users.get("token")
     print(dictionary)
     return dictionary
-    
+
 class Singleton(object):
     _instance = None
     users = setLoginedUsers()
@@ -24,7 +25,7 @@ class UsersTokens(Singleton):
     
 
     def userLogin(self,user,token):
-        print(self.users)
+        print('Changin tokenJJJJJJ',self,user)
         self.users[user]=token
 
     def checkUserLogin(self,user,password):
