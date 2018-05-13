@@ -12,7 +12,7 @@ def getHomepageFeed(request):
 	username = getRequestHeader(request,"username")
 	if(username == None):
 		return {"Error": "Falta de informacion en header username no especificado (Error code: 21)"}, 400
-	return storiesDb.getUserLastNStories(username,numberOfStoriesToSee)
+	return { "feedStories" : storiesDb.getUserLastNStories(username,numberOfStoriesToSee)}, 200
 
 def addNewStory(request):
 	username = getRequestHeader(request,"username")
