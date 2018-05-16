@@ -21,7 +21,7 @@ def addNewStory(request):
 		return {"Error": "Falta de informacion en header username no especificado (Error code: 22)"}, 400
 	id = storiesDb.addNewStory(username,storyInfo)
 	commentsDb.addComments(id)
-	return id
+	return { 'storyId' : id}, 200
 
 def updateStory(request):
     username = getRequestHeader(request,"username")
@@ -31,14 +31,16 @@ def updateStory(request):
         return {"Error": "Falta de informacion en header username no especificado (Error code: 23)"}, 400
     if(storyInfo["url"] !=None):
         return {"Error": "No se puede modificar informacion vital del archivo mutlimedia (Error code: 25)"}, 401
-    return storiesDb.updateStory(username, id,storyInfo)
+    storiesDb.updateStory(username, id,storyInfo)
+    return { 'storyId' : id }, 200
 
 def removeStory(request):
 	# username = getUserName(request)
 	id = getRequestHeader(request,"id")
 	if(id == None):
 		return {"Error": "Falta de informacion en header username no especificado (Error code: 24)"}, 400
-	return storiesDb.deleteStory(id)
+	return { 'state': storiesDb.deleteStory(id)},200
+
 
 def getUserName(request):
     data = json.loads(request.data)
@@ -52,6 +54,7 @@ def getRequestData(request):
 	storyInfo = {}
 	data = json.loads(request.data)
 	storyInfo["url"] = data.get("url")
+	storyInfo["title"] = data.get("title")
 	storyInfo["state"] = data.get("state")
 	storyInfo["description"] = data.get("description")
 	return storyInfo

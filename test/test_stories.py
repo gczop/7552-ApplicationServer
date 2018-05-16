@@ -92,7 +92,7 @@ class StoriesTestCase(unittest.TestCase):
         dataDict = json.loads(result.data)
         print ("Historias:\n",dataDict)
         self.assertEqual(result.status_code,200)
-        self.assertTrue(dataDict[0]) # is not Empty
+        self.assertTrue(dataDict['feedStories'][0]) # is not Empty
 
     def test_4_update_my_story(self):
         # Asume user exists
@@ -115,7 +115,7 @@ class StoriesTestCase(unittest.TestCase):
 
         result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
         dataDict = json.loads(result.data)
-        id = dataDict[0]["_id"]
+        id = dataDict['feedStories'][0]["_id"]
         # print ("\n\nHistoria ID: ",id)
         updatedInfo = {
             "username": "user",
@@ -130,7 +130,7 @@ class StoriesTestCase(unittest.TestCase):
         result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
         dataDict = json.loads(result.data)
         print (dataDict)
-        description = dataDict[0]["storyDetail"]["description"]
+        description = dataDict['feedStories'][0]["storyDetail"]["description"]
         self.assertEqual(result.status_code,200)
         self.assertEqual(description,"Nueva descripcion")
 
@@ -211,7 +211,7 @@ class StoriesTestCase(unittest.TestCase):
         result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
 
         dataDict = json.loads(result.data)
-        id = dataDict[1]["_id"]
+        id = dataDict['feedStories'][1]["_id"]
         print ("\n\nHistoria ID: ",id)
         self.assertEqual(result.status_code,200)
         self.assertTrue(dataDict) # is not Empty
@@ -246,7 +246,7 @@ class StoriesTestCase(unittest.TestCase):
         result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
 
         dataDict = json.loads(result.data)
-        id = dataDict[0]["_id"]
+        id = dataDict['feedStories'][0]["_id"]
         print ("\n\nHistoria ID: ",id)
         self.assertEqual(result.status_code,200)
         self.assertTrue(dataDict) # is not Empty

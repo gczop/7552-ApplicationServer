@@ -88,20 +88,12 @@ class StoriesDb(Singleton):
         oldStoryInfo = self.storiesList.find_one({"_id":id})
         if(oldStoryInfo == None):
             raise Exception("Story inexistente")
-        storyDict = updateInfo;
-        print("STORY VIEJA\n",oldStoryInfo)
-
-        if(storyDict["state"] == None):
-            storyDict["state"] = oldStoryInfo["storyDetail"]["state"]
-        if(storyDict["description"] == None):
-            storyDict["description"] = oldStoryInfo["storyDetail"]["description"]
-        if(storyDict["url"] == None):
-            storyDict["url"] = oldStoryInfo["storyDetail"]["url"]
-
-        print("STORY NUEVA\n",storyDict)
+        storyDict = updateInfo
+        
+        newData = createdUpdatedDictionary(storyDict,oldStoryInfo['storyDetail'])
 
         self.storiesList.find_one_and_update({"_id":id},
-            {"$set": {"storyDetail": storyDict, "updatedAt": str(datetime.datetime.now())}},upsert=True)
+            {"$set": {"storyDetail": newData, "updatedAt": str(datetime.datetime.now())}},upsert=True)
 
     def deleteStory(self, id):
         self.storiesList.delete_one({"_id": id})
