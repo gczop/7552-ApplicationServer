@@ -89,7 +89,7 @@ class StoriesDb(Singleton):
         if(oldStoryInfo == None):
             raise Exception("Story inexistente")
         storyDict = updateInfo
-        
+
         newData = createdUpdatedDictionary(storyDict,oldStoryInfo['storyDetail'])
 
         self.storiesList.find_one_and_update({"_id":id},
@@ -108,6 +108,7 @@ class StoriesDb(Singleton):
 def createStoryDocument(storyInfo):
     document = {}
     document["description"] = storyInfo["description"]
+    document["title"] = storyInfo["title"]
     document["state"]= storyInfo["state"]
     document["url"]= storyInfo["url"]
     return document
