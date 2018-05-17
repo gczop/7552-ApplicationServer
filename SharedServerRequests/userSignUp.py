@@ -14,7 +14,9 @@ elif TRAVIS_URL:
  	sharedServerDir = "https://blooming-lowlands-52198.herokuapp.com" #"http://localhost:10010"
 else:
 	#sharedServerDir = "https://blooming-lowlands-52198.herokuapp.com"
-	 sharedServerDir = "http://localhost:10010"
+    sharedServerDir = "http://localhost:10010"
+    #sharedServerDir = "http://web-shared:10010" #DOCKER-TAG
+    print (sharedServerDir)
 
 def registerNewUser(username,password,fbToken):
 	payload = {
@@ -22,4 +24,5 @@ def registerNewUser(username,password,fbToken):
  	 "password": password,
  	 "facebookAuthToken": fbToken
 	}
+	print (payload)
 	return requests.post(sharedServerDir +  '/api/authorize', data= payload)

@@ -4,10 +4,17 @@ services:
     image: mongo:3.6-jessie
     ports:
       - "27017:27017"
-  web:
+    networks:
+      - my-net
+  web-api:
     build: .
     ports:
      - "5000:5000"
      - "8000:8000"
+    networks:
+     - my-net
     depends_on:
      - mongo
+networks:
+  my-net:
+    driver: bridge   

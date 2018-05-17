@@ -19,6 +19,7 @@ else:
     # Not on an app with the MongoHQ add-on, do some localhost action
     print("Conectamos local6")
     conn = pymongo.MongoClient('localhost', 27017)
+    #conn = pymongo.MongoClient('mongo', 27017) #DOCKER-TAG
     db = conn['StoriesAppServer']
 
 

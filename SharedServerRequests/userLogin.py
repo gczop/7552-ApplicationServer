@@ -14,7 +14,8 @@ elif TRAVIS_URL:
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
     #sharedServerDir = "https://blooming-lowlands-52198.herokuapp.com"
- 	sharedServerDir = "http://localhost:10010"
+    sharedServerDir = "http://localhost:10010"
+    #sharedServerDir = "http://web-shared:10010" #DOCKER-TAG
 
 def authenticateUserLogin(username,password):
     payload = {
