@@ -6,7 +6,7 @@ from databases.stories import storiesDb
 from databases.comments import commentsDb
 from databases.loginedUsers import loginedUsers
 
-numberOfStoriesToSee = 3
+numberOfStoriesToSee = 10
 
 def getHomepageFeed(request):
 	username = getRequestHeader(request,"username")
