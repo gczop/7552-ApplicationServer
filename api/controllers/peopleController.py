@@ -1,11 +1,12 @@
 import json
 from flask import request
 from SharedServerRequests.userLogin import *
+from api.utils import *
 from databases.users import usersDb
 from databases.loginedUsers import loginedUsers
 
 def searchForPerson(request):
-	searchedFor = request.headers.get("searchedFor")
+	searchedFor = getRequestHeader(request,"searchedFor")
 	if(searchedFor == None):
 		return {"Error": "Falta de informacion en header (Error code: 4)"}, 400
 	return usersDb.searchForUsers(searchedFor)

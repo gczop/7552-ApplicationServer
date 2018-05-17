@@ -1,11 +1,12 @@
 import json
 from flask import request
 from SharedServerRequests.userLogin import *
+from api.utils import *
 from databases.friends import friendsDb
 from databases.loginedUsers import loginedUsers
 
 def getUserFriends(request):
-	username = getRequestData(request)
+	username = getRequestHeader(request,'username')
 	print(username)
 	if(username == None):
 		return {"Error": "Falta de informacion en header (Error code: 13)"}, 400
@@ -13,9 +14,8 @@ def getUserFriends(request):
 
 #For testing purposes
 def addFriend(request):
-	data = json.loads(request.data)
-	username = data.get("username")
-	friend = data.get("friend")
+	username = getRequestHeader(request,"username")
+	friend = getRequestHeader(request,"friend")
 	if(username == None or friend == None):
 		return {"Error": "Falta de informacion en header (Error code: 14)"}, 400
 	try:
@@ -25,9 +25,8 @@ def addFriend(request):
 
 
 def removeFriend(request):
-    data = json.loads(request.data)
-    username = data.get("username")
-    friend = data.get("friend")
+    username = getRequestHeader(request,"username")
+    friend = getRequestHeader(request,"friend")
     if(username == None):
         return {"Error": "Falta de informacion en header (Error code: 14)"}, 400
     if(friend == None):
@@ -37,10 +36,6 @@ def removeFriend(request):
     except:
         return {"Error": "Esta persona no esta en tu lista de amigos (Error code: 25)"}, 401
 
-def getRequestData(request):
-    data = json.loads(request.data)
-    user = data.get("username")
-    return user
 
 def getSpecificUserFriends(username):
     if(username == None):

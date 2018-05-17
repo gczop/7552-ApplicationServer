@@ -1,19 +1,20 @@
 import json
 from flask import request
 from SharedServerRequests.userLogin import *
+from api.utils import *
 #from databases.conversations import conversationsDb
 
 conversationsDb = 0
 def getUserConversations(request):
-	username = request.headers.get("username")
+	username = getRequestHeader(request,"username")
 	if (username == None):
 		return {"Error": "Falta de informacion en header. Story id no especificado (Error code: 38)"},400
 	return conversationsDb.getUserConversations(username)
 
 
 def createNewConversation(request):
-	firstUser = request.headers.get("first-username")
-	secondUser = request.headers.get("second-username")
+	firstUser = getRequestHeader(request,"first-username") 
+	secondUser =  getRequestHeader(request,"second-username")
 	if (firstUser == None):
 		return {"Error": "Falta de informacion en header. Story id no especificado (Error code: 39)"},400
 	if (secondUser == None):

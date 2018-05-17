@@ -26,7 +26,10 @@ class InvitationsTestCase(unittest.TestCase):
 
         token1 = json.loads(result_login.data)["Token"]
 
-        headers1 = { 'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token1, "utf-8")).decode("ascii")}
+        headers1 = { 
+            'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token1, "utf-8")).decode("ascii"),
+            "username": "userFriends"
+        }
 
         result = self.client.get('/api/invitations', headers=headers1 ,data=json.dumps(info), content_type='application/json')
         # Assert a correct get of friends
@@ -60,8 +63,15 @@ class InvitationsTestCase(unittest.TestCase):
         token1 = json.loads(result_login.data)["Token"]
         token2 = json.loads(result_login2.data)["Token"]
 
-        headers1 = { 'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token1, "utf-8")).decode("ascii")}
-        headers2 = { 'Authorization': 'Basic %s' % b64encode(bytes(info["friend"] + ':' + token2, "utf-8")).decode("ascii")}
+        headers1 = {
+            'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token1, "utf-8")).decode("ascii"),
+            "username": "userFriends",
+            "friend": "user"
+        }
+        headers2 = {
+            'Authorization': 'Basic %s' % b64encode(bytes(info["friend"] + ':' + token2, "utf-8")).decode("ascii"),
+            "username": "user"
+        }
 
         result = self.client.post('/api/invitations', headers=headers1 ,data=json.dumps(info), content_type='application/json')
         # Assert a correct post of the invitation
@@ -103,8 +113,15 @@ class InvitationsTestCase(unittest.TestCase):
         token1 = json.loads(result_login.data)["Token"]
         token2 = json.loads(result_login2.data)["Token"]
 
-        headers1 = { 'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token1, "utf-8")).decode("ascii")}
-        headers2 = { 'Authorization': 'Basic %s' % b64encode(bytes(info["friend"] + ':' + token2, "utf-8")).decode("ascii")}
+        headers1 = {
+            'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token1, "utf-8")).decode("ascii"),
+            "username": "userFriends",
+            "friend": "user"
+        }
+        headers2 = {
+            'Authorization': 'Basic %s' % b64encode(bytes(info["friend"] + ':' + token2, "utf-8")).decode("ascii"),
+            "username": "user"
+        }
 
         result = self.client.post('/api/invitations', headers=headers1 ,data=json.dumps(info), content_type='application/json')
         # Assert a correct get of friends
@@ -172,9 +189,20 @@ class InvitationsTestCase(unittest.TestCase):
         token2 = json.loads(result_login2.data)["Token"]
         token3 = json.loads(result_login3.data)["Token"]
 
-        headers1 = { 'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token1, "utf-8")).decode("ascii")}
-        headers2 = { 'Authorization': 'Basic %s' % b64encode(bytes(info["friend"] + ':' + token2, "utf-8")).decode("ascii")}
-        headers3 = { 'Authorization': 'Basic %s' % b64encode(bytes(info2["username"] + ':' + token3, "utf-8")).decode("ascii")}
+        headers1 = {
+            'Authorization': 'Basic %s' % b64encode(bytes(info["username"] + ':' + token1, "utf-8")).decode("ascii"),
+            "username": "userFriends",
+            "friend": "user"
+        }
+        headers2 = {
+            'Authorization': 'Basic %s' % b64encode(bytes(info["friend"] + ':' + token2, "utf-8")).decode("ascii"),
+            "username": "user"
+        }
+        headers3 = {
+            'Authorization': 'Basic %s' % b64encode(bytes(info2["username"] + ':' + token3, "utf-8")).decode("ascii"),
+            "username": "user2",
+            "friend": "user"
+        }
 
         result = self.client.post('/api/invitations', headers=headers1 ,data=json.dumps(info), content_type='application/json')
         # Assert a correct post of the invitation

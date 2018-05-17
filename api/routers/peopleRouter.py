@@ -8,9 +8,9 @@ from databases.loginedUsers import loginedUsers
 
 auth = HTTPBasicAuth()
 
-@auth.get_password
-def get_token(username):
-    return loginedUsers.checkUserLogin(username)
+@auth.verify_password
+def get_token(username,password):
+    return usersDb.checkUserLogin(username,password)
 
 
 

@@ -37,7 +37,10 @@ class ProfileTestCase(unittest.TestCase):
                 "age": "15"
                 }
         }
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(signupInfo["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = {
+            'Authorization': 'Basic %s' % b64encode(bytes(signupInfo["username"] + ':' + token, "utf-8")).decode("ascii"),
+            'username': 'userProfile'
+        }
 
         result = self.client.put('/api/profile', headers=headers ,data=json.dumps(profileInfo), content_type='application/json')
 
@@ -54,7 +57,8 @@ class ProfileTestCase(unittest.TestCase):
             "username": "userProfile"
         }
         headers = {
-            'Authorization': 'Basic ' + b64encode(b'userProfile:eTKhUrPGek').decode('utf-8')
+            'Authorization': 'Basic ' + b64encode(b'userProfile:eTKhUrPGek').decode('utf-8'),
+            'username': 'userProfile'
         }
 
         result = self.client.get('/api/profile', headers=headers ,data=json.dumps(profileInfo), content_type='application/json')
@@ -85,7 +89,10 @@ class ProfileTestCase(unittest.TestCase):
         }
         # headers = {'Authorization': 'Basic ' + b64encode(b'userProfile:'+bytes(token)+b').decode('utf-8')}
 
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(user["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = { 
+            'Authorization': 'Basic %s' % b64encode(bytes(user["username"] + ':' + token, "utf-8")).decode("ascii"),
+            'username': 'userProfile'
+        }
         result = self.client.put('/api/profile', headers=headers ,data=json.dumps(profileNewInfo), content_type='application/json')
         # Assert a correct update of the profile
         self.assertEqual(result.status_code, 200)
@@ -121,7 +128,8 @@ class ProfileTestCase(unittest.TestCase):
             }
         }
         headers = {
-            'Authorization': 'Basic ' + b64encode(b'userProfile:eTKhUrPGek').decode('utf-8')
+            'Authorization': 'Basic ' + b64encode(b'userProfile:eTKhUrPGek').decode('utf-8'),
+            'username': 'userProfile2'
         }
 
         result = self.client.put('/api/profile', headers=headers ,data=json.dumps(profileInfo), content_type='application/json')

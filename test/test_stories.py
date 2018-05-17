@@ -30,7 +30,10 @@ class StoriesTestCase(unittest.TestCase):
 
         token = json.loads(result_login.data)["Token"]
 
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = { 
+            'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii"),
+            "username": "user"
+        }
 
         result = self.client.post('/api/stories', headers=headers, data=json.dumps(storyInfo), content_type='application/json')
 
@@ -52,7 +55,10 @@ class StoriesTestCase(unittest.TestCase):
 
         token = json.loads(result_login.data)["Token"]
 
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = {
+            'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii"),
+            "username": "user"
+        }
 
         result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
 
@@ -76,14 +82,17 @@ class StoriesTestCase(unittest.TestCase):
 
         token = json.loads(result_login.data)["Token"]
 
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = {
+            'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii"),
+            "username": "userFriends"
+        }
 
         result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
 
         dataDict = json.loads(result.data)
         print ("Historias:\n",dataDict)
         self.assertEqual(result.status_code,200)
-        self.assertTrue(dataDict[0]) # is not Empty
+        self.assertTrue(dataDict['feedStories'][0]) # is not Empty
 
     def test_4_update_my_story(self):
         # Asume user exists
@@ -99,11 +108,14 @@ class StoriesTestCase(unittest.TestCase):
 
         token = json.loads(result_login.data)["Token"]
 
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = { 
+            'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii"),
+            "username": "user"
+        }
 
         result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
         dataDict = json.loads(result.data)
-        id = dataDict[0]["_id"]
+        id = dataDict['feedStories'][0]["_id"]
         # print ("\n\nHistoria ID: ",id)
         updatedInfo = {
             "username": "user",
@@ -118,7 +130,7 @@ class StoriesTestCase(unittest.TestCase):
         result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
         dataDict = json.loads(result.data)
         print (dataDict)
-        description = dataDict[0]["storyDetail"]["description"]
+        description = dataDict['feedStories'][0]["storyDetail"]["description"]
         self.assertEqual(result.status_code,200)
         self.assertEqual(description,"Nueva descripcion")
 
@@ -140,7 +152,10 @@ class StoriesTestCase(unittest.TestCase):
 
         token = json.loads(result_login.data)["Token"]
 
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = {
+            'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii"),
+            "username": "userFriends"
+        }
 
         result = self.client.post('/api/stories', headers=headers, data=json.dumps(storyInfo), content_type='application/json')
 
@@ -162,7 +177,10 @@ class StoriesTestCase(unittest.TestCase):
 
         token = json.loads(result_login.data)["Token"]
 
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = {
+            'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii"),
+            "username": "userFriends"
+        }
 
         result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
 
@@ -185,17 +203,24 @@ class StoriesTestCase(unittest.TestCase):
 
         token = json.loads(result_login.data)["Token"]
 
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = {
+            'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii"),
+            "username": "user"
+        }
 
         result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
 
         dataDict = json.loads(result.data)
-        id = dataDict[1]["_id"]
+        id = dataDict['feedStories'][1]["_id"]
         print ("\n\nHistoria ID: ",id)
         self.assertEqual(result.status_code,200)
         self.assertTrue(dataDict) # is not Empty
-
-        result = self.client.delete('/api/stories', headers=headers, data=json.dumps({"id":id}), content_type='application/json')
+        headers2 = {
+            'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii"),
+            "username": "user",
+            'id':id
+        }
+        result = self.client.delete('/api/stories', headers=headers2, data=json.dumps({"id":id}), content_type='application/json')
 
         self.assertEqual(result.status_code,200)
 
@@ -213,16 +238,24 @@ class StoriesTestCase(unittest.TestCase):
 
         token = json.loads(result_login.data)["Token"]
 
-        headers = { 'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii")}
+        headers = {
+            'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii"),
+            "username": "user"
+        }
 
         result = self.client.get('/api/stories', headers=headers, data=json.dumps(info), content_type='application/json')
 
         dataDict = json.loads(result.data)
-        id = dataDict[0]["_id"]
+        id = dataDict['feedStories'][0]["_id"]
         print ("\n\nHistoria ID: ",id)
         self.assertEqual(result.status_code,200)
         self.assertTrue(dataDict) # is not Empty
 
-        result = self.client.delete('/api/stories', headers=headers, data=json.dumps({"id":id}), content_type='application/json')
+        headers2 = {
+            'Authorization': 'Basic %s' % b64encode(bytes(loginInfo["username"] + ':' + token, "utf-8")).decode("ascii"),
+            "username": "user",
+            'id':id
+        }
+        result = self.client.delete('/api/stories', headers=headers2, data=json.dumps({"id":id}), content_type='application/json')
 
         self.assertEqual(result.status_code,200)

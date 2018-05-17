@@ -59,9 +59,6 @@ class UsersDB(Singleton):
         self.users.insert_one({"username":username,"token":token,"personalInformation": personalInfo or {}})
 
     def getUserProfile(self, username):
-        # print(self.users.find_one({"username": username}).get("personalInformation"))
-        # print('\n\n\n')
-        # print(self.users.find_one({"username": username})["personalInformation"])
         return self.users.find_one({"username": username})["personalInformation"]
 
     def updateUserProfile(self, username, updatedInfo):
@@ -70,6 +67,8 @@ class UsersDB(Singleton):
         self.users.find_one_and_update({"username":username},
             {"$set": {"personalInformation": update}},upsert=True)
 
+    def checkUserLogin(self,user,password):
+        return self.users.find_one({'username':user}).get('token') == password
 
     def searchForSingleUser(self,username):
         return self.users.find_one({"username": username},projection={'_id':False})

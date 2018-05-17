@@ -4,13 +4,15 @@ from flask import request
 from api.controllers.profilesController import getUserProfile, updateUserProfile
 from SharedServerRequests.userLogin import *
 from databases.users import *
-from databases.loginedUsers import loginedUsers
+from databases.loginedUsers import *
+
+
 
 auth = HTTPBasicAuth()
 
-@auth.get_password
-def get_token(username):
-    return loginedUsers.checkUserLogin(username)
+@auth.verify_password
+def get_token(username,password):
+	return usersDb.checkUserLogin(username,password)
 
 
 
