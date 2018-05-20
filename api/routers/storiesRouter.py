@@ -31,5 +31,4 @@ class StoriesRouter(Resource):
 	@auth.login_required
 	def delete(self):
 		return removeStory(request)
-
 		

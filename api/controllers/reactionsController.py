@@ -32,5 +32,5 @@ def removeReaction(request):
 		return {"Error": "Falta de informacion en header. Story id no especificado (Error code: 30)"}, 400
 	if (username == None):
 		return {"Error": "Falta de informacion en header. Username no especificado (Error code: 31)"}, 400
-	return storiesDb.removeReaction(storyID,username)	
+	return storiesDb.deleteStoryReaction(storyID,username)
 

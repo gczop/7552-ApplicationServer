@@ -100,9 +100,17 @@ class StoriesDb(Singleton):
         self.storiesList.delete_one({"_id": id})
         return "Okey"
 
+    def getStoryReactions(self, storyId):
+        return self.storiesList.find_one({ "storyId": storyId })["reactions"]
+
     def addStoryReaction(self, storyId, username ,reaction):
         reactionData = { "reacter": username , "reaction": reaction }
-        self.storiesList.find_one_and_update({"username": username} ,{"$push": {"reactions" : reactionData }} , projection={'_id':False} ,upsert=True)
+
+        self.storiesList.find_one_and_update({"storyId": storyId} ,{"$push": {"reactions" : reactionData }} , projection={'_id':False} ,upsert=True)
+        return "Okey"
+
+    def deleteStoryReaction(self, storyId, username):
+        self.storiesList.find_one_and_update({"storyId": storyId } ,{"$pull": {"reactions" : {"reacter": username} }})
         return "Okey"
 
 

@@ -4,7 +4,7 @@ os.environ["TEST_ENV"] = "true"
 from app import application as app
 import unittest
 from test import test_users , test_server , test_profile , \
-        test_friends , test_invitations , test_stories ,  test_comments
+        test_friends , test_invitations , test_stories ,  test_comments , test_reactions
 
 loader = unittest.TestLoader()
 suite  = unittest.TestSuite()
@@ -17,6 +17,7 @@ suite.addTests(loader.loadTestsFromModule(test_friends))
 suite.addTests(loader.loadTestsFromModule(test_invitations))
 suite.addTests(loader.loadTestsFromModule(test_stories))
 suite.addTests(loader.loadTestsFromModule(test_comments))
+suite.addTests(loader.loadTestsFromModule(test_reactions))
 
 # initialize a runner, pass it your suite and run it
 runner = unittest.TextTestRunner(verbosity=3)
