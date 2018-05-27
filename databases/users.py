@@ -1,6 +1,7 @@
 import os
 import pymongo
 from pymongo import MongoClient
+from logger.log import *
 
 import pymongo
 
@@ -9,13 +10,14 @@ print(MONGO_URL)
 
 if MONGO_URL:
     # Get a connection
+    log("Users DB in MONGO")
     conn = pymongo.MongoClient(MONGO_URL)
     from urllib.parse import urlparse
     # Get the database
     db = conn[urlparse(MONGO_URL).path[1:]]
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
-    print("Conectamos local1")
+    log("Users DB in localhost")
     conn = pymongo.MongoClient('localhost', 27017)
     #conn = pymongo.MongoClient('mongo', 27017)#DOCKER-TAG
     db = conn['StoriesAppServer']
@@ -41,11 +43,13 @@ class UsersDB(Singleton):
     users = userCollection
 
     def getAllUsers(self):
+        log("Getting all users")
         a = self.users.find(projection ={'_id':False, "username":True, "token":True})
         print(a)
         return a
 
     def registerUserToken(self,user, token):
+        log("Registering user token")
         if(self.users.find_one({"username":user}) != None):
             self.users.find_one_and_update({"username":user},
                 {"$set": {"token": token}},upsert=True)
@@ -55,25 +59,32 @@ class UsersDB(Singleton):
     def addNewUser(self,username= None,token= None,personalInfo=None):
         print(personalInfo)
         if(username == None):
+            log("No username received")
             return
+        log("Adding new user: "+username)
         self.users.insert_one({"username":username,"token":token,"personalInformation": personalInfo or {}})
 
     def getUserProfile(self, username):
+        log("Getting "+str(username)+" profile")
         return self.users.find_one({"username": username})["personalInformation"]
 
     def updateUserProfile(self, username, updatedInfo):
+        log("Updating "+str(username)+ " profile")
         oldInformation = self.users.find_one({"username": username}).get("personalInformation")
         update = createdUpdatedDictionary(updatedInfo,oldInformation)
         self.users.find_one_and_update({"username":username},
             {"$set": {"personalInformation": update}},upsert=True)
 
     def checkUserLogin(self,user,password):
+        log("Checking "+str(username)+ " login")
         return self.users.find_one({'username':user}).get('token') == password
 
     def searchForSingleUser(self,username):
+        log("Searching "+str(username)+ " in DB")
         return self.users.find_one({"username": username},projection={'_id':False})
 
     def searchForUsers(self,username):
+        log("Searching users in DB: "+str(username))
         matchCursor = self.users.find({"username" : {'$regex' : ".*"+username+".*"}},projection={'_id':False, 'username':True})
         matchList = []
         for match in matchCursor:
@@ -81,7 +92,7 @@ class UsersDB(Singleton):
         return matchList
 
     def authenticateUser(self,username,token= None):
-        print("LLegamos a auth" + token)
+        log("Authenticating: "+str(username))
         if(token != None):
             return self.users.find_one({
                 "token":token,

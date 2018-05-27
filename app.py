@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_restful import Resource, Api
+from logger.log import *
 import os
 
 
@@ -67,4 +68,5 @@ def hello_world():
 
 
 if __name__ == '__main__':
+	log("Starting server")
 	application.run(host='0.0.0.0')
