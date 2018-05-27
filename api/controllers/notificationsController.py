@@ -8,9 +8,9 @@ from logger.log import *
 
 def getUserNotifications(request):
 	username = getRequestHeader(request,"username")
-    log("Getting notifications for user "+str(username))
+	log("Getting notifications for user "+str(username))
 	if(username == None):
-        logError("API18")
+		logError("API18")
 		return {"Error": "Falta de informacion en header (Error code: 18)"}, 400
 	return notificationsDb.getUserNotifications(username)
 

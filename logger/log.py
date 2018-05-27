@@ -1,4 +1,4 @@
-from errorCodes import codeMap
+from logger.errorCodes import codeMap
 
 def logError(*args):
     message = "["+args[0]+"] "+codeMap[args[0]]
@@ -21,9 +21,3 @@ def writeMessage(message):
 		outputFile.write(message)
 		outputFile.write("\n")
 	outputFile.close()
-
-
-logError("32", "Garra")
-logError("debug", "param1", "param2")
-log("Hola")
-

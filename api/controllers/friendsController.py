@@ -9,9 +9,9 @@ from logger.log import *
 def getUserFriends(request):
 	username = getRequestHeader(request,'username')
 	print(username)
-    log("Getting "+str(username)+" friend list")
+	log("Getting "+str(username)+" friend list")
 	if(username == None):
-        logError("API13")
+		logError("API13")
 		return {"Error": "Falta de informacion en header (Error code: 13)"}, 400
 	return friendsDb.getUserFriends(username)
 
@@ -19,14 +19,14 @@ def getUserFriends(request):
 def addFriend(request):
 	username = getRequestHeader(request,"username")
 	friend = getRequestHeader(request,"friend")
-    log("Adding "+str(friend)+" to "+str(username)+" friend list")
+	log("Adding "+str(friend)+" to "+str(username)+" friend list")
 	if(username == None or friend == None):
-        logError("API14")
+		logError("API14")
 		return {"Error": "Falta de informacion en header (Error code: 14)"}, 400
 	try:
 		return friendsDb.addNewFriend(username,friend)
 	except:
-        logError("API26")
+		logError("API26")
 		return {"Error": "No se pudo agregar esta persona a tu lista de amigos (Error code: 26?)"}, 401
 
 

@@ -8,9 +8,9 @@ from logger.log import *
 
 def getStoryComments(request):
 	storyId = getRequestHeader(request,"story-id")
-    log("Getting story comments from story "+str(storyId))
+	log("Getting story comments from story "+str(storyId))
 	if (storyId == None):
-        logError("API32")
+		logError("API32")
 		return {"Error": "Falta de informacion en header. Story id no especificado (Error code: 32)"}, 400
 	return commentsDb.getStoryComments(storyId)	
 
@@ -18,26 +18,26 @@ def addNewComment(request):
 	storyID = request.headers.get("story-id")
 	username = request.headers.get("username")
 	comment = request.headers.get("comment")
-    log("Adding new comment from "+str(username)+" to story "+str(storyId))
+	log("Adding new comment from "+str(username)+" to story "+str(storyId))
 	if (storyID == None):
-        logError("API33")
+		logError("API33")
 		return {"Error": "Falta de informacion en header. Story id no especificado (Error code: 33)"}, 400
 	if (username == None):
-        logError("API34")
+		logError("API34")
 		return {"Error": "Falta de informacion en header. Username no especificado (Error code: 34)"}, 400
 	if (comment == None):
-        logError("API35")
+		logError("API35")
 		return {"Error": "Falta de informacion en header. Comentario no especificado (Error code: 35)"}, 400	
 	return commentsDb.addNewComment(storyID, username, comment)
 
 def removeComment(request):
 	storyID = request.headers.get("story-id")
 	commentID = request.headers.get("comment-id")
-    log("Removing comment "+str(commentID)+" from story "+str(storyID))
+	log("Removing comment "+str(commentID)+" from story "+str(storyID))
 	if (storyID == None):
-        logError("API36")
+		logError("API36")
 		return {"Error": "Falta de informacion en header. Story id no especificado (Error code: 36)"}, 400
 	if (commentID == None):
-        logError("API37")
+		logError("API37")
 		return {"Error": "Falta de informacion en header. Comment ID no especificado (Error code: 37)"}, 400	
 	return commentsDb.removeComment(storyID, commentID)

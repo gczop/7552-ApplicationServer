@@ -1,6 +1,6 @@
 import requests
 import os
-
+from logger.log import *
 
 MONGO_URL = os.environ.get('MONGODB_URI')
 TRAVIS_URL = os.environ.get('TRAVIS_URI')

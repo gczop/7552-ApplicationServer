@@ -17,22 +17,22 @@ from databases.users import usersDb
 
 def authenticateSignUp(request):
 	user,password,fbToken,personalInfo = getRequestData(request)
-    log("Authenticating sign up for new user: "+str(user))
+	log("Authenticating sign up for new user: "+str(user))
 	response = registerNewUser(user, password, fbToken);# {"id":4,"_rev":null,"applicationOwner":"String","username":null};
 	print (response.text)
 	signUpResponse = json.loads(response.text)
 	if(response.status_code != 200):
-   		log("Error while registering user:"+str(signUpResponse))
-        logError("API01", str(signUpResponse["message"]))
+		log("Error while registering user:"+str(signUpResponse))
+		logError("API01", str(signUpResponse["message"]))
 		return {"Error": "(Error code: 1)", "Message":signUpResponse["message"]}, 401
 	else:
-        log("New user registered in DB")
+		log("New user registered in DB")
 		sentPassword = password or fbToken
 		response = authenticateUserLogin(user,sentPassword)
 		loginResponse = json.loads(response.text)
 		if(response.status_code != 200):
-            log("Error while loading information:"+str(loginResponse))
-            logError("API01", str(loginResponse["message"]))
+			log("Error while loading information:"+str(loginResponse))
+			logError("API01", str(loginResponse["message"]))
 			return {"Error": loginResponse['message'] + "(Error code: 41)"}, response.status_code
 		else:
 			log(personalInfo)

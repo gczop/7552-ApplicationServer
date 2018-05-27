@@ -1,6 +1,5 @@
 from flask import Flask
 from flask_restful import Resource, Api
-from logger.log import *
 import os
 
 
@@ -19,6 +18,7 @@ from api.routers.commentsRouter import CommentsRouter
 from api.routers.conversationsRouter import ConversationsRouter
 from api.routers.pingRouter import PingRouter
 from api.routers.statsRouter import StatsRouter
+from logger.log import *
 
 application = Flask(__name__)
 
