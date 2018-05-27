@@ -24,8 +24,13 @@ else:
     #conn = pymongo.MongoClient('mongo', 27017)#DOCKER-TAG
     db = conn['StoriesAppServer']
 
+if 'TEST_ENV' in os.environ:
+    deltatime = datetime.timedelta(seconds=1)
+else:
+    deltatime = datetime.timedelta(hours=4)
 
-storiesCollection = db.Stories
+
+flashStoriesCollection = db.FlashStories
 
 
 """    DATABASES JSONs DEFINITIONS
@@ -68,8 +73,15 @@ class Singleton(object):
             class_._instance = object.__new__(class_, *args, **kwargs)
         return class_._instance
 
-class StoriesDb(Singleton):
-    storiesList = storiesCollection
+class FlashStoriesDb(Singleton):
+    storiesList = flashStoriesCollection
+
+
+    def garbageCollector(self):
+        deletionDate = datetime.datetime.now() - deltatime
+        print ("deleeeeete: ", deletionDate)
+        #Se compara strings porque el formato da para eso
+        self.storiesList.remove({ "createdAt" : { "$lt" : str(deletionDate) }});
 
     def getUserLastNStories(self, username, number = 5):
         fromNewToOld = -1
@@ -77,6 +89,9 @@ class StoriesDb(Singleton):
         friends.append(username);
         # print (friends,"\n\n")
         # print (list(self.storiesList.find()),"\n\n")
+
+        self.garbageCollector();
+
         return list(self.storiesList.find({ "username": {"$in" : friends }}).sort("createdAt",fromNewToOld).limit(number))
 
     def addNewStory(self, username, storyInfo):
@@ -114,6 +129,7 @@ class StoriesDb(Singleton):
         return "Okey"
 
 
+
 def createStoryDocument(storyInfo):
     document = {}
     document["description"] = storyInfo["description"]
@@ -131,4 +147,4 @@ def createdUpdatedDictionary(newInformation, oldInormation):
 def createReaction(username, reaction):
     return
 
-storiesDb = StoriesDb()
+flashStoriesDb = FlashStoriesDb()

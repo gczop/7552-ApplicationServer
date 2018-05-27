@@ -5,6 +5,7 @@ import datetime
 from pymongo import MongoClient
 
 import pymongo
+import uuid
 
 MONGO_URL = os.environ.get('MONGODB_URI')
 print(MONGO_URL)
@@ -55,17 +56,31 @@ class CommentsDb(Singleton):
     commentsList = commentsCollection
 
     def addComments(self, storyId):
-        self.commentsList.insert_one({"storyId": storyId, "content": []})
+        self.commentsList.insert_one({"storyId": storyId , "content": []})
 
     def addNewComment(self, storyID, username, comment):
         storyComment = createComment(username, comment)
-        self.commentsList.insert_one_and_update({"stroryId":storyID},{"$push": {"content": {storyComment}}})
-        return "Okey"
+
+        print (storyComment)
+        #self.commentsList.insert_one({"storyId":storyID},{"$push": {"content": storyComment }})
+        self.commentsList.find_one_and_update({"storyId": storyID}, {"$push": {"content": storyComment}})
+        return storyComment["_id"]
 
     def removeComment(self, storyId, commentID):
-        self.commentsList.find_one_and_update({"_id" : storyId} , { "$pull" : { "_id" : commentID}})
+        self.commentsList.find_one_and_update({"storyId" : storyId} , { "$pull" : { "content" : {"_id": commentID } }})
         return "Okey"
 
+    def getStoryComments(self, storyId):
+        # return self.commentsList.find_one({ "storyId" : storyId})#.sort("date",fromNewToOld))
+        return self.commentsList.find_one({"storyId": storyId})["content"][::-1]
+
+def createComment(username, comment):
+    return {
+        "_id" : str(uuid.uuid4()),
+        "user": username,
+        "date": str(datetime.datetime.now()),
+        "message": comment
+    }
 
 
 commentsDb = CommentsDb()

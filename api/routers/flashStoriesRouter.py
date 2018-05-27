@@ -1,7 +1,7 @@
 from flask_restful import Resource
 from flask_httpauth import HTTPBasicAuth
 from flask import request
-from api.controllers.storiesController import getHomepageFeed, addNewStory, updateStory, removeStory
+from api.controllers.flashStoriesController import getHomepageFeed, addNewStory, updateStory, removeStory
 from SharedServerRequests.userLogin import *
 from databases.users import *
 from databases.loginedUsers import loginedUsers
@@ -14,7 +14,7 @@ def get_token(username,password):
 
 
 
-class StoriesRouter(Resource):
+class FlashStoriesRouter(Resource):
 
 	@auth.login_required
 	def get(self):
