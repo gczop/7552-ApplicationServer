@@ -1,4 +1,6 @@
 import requests
+from requests.auth import HTTPBasicAuth as ReqAuth
+from SharedServerRequests.serverAuthentication import serverAuthenticator
 import os
 
 
@@ -22,6 +24,7 @@ def authenticateUserLogin(username,password):
   		"username": username,
   		"password": password
     }
-    print(payload)
+    print(payload, serverAuthenticator.serverUser, serverAuthenticator.serverPassword)
     print (sharedServerDir + '/api/token')
-    return requests.post(sharedServerDir + '/api/token', data= payload)
+    return requests.post(sharedServerDir + '/api/token',  
+        auth=ReqAuth(serverAuthenticator.serverUser,serverAuthenticator.serverPassword), data= payload)

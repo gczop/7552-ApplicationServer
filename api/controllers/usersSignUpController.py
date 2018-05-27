@@ -18,6 +18,8 @@ def authenticateSignUp(request):
 	user,password,fbToken,personalInfo = getRequestData(request)
 	response = registerNewUser(user, password, fbToken);# {"id":4,"_rev":null,"applicationOwner":"String","username":null};
 	print (response.text)
+	if (response.status_code == 401):
+			return {"Error": "Authentication not correct"}, 401
 	signUpResponse = json.loads(response.text)
 	if(response.status_code != 200):
 		print(signUpResponse)
