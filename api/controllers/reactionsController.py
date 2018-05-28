@@ -42,5 +42,5 @@ def removeReaction(request):
 	if (username == None):
 		logError("API31")
 		return {"Error": "Falta de informacion en header. Username no especificado (Error code: 31)"}, 400
-	return storiesDb.removeReaction(storyID,username)	
+	return storiesDb.deleteStoryReaction(storyID,username)
 

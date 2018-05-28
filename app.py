@@ -13,6 +13,7 @@ from api.routers.peopleRouter import PeopleRouter, SinglePeopleRouter
 from api.routers.notificationsRouter import NotificationsRouter
 from api.routers.profilesRouter import ProfilesRouter
 from api.routers.storiesRouter import StoriesRouter
+from api.routers.flashStoriesRouter import FlashStoriesRouter
 from api.routers.reactionsRouter import ReactionsRouter
 from api.routers.commentsRouter import CommentsRouter
 from api.routers.conversationsRouter import ConversationsRouter
@@ -34,6 +35,7 @@ api.add_resource(SinglePeopleRouter,'/people/<string:username>')
 api.add_resource(NotificationsRouter,'/notifications')
 api.add_resource(ProfilesRouter,'/profile')
 api.add_resource(StoriesRouter,'/stories')
+api.add_resource(FlashStoriesRouter,'/flashstories')
 api.add_resource(ReactionsRouter,'/reactions')
 api.add_resource(CommentsRouter,'/comments')
 api.add_resource(ConversationsRouter,'/conversations')

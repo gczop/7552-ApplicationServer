@@ -12,12 +12,12 @@ def getStoryComments(request):
 	if (storyId == None):
 		logError("API32")
 		return {"Error": "Falta de informacion en header. Story id no especificado (Error code: 32)"}, 400
-	return commentsDb.getStoryComments(storyId)	
+	return { "comments" : commentsDb.getStoryComments(storyId) } , 200
 
 def addNewComment(request):
-	storyID = request.headers.get("story-id")
-	username = request.headers.get("username")
-	comment = request.headers.get("comment")
+	storyID = getRequestHeader(request,"story-id")
+	username = getRequestHeader(request,"username")
+	comment = getRequestData(request)
 	log("Adding new comment from "+str(username)+" to story "+str(storyId))
 	if (storyID == None):
 		logError("API33")
@@ -28,7 +28,7 @@ def addNewComment(request):
 	if (comment == None):
 		logError("API35")
 		return {"Error": "Falta de informacion en header. Comentario no especificado (Error code: 35)"}, 400	
-	return commentsDb.addNewComment(storyID, username, comment)
+	return { "id": commentsDb.addNewComment(storyID, username, comment) } , 200
 
 def removeComment(request):
 	storyID = request.headers.get("story-id")
@@ -40,4 +40,10 @@ def removeComment(request):
 	if (commentID == None):
 		logError("API37")
 		return {"Error": "Falta de informacion en header. Comment ID no especificado (Error code: 37)"}, 400	
-	return commentsDb.removeComment(storyID, commentID)
+	return { "state": commentsDb.removeComment(storyID, commentID) } , 200
+
+def getRequestData(request):
+	commentInfo = {}
+	data = json.loads(request.data)
+	commentInfo = data.get("comment")
+	return commentInfo
