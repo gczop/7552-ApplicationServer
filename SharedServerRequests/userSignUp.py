@@ -1,6 +1,8 @@
 import requests
 import os
 from logger.log import *
+from requests.auth import HTTPBasicAuth as ReqAuth
+from SharedServerRequests.serverAuthentication import serverAuthenticator
 
 MONGO_URL = os.environ.get('MONGODB_URI')
 TRAVIS_URL = os.environ.get('TRAVIS_URI')
@@ -28,5 +30,6 @@ def registerNewUser(username,password,fbToken):
  	 "password": password,
  	 "facebookAuthToken": fbToken
 	}
-	print (payload)
-	return requests.post(sharedServerDir +  '/api/authorize', data= payload)
+	print (payload, serverAuthenticator.serverUser, serverAuthenticator.serverPassword)
+	return requests.post(sharedServerDir +  '/api/authorize',
+        auth=ReqAuth(serverAuthenticator.serverUser,serverAuthenticator.serverPassword), data= payload)

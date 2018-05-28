@@ -22,6 +22,10 @@ def validateUserLogin(request):
 			response = authenticateUserLogin(user,password)
 		else:
 			response = authenticateUserLogin(user,fbToken)
+		print(response.status_code, "AAAAAAA")
+		log("LoginController - response status:" +str(response.status_code))
+		if (response.status_code == 401):
+			return {"Error": "Authentication not correct"}, 401
 		responseData = json.loads(response.text)
 		if (response.status_code != 200):
 			log(responseData)
