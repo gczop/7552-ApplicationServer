@@ -19,6 +19,7 @@ from api.routers.commentsRouter import CommentsRouter
 from api.routers.conversationsRouter import ConversationsRouter
 from api.routers.pingRouter import PingRouter
 from api.routers.statsRouter import StatsRouter
+from logger.log import *
 
 application = Flask(__name__)
 
@@ -69,4 +70,5 @@ def hello_world():
 
 
 if __name__ == '__main__':
+	log("Starting server")
 	application.run(host='0.0.0.0')

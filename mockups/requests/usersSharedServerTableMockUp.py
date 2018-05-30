@@ -1,6 +1,7 @@
 import requests
 import os
 import json
+from logger.log import *
 
 class Singleton(object):
     _instance = None
@@ -14,15 +15,19 @@ class UserSingupSharedServer(Singleton):
     ids = 1
 
     def signUpNewUser(self,username,password,fbToken):
+        log("Mocking user signup")
         if(password == None and fbToken == None):
+            logError("MOCK01")
             return HttpReqMockUp({
                             "message": 'Parametros de signup faltantes'
                         },400)
         if username in self.users:
+            logError("MOCK02", username)
             return HttpReqMockUp({"message":"User Already registerd"},401)
         newUser = generateNewUser(username,password,fbToken,self.ids)
         self.users[username] = newUser
         self.ids +=1
+        log("Mocking new user")
         return HttpReqMockUp({
                                     'id': newUser['id'],
                                     "_rev": newUser["_rev"],
@@ -32,10 +37,12 @@ class UserSingupSharedServer(Singleton):
 
     def loginUser(self,username,password):
         if username not in self.users or self.users[username]["password"] != password:
+            logError("MOCK03")
             return HttpReqMockUp({
                             "message": "Datos de login incorrectos"
                         },401)
         else:
+            log("Mocking succesful login")
             self.users[username]["token"]= "eTKhUrPGek"
             return HttpReqMockUp({
                             "token": "eTKhUrPGek"
@@ -44,10 +51,12 @@ class UserSingupSharedServer(Singleton):
 
     def registerUserToken(self, username, token):
         if username not in self.users:
+            logError("MOCK04", username)
             return HttpReqMockUp({
                 "message": "Datos de register incorrectos"
             },401)
         else:
+            log("Mocking user registry")
             self.users[username]["token"]= token
             return HttpReqMockUp({
                 "token": token

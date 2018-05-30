@@ -3,6 +3,7 @@ import uuid
 import pymongo
 import datetime
 from pymongo import MongoClient
+from logger.log import *
 
 import pymongo
 import uuid
@@ -12,13 +13,14 @@ print(MONGO_URL)
 
 if MONGO_URL:
     # Get a connection
+    log("Comments DB in MONGO")
     conn = pymongo.MongoClient(MONGO_URL)
     from urllib.parse import urlparse
     # Get the database
     db = conn[urlparse(MONGO_URL).path[1:]]
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
-    print("Conectamos local6")
+    log("Comments DB in localhost")
     conn = pymongo.MongoClient('localhost', 27017)
     #conn = pymongo.MongoClient('mongo', 27017) #DOCKER-TAG
     db = conn['StoriesAppServer']
@@ -56,9 +58,11 @@ class CommentsDb(Singleton):
     commentsList = commentsCollection
 
     def addComments(self, storyId):
+        log("Adding comment")
         self.commentsList.insert_one({"storyId": storyId , "content": []})
 
     def addNewComment(self, storyID, username, comment):
+        log("Adding new comment: "+str(comment))
         storyComment = createComment(username, comment)
 
         print (storyComment)
@@ -67,6 +71,7 @@ class CommentsDb(Singleton):
         return storyComment["_id"]
 
     def removeComment(self, storyId, commentID):
+        log("Removing comment "+str(commentID)+ " from story "+str(storyID))
         self.commentsList.find_one_and_update({"storyId" : storyId} , { "$pull" : { "content" : {"_id": commentID } }})
         return "Okey"
 

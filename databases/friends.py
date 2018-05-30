@@ -2,6 +2,7 @@ import os
 import pymongo
 from pymongo import MongoClient
 from pymongo import ReturnDocument
+from logger.log import *
 import pymongo
 
 MONGO_URL = os.environ.get('MONGODB_URI')
@@ -12,10 +13,11 @@ if MONGO_URL:
     conn = pymongo.MongoClient(MONGO_URL)
     from urllib.parse import urlparse
     # Get the database
+    log("Friends DB in MONGO")
     db = conn[urlparse(MONGO_URL).path[1:]]
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
-    print("Conectamos local5")
+    log("Friends DB in localhost")
     conn = pymongo.MongoClient('localhost', 27017)
     #conn = pymongo.MongoClient('mongo', 27017)#DOCKER-TAG
     db = conn['StoriesAppServer']
@@ -35,6 +37,7 @@ class FriendsDb(Singleton):
     friendsList = friendsCollection
 
     def getUserFriends(self,username):
+        log("Getting "+str(username)+" friend list")
         try:
             return self.friendsList.find_one({"username":username})["friends"]
         except:
@@ -42,6 +45,7 @@ class FriendsDb(Singleton):
             {"$set": {"friends": []}},upsert=True,return_document=ReturnDocument.AFTER)["friends"]
 
     def removeFriend(self,username,friend):
+        log(str(username)+" deleting "+str(friend)+ " from friends list")
         userFriends = self.friendsList.find_one({"username":username})["friends"]
         userFriends.remove(friend)
         self.friendsList.find_one_and_update({"username":username},
@@ -53,6 +57,7 @@ class FriendsDb(Singleton):
         return "Okey"
 
     def addNewFriend(self,username,newFriend):
+        log(str(username)+" adding "+str(friend)+ " to friends list")
         try:
             userFriends = self.friendsList.find_one({"username":username})["friends"]
             if newFriend not in userFriends:
