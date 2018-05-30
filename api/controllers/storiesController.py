@@ -6,19 +6,36 @@ from databases.stories import storiesDb
 from databases.comments import commentsDb
 from databases.loginedUsers import loginedUsers
 
+if 'TEST_ENV' in os.environ:
+	from mockups.requests.mediaRequestsMockUp import *
+else:
+	from SharedServerRequests.mediaRequests import *
+
 numberOfStoriesToSee = 10
 
 def getHomepageFeed(request):
 	username = getRequestHeader(request,"username")
 	if(username == None):
 		return {"Error": "Falta de informacion en header username no especificado (Error code: 21)"}, 400
-	return { "feedStories" : storiesDb.getUserLastNStories(username,numberOfStoriesToSee)}, 200
+	storyList = storiesDb.getUserLastNStories(username,numberOfStoriesToSee)
+	for story in storyList:
+		response = getFirebaseUrl(story['storyDetail']['url'])
+		if(response.status_code != 200):
+			return {"Error": "Error inesperado obteniendo la url de una imagen del feed" + story["storyDetail"]["url"]} , 400
+		responseData = json.loads(response.text)
+		story['storyDetail']['url']= responseData['resource']
+	return { "feedStories" : storyList}, 200
 
 def addNewStory(request):
 	username = getRequestHeader(request,"username")
 	storyInfo = getRequestData(request)
 	if(username == None):
 		return {"Error": "Falta de informacion en header username no especificado (Error code: 22)"}, 400
+	response = uploadNewFile(username,storyInfo['url'])
+	if(response.status_code != 200):
+		return{"Error": "Error inesperado en el upload de una story"}, 400
+	responseData = json.loads(response.text)
+	storyInfo["url"] = responseData["_rev"]
 	id = storiesDb.addNewStory(username,storyInfo)
 	commentsDb.addComments(id)
 	return { 'storyId' : id}, 200
