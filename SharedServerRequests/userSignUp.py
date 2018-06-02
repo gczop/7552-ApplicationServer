@@ -30,6 +30,6 @@ def registerNewUser(username,password,fbToken):
  	 "password": password,
  	 "facebookAuthToken": fbToken
 	}
-	print (payload, serverAuthenticator.serverUser, serverAuthenticator.serverPassword)
+	user,s_password = authenticationsDb.getAuthentication()
 	return requests.post(sharedServerDir +  '/api/authorize',
-        auth=ReqAuth(serverAuthenticator.serverUser,serverAuthenticator.serverPassword), data= payload)
+        auth=ReqAuth(user,s_password), data= payload)

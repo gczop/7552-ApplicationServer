@@ -1,6 +1,7 @@
 import requests
 import os
 import json
+from databases.auth import authenticationsDb
 
 MONGO_URL = os.environ.get('MONGODB_URI')
 TRAVIS_URL = os.environ.get('TRAVIS_URI')
@@ -26,8 +27,7 @@ class ServerAuthentication(object):
 		if(response.status_code != 200):
 			raise NameError('Incorrect Server Auhtentication')
 		responseData = json.loads(response.text)
-		self.serverUser = serverId
-		self.serverPassword = responseData['token']
+		authenticationsDb.registerAuthentication(serverId,responseData['token'])
 		return {"Message": "Autenticacion Exitosa"} , 200
 
 serverAuthenticator = ServerAuthentication()

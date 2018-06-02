@@ -1,0 +1,155 @@
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Validating login for user guido
+Shared server request: login user
+LoginController - response status:401
+Validating login for user guido
+Shared server request: login user
+LoginController - response status:401
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Validating login for user guido
+Shared server request: login user
+LoginController - response status:401
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Validating login for user guido
+Shared server request: login user
+LoginController - response status:401
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Validating login for user guido
+Shared server request: login user
+LoginController - response status:401
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Validating login for user guido
+Shared server request: login user
+LoginController - response status:401
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Validating login for user guido
+Shared server request: login user
+LoginController - response status:200
+Succesful login for user guido
+Registering user token
+User login: guido, token: 3Tdrzb2AiP
+Validating login for user guido
+Shared server request: login user
+LoginController - response status:200
+Succesful login for user guido
+Registering user token
+User login: guido, token: 0xfGxskSqK
+Validating login for user guido
+Shared server request: login user
+LoginController - response status:200
+Succesful login for user guido
+Registering user token
+User login: guido, token: uwdiANHKjQ
+Validating login for user guido
+Shared server request: login user
+LoginController - response status:200
+Succesful login for user guido
+Registering user token
+User login: guido, token: 5ybmuQrkxg
