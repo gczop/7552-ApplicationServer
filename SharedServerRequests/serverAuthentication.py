@@ -1,11 +1,8 @@
 import requests
 import os
 import json
-<<<<<<< HEAD
 from logger.log import *
-=======
 from databases.auth import authenticationsDb
->>>>>>> 78f5148268f5918c214b46210215cf8289cb5388
 
 MONGO_URL = os.environ.get('MONGODB_URI')
 TRAVIS_URL = os.environ.get('TRAVIS_URI')

@@ -1,6 +1,7 @@
 import requests
 from requests.auth import HTTPBasicAuth as ReqAuth
 from SharedServerRequests.serverAuthentication import serverAuthenticator
+from logger.log import *
 import os
 import datetime
 
