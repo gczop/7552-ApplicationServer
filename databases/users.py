@@ -75,9 +75,11 @@ class UsersDB(Singleton):
         self.users.find_one_and_update({"username":username},
             {"$set": {"personalInformation": update}},upsert=True)
 
-    def checkUserLogin(self,user,password):
+
+    def checkUserLogin(self,username,password):
         logDebug("users-Checking "+str(username)+ " login")
-        return self.users.find_one({'username':user}).get('token') == password
+        return self.users.find_one({'username':username}).get('token') == password
+
 
     def searchForSingleUser(self,username):
         logDebug("users-Searching "+str(username)+ " in DB")

@@ -1,5 +1,6 @@
 import requests
 from requests.auth import HTTPBasicAuth as ReqAuth
+from databases.auth import authenticationsDb
 from SharedServerRequests.serverAuthentication import serverAuthenticator
 import os
 from logger.log import *
@@ -19,8 +20,8 @@ else:
     # Not on an app with the MongoHQ add-on, do some localhost action
     logInfo("userLogin: Shared Server found in localhost")
     #sharedServerDir = "https://blooming-lowlands-52198.herokuapp.com"
-    #sharedServerDir = "http://localhost:10010"
-    sharedServerDir = "http://web-shared:10010" #DOCKER-TAG
+    sharedServerDir = "http://localhost:10010"
+    #sharedServerDir = "http://web-shared:10010" #DOCKER-TAG
 
 def authenticateUserLogin(username,password):
     logInfo("userLogin- Shared server request: authenticate login user")
@@ -29,7 +30,6 @@ def authenticateUserLogin(username,password):
   		"password": password
     }
     logDebug("userLogin- "+str(payload)+" "+str(serverAuthenticator.serverUser))
-    print(payload, serverAuthenticator.serverUser, serverAuthenticator.serverPassword)
-    print (sharedServerDir + '/api/token')
+    user,s_password = authenticationsDb.getAuthentication()
     return requests.post(sharedServerDir + '/api/token',  
-        auth=ReqAuth(serverAuthenticator.serverUser,serverAuthenticator.serverPassword), data= payload)
+        auth=ReqAuth(user,s_password), data= payload)

@@ -1,7 +1,11 @@
 import requests
 import os
 import json
+<<<<<<< HEAD
 from logger.log import *
+=======
+from databases.auth import authenticationsDb
+>>>>>>> 78f5148268f5918c214b46210215cf8289cb5388
 
 MONGO_URL = os.environ.get('MONGODB_URI')
 TRAVIS_URL = os.environ.get('TRAVIS_URI')
@@ -14,8 +18,8 @@ if MONGO_URL:
 else:
 	#sharedServerDir = "https://blooming-lowlands-52198.herokuapp.com"
     logInfo("serverAuth-SharedServer found in localhost")
-    #sharedServerDir = "http://localhost:10010"
-    sharedServerDir = "http://web-shared:10010" #DOCKER-TAG
+    sharedServerDir = "http://localhost:10010"
+    #sharedServerDir = "http://web-shared:10010" #DOCKER-TAG
     logInfo(sharedServerDir)
 
 
@@ -32,9 +36,8 @@ class ServerAuthentication(object):
 			logErrorCode("AUTHSERVER01")
 			raise NameError('Incorrect Server Auhtentication')
 		responseData = json.loads(response.text)
-		self.serverUser = serverId
-		self.serverPassword = responseData['token']
 		logInfo("serverAuth-Authentication succesful")
+		authenticationsDb.registerAuthentication(serverId,responseData['token'])
 		return {"Message": "Autenticacion Exitosa"} , 200
 
 serverAuthenticator = ServerAuthentication()

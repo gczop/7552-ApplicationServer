@@ -6,7 +6,13 @@ from databases.flashStories import flashStoriesDb
 # from databases.comments import commentsDb
 from databases.loginedUsers import loginedUsers
 
+if 'TEST_ENV' in os.environ:
+	from mockups.requests.mediaRequestsMockUp import *
+else:
+	from SharedServerRequests.mediaRequests import *
+
 numberOfStoriesToSee = 10
+
 
 def getHomepageFeed(request):
 	username = getRequestHeader(request,"username")
@@ -14,7 +20,17 @@ def getHomepageFeed(request):
 	if(username == None):
 		logErrorCode("API46",username)
 		return {"Error": "Falta de informacion en header username no especificado (Error code: 46)"}, 400
-	return { "feedStories" : flashStoriesDb.getUserLastNStories(username,numberOfStoriesToSee)}, 200
+	flashStoriesList = flashStoriesDb.getUserLastNStories(username,numberOfStoriesToSee)
+	for story in flashStoriesList:
+		response = getFirebaseUrl(story['storyDetail']['url'])
+		if(response.status_code != 200):
+			logErrorCode("API51", story["storyDetail"]["url"])
+			return {"Error": "Error inesperado obteniendo la url de una flash story" + story["storyDetail"]["url"]} , 400
+		responseData = json.loads(response.text)
+		story['storyDetail']['url']= responseData['resource']
+	return { "feedStories" : flashStoriesList}, 200
+
+
 
 def addNewStory(request):
 	username = getRequestHeader(request,"username")
@@ -23,9 +39,16 @@ def addNewStory(request):
 	if(username == None):
 		logErrorCode("API47")
 		return {"Error": "Falta de informacion en header username no especificado (Error code: 47)"}, 400
+	response = uploadNewFile(username,storyInfo['url'])
+	if(response.status_code != 200):
+		logErrorCode("API52")
+		return{"Error": "Error inesperado en el upload de una flash story"}, 400
+	responseData = json.loads(response.text)
+	storyInfo["url"] = responseData["_rev"]
 	id = flashStoriesDb.addNewStory(username,storyInfo)
 	# commentsDb.addComments(id)
 	return { 'storyId' : id}, 200
+
 
 def updateStory(request):
     username = getRequestHeader(request,"username")

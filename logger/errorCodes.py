@@ -58,5 +58,7 @@ codeMap = {
 "API47":"[flashStoriesController.addNewStory] Request header is missing username",
 "API48":"[flashStoriesController.updateStory] Request header is missing username",
 "API49":"[flashStoriesController.updateStory]Cant modify vital metadata from a multimeda file. URL=%1$",
-"API50":"[flashStoriesController.removeStory]Request header is missing username	"
+"API50":"[flashStoriesController.removeStory]Request header is missing username	",
+"API51":"[flashStoriesController.getHomepageFeed] Error obtaining flash story url %1$",
+"API52":"[flashStoriesController.addNewStory] Error uploading flash story"
 }

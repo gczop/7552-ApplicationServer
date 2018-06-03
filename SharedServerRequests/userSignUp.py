@@ -19,9 +19,10 @@ elif TRAVIS_URL:
 else:
 	#sharedServerDir = "https://blooming-lowlands-52198.herokuapp.com"
     logInfo("UserSignup- Shared Server found in localhost")
-    #sharedServerDir = "http://localhost:10010"
-    sharedServerDir = "http://web-shared:10010" #DOCKER-TAG
+    sharedServerDir = "http://localhost:10010"
+    #sharedServerDir = "http://web-shared:10010" #DOCKER-TAG
     print (sharedServerDir)
+
 
 def registerNewUser(username,password,fbToken):
 	logInfo("UserSignup- Shared Server request: registering new user")
@@ -32,5 +33,6 @@ def registerNewUser(username,password,fbToken):
 	}
 	logDebug("UserSignup- "+str(payload)+" "+str(serverAuthenticator.serverUser))
 	print (payload, serverAuthenticator.serverUser, serverAuthenticator.serverPassword)
+	user,s_password = authenticationsDb.getAuthentication()
 	return requests.post(sharedServerDir +  '/api/authorize',
-        auth=ReqAuth(serverAuthenticator.serverUser,serverAuthenticator.serverPassword), data= payload)
+        auth=ReqAuth(user,s_password), data= payload)
