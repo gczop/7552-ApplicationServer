@@ -8,16 +8,16 @@ from logger.log import *
 
 def searchForPerson(request):
 	searchedFor = getRequestHeader(request,"searchedFor")
-	log("Searching for "+str(searchedFor))
+	logDebug("peopleController- Searching for "+str(searchedFor))
 	if(searchedFor == None):
-		logError("API04")
+		logErrorCode("API04")
 		return {"Error": "Falta de informacion en header (Error code: 4)"}, 400
 	return usersDb.searchForUsers(searchedFor)
 
 def searchForSinglePerson(username):
 	user = usersDb.searchForSingleUser(username)
-	log("Searching for "+str(user))
+	logDebug("peopleController- Searching for "+str(user))
 	if(user == None):
-		logError("API05")
+		logErrorCode("API05")
 		return {"Error": "Username del usuario incorrecto (Error code: 5)"}, 400
 	return user

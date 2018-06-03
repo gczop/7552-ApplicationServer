@@ -70,5 +70,4 @@ def hello_world():
 
 
 if __name__ == '__main__':
-	log("Starting server")
 	application.run(host='0.0.0.0')
