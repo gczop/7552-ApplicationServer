@@ -1,6 +1,7 @@
 import requests
 from requests.auth import HTTPBasicAuth as ReqAuth
 from SharedServerRequests.serverAuthentication import serverAuthenticator
+from logger.log import *
 import os
 import datetime
 
@@ -13,16 +14,20 @@ print(MONGO_URL)
 
 if MONGO_URL:
     # Get a connection
+    logInfo("mediaRequests- SharedServer found in MONGO")
     sharedServerDir = "https://morning-cove-52274.herokuapp.com"
 elif TRAVIS_URL:
     sharedServerDir = "https://blooming-lowlands-52198.herokuapp.com"
 else:
-    # Not on an app with the MongoHQ add-on, do some localhost action
+    logInfo("mediaRequests- SharedServer found in localhost")
     #sharedServerDir = "https://blooming-lowlands-52198.herokuapp.com"
     sharedServerDir = "http://localhost:10010"
     #sharedServerDir = "http://web-shared:10010" #DOCKER-TAG
 
+
 def uploadNewFile(username,fileUrl):
+    logInfo("mediaRequests- Uploading new file")
+    logDebug("mediaRequests- "+str(username)+"||"+str(fileUrl))
     payload = {
   		"id": username,
   		"createdTime": str(datetime.datetime.now()),

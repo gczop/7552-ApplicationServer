@@ -11,14 +11,14 @@ print(MONGO_URL)
 
 if MONGO_URL:
     # Get a connection
-    log("Users DB in MONGO")
+    logInfo("users- Users DB in MONGO")
     conn = pymongo.MongoClient(MONGO_URL)
     from urllib.parse import urlparse
     # Get the database
     db = conn[urlparse(MONGO_URL).path[1:]]
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
-    log("Users DB in localhost")
+    logInfo("users- Users DB in localhost")
     conn = pymongo.MongoClient('localhost', 27017)
     #conn = pymongo.MongoClient('mongo', 27017)#DOCKER-TAG
     db = conn['StoriesAppServer']
@@ -44,13 +44,12 @@ class UsersDB(Singleton):
     users = userCollection
 
     def getAllUsers(self):
-        log("Getting all users")
+        logDebug("users- Getting all users")
         a = self.users.find(projection ={'_id':False, "username":True, "token":True})
-        print(a)
         return a
 
     def registerUserToken(self,user, token):
-        log("Registering user token")
+        logDebug("users-Registering user token")
         if(self.users.find_one({"username":user}) != None):
             self.users.find_one_and_update({"username":user},
                 {"$set": {"token": token, "expiration": datetime.now()+timedelta(hours=12)}},upsert=True)
@@ -58,39 +57,37 @@ class UsersDB(Singleton):
             self.addNewUser(user,token)
 
     def addNewUser(self,username= None,token= None,personalInfo=None):
-        print(personalInfo)
         if(username == None):
-            log("No username received")
+            logError("users-No username received")
             return
-        log("Adding new user: "+username)
+        logDebug("Adding new user: "+username)
         self.users.insert_one({"username":username,"token":token, "expiration": datetime.now()+timedelta(hours=12),"personalInformation": personalInfo or {}})
 
     def getUserProfile(self, username):
-        log("Getting "+str(username)+" profile")
+        logDebug("users-Getting "+str(username)+" profile")
         return self.users.find_one({"username": username})["personalInformation"]
 
     def updateUserProfile(self, username, updatedInfo):
-        log("Updating "+str(username)+ " profile")
+        logDebug("users-Updating "+str(username)+ " profile")
         oldInformation = self.users.find_one({"username": username}).get("personalInformation")
         update = createdUpdatedDictionary(updatedInfo,oldInformation)
         self.users.find_one_and_update({"username":username},
             {"$set": {"personalInformation": update}},upsert=True)
 
     def checkTokenNotExpired(self,username):
-        print(username)
-        print(self.users.find_one({'username':username}).get('expiration'))
         return self.users.find_one({'username':username}).get('expiration') < datetime.now()
 
     def checkUserLogin(self,username,password):
-        log("Checking "+str(username)+ " login")
+        logDebug("users-Checking "+str(username)+ " login")
         return self.users.find_one({'username':username}).get('token') == password
 
+
     def searchForSingleUser(self,username):
-        log("Searching "+str(username)+ " in DB")
+        logDebug("users-Searching "+str(username)+ " in DB")
         return self.users.find_one({"username": username},projection={'_id':False})
 
     def searchForUsers(self,username):
-        log("Searching users in DB: "+str(username))
+        logDebug("users-Searching users in DB: "+str(username))
         matchCursor = self.users.find({"username" : {'$regex' : ".*"+username+".*"}},projection={'_id':False, 'username':True})
         matchList = []
         for match in matchCursor:
@@ -98,12 +95,13 @@ class UsersDB(Singleton):
         return matchList
 
     def authenticateUser(self,username,token= None):
-        log("Authenticating: "+str(username))
+        logDebug("users-Authenticating: "+str(username))
         if(token != None):
             return self.users.find_one({
                 "token":token,
                 "username":username
                 })
+        logDebug("No token found")
         return None
 
 usersDb = UsersDB()
@@ -111,10 +109,8 @@ usersDb = UsersDB()
 
 def createdUpdatedDictionary(newInformation, oldInormation):
     update = {}
-    print(oldInormation)
     for fields in newInformation:
         update[fields]= newInformation.get(fields) or oldInormation.get(fields)
-    print(update)
     return update
 
 # def DbSearchForUsers(username):

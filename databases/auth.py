@@ -14,11 +14,11 @@ if MONGO_URL:
     conn = pymongo.MongoClient(MONGO_URL)
     from urllib.parse import urlparse
     # Get the database
-    log("Notifications DB in MONGO")
+    logInfo("Notifications DB in MONGO")
     db = conn[urlparse(MONGO_URL).path[1:]]
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
-    log("Notifications DB in localhost")
+    logInfo("Notifications DB in localhost")
     conn = pymongo.MongoClient('localhost', 27017)
     #conn = pymongo.MongoClient('mongo', 27017)#DOCKER-TAG
     db = conn['StoriesAppServer']

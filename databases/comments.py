@@ -13,14 +13,14 @@ print(MONGO_URL)
 
 if MONGO_URL:
     # Get a connection
-    log("Comments DB in MONGO")
+    logInfo("Comments DB in MONGO")
     conn = pymongo.MongoClient(MONGO_URL)
     from urllib.parse import urlparse
     # Get the database
     db = conn[urlparse(MONGO_URL).path[1:]]
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
-    log("Comments DB in localhost")
+    logInfo("Comments DB in localhost")
     conn = pymongo.MongoClient('localhost', 27017)
     #conn = pymongo.MongoClient('mongo', 27017) #DOCKER-TAG
     db = conn['StoriesAppServer']
@@ -58,24 +58,24 @@ class CommentsDb(Singleton):
     commentsList = commentsCollection
 
     def addComments(self, storyId):
-        log("Adding comment")
+        logDebug("comments- Adding comment to story "+str(storyId))
         self.commentsList.insert_one({"storyId": storyId , "content": []})
 
     def addNewComment(self, storyID, username, comment):
-        log("Adding new comment: "+str(comment))
+        logDebug("comments-"+str(username)+" adding comment: "+str(comment)+" to story "+str(storyID))
         storyComment = createComment(username, comment)
-
-        print (storyComment)
+        logInfo("comments- comment:"+str(storyComment))
         #self.commentsList.insert_one({"storyId":storyID},{"$push": {"content": storyComment }})
         self.commentsList.find_one_and_update({"storyId": storyID}, {"$push": {"content": storyComment}})
         return storyComment["_id"]
 
     def removeComment(self, storyId, commentID):
-        log("Removing comment "+str(commentID)+ " from story "+str(storyId))
+        logDebug("comments- Removing comment "+str(commentID)+ " from story "+str(storyId))
         self.commentsList.find_one_and_update({"storyId" : storyId} , { "$pull" : { "content" : {"_id": commentID } }})
         return "Okey"
 
     def getStoryComments(self, storyId):
+        logDebug("comments-Getting comments from story "+str(storyId))
         # return self.commentsList.find_one({ "storyId" : storyId})#.sort("date",fromNewToOld))
         return self.commentsList.find_one({"storyId": storyId})["content"][::-1]
 

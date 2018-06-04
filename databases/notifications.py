@@ -14,11 +14,11 @@ if MONGO_URL:
     conn = pymongo.MongoClient(MONGO_URL)
     from urllib.parse import urlparse
     # Get the database
-    log("Notifications DB in MONGO")
+    logInfo("notifications- Notifications DB in MONGO")
     db = conn[urlparse(MONGO_URL).path[1:]]
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
-    log("Notifications DB in localhost")
+    logInfo("notifications- Notifications DB in localhost")
     conn = pymongo.MongoClient('localhost', 27017)
     #conn = pymongo.MongoClient('mongo', 27017)#DOCKER-TAG
     db = conn['StoriesAppServer']
@@ -37,7 +37,7 @@ class NotificationsDb(Singleton):
     notificationsList = notificationsCollection
 
     def getUserNotifications(self,username):
-        log("Getting "+str(username)+" notifications")
+        logDebug("notifications- Getting "+str(username)+" notifications")
         try:
             return notificationsCollection.find_one({"username":username})["notifications"]
         except:

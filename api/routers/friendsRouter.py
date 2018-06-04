@@ -50,7 +50,6 @@ class FriendsRouter(Resource):
 
     @requires_auth
     def get(self):
-        print('ACACACACA')
         return getUserFriends(request)
 
     # For testing purposes
@@ -67,5 +66,4 @@ class SpecificUserFriendsRouter(Resource):
 
     @requires_auth
     def get(self, username):
-        print("Estamos aca")
         return getSpecificUserFriends(username)

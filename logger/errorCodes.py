@@ -3,8 +3,10 @@ codeMap = {
 "MOCK02": "MOCK: User %1$ already registered",
 "MOCK03": "MOCK: Incorrect login information",
 "MOCK04": "MOCK: User %1$ not registered",
+"FLASH01": "FlashStories: Story does not exist",
 "STORIES01": "Non existing story",
 "LOGINUSERS01": "Failed to login user %1$",
+"AUTHSERVER01": "Falied to authenticate server %1$",
 "API00":"",
 "API01":"[userSignUpController.authenticateSignUp]Error at sign up. Response message received: %1$",
 "API02":"[usersLoginController.validateUserLogin]Request header is missing token and password",
@@ -49,5 +51,14 @@ codeMap = {
 "API40":"[conversationsController.createNewConversations]Request header is missing second user",
 "API41":"[userSignUpController.authenticateSignUp]Error found. Response message received: %1$",
 "API42":"[reactionsController.getStoryReactions]Request header is missing story ID",
-"API43":"[storiesController.updateStory]Cant modify vital metadata from a multimeda file. URL=%1$"
+"API43":"[storiesController.updateStory]Cant modify vital metadata from a multimeda file. URL=%1$",
+"API44":"[statsController.authenticateServer] No server found with id %1$",
+"API45":"[statsController.authenticateServer] Server id is incorrect",
+"API46":"[flashStoriesController.getHomepageFeed] Request header is missing username",
+"API47":"[flashStoriesController.addNewStory] Request header is missing username",
+"API48":"[flashStoriesController.updateStory] Request header is missing username",
+"API49":"[flashStoriesController.updateStory]Cant modify vital metadata from a multimeda file. URL=%1$",
+"API50":"[flashStoriesController.removeStory]Request header is missing username	",
+"API51":"[flashStoriesController.getHomepageFeed] Error obtaining flash story url %1$",
+"API52":"[flashStoriesController.addNewStory] Error uploading flash story"
 }

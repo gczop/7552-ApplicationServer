@@ -14,11 +14,9 @@ class User(Document):
 def authenticate_user(token= None, email= None, password= None):
 	if(token != None):
 		for users in User.objects(token = token):
-			print(users)
 			return users
 	elif(email != None & password != None):
 		for users in User.objects(email= email, password= password)
-			print(users)
 			return users
 	return None
 

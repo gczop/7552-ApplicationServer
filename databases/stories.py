@@ -17,11 +17,11 @@ if MONGO_URL:
     conn = pymongo.MongoClient(MONGO_URL)
     from urllib.parse import urlparse
     # Get the database
-    log("Stories DB in MONGO")
+    logInfo("stories- Stories DB in MONGO")
     db = conn[urlparse(MONGO_URL).path[1:]]
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
-    log("Stories DB in localhost")
+    logInfo("stories- Stories DB in localhost")
     conn = pymongo.MongoClient('localhost', 27017)
     #conn = pymongo.MongoClient('mongo', 27017)#DOCKER-TAG
     db = conn['StoriesAppServer']
@@ -74,7 +74,7 @@ class StoriesDb(Singleton):
     storiesList = storiesCollection
 
     def getUserLastNStories(self, username, number = 5):
-        log("Retrieving last "+str(number)+ "stories")
+        logDebug("stories- Retrieving last "+str(number)+ "stories")
         fromNewToOld = -1
         friends = friendsDb.getUserFriends(username);
         friends.append(username);
@@ -83,17 +83,17 @@ class StoriesDb(Singleton):
         return list(self.storiesList.find({ "username": {"$in" : friends }}).sort("createdAt",fromNewToOld).limit(number))
 
     def addNewStory(self, username, storyInfo):
-        log("Adding new story for user "+str(username))
+        logDebug("stories- Adding new story for user "+str(username))
         storyDict = createStoryDocument(storyInfo)
         id = str(uuid.uuid4())
         self.storiesList.insert_one({"_id":id , "username":username,"storyDetail":storyDict, "createdAt":str(datetime.datetime.now()), "updatedAt":str(datetime.datetime.now()),"reactions": {}})
         return id
 
     def updateStory(self, username, id, updateInfo):
-        log("Updating story "+str(id)+" for user "+str(username))
+        logDebug("stories- Updating story "+str(id)+" for user "+str(username))
         oldStoryInfo = self.storiesList.find_one({"_id":id})
         if(oldStoryInfo == None):
-            logError("STORIES01")
+            logErrorCode("STORIES01")
             raise Exception("Story inexistente")
         storyDict = updateInfo
 
@@ -103,21 +103,23 @@ class StoriesDb(Singleton):
             {"$set": {"storyDetail": newData, "updatedAt": str(datetime.datetime.now())}},upsert=True)
 
     def deleteStory(self, id):
-        log("Deleting story "+str(id))
+        logDebug("stories- Deleting story "+str(id))
         self.storiesList.delete_one({"_id": id})
         return "Okey"
 
     def getStoryReactions(self, storyId):
+        logDebug("stories- Getting reactions for story: "+str(storyId))
         return self.storiesList.find_one({ "storyId": storyId })["reactions"]
 
     def addStoryReaction(self, storyId, username ,reaction):
-        log("Adding reaction to story")
+        logDebug("stories- Adding reaction to story")
         reactionData = { "reacter": username , "reaction": reaction }
 
         self.storiesList.find_one_and_update({"storyId": storyId} ,{"$push": {"reactions" : reactionData }} , projection={'_id':False} ,upsert=True)
         return "Okey"
 
     def deleteStoryReaction(self, storyId, username):
+        logDebug("stories- Deleting reaction from "+str(username)+" for story: "+str(storyId))
         self.storiesList.find_one_and_update({"storyId": storyId } ,{"$pull": {"reactions" : {"reacter": username} }})
         return "Okey"
 
