@@ -153,3 +153,5095 @@ LoginController - response status:200
 Succesful login for user guido
 Registering user token
 User login: guido, token: 5ybmuQrkxg
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking  login
+Checking guido login
+Adding None to None friend list
+[API14] [friendsController.addFriend]Request header is missing username/friend
+Checking guido login
+Adding None to None friend list
+[API14] [friendsController.addFriend]Request header is missing username/friend
+Checking guido login
+Adding None to guido friend list
+[API14] [friendsController.addFriend]Request header is missing username/friend
+Checking guido login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking guido login
+Checking guido login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking guido login
+Checking guido login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking guido login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking guido login
+Checking guido login
+Adding None to guido friend list
+[API14] [friendsController.addFriend]Request header is missing username/friend
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking guido login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking guido login
+Getting guido friend list
+Getting guido friend list
+Checking guido login
+Checking guido login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking guido login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Validating login for user guido
+Shared server request: login user
+LoginController - response status:401
+Validating login for user guido
+Shared server request: login user
+LoginController - response status:200
+Succesful login for user guido
+Registering user token
+User login: guido, token: thgyjakWtI
+Checking guido login
+Checking guido login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking guido login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking guido login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking guido login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking guido login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking guido login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking guido login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+UserSignup: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Checking guido login
+Getting guido friend list
+Getting guido friend list
+Users DB in localhost
+Setting logined users
+Getting all users
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Authenticating sign up for new user: user
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+[MOCK01] MOCK: Signup parameters missing
+Error while registering user:{'message': 'Parametros de signup faltantes'}
+[API01] [userSignUpController.authenticateSignUp]Error at sign up. Response message received: Parametros de signup faltantes
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+Validating login for user fakeuser
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Authenticating sign up for new user: user3
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+Authenticating sign up for new user: userProfile
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Checking userProfile login
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Authenticating sign up for new user: userProfile2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+Validating login for user userProfile2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile2
+Mocking user registry
+User login: userProfile2, token: eTKhUrPGek
+Checking userProfile login
+Authenticating sign up for new user: userFriends
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Authenticating sign up for new user: user
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+[MOCK01] MOCK: Signup parameters missing
+Error while registering user:{'message': 'Parametros de signup faltantes'}
+[API01] [userSignUpController.authenticateSignUp]Error at sign up. Response message received: Parametros de signup faltantes
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+Validating login for user fakeuser
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Authenticating sign up for new user: user3
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+Authenticating sign up for new user: userProfile
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Checking userProfile login
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Authenticating sign up for new user: userProfile2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+Validating login for user userProfile2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile2
+Mocking user registry
+User login: userProfile2, token: eTKhUrPGek
+Checking userProfile login
+Authenticating sign up for new user: userFriends
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Authenticating sign up for new user: user
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user
+User login: user, token: eTKhUrPGek
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+[MOCK01] MOCK: Signup parameters missing
+Error while registering user:{'message': 'Parametros de signup faltantes'}
+[API01] [userSignUpController.authenticateSignUp]Error at sign up. Response message received: Parametros de signup faltantes
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user2
+User login: user2, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Validating login for user fakeuser
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Authenticating sign up for new user: user3
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user3
+User login: user3, token: eTKhUrPGek
+Validating login for user user3
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user3
+Mocking user registry
+User login: user3, token: eTKhUrPGek
+Authenticating sign up for new user: userProfile
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userProfile
+User login: userProfile, token: eTKhUrPGek
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile profile
+Updating userProfile profile
+Checking userProfile login
+Getting userProfile profile
+Getting userProfile profile
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile profile
+Updating userProfile profile
+Checking userProfile login
+Getting userProfile profile
+Getting userProfile profile
+Authenticating sign up for new user: userProfile2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userProfile2
+User login: userProfile2, token: eTKhUrPGek
+Validating login for user userProfile2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile2
+Mocking user registry
+User login: userProfile2, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile2 profile
+Updating userProfile2 profile
+Checking userProfile login
+Getting userProfile2 profile
+Getting userProfile2 profile
+Authenticating sign up for new user: userFriends
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userFriends
+User login: userFriends, token: eTKhUrPGek
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding user to userFriends friend list
+[API26] [friendsController.addFriend]Error found while adding friend
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Checking userFriends login
+Removing user from userFriends friend list
+userFriends deleting user from friends list
+[API25] [friendsController.removeFriend]Friend not in users friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding user to userFriends friend list
+[API26] [friendsController.addFriend]Error found while adding friend
+Checking userFriends login
+Getting user friend list
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving invitations for user userFriends
+Getting user userFriends invitations
+[API07] [invitationsController.getUserInvitations]No invitations found for user userFriends
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Checking user login
+user accepting None friend request
+[API11] [invitationsController.acceptFriendInvitation]Request header is missing friend name
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user2 login
+user2 adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for userFriends
+Retrieving last 10stories
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Checking user login
+Updating story 64fbfdfe-ba65-4aca-9cc3-c7e6feb74c76
+Updating story 64fbfdfe-ba65-4aca-9cc3-c7e6feb74c76 for user user
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding story for user userFriends
+Adding new story for user userFriends
+Adding comment
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for userFriends
+Retrieving last 10stories
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Checking userFriends login
+Deleting story 64fbfdfe-ba65-4aca-9cc3-c7e6feb74c76
+Deleting story 64fbfdfe-ba65-4aca-9cc3-c7e6feb74c76
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Checking user login
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting user friend list
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Checking user login
+Getting user friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story fe0c9e87-3e3d-45ff-9526-bd78458509f2
+Adding reaction to story
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story c9d5bb00-5de6-4ad8-a352-5b0c37a02fe0
+Adding reaction to story
+Checking user login
+user2 is adding a reaction to story c9d5bb00-5de6-4ad8-a352-5b0c37a02fe0
+Adding reaction to story
+Checking user login
+Getting story c9d5bb00-5de6-4ad8-a352-5b0c37a02fe0 reactions
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 169eb672-9cfb-451b-8455-0bc64646baab
+Adding reaction to story
+Checking user login
+user is removing his reaction to story 169eb672-9cfb-451b-8455-0bc64646baab
+Checking user login
+Getting story 169eb672-9cfb-451b-8455-0bc64646baab reactions
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Authenticating sign up for new user: user
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user
+User login: user, token: eTKhUrPGek
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+[MOCK01] MOCK: Signup parameters missing
+Error while registering user:{'message': 'Parametros de signup faltantes'}
+[API01] [userSignUpController.authenticateSignUp]Error at sign up. Response message received: Parametros de signup faltantes
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user2
+User login: user2, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Validating login for user fakeuser
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Authenticating sign up for new user: user3
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user3
+User login: user3, token: eTKhUrPGek
+Validating login for user user3
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user3
+Mocking user registry
+User login: user3, token: eTKhUrPGek
+Authenticating sign up for new user: userProfile
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userProfile
+User login: userProfile, token: eTKhUrPGek
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile profile
+Updating userProfile profile
+Checking userProfile login
+Getting userProfile profile
+Getting userProfile profile
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile profile
+Updating userProfile profile
+Checking userProfile login
+Getting userProfile profile
+Getting userProfile profile
+Authenticating sign up for new user: userProfile2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userProfile2
+User login: userProfile2, token: eTKhUrPGek
+Validating login for user userProfile2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile2
+Mocking user registry
+User login: userProfile2, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile2 profile
+Updating userProfile2 profile
+Checking userProfile login
+Getting userProfile2 profile
+Getting userProfile2 profile
+Authenticating sign up for new user: userFriends
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userFriends
+User login: userFriends, token: eTKhUrPGek
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding user to userFriends friend list
+[API26] [friendsController.addFriend]Error found while adding friend
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Checking userFriends login
+Removing user from userFriends friend list
+userFriends deleting user from friends list
+[API25] [friendsController.removeFriend]Friend not in users friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding user to userFriends friend list
+[API26] [friendsController.addFriend]Error found while adding friend
+Checking userFriends login
+Getting user friend list
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving invitations for user userFriends
+Getting user userFriends invitations
+[API07] [invitationsController.getUserInvitations]No invitations found for user userFriends
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Checking user login
+user accepting None friend request
+[API11] [invitationsController.acceptFriendInvitation]Request header is missing friend name
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user2 login
+user2 adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for userFriends
+Retrieving last 10stories
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding story for user userFriends
+Adding new story for user userFriends
+Adding comment
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for userFriends
+Retrieving last 10stories
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Checking user login
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting user friend list
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Checking user login
+Getting user friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 02c861c6-dc3c-46a7-b723-2f930f887cd9
+Adding new comment: Ese meme si se puede ver
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story f5248691-96de-45f3-9766-80eb9cddc613
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Getting story comments from story f5248691-96de-45f3-9766-80eb9cddc613
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 46ec0101-d5fd-45c6-97ab-b7e432f33a3a
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Adding new comment from user to story 46ec0101-d5fd-45c6-97ab-b7e432f33a3a
+Adding new comment: Buzzfeed es muy normie
+Checking user login
+Getting story comments from story 46ec0101-d5fd-45c6-97ab-b7e432f33a3a
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 4d35eac4-d9df-4cc8-bd44-052a69e9e1f8
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Removing comment 97105550-eb6b-40d9-9d18-0457437a33d2 from story 4d35eac4-d9df-4cc8-bd44-052a69e9e1f8
+Checking user login
+Getting story comments from story 4d35eac4-d9df-4cc8-bd44-052a69e9e1f8
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story c8eb664d-159c-4b44-aa96-e0d032528d1e
+Adding reaction to story
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 19f6f00a-6b21-47e8-bd6b-607235e4e0c9
+Adding reaction to story
+Checking user login
+user2 is adding a reaction to story 19f6f00a-6b21-47e8-bd6b-607235e4e0c9
+Adding reaction to story
+Checking user login
+Getting story 19f6f00a-6b21-47e8-bd6b-607235e4e0c9 reactions
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 13239988-316b-4da4-946e-5769f5e818e6
+Adding reaction to story
+Checking user login
+user is removing his reaction to story 13239988-316b-4da4-946e-5769f5e818e6
+Checking user login
+Getting story 13239988-316b-4da4-946e-5769f5e818e6 reactions
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Authenticating sign up for new user: user
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user
+User login: user, token: eTKhUrPGek
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+[MOCK01] MOCK: Signup parameters missing
+Error while registering user:{'message': 'Parametros de signup faltantes'}
+[API01] [userSignUpController.authenticateSignUp]Error at sign up. Response message received: Parametros de signup faltantes
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user2
+User login: user2, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Validating login for user fakeuser
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Authenticating sign up for new user: user3
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user3
+User login: user3, token: eTKhUrPGek
+Validating login for user user3
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user3
+Mocking user registry
+User login: user3, token: eTKhUrPGek
+Authenticating sign up for new user: userProfile
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userProfile
+User login: userProfile, token: eTKhUrPGek
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile profile
+Updating userProfile profile
+Checking userProfile login
+Getting userProfile profile
+Getting userProfile profile
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile profile
+Updating userProfile profile
+Checking userProfile login
+Getting userProfile profile
+Getting userProfile profile
+Authenticating sign up for new user: userProfile2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userProfile2
+User login: userProfile2, token: eTKhUrPGek
+Validating login for user userProfile2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile2
+Mocking user registry
+User login: userProfile2, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile2 profile
+Updating userProfile2 profile
+Checking userProfile login
+Getting userProfile2 profile
+Getting userProfile2 profile
+Authenticating sign up for new user: userFriends
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userFriends
+User login: userFriends, token: eTKhUrPGek
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding user to userFriends friend list
+[API26] [friendsController.addFriend]Error found while adding friend
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Checking userFriends login
+Removing user from userFriends friend list
+userFriends deleting user from friends list
+[API25] [friendsController.removeFriend]Friend not in users friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding user to userFriends friend list
+[API26] [friendsController.addFriend]Error found while adding friend
+Checking userFriends login
+Getting user friend list
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving invitations for user userFriends
+Getting user userFriends invitations
+[API07] [invitationsController.getUserInvitations]No invitations found for user userFriends
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Checking user login
+user accepting None friend request
+[API11] [invitationsController.acceptFriendInvitation]Request header is missing friend name
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user2 login
+user2 adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for userFriends
+Retrieving last 10stories
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Checking user login
+Updating story 38ac7f9a-6925-43db-a2fc-41133ec2061d
+Updating story 38ac7f9a-6925-43db-a2fc-41133ec2061d for user user
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding story for user userFriends
+Adding new story for user userFriends
+Adding comment
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for userFriends
+Retrieving last 10stories
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Checking userFriends login
+Deleting story 38ac7f9a-6925-43db-a2fc-41133ec2061d
+Deleting story 38ac7f9a-6925-43db-a2fc-41133ec2061d
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Checking user login
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting user friend list
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Checking user login
+Getting user friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 0873a7ce-ee0e-4235-b8f9-feec1e2e578e
+Adding new comment: Ese meme si se puede ver
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story ec71932b-6c17-4170-85f3-3c622fefb328
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Getting story comments from story ec71932b-6c17-4170-85f3-3c622fefb328
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 2ddaa17c-c393-4adf-adb4-fc873fd89fd1
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Adding new comment from user to story 2ddaa17c-c393-4adf-adb4-fc873fd89fd1
+Adding new comment: Buzzfeed es muy normie
+Checking user login
+Getting story comments from story 2ddaa17c-c393-4adf-adb4-fc873fd89fd1
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story d2658a3e-924a-424d-94a8-5768d2e0a710
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Removing comment 15083d41-344c-4b7c-811a-89cdb4de68a2 from story d2658a3e-924a-424d-94a8-5768d2e0a710
+Checking user login
+Getting story comments from story d2658a3e-924a-424d-94a8-5768d2e0a710
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 322cfbe5-e2b1-49f2-ba12-3d3b0430d5e9
+Adding reaction to story
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 442b0ab9-dea3-46fa-a584-561bad4266c0
+Adding reaction to story
+Checking user login
+user2 is adding a reaction to story 442b0ab9-dea3-46fa-a584-561bad4266c0
+Adding reaction to story
+Checking user login
+Getting story 442b0ab9-dea3-46fa-a584-561bad4266c0 reactions
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 0422333b-8fa2-41e2-a2c8-52550bff2971
+Adding reaction to story
+Checking user login
+user is removing his reaction to story 0422333b-8fa2-41e2-a2c8-52550bff2971
+Checking user login
+Getting story 0422333b-8fa2-41e2-a2c8-52550bff2971 reactions
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Authenticating sign up for new user: user
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user
+User login: user, token: eTKhUrPGek
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+[MOCK01] MOCK: Signup parameters missing
+Error while registering user:{'message': 'Parametros de signup faltantes'}
+[API01] [userSignUpController.authenticateSignUp]Error at sign up. Response message received: Parametros de signup faltantes
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user2
+User login: user2, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Validating login for user fakeuser
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Authenticating sign up for new user: user3
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user3
+User login: user3, token: eTKhUrPGek
+Validating login for user user3
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user3
+Mocking user registry
+User login: user3, token: eTKhUrPGek
+Authenticating sign up for new user: userProfile
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userProfile
+User login: userProfile, token: eTKhUrPGek
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile profile
+Updating userProfile profile
+Checking userProfile login
+Getting userProfile profile
+Getting userProfile profile
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile profile
+Updating userProfile profile
+Checking userProfile login
+Getting userProfile profile
+Getting userProfile profile
+Authenticating sign up for new user: userProfile2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userProfile2
+User login: userProfile2, token: eTKhUrPGek
+Validating login for user userProfile2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile2
+Mocking user registry
+User login: userProfile2, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile2 profile
+Updating userProfile2 profile
+Checking userProfile login
+Getting userProfile2 profile
+Getting userProfile2 profile
+Authenticating sign up for new user: userFriends
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userFriends
+User login: userFriends, token: eTKhUrPGek
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding user to userFriends friend list
+[API26] [friendsController.addFriend]Error found while adding friend
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Checking userFriends login
+Removing user from userFriends friend list
+userFriends deleting user from friends list
+[API25] [friendsController.removeFriend]Friend not in users friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding user to userFriends friend list
+[API26] [friendsController.addFriend]Error found while adding friend
+Checking userFriends login
+Getting user friend list
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving invitations for user userFriends
+Getting user userFriends invitations
+[API07] [invitationsController.getUserInvitations]No invitations found for user userFriends
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Checking user login
+user accepting None friend request
+[API11] [invitationsController.acceptFriendInvitation]Request header is missing friend name
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user2 login
+user2 adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for userFriends
+Retrieving last 10stories
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding story for user userFriends
+Adding new story for user userFriends
+Adding comment
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for userFriends
+Retrieving last 10stories
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Checking user login
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting user friend list
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Checking user login
+Getting user friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 11a9fc14-1afc-488e-9946-2c08f9bac177
+Adding new comment: Ese meme si se puede ver
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 52e2abfa-80cf-42e9-a62b-82f786419808
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Getting story comments from story 52e2abfa-80cf-42e9-a62b-82f786419808
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 6a3fdfdf-d269-4f11-b80d-83b58c8525c5
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Adding new comment from user to story 6a3fdfdf-d269-4f11-b80d-83b58c8525c5
+Adding new comment: Buzzfeed es muy normie
+Checking user login
+Getting story comments from story 6a3fdfdf-d269-4f11-b80d-83b58c8525c5
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story e85b80f3-2df4-4182-8e61-ddf27f879c27
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Removing comment 1b1e99a0-d11a-4ec1-8a34-e4def2a24e79 from story e85b80f3-2df4-4182-8e61-ddf27f879c27
+Removing comment 1b1e99a0-d11a-4ec1-8a34-e4def2a24e79 from story e85b80f3-2df4-4182-8e61-ddf27f879c27
+Checking user login
+Getting story comments from story e85b80f3-2df4-4182-8e61-ddf27f879c27
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 76e5624e-b77e-43bc-9cd7-b90ea3a09ff8
+Adding reaction to story
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 48ab68e0-053d-4fb8-87a8-a345250053f6
+Adding reaction to story
+Checking user login
+user2 is adding a reaction to story 48ab68e0-053d-4fb8-87a8-a345250053f6
+Adding reaction to story
+Checking user login
+Getting story 48ab68e0-053d-4fb8-87a8-a345250053f6 reactions
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story d060b074-e528-4bd0-bd29-e64989403f68
+Adding reaction to story
+Checking user login
+user is removing his reaction to story d060b074-e528-4bd0-bd29-e64989403f68
+Checking user login
+Getting story d060b074-e528-4bd0-bd29-e64989403f68 reactions
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Authenticating sign up for new user: user
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user
+User login: user, token: eTKhUrPGek
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+[MOCK01] MOCK: Signup parameters missing
+Error while registering user:{'message': 'Parametros de signup faltantes'}
+[API01] [userSignUpController.authenticateSignUp]Error at sign up. Response message received: Parametros de signup faltantes
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user2
+User login: user2, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Validating login for user fakeuser
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Authenticating sign up for new user: user3
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user3
+User login: user3, token: eTKhUrPGek
+Validating login for user user3
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user3
+Mocking user registry
+User login: user3, token: eTKhUrPGek
+Authenticating sign up for new user: userProfile
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userProfile
+User login: userProfile, token: eTKhUrPGek
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile profile
+Updating userProfile profile
+Checking userProfile login
+Getting userProfile profile
+Getting userProfile profile
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile profile
+Updating userProfile profile
+Checking userProfile login
+Getting userProfile profile
+Getting userProfile profile
+Authenticating sign up for new user: userProfile2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userProfile2
+User login: userProfile2, token: eTKhUrPGek
+Validating login for user userProfile2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile2
+Mocking user registry
+User login: userProfile2, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile2 profile
+Updating userProfile2 profile
+Checking userProfile login
+Getting userProfile2 profile
+Getting userProfile2 profile
+Authenticating sign up for new user: userFriends
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userFriends
+User login: userFriends, token: eTKhUrPGek
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding user to userFriends friend list
+[API26] [friendsController.addFriend]Error found while adding friend
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Checking userFriends login
+Removing user from userFriends friend list
+userFriends deleting user from friends list
+[API25] [friendsController.removeFriend]Friend not in users friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding user to userFriends friend list
+[API26] [friendsController.addFriend]Error found while adding friend
+Checking userFriends login
+Getting user friend list
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving invitations for user userFriends
+Getting user userFriends invitations
+[API07] [invitationsController.getUserInvitations]No invitations found for user userFriends
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Checking user login
+user accepting None friend request
+[API11] [invitationsController.acceptFriendInvitation]Request header is missing friend name
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user2 login
+user2 adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for userFriends
+Retrieving last 10stories
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Checking user login
+Updating story 2ac541eb-c69d-44fc-80b2-9c6b6248e685
+Updating story 2ac541eb-c69d-44fc-80b2-9c6b6248e685 for user user
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding story for user userFriends
+Adding new story for user userFriends
+Adding comment
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for userFriends
+Retrieving last 10stories
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Checking userFriends login
+Deleting story 2ac541eb-c69d-44fc-80b2-9c6b6248e685
+Deleting story 2ac541eb-c69d-44fc-80b2-9c6b6248e685
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Checking user login
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting user friend list
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Checking user login
+Getting user friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story e3810632-687d-46be-a079-a787d94469f7
+Adding new comment: Ese meme si se puede ver
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 853160c1-1013-436b-b579-457c66c2355c
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Getting story comments from story 853160c1-1013-436b-b579-457c66c2355c
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 2ffd2862-977b-432c-823e-b4eafc1a48fb
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Adding new comment from user to story 2ffd2862-977b-432c-823e-b4eafc1a48fb
+Adding new comment: Buzzfeed es muy normie
+Checking user login
+Getting story comments from story 2ffd2862-977b-432c-823e-b4eafc1a48fb
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 852e6c01-c0ee-4bd5-9bd0-d64f03642176
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Removing comment 83f61b12-9bd8-4695-bb21-9420d1c1ba30 from story 852e6c01-c0ee-4bd5-9bd0-d64f03642176
+Removing comment 83f61b12-9bd8-4695-bb21-9420d1c1ba30 from story 852e6c01-c0ee-4bd5-9bd0-d64f03642176
+Checking user login
+Getting story comments from story 852e6c01-c0ee-4bd5-9bd0-d64f03642176
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 77efd759-a8fb-421d-9d32-e33e0797f4f3
+Adding reaction to story
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story e3af148b-6408-4f91-bfa1-b74fedbff080
+Adding reaction to story
+Checking user login
+user2 is adding a reaction to story e3af148b-6408-4f91-bfa1-b74fedbff080
+Adding reaction to story
+Checking user login
+Getting story e3af148b-6408-4f91-bfa1-b74fedbff080 reactions
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 387dbad0-d5b8-4f09-9715-baee04bf6c96
+Adding reaction to story
+Checking user login
+user is removing his reaction to story 387dbad0-d5b8-4f09-9715-baee04bf6c96
+Checking user login
+Getting story 387dbad0-d5b8-4f09-9715-baee04bf6c96 reactions
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Authenticating sign up for new user: user
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user
+User login: user, token: eTKhUrPGek
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+[MOCK01] MOCK: Signup parameters missing
+Error while registering user:{'message': 'Parametros de signup faltantes'}
+[API01] [userSignUpController.authenticateSignUp]Error at sign up. Response message received: Parametros de signup faltantes
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user2
+User login: user2, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Validating login for user fakeuser
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Authenticating sign up for new user: user3
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user3
+User login: user3, token: eTKhUrPGek
+Validating login for user user3
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user3
+Mocking user registry
+User login: user3, token: eTKhUrPGek
+Authenticating sign up for new user: userProfile
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userProfile
+User login: userProfile, token: eTKhUrPGek
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile profile
+Updating userProfile profile
+Checking userProfile login
+Getting userProfile profile
+Getting userProfile profile
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile profile
+Updating userProfile profile
+Checking userProfile login
+Getting userProfile profile
+Getting userProfile profile
+Authenticating sign up for new user: userProfile2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userProfile2
+User login: userProfile2, token: eTKhUrPGek
+Validating login for user userProfile2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile2
+Mocking user registry
+User login: userProfile2, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile2 profile
+Updating userProfile2 profile
+Checking userProfile login
+Getting userProfile2 profile
+Getting userProfile2 profile
+Authenticating sign up for new user: userFriends
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userFriends
+User login: userFriends, token: eTKhUrPGek
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding user to userFriends friend list
+userFriends adding user to friends list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Checking userFriends login
+Removing user from userFriends friend list
+userFriends deleting user from friends list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding user to userFriends friend list
+userFriends adding user to friends list
+Checking userFriends login
+Getting user friend list
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving invitations for user userFriends
+Getting user userFriends invitations
+[API07] [invitationsController.getUserInvitations]No invitations found for user userFriends
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Checking user login
+user accepting None friend request
+[API11] [invitationsController.acceptFriendInvitation]Request header is missing friend name
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user2 login
+user2 adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for userFriends
+Retrieving last 10stories
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding story for user userFriends
+Adding new story for user userFriends
+Adding comment
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for userFriends
+Retrieving last 10stories
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Checking user login
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Checking user login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting user friend list
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Checking user login
+Getting user friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 1ab9d66a-6bab-4966-8fc1-84d6c295d399
+Adding new comment: Ese meme si se puede ver
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story e5b467ee-7992-4836-b17c-999f6e9108a3
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Getting story comments from story e5b467ee-7992-4836-b17c-999f6e9108a3
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 13e4e259-a139-4793-a8a7-eb3aa289863a
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Adding new comment from user to story 13e4e259-a139-4793-a8a7-eb3aa289863a
+Adding new comment: Buzzfeed es muy normie
+Checking user login
+Getting story comments from story 13e4e259-a139-4793-a8a7-eb3aa289863a
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 9ccefb9d-2aca-445f-97fe-06012f2464c7
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Removing comment 5b50a10f-cab7-4ab9-9bc3-156e5deb3128 from story 9ccefb9d-2aca-445f-97fe-06012f2464c7
+Removing comment 5b50a10f-cab7-4ab9-9bc3-156e5deb3128 from story 9ccefb9d-2aca-445f-97fe-06012f2464c7
+Checking user login
+Getting story comments from story 9ccefb9d-2aca-445f-97fe-06012f2464c7
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 0a2ca740-384f-4396-8d24-971ecc22ee0d
+Adding reaction to story
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story bf6cc739-1bbf-4a0c-81cf-fd29f293396f
+Adding reaction to story
+Checking user login
+user2 is adding a reaction to story bf6cc739-1bbf-4a0c-81cf-fd29f293396f
+Adding reaction to story
+Checking user login
+Getting story bf6cc739-1bbf-4a0c-81cf-fd29f293396f reactions
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 4b4a0710-01da-446f-aba2-b465219abda0
+Adding reaction to story
+Checking user login
+user is removing his reaction to story 4b4a0710-01da-446f-aba2-b465219abda0
+Checking user login
+Getting story 4b4a0710-01da-446f-aba2-b465219abda0 reactions
+Users DB in localhost
+Setting logined users
+Getting all users
+Notifications DB in localhost
+userLogin: Shared Server found in localhost
+Friends DB in localhost
+Invitations DB in localhost
+Notifications DB in localhost
+Stories DB in localhost
+Comments DB in localhost
+Authenticating sign up for new user: user
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user
+User login: user, token: eTKhUrPGek
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+[MOCK01] MOCK: Signup parameters missing
+Error while registering user:{'message': 'Parametros de signup faltantes'}
+[API01] [userSignUpController.authenticateSignUp]Error at sign up. Response message received: Parametros de signup faltantes
+Authenticating sign up for new user: user2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user2
+User login: user2, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Validating login for user fakeuser
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+[MOCK03] MOCK: Incorrect login information
+LoginController - response status:401
+Authenticating sign up for new user: user3
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: user3
+User login: user3, token: eTKhUrPGek
+Validating login for user user3
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user3
+Mocking user registry
+User login: user3, token: eTKhUrPGek
+Authenticating sign up for new user: userProfile
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userProfile
+User login: userProfile, token: eTKhUrPGek
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile profile
+Updating userProfile profile
+Checking userProfile login
+Getting userProfile profile
+Getting userProfile profile
+Validating login for user userProfile
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile
+Mocking user registry
+User login: userProfile, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile profile
+Updating userProfile profile
+Checking userProfile login
+Getting userProfile profile
+Getting userProfile profile
+Authenticating sign up for new user: userProfile2
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userProfile2
+User login: userProfile2, token: eTKhUrPGek
+Validating login for user userProfile2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userProfile2
+Mocking user registry
+User login: userProfile2, token: eTKhUrPGek
+Checking userProfile login
+Updating userProfile2 profile
+Updating userProfile2 profile
+Checking userProfile login
+Getting userProfile2 profile
+Getting userProfile2 profile
+Authenticating sign up for new user: userFriends
+Mocking user signup
+Mocking user signup
+Mocking new user
+New user registered in DB
+User login mockup
+Mocking succesful login
+{"firstname": null, "lastname": null, "gender": null, "age": null, "birthday": null}
+Adding new user: userFriends
+User login: userFriends, token: eTKhUrPGek
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding user to userFriends friend list
+userFriends adding user to friends list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Checking userFriends login
+Removing user from userFriends friend list
+userFriends deleting user from friends list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding user to userFriends friend list
+userFriends adding user to friends list
+Checking userFriends login
+Getting user friend list
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving invitations for user userFriends
+Getting user userFriends invitations
+[API07] [invitationsController.getUserInvitations]No invitations found for user userFriends
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Checking user login
+user accepting None friend request
+[API11] [invitationsController.acceptFriendInvitation]Request header is missing friend name
+Checking userFriends login
+Getting userFriends friend list
+Getting userFriends friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Validating login for user user2
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user2
+Mocking user registry
+User login: user2, token: eTKhUrPGek
+Checking userFriends login
+userFriends adding user to friend list
+Adding friend invitation
+Checking user2 login
+user2 adding user to friend list
+Adding friend invitation
+Checking user login
+Retrieving invitations for user user
+Getting user user invitations
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for userFriends
+Retrieving last 10stories
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Checking user login
+Updating story e523a24c-6d88-4634-90c3-33d59766fb79
+Updating story e523a24c-6d88-4634-90c3-33d59766fb79 for user user
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Adding story for user userFriends
+Adding new story for user userFriends
+Adding comment
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for userFriends
+Retrieving last 10stories
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Checking user login
+Deleting story e523a24c-6d88-4634-90c3-33d59766fb79
+Deleting story e523a24c-6d88-4634-90c3-33d59766fb79
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Retrieving homepage feed for user
+Retrieving last 10stories
+Getting user friend list
+Checking userFriends login
+Deleting story c327197a-1cd2-4375-90e7-b624e8008d2c
+Deleting story c327197a-1cd2-4375-90e7-b624e8008d2c
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Checking user login
+Checking user login
+Getting user friend list
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting userFriends friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Getting user friend list
+Checking user login
+Validating login for user userFriends
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user userFriends
+Mocking user registry
+User login: userFriends, token: eTKhUrPGek
+Checking userFriends login
+Getting user friend list
+Checking userFriends login
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Checking user login
+Getting user friend list
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story 59d63225-588d-460a-8ba5-78348e696df4
+Adding new comment: Ese meme si se puede ver
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story d1621183-6f2d-4184-8212-2dac8170a57a
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Getting story comments from story d1621183-6f2d-4184-8212-2dac8170a57a
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story d1b52538-2b8c-4633-903f-0a9158c1b3fe
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Adding new comment from user to story d1b52538-2b8c-4633-903f-0a9158c1b3fe
+Adding new comment: Buzzfeed es muy normie
+Checking user login
+Getting story comments from story d1b52538-2b8c-4633-903f-0a9158c1b3fe
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+Adding new comment from user to story bf20bb0c-f455-4de3-bec4-00036589fda0
+Adding new comment: Ese meme si se puede ver
+Checking user login
+Removing comment 6ea611b9-187e-42e6-a5fa-c56d217d1c73 from story bf20bb0c-f455-4de3-bec4-00036589fda0
+Removing comment 6ea611b9-187e-42e6-a5fa-c56d217d1c73 from story bf20bb0c-f455-4de3-bec4-00036589fda0
+Checking user login
+Getting story comments from story bf20bb0c-f455-4de3-bec4-00036589fda0
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 717c4b82-ee2d-4726-88e0-f7d238018c7d
+Adding reaction to story
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 5363029f-5b00-4551-9857-929ffea95748
+Adding reaction to story
+Checking user login
+user2 is adding a reaction to story 5363029f-5b00-4551-9857-929ffea95748
+Adding reaction to story
+Checking user login
+Getting story 5363029f-5b00-4551-9857-929ffea95748 reactions
+Validating login for user user
+User login mockup
+Mocking succesful login
+LoginController - response status:200
+Succesful login for user user
+Mocking user registry
+User login: user, token: eTKhUrPGek
+Checking user login
+Adding story for user user
+Adding new story for user user
+Adding comment
+Checking user login
+user is adding a reaction to story 674fd8ae-7713-486a-b21a-35d06a83fd46
+Adding reaction to story
+Checking user login
+user is removing his reaction to story 674fd8ae-7713-486a-b21a-35d06a83fd46
+Checking user login
+Getting story 674fd8ae-7713-486a-b21a-35d06a83fd46 reactions

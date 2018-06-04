@@ -37,7 +37,7 @@ def authenticateSignUp(request):
 			logError("API01", str(loginResponse["message"]))
 			return {"Error": loginResponse['message'] + "(Error code: 41)"}, response.status_code
 		else:
-			log(personalInfo)
+			log(json.dumps(personalInfo))
 			usersDb.addNewUser(user,loginResponse["token"],personalInfo)
 			loginedUsers.userLogin(user,loginResponse["token"])
 			return {"Message": "Bienvenido {}".format(user), "Token":loginResponse["token"]}	

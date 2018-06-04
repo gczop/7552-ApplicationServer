@@ -5,7 +5,7 @@ from logger.log import *
 
 def registerNewUser(username,password,fbToken):
     log("Mocking user signup")
-	return usersDb.signUpNewUser(username,password,fbToken)
+    return usersDb.signUpNewUser(username,password,fbToken)
 
 
 

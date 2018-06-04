@@ -57,7 +57,7 @@ class FriendsDb(Singleton):
         return "Okey"
 
     def addNewFriend(self,username,newFriend):
-        log(str(username)+" adding "+str(friend)+ " to friends list")
+        log(str(username)+" adding "+str(newFriend)+ " to friends list")
         try:
             userFriends = self.friendsList.find_one({"username":username})["friends"]
             if newFriend not in userFriends:

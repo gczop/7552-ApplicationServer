@@ -1,5 +1,6 @@
 import os
 import pymongo
+from datetime import datetime, timedelta
 from pymongo import MongoClient
 from logger.log import *
 
@@ -52,7 +53,7 @@ class UsersDB(Singleton):
         log("Registering user token")
         if(self.users.find_one({"username":user}) != None):
             self.users.find_one_and_update({"username":user},
-                {"$set": {"token": token}},upsert=True)
+                {"$set": {"token": token, "expiration": datetime.now()+timedelta(hours=12)}},upsert=True)
         else:
             self.addNewUser(user,token)
 
@@ -62,7 +63,7 @@ class UsersDB(Singleton):
             log("No username received")
             return
         log("Adding new user: "+username)
-        self.users.insert_one({"username":username,"token":token,"personalInformation": personalInfo or {}})
+        self.users.insert_one({"username":username,"token":token, "expiration": datetime.now()+timedelta(hours=12),"personalInformation": personalInfo or {}})
 
     def getUserProfile(self, username):
         log("Getting "+str(username)+" profile")
@@ -74,6 +75,11 @@ class UsersDB(Singleton):
         update = createdUpdatedDictionary(updatedInfo,oldInformation)
         self.users.find_one_and_update({"username":username},
             {"$set": {"personalInformation": update}},upsert=True)
+
+    def checkTokenNotExpired(self,username):
+        print(username)
+        print(self.users.find_one({'username':username}).get('expiration'))
+        return self.users.find_one({'username':username}).get('expiration') < datetime.now()
 
     def checkUserLogin(self,username,password):
         log("Checking "+str(username)+ " login")

@@ -71,7 +71,7 @@ class CommentsDb(Singleton):
         return storyComment["_id"]
 
     def removeComment(self, storyId, commentID):
-        log("Removing comment "+str(commentID)+ " from story "+str(storyID))
+        log("Removing comment "+str(commentID)+ " from story "+str(storyId))
         self.commentsList.find_one_and_update({"storyId" : storyId} , { "$pull" : { "content" : {"_id": commentID } }})
         return "Okey"
 
