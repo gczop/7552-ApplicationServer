@@ -2,6 +2,7 @@ import requests
 import os
 from logger.log import *
 from requests.auth import HTTPBasicAuth as ReqAuth
+from databases.auth import authenticationsDb
 from SharedServerRequests.serverAuthentication import serverAuthenticator
 
 MONGO_URL = os.environ.get('MONGODB_URI')
