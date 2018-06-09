@@ -60,7 +60,7 @@ class InvitationsDb(Singleton):
         # NO SE PORQUE SE BORRA EN OTRO LADO
         userInvitations.remove(friend)
         self.invitationsList.find_one_and_update({"username":username},
-                                                 {"$set": {"friends": userInvitations}},upsert=True)
+                                                 {"$set": {"invitations": userInvitations}},upsert=True)
         return "Okey"
 
 invitationsDb = InvitationsDb()
