@@ -21,8 +21,7 @@ def getUserInvitations(request):
 		return {"Error": "Aun no tiene invitaciones (Error code: 7)"}
 
 def addFriendInvitation(request):
-	username = getRequestHeader(request,"username")
-	newFriend = getRequestHeader(request,"friend")
+	username, newFriend = getRequestData(request)
 	logDebug("invitationsController- "+str(username)+" adding "+str(newFriend)+" to friend list")
 	if(username == None):
 		logErrorCode("API08")
@@ -33,8 +32,8 @@ def addFriendInvitation(request):
 	return invitationsDb.addFriendInvitation(username,newFriend)
 
 def acceptFriendInvitation(request):
-	username = getRequestHeader(request,"username")
-	newFriend = getRequestHeader(request,"friend")
+	print("ACCEPT INVITATIONSSSS")
+	username, newFriend = getRequestData(request)
 	logDebug("invitationsController- "+str(username)+" accepting "+str(newFriend)+" friend request")
 	if(username == None):
 		logErrorCode("API10")
