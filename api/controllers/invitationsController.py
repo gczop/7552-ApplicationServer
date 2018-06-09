@@ -15,7 +15,7 @@ def getUserInvitations(request):
 		logErrorCode("API06")
 		return {"Error": "Falta de informacion en header (Error code: 6)"}, 400
 	try:
-		return invitationsDb.getUserInvitations(username)
+		return {'invitations': invitationsDb.getUserInvitations(username)}
 	except:
 		logErrorCode("API07", username)
 		return {"Error": "Aun no tiene invitaciones (Error code: 7)"}

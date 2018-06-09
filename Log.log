@@ -18537,3 +18537,1936 @@
 2018-06-09 18:52:46,318||DEBUG:users-Checking user login
 2018-06-09 18:52:46,320||DEBUG:reactionsController- Getting story 211efb3d-3b5e-4a91-9699-e6e6cae10c93 reactions
 2018-06-09 18:52:46,320||DEBUG:stories- Getting reactions for story: 211efb3d-3b5e-4a91-9699-e6e6cae10c93
+2018-06-09 20:51:29,521||INFO:users- Users DB in localhost
+2018-06-09 20:51:29,526||INFO:loginnedUsers- Setting logined users
+2018-06-09 20:51:29,527||DEBUG:users- Getting all users
+2018-06-09 20:51:29,769||INFO:Notifications DB in localhost
+2018-06-09 20:51:29,774||INFO:serverAuth-SharedServer found in localhost
+2018-06-09 20:51:29,775||INFO:http://localhost:10010
+2018-06-09 20:51:29,775||INFO:userLogin: Shared Server found in localhost
+2018-06-09 20:51:29,779||INFO:friends- Friends DB in localhost
+2018-06-09 20:51:29,794||INFO:invitations- Invitations DB in localhost
+2018-06-09 20:51:29,807||INFO:notifications- Notifications DB in localhost
+2018-06-09 20:51:29,819||INFO:stories- Stories DB in localhost
+2018-06-09 20:51:29,822||INFO:Comments DB in localhost
+2018-06-09 20:51:29,832||INFO:flashStories - FlashStories DB found in localhost
+2018-06-09 20:51:29,833||INFO:flashStories- TEST_ENV found in os.environ
+2018-06-09 20:51:29,923||DEBUG:usersSignUpController- Authenticating sign up for new user: user
+2018-06-09 20:51:29,924||INFO:Mocking user signup
+2018-06-09 20:51:29,924||INFO:Mocking user signup
+2018-06-09 20:51:29,924||INFO:Mocking new user
+2018-06-09 20:51:29,924||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:51:29,924||INFO:User login mockup
+2018-06-09 20:51:29,924||INFO:Mocking succesful login
+2018-06-09 20:51:29,925||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:51:29,925||DEBUG:Adding new user: user
+2018-06-09 20:51:30,010||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:30,016||DEBUG:usersSignUpController- Authenticating sign up for new user: user2
+2018-06-09 20:51:30,016||INFO:Mocking user signup
+2018-06-09 20:51:30,016||INFO:Mocking user signup
+2018-06-09 20:51:30,017||ERROR:[MOCK01] MOCK: Signup parameters missing
+2018-06-09 20:51:30,017||DEBUG:usersSignUpController- Error while registering user:{'message': 'Parametros de signup faltantes'}
+2018-06-09 20:51:30,017||ERROR:[API01] [userSignUpController.authenticateSignUp]Error at sign up. Response message received: Parametros de signup faltantes
+2018-06-09 20:51:30,020||DEBUG:usersSignUpController- Authenticating sign up for new user: user2
+2018-06-09 20:51:30,021||INFO:Mocking user signup
+2018-06-09 20:51:30,021||INFO:Mocking user signup
+2018-06-09 20:51:30,021||INFO:Mocking new user
+2018-06-09 20:51:30,022||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:51:30,022||INFO:User login mockup
+2018-06-09 20:51:30,022||INFO:Mocking succesful login
+2018-06-09 20:51:30,023||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:51:30,023||DEBUG:Adding new user: user2
+2018-06-09 20:51:30,024||DEBUG:loginnedUsers- User login: user2, token: eTKhUrPGek
+2018-06-09 20:51:30,027||DEBUG:usersLoginController- Validating login for user user2
+2018-06-09 20:51:30,027||INFO:User login mockup
+2018-06-09 20:51:30,027||INFO:Mocking succesful login
+2018-06-09 20:51:30,028||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,028||DEBUG:usersLoginController- Succesful login for user user2
+2018-06-09 20:51:30,028||INFO:Mocking user registry
+2018-06-09 20:51:30,029||DEBUG:loginnedUsers- User login: user2, token: eTKhUrPGek
+2018-06-09 20:51:30,031||DEBUG:usersLoginController- Validating login for user fakeuser
+2018-06-09 20:51:30,031||INFO:User login mockup
+2018-06-09 20:51:30,031||ERROR:[MOCK03] MOCK: Incorrect login information
+2018-06-09 20:51:30,031||DEBUG:usersLoginController- LoginController - response status:401
+2018-06-09 20:51:30,033||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:30,033||INFO:User login mockup
+2018-06-09 20:51:30,033||INFO:Mocking succesful login
+2018-06-09 20:51:30,034||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,034||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:30,034||INFO:Mocking user registry
+2018-06-09 20:51:30,034||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:30,036||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:30,036||INFO:User login mockup
+2018-06-09 20:51:30,036||ERROR:[MOCK03] MOCK: Incorrect login information
+2018-06-09 20:51:30,036||DEBUG:usersLoginController- LoginController - response status:401
+2018-06-09 20:51:30,038||DEBUG:usersSignUpController- Authenticating sign up for new user: user3
+2018-06-09 20:51:30,039||INFO:Mocking user signup
+2018-06-09 20:51:30,039||INFO:Mocking user signup
+2018-06-09 20:51:30,039||INFO:Mocking new user
+2018-06-09 20:51:30,039||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:51:30,040||INFO:User login mockup
+2018-06-09 20:51:30,040||INFO:Mocking succesful login
+2018-06-09 20:51:30,040||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:51:30,041||DEBUG:Adding new user: user3
+2018-06-09 20:51:30,042||DEBUG:loginnedUsers- User login: user3, token: eTKhUrPGek
+2018-06-09 20:51:30,043||DEBUG:usersLoginController- Validating login for user user3
+2018-06-09 20:51:30,043||INFO:User login mockup
+2018-06-09 20:51:30,043||INFO:Mocking succesful login
+2018-06-09 20:51:30,044||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,044||DEBUG:usersLoginController- Succesful login for user user3
+2018-06-09 20:51:30,044||INFO:Mocking user registry
+2018-06-09 20:51:30,044||DEBUG:loginnedUsers- User login: user3, token: eTKhUrPGek
+2018-06-09 20:51:30,045||DEBUG:usersSignUpController- Authenticating sign up for new user: userProfile
+2018-06-09 20:51:30,046||INFO:Mocking user signup
+2018-06-09 20:51:30,046||INFO:Mocking user signup
+2018-06-09 20:51:30,046||INFO:Mocking new user
+2018-06-09 20:51:30,046||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:51:30,046||INFO:User login mockup
+2018-06-09 20:51:30,046||INFO:Mocking succesful login
+2018-06-09 20:51:30,046||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:51:30,046||DEBUG:Adding new user: userProfile
+2018-06-09 20:51:30,047||DEBUG:loginnedUsers- User login: userProfile, token: eTKhUrPGek
+2018-06-09 20:51:30,049||DEBUG:usersLoginController- Validating login for user userProfile
+2018-06-09 20:51:30,049||INFO:User login mockup
+2018-06-09 20:51:30,049||INFO:Mocking succesful login
+2018-06-09 20:51:30,050||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,050||DEBUG:usersLoginController- Succesful login for user userProfile
+2018-06-09 20:51:30,050||INFO:Mocking user registry
+2018-06-09 20:51:30,050||DEBUG:loginnedUsers- User login: userProfile, token: eTKhUrPGek
+2018-06-09 20:51:30,052||DEBUG:users-Checking userProfile login
+2018-06-09 20:51:30,054||DEBUG:profilesController- Updating userProfile profile
+2018-06-09 20:51:30,055||DEBUG:users-Updating userProfile profile
+2018-06-09 20:51:30,058||DEBUG:users-Checking userProfile login
+2018-06-09 20:51:30,060||DEBUG:profilesController- Getting userProfile profile
+2018-06-09 20:51:30,060||DEBUG:users-Getting userProfile profile
+2018-06-09 20:51:30,063||DEBUG:usersLoginController- Validating login for user userProfile
+2018-06-09 20:51:30,063||INFO:User login mockup
+2018-06-09 20:51:30,063||INFO:Mocking succesful login
+2018-06-09 20:51:30,063||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,064||DEBUG:usersLoginController- Succesful login for user userProfile
+2018-06-09 20:51:30,064||INFO:Mocking user registry
+2018-06-09 20:51:30,064||DEBUG:loginnedUsers- User login: userProfile, token: eTKhUrPGek
+2018-06-09 20:51:30,065||DEBUG:users-Checking userProfile login
+2018-06-09 20:51:30,067||DEBUG:profilesController- Updating userProfile profile
+2018-06-09 20:51:30,067||DEBUG:users-Updating userProfile profile
+2018-06-09 20:51:30,070||DEBUG:users-Checking userProfile login
+2018-06-09 20:51:30,072||DEBUG:profilesController- Getting userProfile profile
+2018-06-09 20:51:30,072||DEBUG:users-Getting userProfile profile
+2018-06-09 20:51:30,076||DEBUG:usersSignUpController- Authenticating sign up for new user: userProfile2
+2018-06-09 20:51:30,077||INFO:Mocking user signup
+2018-06-09 20:51:30,077||INFO:Mocking user signup
+2018-06-09 20:51:30,078||INFO:Mocking new user
+2018-06-09 20:51:30,078||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:51:30,079||INFO:User login mockup
+2018-06-09 20:51:30,079||INFO:Mocking succesful login
+2018-06-09 20:51:30,079||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:51:30,079||DEBUG:Adding new user: userProfile2
+2018-06-09 20:51:30,081||DEBUG:loginnedUsers- User login: userProfile2, token: eTKhUrPGek
+2018-06-09 20:51:30,096||DEBUG:usersLoginController- Validating login for user userProfile2
+2018-06-09 20:51:30,097||INFO:User login mockup
+2018-06-09 20:51:30,097||INFO:Mocking succesful login
+2018-06-09 20:51:30,097||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,097||DEBUG:usersLoginController- Succesful login for user userProfile2
+2018-06-09 20:51:30,098||INFO:Mocking user registry
+2018-06-09 20:51:30,098||DEBUG:loginnedUsers- User login: userProfile2, token: eTKhUrPGek
+2018-06-09 20:51:30,100||DEBUG:users-Checking userProfile login
+2018-06-09 20:51:30,103||DEBUG:profilesController- Updating userProfile2 profile
+2018-06-09 20:51:30,103||DEBUG:users-Updating userProfile2 profile
+2018-06-09 20:51:30,107||DEBUG:users-Checking userProfile login
+2018-06-09 20:51:30,109||DEBUG:profilesController- Getting userProfile2 profile
+2018-06-09 20:51:30,109||DEBUG:users-Getting userProfile2 profile
+2018-06-09 20:51:30,111||DEBUG:usersSignUpController- Authenticating sign up for new user: userFriends
+2018-06-09 20:51:30,112||INFO:Mocking user signup
+2018-06-09 20:51:30,112||INFO:Mocking user signup
+2018-06-09 20:51:30,112||INFO:Mocking new user
+2018-06-09 20:51:30,112||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:51:30,112||INFO:User login mockup
+2018-06-09 20:51:30,112||INFO:Mocking succesful login
+2018-06-09 20:51:30,113||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:51:30,113||DEBUG:Adding new user: userFriends
+2018-06-09 20:51:30,114||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,115||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,115||INFO:User login mockup
+2018-06-09 20:51:30,115||INFO:Mocking succesful login
+2018-06-09 20:51:30,116||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,116||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,116||INFO:Mocking user registry
+2018-06-09 20:51:30,116||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,117||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,119||DEBUG:friendsController- Getting userFriends friend list
+2018-06-09 20:51:30,119||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:30,123||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,124||INFO:User login mockup
+2018-06-09 20:51:30,124||INFO:Mocking succesful login
+2018-06-09 20:51:30,124||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,125||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,126||INFO:Mocking user registry
+2018-06-09 20:51:30,126||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,129||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,131||DEBUG:friendsController- Adding user to userFriends friend list
+2018-06-09 20:51:30,131||DEBUG:friends- userFriends adding user to friends list
+2018-06-09 20:51:30,133||DEBUG:friends- user adding userFriends to friends list
+2018-06-09 20:51:30,136||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,136||INFO:User login mockup
+2018-06-09 20:51:30,136||INFO:Mocking succesful login
+2018-06-09 20:51:30,137||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,137||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,137||INFO:Mocking user registry
+2018-06-09 20:51:30,137||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,139||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,141||DEBUG:friendsController- Getting userFriends friend list
+2018-06-09 20:51:30,141||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:30,143||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,143||INFO:User login mockup
+2018-06-09 20:51:30,144||INFO:Mocking succesful login
+2018-06-09 20:51:30,144||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,144||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,144||INFO:Mocking user registry
+2018-06-09 20:51:30,144||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,145||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,147||DEBUG:friendsController- Getting userFriends friend list
+2018-06-09 20:51:30,147||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:30,150||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,153||DEBUG:friendsController- Removing user from userFriends friend list
+2018-06-09 20:51:30,153||DEBUG:friends- userFriends deleting user from friends list
+2018-06-09 20:51:30,160||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,161||INFO:User login mockup
+2018-06-09 20:51:30,161||INFO:Mocking succesful login
+2018-06-09 20:51:30,161||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,161||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,161||INFO:Mocking user registry
+2018-06-09 20:51:30,162||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,164||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,166||DEBUG:friendsController- Adding user to userFriends friend list
+2018-06-09 20:51:30,166||DEBUG:friends- userFriends adding user to friends list
+2018-06-09 20:51:30,168||DEBUG:friends- user adding userFriends to friends list
+2018-06-09 20:51:30,172||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,174||DEBUG:friendsController- Getting user friend list
+2018-06-09 20:51:30,174||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:30,177||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,178||INFO:User login mockup
+2018-06-09 20:51:30,178||INFO:Mocking succesful login
+2018-06-09 20:51:30,178||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,178||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,178||INFO:Mocking user registry
+2018-06-09 20:51:30,178||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,180||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,181||DEBUG:invitationsController- Retrieving invitations for user userFriends
+2018-06-09 20:51:30,182||DEBUG:invitations- Getting user userFriends invitations
+2018-06-09 20:51:30,184||ERROR:[API07] [invitationsController.getUserInvitations]No invitations found for user userFriends
+2018-06-09 20:51:30,186||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,186||INFO:User login mockup
+2018-06-09 20:51:30,187||INFO:Mocking succesful login
+2018-06-09 20:51:30,187||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,187||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,187||INFO:Mocking user registry
+2018-06-09 20:51:30,187||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,189||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:30,189||INFO:User login mockup
+2018-06-09 20:51:30,190||INFO:Mocking succesful login
+2018-06-09 20:51:30,190||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,190||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:30,190||INFO:Mocking user registry
+2018-06-09 20:51:30,190||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:30,193||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,208||DEBUG:invitationsController- userFriends adding user to friend list
+2018-06-09 20:51:30,209||DEBUG:invitations- Adding friend invitation
+2018-06-09 20:51:30,276||DEBUG:users-Checking user login
+2018-06-09 20:51:30,282||DEBUG:invitationsController- Retrieving invitations for user user
+2018-06-09 20:51:30,283||DEBUG:invitations- Getting user user invitations
+2018-06-09 20:51:30,287||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,288||INFO:User login mockup
+2018-06-09 20:51:30,288||INFO:Mocking succesful login
+2018-06-09 20:51:30,288||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,289||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,289||INFO:Mocking user registry
+2018-06-09 20:51:30,290||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,293||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:30,293||INFO:User login mockup
+2018-06-09 20:51:30,294||INFO:Mocking succesful login
+2018-06-09 20:51:30,294||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,294||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:30,294||INFO:Mocking user registry
+2018-06-09 20:51:30,295||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:30,296||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,298||DEBUG:invitationsController- userFriends adding user to friend list
+2018-06-09 20:51:30,299||DEBUG:invitations- Adding friend invitation
+2018-06-09 20:51:30,300||DEBUG:users-Checking user login
+2018-06-09 20:51:30,302||DEBUG:invitationsController- Retrieving invitations for user user
+2018-06-09 20:51:30,302||DEBUG:invitations- Getting user user invitations
+2018-06-09 20:51:30,305||DEBUG:users-Checking user login
+2018-06-09 20:51:30,308||DEBUG:invitationsController- user accepting userFriends friend request
+2018-06-09 20:51:30,320||DEBUG:invitations- Accepting friend invitation: user|userFriends
+2018-06-09 20:51:30,323||DEBUG:friends- user adding userFriends to friends list
+2018-06-09 20:51:30,325||DEBUG:friends- userFriends adding user to friends list
+2018-06-09 20:51:30,331||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,333||DEBUG:friendsController- Getting userFriends friend list
+2018-06-09 20:51:30,333||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:30,336||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,336||INFO:User login mockup
+2018-06-09 20:51:30,336||INFO:Mocking succesful login
+2018-06-09 20:51:30,336||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,336||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,337||INFO:Mocking user registry
+2018-06-09 20:51:30,337||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,338||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:30,338||INFO:User login mockup
+2018-06-09 20:51:30,338||INFO:Mocking succesful login
+2018-06-09 20:51:30,339||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,339||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:30,339||INFO:Mocking user registry
+2018-06-09 20:51:30,339||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:30,341||DEBUG:usersLoginController- Validating login for user user2
+2018-06-09 20:51:30,341||INFO:User login mockup
+2018-06-09 20:51:30,341||INFO:Mocking succesful login
+2018-06-09 20:51:30,341||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,341||DEBUG:usersLoginController- Succesful login for user user2
+2018-06-09 20:51:30,342||INFO:Mocking user registry
+2018-06-09 20:51:30,342||DEBUG:loginnedUsers- User login: user2, token: eTKhUrPGek
+2018-06-09 20:51:30,343||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,345||DEBUG:invitationsController- userFriends adding user to friend list
+2018-06-09 20:51:30,345||DEBUG:invitations- Adding friend invitation
+2018-06-09 20:51:30,348||DEBUG:users-Checking user2 login
+2018-06-09 20:51:30,350||DEBUG:invitationsController- user2 adding user to friend list
+2018-06-09 20:51:30,350||DEBUG:invitations- Adding friend invitation
+2018-06-09 20:51:30,353||DEBUG:users-Checking user login
+2018-06-09 20:51:30,355||DEBUG:invitationsController- Retrieving invitations for user user
+2018-06-09 20:51:30,355||DEBUG:invitations- Getting user user invitations
+2018-06-09 20:51:30,358||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:30,358||INFO:User login mockup
+2018-06-09 20:51:30,358||INFO:Mocking succesful login
+2018-06-09 20:51:30,358||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,358||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:30,359||INFO:Mocking user registry
+2018-06-09 20:51:30,359||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:30,360||DEBUG:users-Checking user login
+2018-06-09 20:51:30,362||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:30,362||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:30,423||DEBUG:comments- Adding comment to story 374e508c-815c-4335-8f73-da73a70ef817
+2018-06-09 20:51:30,437||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:30,437||INFO:User login mockup
+2018-06-09 20:51:30,438||INFO:Mocking succesful login
+2018-06-09 20:51:30,438||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,438||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:30,438||INFO:Mocking user registry
+2018-06-09 20:51:30,439||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:30,441||DEBUG:users-Checking user login
+2018-06-09 20:51:30,443||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:51:30,443||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:51:30,443||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:30,448||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,448||INFO:User login mockup
+2018-06-09 20:51:30,448||INFO:Mocking succesful login
+2018-06-09 20:51:30,448||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,448||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,448||INFO:Mocking user registry
+2018-06-09 20:51:30,448||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,450||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,451||DEBUG:storiesController- Retrieving homepage feed for userFriends
+2018-06-09 20:51:30,452||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:51:30,452||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:30,455||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:30,456||INFO:User login mockup
+2018-06-09 20:51:30,456||INFO:Mocking succesful login
+2018-06-09 20:51:30,456||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,456||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:30,456||INFO:Mocking user registry
+2018-06-09 20:51:30,457||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:30,459||DEBUG:users-Checking user login
+2018-06-09 20:51:30,460||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:51:30,461||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:51:30,461||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:30,464||DEBUG:users-Checking user login
+2018-06-09 20:51:30,465||DEBUG:storiesController- Updating story 374e508c-815c-4335-8f73-da73a70ef817
+2018-06-09 20:51:30,466||DEBUG:stories- Updating story 374e508c-815c-4335-8f73-da73a70ef817 for user user
+2018-06-09 20:51:30,468||DEBUG:users-Checking user login
+2018-06-09 20:51:30,470||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:51:30,470||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:51:30,470||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:30,474||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,474||INFO:User login mockup
+2018-06-09 20:51:30,474||INFO:Mocking succesful login
+2018-06-09 20:51:30,475||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,475||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,475||INFO:Mocking user registry
+2018-06-09 20:51:30,475||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,476||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,478||DEBUG:storiesController- Adding story for user userFriends
+2018-06-09 20:51:30,478||DEBUG:stories- Adding new story for user userFriends
+2018-06-09 20:51:30,479||DEBUG:comments- Adding comment to story 63e2f15c-17ad-4040-aa76-580a0c584375
+2018-06-09 20:51:30,482||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,482||INFO:User login mockup
+2018-06-09 20:51:30,482||INFO:Mocking succesful login
+2018-06-09 20:51:30,483||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,483||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,483||INFO:Mocking user registry
+2018-06-09 20:51:30,483||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,485||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,487||DEBUG:storiesController- Retrieving homepage feed for userFriends
+2018-06-09 20:51:30,487||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:51:30,487||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:30,492||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:30,492||INFO:User login mockup
+2018-06-09 20:51:30,492||INFO:Mocking succesful login
+2018-06-09 20:51:30,492||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,493||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:30,493||INFO:Mocking user registry
+2018-06-09 20:51:30,493||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:30,494||DEBUG:users-Checking user login
+2018-06-09 20:51:30,496||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:51:30,496||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:51:30,496||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:30,499||DEBUG:users-Checking user login
+2018-06-09 20:51:30,501||DEBUG:storiesController- Deleting story 374e508c-815c-4335-8f73-da73a70ef817
+2018-06-09 20:51:30,501||DEBUG:stories- Deleting story 374e508c-815c-4335-8f73-da73a70ef817
+2018-06-09 20:51:30,503||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,504||INFO:User login mockup
+2018-06-09 20:51:30,504||INFO:Mocking succesful login
+2018-06-09 20:51:30,504||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,504||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,504||INFO:Mocking user registry
+2018-06-09 20:51:30,505||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,506||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,511||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:51:30,512||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:51:30,512||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:30,517||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,519||DEBUG:storiesController- Deleting story 63e2f15c-17ad-4040-aa76-580a0c584375
+2018-06-09 20:51:30,519||DEBUG:stories- Deleting story 63e2f15c-17ad-4040-aa76-580a0c584375
+2018-06-09 20:51:30,522||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:30,522||INFO:User login mockup
+2018-06-09 20:51:30,522||INFO:Mocking succesful login
+2018-06-09 20:51:30,522||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,523||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:30,523||INFO:Mocking user registry
+2018-06-09 20:51:30,523||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:30,525||DEBUG:users-Checking user login
+2018-06-09 20:51:30,538||DEBUG:flashStoriesController- user adding new flash story
+2018-06-09 20:51:30,539||DEBUG:Adding new story for user user
+2018-06-09 20:51:30,548||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:30,549||INFO:User login mockup
+2018-06-09 20:51:30,549||INFO:Mocking succesful login
+2018-06-09 20:51:30,549||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,549||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:30,550||INFO:Mocking user registry
+2018-06-09 20:51:30,550||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:30,551||DEBUG:users-Checking user login
+2018-06-09 20:51:30,553||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:51:30,553||DEBUG:Getting last stories for user
+2018-06-09 20:51:30,554||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:30,555||INFO:Deleting garbage
+2018-06-09 20:51:30,559||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,560||INFO:User login mockup
+2018-06-09 20:51:30,560||INFO:Mocking succesful login
+2018-06-09 20:51:30,560||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,560||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,560||INFO:Mocking user registry
+2018-06-09 20:51:30,560||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,562||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,563||DEBUG:flashStoriesController- getting userFriends homepage feed
+2018-06-09 20:51:30,563||DEBUG:Getting last stories for userFriends
+2018-06-09 20:51:30,564||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:30,564||INFO:Deleting garbage
+2018-06-09 20:51:30,568||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:30,568||INFO:User login mockup
+2018-06-09 20:51:30,568||INFO:Mocking succesful login
+2018-06-09 20:51:30,568||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,569||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:30,569||INFO:Mocking user registry
+2018-06-09 20:51:30,569||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:30,570||DEBUG:users-Checking user login
+2018-06-09 20:51:30,572||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:51:30,572||DEBUG:Getting last stories for user
+2018-06-09 20:51:30,572||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:30,574||INFO:Deleting garbage
+2018-06-09 20:51:30,580||DEBUG:users-Checking user login
+2018-06-09 20:51:30,583||DEBUG:flashStoriesController- user updating flash story096a7b3f-b612-47f1-b4bf-d556445ff9a4
+2018-06-09 20:51:30,584||DEBUG:Updating story 096a7b3f-b612-47f1-b4bf-d556445ff9a4 from user user
+2018-06-09 20:51:30,587||DEBUG:users-Checking user login
+2018-06-09 20:51:30,588||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:51:30,588||DEBUG:Getting last stories for user
+2018-06-09 20:51:30,589||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:30,590||INFO:Deleting garbage
+2018-06-09 20:51:30,598||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,599||INFO:User login mockup
+2018-06-09 20:51:30,599||INFO:Mocking succesful login
+2018-06-09 20:51:30,599||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,599||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,599||INFO:Mocking user registry
+2018-06-09 20:51:30,599||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,601||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,602||DEBUG:flashStoriesController- userFriends adding new flash story
+2018-06-09 20:51:30,602||DEBUG:Adding new story for user userFriends
+2018-06-09 20:51:30,605||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,605||INFO:User login mockup
+2018-06-09 20:51:30,605||INFO:Mocking succesful login
+2018-06-09 20:51:30,605||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,605||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,605||INFO:Mocking user registry
+2018-06-09 20:51:30,605||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,607||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,609||DEBUG:flashStoriesController- getting userFriends homepage feed
+2018-06-09 20:51:30,609||DEBUG:Getting last stories for userFriends
+2018-06-09 20:51:30,609||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:30,611||INFO:Deleting garbage
+2018-06-09 20:51:30,615||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:30,615||INFO:User login mockup
+2018-06-09 20:51:30,615||INFO:Mocking succesful login
+2018-06-09 20:51:30,615||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,615||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:30,616||INFO:Mocking user registry
+2018-06-09 20:51:30,616||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:30,617||DEBUG:users-Checking user login
+2018-06-09 20:51:30,619||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:51:30,619||DEBUG:Getting last stories for user
+2018-06-09 20:51:30,619||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:30,620||INFO:Deleting garbage
+2018-06-09 20:51:30,624||DEBUG:users-Checking user login
+2018-06-09 20:51:30,627||DEBUG:flashStoriesController- removing story 096a7b3f-b612-47f1-b4bf-d556445ff9a4
+2018-06-09 20:51:30,628||DEBUG:Deleting story 096a7b3f-b612-47f1-b4bf-d556445ff9a4
+2018-06-09 20:51:30,629||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:30,629||INFO:User login mockup
+2018-06-09 20:51:30,630||INFO:Mocking succesful login
+2018-06-09 20:51:30,630||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,630||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:30,630||INFO:Mocking user registry
+2018-06-09 20:51:30,630||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:30,631||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,633||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:51:30,633||DEBUG:Getting last stories for user
+2018-06-09 20:51:30,633||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:30,634||INFO:Deleting garbage
+2018-06-09 20:51:30,638||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:30,653||DEBUG:flashStoriesController- removing story 0a37ae7c-6195-443d-b5af-3b2038e1f981
+2018-06-09 20:51:30,654||DEBUG:Deleting story 0a37ae7c-6195-443d-b5af-3b2038e1f981
+2018-06-09 20:51:30,658||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:30,659||INFO:User login mockup
+2018-06-09 20:51:30,659||INFO:Mocking succesful login
+2018-06-09 20:51:30,659||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:30,659||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:30,660||INFO:Mocking user registry
+2018-06-09 20:51:30,660||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:30,663||DEBUG:users-Checking user login
+2018-06-09 20:51:30,666||DEBUG:flashStoriesController- user adding new flash story
+2018-06-09 20:51:30,666||DEBUG:Adding new story for user user
+2018-06-09 20:51:31,675||DEBUG:users-Checking user login
+2018-06-09 20:51:31,678||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:51:31,679||DEBUG:Getting last stories for user
+2018-06-09 20:51:31,679||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:31,680||INFO:Deleting garbage
+2018-06-09 20:51:31,687||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:31,687||INFO:User login mockup
+2018-06-09 20:51:31,687||INFO:Mocking succesful login
+2018-06-09 20:51:31,688||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:31,688||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:31,688||INFO:Mocking user registry
+2018-06-09 20:51:31,689||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:31,691||DEBUG:users-Checking user login
+2018-06-09 20:51:31,694||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:31,707||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:31,709||DEBUG:comments- Adding comment to story 7d5d1a35-8e8f-4cf3-b7da-e64d71305a8b
+2018-06-09 20:51:31,713||DEBUG:users-Checking user login
+2018-06-09 20:51:31,716||DEBUG:commentsController- Adding new comment from user to story 7d5d1a35-8e8f-4cf3-b7da-e64d71305a8b
+2018-06-09 20:51:31,716||DEBUG:comments-user adding comment: Ese meme si se puede ver to story 7d5d1a35-8e8f-4cf3-b7da-e64d71305a8b
+2018-06-09 20:51:31,717||INFO:comments- comment:{'_id': '03e2a06e-3ed1-4f90-ac41-60ae15771888', 'user': 'user', 'date': '2018-06-09 20:51:31.717106', 'message': 'Ese meme si se puede ver'}
+2018-06-09 20:51:31,722||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:31,722||INFO:User login mockup
+2018-06-09 20:51:31,722||INFO:Mocking succesful login
+2018-06-09 20:51:31,722||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:31,722||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:31,722||INFO:Mocking user registry
+2018-06-09 20:51:31,723||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:31,724||DEBUG:users-Checking user login
+2018-06-09 20:51:31,727||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:31,727||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:31,728||DEBUG:comments- Adding comment to story a72c4653-b842-46d9-84fe-d73a3dae0d22
+2018-06-09 20:51:31,730||DEBUG:users-Checking user login
+2018-06-09 20:51:31,732||DEBUG:commentsController- Adding new comment from user to story a72c4653-b842-46d9-84fe-d73a3dae0d22
+2018-06-09 20:51:31,732||DEBUG:comments-user adding comment: Ese meme si se puede ver to story a72c4653-b842-46d9-84fe-d73a3dae0d22
+2018-06-09 20:51:31,733||INFO:comments- comment:{'_id': 'e7f0eb99-c24d-41b2-a7b5-0e95ecb9ee95', 'user': 'user', 'date': '2018-06-09 20:51:31.732926', 'message': 'Ese meme si se puede ver'}
+2018-06-09 20:51:31,735||DEBUG:users-Checking user login
+2018-06-09 20:51:31,737||DEBUG:commentsController- Getting story comments from story a72c4653-b842-46d9-84fe-d73a3dae0d22
+2018-06-09 20:51:31,737||DEBUG:comments-Getting comments from story a72c4653-b842-46d9-84fe-d73a3dae0d22
+2018-06-09 20:51:31,740||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:31,740||INFO:User login mockup
+2018-06-09 20:51:31,740||INFO:Mocking succesful login
+2018-06-09 20:51:31,740||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:31,740||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:31,740||INFO:Mocking user registry
+2018-06-09 20:51:31,741||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:31,742||DEBUG:users-Checking user login
+2018-06-09 20:51:31,744||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:31,744||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:31,747||DEBUG:comments- Adding comment to story f353d4fd-8011-4c3d-b1a9-b27b561c9262
+2018-06-09 20:51:31,751||DEBUG:users-Checking user login
+2018-06-09 20:51:31,753||DEBUG:commentsController- Adding new comment from user to story f353d4fd-8011-4c3d-b1a9-b27b561c9262
+2018-06-09 20:51:31,753||DEBUG:comments-user adding comment: Ese meme si se puede ver to story f353d4fd-8011-4c3d-b1a9-b27b561c9262
+2018-06-09 20:51:31,754||INFO:comments- comment:{'_id': 'a2f11ab1-4ffa-450a-aa99-9e2a6ffcfa7d', 'user': 'user', 'date': '2018-06-09 20:51:31.754045', 'message': 'Ese meme si se puede ver'}
+2018-06-09 20:51:31,756||DEBUG:users-Checking user login
+2018-06-09 20:51:31,758||DEBUG:commentsController- Adding new comment from user to story f353d4fd-8011-4c3d-b1a9-b27b561c9262
+2018-06-09 20:51:31,758||DEBUG:comments-user adding comment: Buzzfeed es muy normie to story f353d4fd-8011-4c3d-b1a9-b27b561c9262
+2018-06-09 20:51:31,758||INFO:comments- comment:{'_id': '954f578a-7972-4d4e-a4eb-dbe56fb03817', 'user': 'user', 'date': '2018-06-09 20:51:31.758666', 'message': 'Buzzfeed es muy normie'}
+2018-06-09 20:51:31,761||DEBUG:users-Checking user login
+2018-06-09 20:51:31,763||DEBUG:commentsController- Getting story comments from story f353d4fd-8011-4c3d-b1a9-b27b561c9262
+2018-06-09 20:51:31,763||DEBUG:comments-Getting comments from story f353d4fd-8011-4c3d-b1a9-b27b561c9262
+2018-06-09 20:51:31,767||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:31,767||INFO:User login mockup
+2018-06-09 20:51:31,767||INFO:Mocking succesful login
+2018-06-09 20:51:31,767||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:31,767||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:31,767||INFO:Mocking user registry
+2018-06-09 20:51:31,768||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:31,770||DEBUG:users-Checking user login
+2018-06-09 20:51:31,772||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:31,772||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:31,773||DEBUG:comments- Adding comment to story 5cb18073-4650-4437-ac8e-aaec678c0b35
+2018-06-09 20:51:31,775||DEBUG:users-Checking user login
+2018-06-09 20:51:31,777||DEBUG:commentsController- Adding new comment from user to story 5cb18073-4650-4437-ac8e-aaec678c0b35
+2018-06-09 20:51:31,777||DEBUG:comments-user adding comment: Ese meme si se puede ver to story 5cb18073-4650-4437-ac8e-aaec678c0b35
+2018-06-09 20:51:31,777||INFO:comments- comment:{'_id': '0bb3b3b5-31cb-465f-85b6-f0879f89bba9', 'user': 'user', 'date': '2018-06-09 20:51:31.777832', 'message': 'Ese meme si se puede ver'}
+2018-06-09 20:51:31,780||DEBUG:users-Checking user login
+2018-06-09 20:51:31,782||DEBUG:commentsController- Removing comment 0bb3b3b5-31cb-465f-85b6-f0879f89bba9 from story 5cb18073-4650-4437-ac8e-aaec678c0b35
+2018-06-09 20:51:31,782||DEBUG:comments- Removing comment 0bb3b3b5-31cb-465f-85b6-f0879f89bba9 from story 5cb18073-4650-4437-ac8e-aaec678c0b35
+2018-06-09 20:51:31,784||DEBUG:users-Checking user login
+2018-06-09 20:51:31,786||DEBUG:commentsController- Getting story comments from story 5cb18073-4650-4437-ac8e-aaec678c0b35
+2018-06-09 20:51:31,786||DEBUG:comments-Getting comments from story 5cb18073-4650-4437-ac8e-aaec678c0b35
+2018-06-09 20:51:31,789||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:31,789||INFO:User login mockup
+2018-06-09 20:51:31,789||INFO:Mocking succesful login
+2018-06-09 20:51:31,789||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:31,790||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:31,790||INFO:Mocking user registry
+2018-06-09 20:51:31,790||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:31,791||DEBUG:users-Checking user login
+2018-06-09 20:51:31,793||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:31,794||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:31,795||DEBUG:comments- Adding comment to story f011438a-dea4-41e9-b1be-a4d8dcf96cd5
+2018-06-09 20:51:31,800||DEBUG:users-Checking user login
+2018-06-09 20:51:31,802||DEBUG:reactionsController- user is adding a reaction to story f011438a-dea4-41e9-b1be-a4d8dcf96cd5
+2018-06-09 20:51:31,802||DEBUG:stories- Adding reaction to story
+2018-06-09 20:51:31,805||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:31,805||INFO:User login mockup
+2018-06-09 20:51:31,805||INFO:Mocking succesful login
+2018-06-09 20:51:31,806||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:31,806||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:31,806||INFO:Mocking user registry
+2018-06-09 20:51:31,806||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:31,808||DEBUG:users-Checking user login
+2018-06-09 20:51:31,821||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:31,821||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:31,822||DEBUG:comments- Adding comment to story 70b5e759-d565-4202-8fe2-e207df1ab11d
+2018-06-09 20:51:31,824||DEBUG:users-Checking user login
+2018-06-09 20:51:31,826||DEBUG:reactionsController- user is adding a reaction to story 70b5e759-d565-4202-8fe2-e207df1ab11d
+2018-06-09 20:51:31,827||DEBUG:stories- Adding reaction to story
+2018-06-09 20:51:31,830||DEBUG:users-Checking user login
+2018-06-09 20:51:31,834||DEBUG:reactionsController- user2 is adding a reaction to story 70b5e759-d565-4202-8fe2-e207df1ab11d
+2018-06-09 20:51:31,834||DEBUG:stories- Adding reaction to story
+2018-06-09 20:51:31,836||DEBUG:users-Checking user login
+2018-06-09 20:51:31,838||DEBUG:reactionsController- Getting story 70b5e759-d565-4202-8fe2-e207df1ab11d reactions
+2018-06-09 20:51:31,838||DEBUG:stories- Getting reactions for story: 70b5e759-d565-4202-8fe2-e207df1ab11d
+2018-06-09 20:51:31,841||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:31,841||INFO:User login mockup
+2018-06-09 20:51:31,841||INFO:Mocking succesful login
+2018-06-09 20:51:31,841||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:31,842||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:31,842||INFO:Mocking user registry
+2018-06-09 20:51:31,842||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:31,843||DEBUG:users-Checking user login
+2018-06-09 20:51:31,845||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:31,845||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:31,847||DEBUG:comments- Adding comment to story 3c3e5e92-8dcf-4fbc-9ca1-c4516142c4b2
+2018-06-09 20:51:31,849||DEBUG:users-Checking user login
+2018-06-09 20:51:31,850||DEBUG:reactionsController- user is adding a reaction to story 3c3e5e92-8dcf-4fbc-9ca1-c4516142c4b2
+2018-06-09 20:51:31,851||DEBUG:stories- Adding reaction to story
+2018-06-09 20:51:31,853||DEBUG:users-Checking user login
+2018-06-09 20:51:31,854||DEBUG:reactionsController- user is removing his reaction to story 3c3e5e92-8dcf-4fbc-9ca1-c4516142c4b2
+2018-06-09 20:51:31,855||DEBUG:stories- Deleting reaction from user for story: 3c3e5e92-8dcf-4fbc-9ca1-c4516142c4b2
+2018-06-09 20:51:31,857||DEBUG:users-Checking user login
+2018-06-09 20:51:31,859||DEBUG:reactionsController- Getting story 3c3e5e92-8dcf-4fbc-9ca1-c4516142c4b2 reactions
+2018-06-09 20:51:31,859||DEBUG:stories- Getting reactions for story: 3c3e5e92-8dcf-4fbc-9ca1-c4516142c4b2
+2018-06-09 20:51:54,428||INFO:users- Users DB in localhost
+2018-06-09 20:51:54,434||INFO:loginnedUsers- Setting logined users
+2018-06-09 20:51:54,434||DEBUG:users- Getting all users
+2018-06-09 20:51:54,669||INFO:Notifications DB in localhost
+2018-06-09 20:51:54,673||INFO:serverAuth-SharedServer found in localhost
+2018-06-09 20:51:54,674||INFO:http://localhost:10010
+2018-06-09 20:51:54,674||INFO:userLogin: Shared Server found in localhost
+2018-06-09 20:51:54,678||INFO:friends- Friends DB in localhost
+2018-06-09 20:51:54,687||INFO:invitations- Invitations DB in localhost
+2018-06-09 20:51:54,698||INFO:notifications- Notifications DB in localhost
+2018-06-09 20:51:54,707||INFO:stories- Stories DB in localhost
+2018-06-09 20:51:54,711||INFO:Comments DB in localhost
+2018-06-09 20:51:54,720||INFO:flashStories - FlashStories DB found in localhost
+2018-06-09 20:51:54,723||INFO:flashStories- TEST_ENV found in os.environ
+2018-06-09 20:51:54,802||DEBUG:usersSignUpController- Authenticating sign up for new user: user
+2018-06-09 20:51:54,803||INFO:Mocking user signup
+2018-06-09 20:51:54,803||INFO:Mocking user signup
+2018-06-09 20:51:54,803||INFO:Mocking new user
+2018-06-09 20:51:54,803||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:51:54,803||INFO:User login mockup
+2018-06-09 20:51:54,804||INFO:Mocking succesful login
+2018-06-09 20:51:54,804||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:51:54,804||DEBUG:Adding new user: user
+2018-06-09 20:51:54,872||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:54,877||DEBUG:usersSignUpController- Authenticating sign up for new user: user2
+2018-06-09 20:51:54,877||INFO:Mocking user signup
+2018-06-09 20:51:54,877||INFO:Mocking user signup
+2018-06-09 20:51:54,877||ERROR:[MOCK01] MOCK: Signup parameters missing
+2018-06-09 20:51:54,877||DEBUG:usersSignUpController- Error while registering user:{'message': 'Parametros de signup faltantes'}
+2018-06-09 20:51:54,877||ERROR:[API01] [userSignUpController.authenticateSignUp]Error at sign up. Response message received: Parametros de signup faltantes
+2018-06-09 20:51:54,879||DEBUG:usersSignUpController- Authenticating sign up for new user: user2
+2018-06-09 20:51:54,879||INFO:Mocking user signup
+2018-06-09 20:51:54,879||INFO:Mocking user signup
+2018-06-09 20:51:54,879||INFO:Mocking new user
+2018-06-09 20:51:54,880||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:51:54,880||INFO:User login mockup
+2018-06-09 20:51:54,880||INFO:Mocking succesful login
+2018-06-09 20:51:54,880||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:51:54,880||DEBUG:Adding new user: user2
+2018-06-09 20:51:54,881||DEBUG:loginnedUsers- User login: user2, token: eTKhUrPGek
+2018-06-09 20:51:54,883||DEBUG:usersLoginController- Validating login for user user2
+2018-06-09 20:51:54,883||INFO:User login mockup
+2018-06-09 20:51:54,883||INFO:Mocking succesful login
+2018-06-09 20:51:54,883||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:54,884||DEBUG:usersLoginController- Succesful login for user user2
+2018-06-09 20:51:54,884||INFO:Mocking user registry
+2018-06-09 20:51:54,884||DEBUG:loginnedUsers- User login: user2, token: eTKhUrPGek
+2018-06-09 20:51:54,886||DEBUG:usersLoginController- Validating login for user fakeuser
+2018-06-09 20:51:54,886||INFO:User login mockup
+2018-06-09 20:51:54,886||ERROR:[MOCK03] MOCK: Incorrect login information
+2018-06-09 20:51:54,886||DEBUG:usersLoginController- LoginController - response status:401
+2018-06-09 20:51:54,888||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:54,888||INFO:User login mockup
+2018-06-09 20:51:54,888||INFO:Mocking succesful login
+2018-06-09 20:51:54,888||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:54,889||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:54,889||INFO:Mocking user registry
+2018-06-09 20:51:54,889||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:54,891||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:54,892||INFO:User login mockup
+2018-06-09 20:51:54,892||ERROR:[MOCK03] MOCK: Incorrect login information
+2018-06-09 20:51:54,892||DEBUG:usersLoginController- LoginController - response status:401
+2018-06-09 20:51:54,894||DEBUG:usersSignUpController- Authenticating sign up for new user: user3
+2018-06-09 20:51:54,894||INFO:Mocking user signup
+2018-06-09 20:51:54,894||INFO:Mocking user signup
+2018-06-09 20:51:54,894||INFO:Mocking new user
+2018-06-09 20:51:54,894||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:51:54,895||INFO:User login mockup
+2018-06-09 20:51:54,895||INFO:Mocking succesful login
+2018-06-09 20:51:54,895||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:51:54,895||DEBUG:Adding new user: user3
+2018-06-09 20:51:54,896||DEBUG:loginnedUsers- User login: user3, token: eTKhUrPGek
+2018-06-09 20:51:54,912||DEBUG:usersLoginController- Validating login for user user3
+2018-06-09 20:51:54,912||INFO:User login mockup
+2018-06-09 20:51:54,912||INFO:Mocking succesful login
+2018-06-09 20:51:54,912||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:54,913||DEBUG:usersLoginController- Succesful login for user user3
+2018-06-09 20:51:54,913||INFO:Mocking user registry
+2018-06-09 20:51:54,913||DEBUG:loginnedUsers- User login: user3, token: eTKhUrPGek
+2018-06-09 20:51:54,915||DEBUG:usersSignUpController- Authenticating sign up for new user: userProfile
+2018-06-09 20:51:54,915||INFO:Mocking user signup
+2018-06-09 20:51:54,915||INFO:Mocking user signup
+2018-06-09 20:51:54,916||INFO:Mocking new user
+2018-06-09 20:51:54,916||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:51:54,916||INFO:User login mockup
+2018-06-09 20:51:54,916||INFO:Mocking succesful login
+2018-06-09 20:51:54,916||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:51:54,916||DEBUG:Adding new user: userProfile
+2018-06-09 20:51:54,918||DEBUG:loginnedUsers- User login: userProfile, token: eTKhUrPGek
+2018-06-09 20:51:54,920||DEBUG:usersLoginController- Validating login for user userProfile
+2018-06-09 20:51:54,920||INFO:User login mockup
+2018-06-09 20:51:54,920||INFO:Mocking succesful login
+2018-06-09 20:51:54,920||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:54,921||DEBUG:usersLoginController- Succesful login for user userProfile
+2018-06-09 20:51:54,921||INFO:Mocking user registry
+2018-06-09 20:51:54,921||DEBUG:loginnedUsers- User login: userProfile, token: eTKhUrPGek
+2018-06-09 20:51:54,923||DEBUG:users-Checking userProfile login
+2018-06-09 20:51:54,926||DEBUG:profilesController- Updating userProfile profile
+2018-06-09 20:51:54,927||DEBUG:users-Updating userProfile profile
+2018-06-09 20:51:54,932||DEBUG:users-Checking userProfile login
+2018-06-09 20:51:54,934||DEBUG:profilesController- Getting userProfile profile
+2018-06-09 20:51:54,934||DEBUG:users-Getting userProfile profile
+2018-06-09 20:51:54,936||DEBUG:usersLoginController- Validating login for user userProfile
+2018-06-09 20:51:54,937||INFO:User login mockup
+2018-06-09 20:51:54,937||INFO:Mocking succesful login
+2018-06-09 20:51:54,937||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:54,937||DEBUG:usersLoginController- Succesful login for user userProfile
+2018-06-09 20:51:54,937||INFO:Mocking user registry
+2018-06-09 20:51:54,938||DEBUG:loginnedUsers- User login: userProfile, token: eTKhUrPGek
+2018-06-09 20:51:54,939||DEBUG:users-Checking userProfile login
+2018-06-09 20:51:54,941||DEBUG:profilesController- Updating userProfile profile
+2018-06-09 20:51:54,941||DEBUG:users-Updating userProfile profile
+2018-06-09 20:51:54,944||DEBUG:users-Checking userProfile login
+2018-06-09 20:51:54,945||DEBUG:profilesController- Getting userProfile profile
+2018-06-09 20:51:54,946||DEBUG:users-Getting userProfile profile
+2018-06-09 20:51:54,948||DEBUG:usersSignUpController- Authenticating sign up for new user: userProfile2
+2018-06-09 20:51:54,948||INFO:Mocking user signup
+2018-06-09 20:51:54,948||INFO:Mocking user signup
+2018-06-09 20:51:54,949||INFO:Mocking new user
+2018-06-09 20:51:54,949||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:51:54,949||INFO:User login mockup
+2018-06-09 20:51:54,949||INFO:Mocking succesful login
+2018-06-09 20:51:54,949||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:51:54,949||DEBUG:Adding new user: userProfile2
+2018-06-09 20:51:54,950||DEBUG:loginnedUsers- User login: userProfile2, token: eTKhUrPGek
+2018-06-09 20:51:54,952||DEBUG:usersLoginController- Validating login for user userProfile2
+2018-06-09 20:51:54,952||INFO:User login mockup
+2018-06-09 20:51:54,952||INFO:Mocking succesful login
+2018-06-09 20:51:54,952||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:54,953||DEBUG:usersLoginController- Succesful login for user userProfile2
+2018-06-09 20:51:54,953||INFO:Mocking user registry
+2018-06-09 20:51:54,953||DEBUG:loginnedUsers- User login: userProfile2, token: eTKhUrPGek
+2018-06-09 20:51:54,955||DEBUG:users-Checking userProfile login
+2018-06-09 20:51:54,957||DEBUG:profilesController- Updating userProfile2 profile
+2018-06-09 20:51:54,957||DEBUG:users-Updating userProfile2 profile
+2018-06-09 20:51:54,960||DEBUG:users-Checking userProfile login
+2018-06-09 20:51:54,962||DEBUG:profilesController- Getting userProfile2 profile
+2018-06-09 20:51:54,963||DEBUG:users-Getting userProfile2 profile
+2018-06-09 20:51:54,966||DEBUG:usersSignUpController- Authenticating sign up for new user: userFriends
+2018-06-09 20:51:54,966||INFO:Mocking user signup
+2018-06-09 20:51:54,966||INFO:Mocking user signup
+2018-06-09 20:51:54,966||INFO:Mocking new user
+2018-06-09 20:51:54,966||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:51:54,967||INFO:User login mockup
+2018-06-09 20:51:54,967||INFO:Mocking succesful login
+2018-06-09 20:51:54,967||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:51:54,967||DEBUG:Adding new user: userFriends
+2018-06-09 20:51:54,968||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:54,970||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:54,970||INFO:User login mockup
+2018-06-09 20:51:54,970||INFO:Mocking succesful login
+2018-06-09 20:51:54,970||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:54,970||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:54,971||INFO:Mocking user registry
+2018-06-09 20:51:54,971||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:54,972||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:54,974||DEBUG:friendsController- Getting userFriends friend list
+2018-06-09 20:51:54,975||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:54,983||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:54,983||INFO:User login mockup
+2018-06-09 20:51:54,983||INFO:Mocking succesful login
+2018-06-09 20:51:54,983||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:54,983||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:54,984||INFO:Mocking user registry
+2018-06-09 20:51:54,984||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:54,985||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:54,987||DEBUG:friendsController- Adding user to userFriends friend list
+2018-06-09 20:51:54,987||DEBUG:friends- userFriends adding user to friends list
+2018-06-09 20:51:54,989||DEBUG:friends- user adding userFriends to friends list
+2018-06-09 20:51:54,992||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:54,992||INFO:User login mockup
+2018-06-09 20:51:54,992||INFO:Mocking succesful login
+2018-06-09 20:51:54,992||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:54,993||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:54,993||INFO:Mocking user registry
+2018-06-09 20:51:54,993||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:54,994||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:54,996||DEBUG:friendsController- Getting userFriends friend list
+2018-06-09 20:51:54,996||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:54,999||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:54,999||INFO:User login mockup
+2018-06-09 20:51:54,999||INFO:Mocking succesful login
+2018-06-09 20:51:54,999||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:54,999||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:54,999||INFO:Mocking user registry
+2018-06-09 20:51:55,000||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:55,002||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,003||DEBUG:friendsController- Getting userFriends friend list
+2018-06-09 20:51:55,004||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:55,006||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,007||DEBUG:friendsController- Removing user from userFriends friend list
+2018-06-09 20:51:55,007||DEBUG:friends- userFriends deleting user from friends list
+2018-06-09 20:51:55,013||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:55,021||INFO:User login mockup
+2018-06-09 20:51:55,022||INFO:Mocking succesful login
+2018-06-09 20:51:55,022||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,022||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:55,022||INFO:Mocking user registry
+2018-06-09 20:51:55,023||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:55,025||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,031||DEBUG:friendsController- Adding user to userFriends friend list
+2018-06-09 20:51:55,031||DEBUG:friends- userFriends adding user to friends list
+2018-06-09 20:51:55,033||DEBUG:friends- user adding userFriends to friends list
+2018-06-09 20:51:55,037||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,039||DEBUG:friendsController- Getting user friend list
+2018-06-09 20:51:55,039||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:55,043||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:55,043||INFO:User login mockup
+2018-06-09 20:51:55,044||INFO:Mocking succesful login
+2018-06-09 20:51:55,044||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,044||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:55,044||INFO:Mocking user registry
+2018-06-09 20:51:55,044||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:55,046||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,047||DEBUG:invitationsController- Retrieving invitations for user userFriends
+2018-06-09 20:51:55,048||DEBUG:invitations- Getting user userFriends invitations
+2018-06-09 20:51:55,050||ERROR:[API07] [invitationsController.getUserInvitations]No invitations found for user userFriends
+2018-06-09 20:51:55,052||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:55,052||INFO:User login mockup
+2018-06-09 20:51:55,052||INFO:Mocking succesful login
+2018-06-09 20:51:55,052||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,052||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:55,053||INFO:Mocking user registry
+2018-06-09 20:51:55,053||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:55,054||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:55,054||INFO:User login mockup
+2018-06-09 20:51:55,054||INFO:Mocking succesful login
+2018-06-09 20:51:55,054||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,055||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:55,055||INFO:Mocking user registry
+2018-06-09 20:51:55,055||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:55,058||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,061||DEBUG:invitationsController- userFriends adding user to friend list
+2018-06-09 20:51:55,061||DEBUG:invitations- Adding friend invitation
+2018-06-09 20:51:55,126||DEBUG:users-Checking user login
+2018-06-09 20:51:55,130||DEBUG:invitationsController- Retrieving invitations for user user
+2018-06-09 20:51:55,130||DEBUG:invitations- Getting user user invitations
+2018-06-09 20:51:55,135||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:55,135||INFO:User login mockup
+2018-06-09 20:51:55,136||INFO:Mocking succesful login
+2018-06-09 20:51:55,136||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,136||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:55,136||INFO:Mocking user registry
+2018-06-09 20:51:55,136||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:55,138||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:55,138||INFO:User login mockup
+2018-06-09 20:51:55,138||INFO:Mocking succesful login
+2018-06-09 20:51:55,138||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,138||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:55,139||INFO:Mocking user registry
+2018-06-09 20:51:55,139||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:55,141||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,144||DEBUG:invitationsController- userFriends adding user to friend list
+2018-06-09 20:51:55,144||DEBUG:invitations- Adding friend invitation
+2018-06-09 20:51:55,146||DEBUG:users-Checking user login
+2018-06-09 20:51:55,147||DEBUG:invitationsController- Retrieving invitations for user user
+2018-06-09 20:51:55,148||DEBUG:invitations- Getting user user invitations
+2018-06-09 20:51:55,150||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:55,150||INFO:User login mockup
+2018-06-09 20:51:55,151||INFO:Mocking succesful login
+2018-06-09 20:51:55,151||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,151||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:55,151||INFO:Mocking user registry
+2018-06-09 20:51:55,151||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:55,153||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:55,153||INFO:User login mockup
+2018-06-09 20:51:55,153||INFO:Mocking succesful login
+2018-06-09 20:51:55,153||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,154||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:55,154||INFO:Mocking user registry
+2018-06-09 20:51:55,154||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:55,155||DEBUG:usersLoginController- Validating login for user user2
+2018-06-09 20:51:55,155||INFO:User login mockup
+2018-06-09 20:51:55,156||INFO:Mocking succesful login
+2018-06-09 20:51:55,156||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,156||DEBUG:usersLoginController- Succesful login for user user2
+2018-06-09 20:51:55,156||INFO:Mocking user registry
+2018-06-09 20:51:55,157||DEBUG:loginnedUsers- User login: user2, token: eTKhUrPGek
+2018-06-09 20:51:55,159||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,162||DEBUG:invitationsController- userFriends adding user to friend list
+2018-06-09 20:51:55,162||DEBUG:invitations- Adding friend invitation
+2018-06-09 20:51:55,165||DEBUG:users-Checking user2 login
+2018-06-09 20:51:55,167||DEBUG:invitationsController- user2 adding user to friend list
+2018-06-09 20:51:55,167||DEBUG:invitations- Adding friend invitation
+2018-06-09 20:51:55,171||DEBUG:users-Checking user login
+2018-06-09 20:51:55,173||DEBUG:invitationsController- Retrieving invitations for user user
+2018-06-09 20:51:55,173||DEBUG:invitations- Getting user user invitations
+2018-06-09 20:51:55,181||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:55,181||INFO:User login mockup
+2018-06-09 20:51:55,182||INFO:Mocking succesful login
+2018-06-09 20:51:55,182||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,182||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:55,182||INFO:Mocking user registry
+2018-06-09 20:51:55,183||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:55,184||DEBUG:users-Checking user login
+2018-06-09 20:51:55,186||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:55,186||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:55,254||DEBUG:comments- Adding comment to story 5f1a56d0-39ab-4831-8b1f-f2a2a3085569
+2018-06-09 20:51:55,263||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:55,264||INFO:User login mockup
+2018-06-09 20:51:55,264||INFO:Mocking succesful login
+2018-06-09 20:51:55,265||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,265||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:55,265||INFO:Mocking user registry
+2018-06-09 20:51:55,266||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:55,270||DEBUG:users-Checking user login
+2018-06-09 20:51:55,273||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:51:55,273||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:51:55,273||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:55,278||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:55,278||INFO:User login mockup
+2018-06-09 20:51:55,278||INFO:Mocking succesful login
+2018-06-09 20:51:55,279||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,279||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:55,279||INFO:Mocking user registry
+2018-06-09 20:51:55,279||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:55,280||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,282||DEBUG:storiesController- Retrieving homepage feed for userFriends
+2018-06-09 20:51:55,282||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:51:55,282||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:55,286||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:55,286||INFO:User login mockup
+2018-06-09 20:51:55,286||INFO:Mocking succesful login
+2018-06-09 20:51:55,286||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,286||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:55,287||INFO:Mocking user registry
+2018-06-09 20:51:55,287||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:55,288||DEBUG:users-Checking user login
+2018-06-09 20:51:55,291||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:51:55,291||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:51:55,292||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:55,295||DEBUG:users-Checking user login
+2018-06-09 20:51:55,297||DEBUG:storiesController- Updating story 5f1a56d0-39ab-4831-8b1f-f2a2a3085569
+2018-06-09 20:51:55,297||DEBUG:stories- Updating story 5f1a56d0-39ab-4831-8b1f-f2a2a3085569 for user user
+2018-06-09 20:51:55,300||DEBUG:users-Checking user login
+2018-06-09 20:51:55,303||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:51:55,303||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:51:55,303||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:55,308||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:55,308||INFO:User login mockup
+2018-06-09 20:51:55,309||INFO:Mocking succesful login
+2018-06-09 20:51:55,309||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,310||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:55,311||INFO:Mocking user registry
+2018-06-09 20:51:55,311||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:55,316||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,318||DEBUG:storiesController- Adding story for user userFriends
+2018-06-09 20:51:55,318||DEBUG:stories- Adding new story for user userFriends
+2018-06-09 20:51:55,319||DEBUG:comments- Adding comment to story f85d7957-afd0-4058-9e7f-d8778a88ebbd
+2018-06-09 20:51:55,321||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:55,322||INFO:User login mockup
+2018-06-09 20:51:55,322||INFO:Mocking succesful login
+2018-06-09 20:51:55,322||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,322||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:55,322||INFO:Mocking user registry
+2018-06-09 20:51:55,322||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:55,324||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,326||DEBUG:storiesController- Retrieving homepage feed for userFriends
+2018-06-09 20:51:55,326||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:51:55,326||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:55,330||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:55,330||INFO:User login mockup
+2018-06-09 20:51:55,330||INFO:Mocking succesful login
+2018-06-09 20:51:55,331||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,331||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:55,331||INFO:Mocking user registry
+2018-06-09 20:51:55,331||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:55,332||DEBUG:users-Checking user login
+2018-06-09 20:51:55,334||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:51:55,334||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:51:55,334||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:55,338||DEBUG:users-Checking user login
+2018-06-09 20:51:55,339||DEBUG:storiesController- Deleting story 5f1a56d0-39ab-4831-8b1f-f2a2a3085569
+2018-06-09 20:51:55,339||DEBUG:stories- Deleting story 5f1a56d0-39ab-4831-8b1f-f2a2a3085569
+2018-06-09 20:51:55,344||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:55,353||INFO:User login mockup
+2018-06-09 20:51:55,354||INFO:Mocking succesful login
+2018-06-09 20:51:55,354||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,354||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:55,354||INFO:Mocking user registry
+2018-06-09 20:51:55,355||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:55,356||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,358||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:51:55,358||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:51:55,360||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:55,366||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,368||DEBUG:storiesController- Deleting story f85d7957-afd0-4058-9e7f-d8778a88ebbd
+2018-06-09 20:51:55,368||DEBUG:stories- Deleting story f85d7957-afd0-4058-9e7f-d8778a88ebbd
+2018-06-09 20:51:55,370||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:55,371||INFO:User login mockup
+2018-06-09 20:51:55,371||INFO:Mocking succesful login
+2018-06-09 20:51:55,371||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,371||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:55,371||INFO:Mocking user registry
+2018-06-09 20:51:55,372||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:55,374||DEBUG:users-Checking user login
+2018-06-09 20:51:55,377||DEBUG:flashStoriesController- user adding new flash story
+2018-06-09 20:51:55,378||DEBUG:Adding new story for user user
+2018-06-09 20:51:55,382||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:55,382||INFO:User login mockup
+2018-06-09 20:51:55,382||INFO:Mocking succesful login
+2018-06-09 20:51:55,382||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,382||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:55,382||INFO:Mocking user registry
+2018-06-09 20:51:55,382||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:55,385||DEBUG:users-Checking user login
+2018-06-09 20:51:55,386||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:51:55,387||DEBUG:Getting last stories for user
+2018-06-09 20:51:55,387||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:55,388||INFO:Deleting garbage
+2018-06-09 20:51:55,391||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:55,392||INFO:User login mockup
+2018-06-09 20:51:55,392||INFO:Mocking succesful login
+2018-06-09 20:51:55,392||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,393||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:55,394||INFO:Mocking user registry
+2018-06-09 20:51:55,395||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:55,398||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,400||DEBUG:flashStoriesController- getting userFriends homepage feed
+2018-06-09 20:51:55,400||DEBUG:Getting last stories for userFriends
+2018-06-09 20:51:55,400||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:55,401||INFO:Deleting garbage
+2018-06-09 20:51:55,404||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:55,404||INFO:User login mockup
+2018-06-09 20:51:55,405||INFO:Mocking succesful login
+2018-06-09 20:51:55,405||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,405||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:55,405||INFO:Mocking user registry
+2018-06-09 20:51:55,405||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:55,407||DEBUG:users-Checking user login
+2018-06-09 20:51:55,410||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:51:55,410||DEBUG:Getting last stories for user
+2018-06-09 20:51:55,410||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:55,411||INFO:Deleting garbage
+2018-06-09 20:51:55,414||DEBUG:users-Checking user login
+2018-06-09 20:51:55,416||DEBUG:flashStoriesController- user updating flash storya02cd297-8ae7-4d28-bd9f-92a16bbca4b3
+2018-06-09 20:51:55,417||DEBUG:Updating story a02cd297-8ae7-4d28-bd9f-92a16bbca4b3 from user user
+2018-06-09 20:51:55,419||DEBUG:users-Checking user login
+2018-06-09 20:51:55,421||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:51:55,421||DEBUG:Getting last stories for user
+2018-06-09 20:51:55,421||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:55,422||INFO:Deleting garbage
+2018-06-09 20:51:55,427||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:55,427||INFO:User login mockup
+2018-06-09 20:51:55,428||INFO:Mocking succesful login
+2018-06-09 20:51:55,428||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,428||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:55,428||INFO:Mocking user registry
+2018-06-09 20:51:55,429||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:55,430||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,432||DEBUG:flashStoriesController- userFriends adding new flash story
+2018-06-09 20:51:55,432||DEBUG:Adding new story for user userFriends
+2018-06-09 20:51:55,435||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:55,435||INFO:User login mockup
+2018-06-09 20:51:55,435||INFO:Mocking succesful login
+2018-06-09 20:51:55,435||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,435||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:55,436||INFO:Mocking user registry
+2018-06-09 20:51:55,436||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:55,437||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,439||DEBUG:flashStoriesController- getting userFriends homepage feed
+2018-06-09 20:51:55,439||DEBUG:Getting last stories for userFriends
+2018-06-09 20:51:55,439||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:51:55,440||INFO:Deleting garbage
+2018-06-09 20:51:55,448||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:55,449||INFO:User login mockup
+2018-06-09 20:51:55,449||INFO:Mocking succesful login
+2018-06-09 20:51:55,449||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,449||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:55,449||INFO:Mocking user registry
+2018-06-09 20:51:55,449||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:55,451||DEBUG:users-Checking user login
+2018-06-09 20:51:55,454||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:51:55,454||DEBUG:Getting last stories for user
+2018-06-09 20:51:55,454||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:55,455||INFO:Deleting garbage
+2018-06-09 20:51:55,474||DEBUG:users-Checking user login
+2018-06-09 20:51:55,478||DEBUG:flashStoriesController- removing story a02cd297-8ae7-4d28-bd9f-92a16bbca4b3
+2018-06-09 20:51:55,479||DEBUG:Deleting story a02cd297-8ae7-4d28-bd9f-92a16bbca4b3
+2018-06-09 20:51:55,482||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:51:55,482||INFO:User login mockup
+2018-06-09 20:51:55,482||INFO:Mocking succesful login
+2018-06-09 20:51:55,482||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,482||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:51:55,482||INFO:Mocking user registry
+2018-06-09 20:51:55,482||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:51:55,483||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,485||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:51:55,486||DEBUG:Getting last stories for user
+2018-06-09 20:51:55,486||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:55,487||INFO:Deleting garbage
+2018-06-09 20:51:55,490||DEBUG:users-Checking userFriends login
+2018-06-09 20:51:55,493||DEBUG:flashStoriesController- removing story ab32fdd5-5a77-4599-aca0-8cbcfc04aa5f
+2018-06-09 20:51:55,495||DEBUG:Deleting story ab32fdd5-5a77-4599-aca0-8cbcfc04aa5f
+2018-06-09 20:51:55,499||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:55,499||INFO:User login mockup
+2018-06-09 20:51:55,499||INFO:Mocking succesful login
+2018-06-09 20:51:55,500||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:55,500||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:55,500||INFO:Mocking user registry
+2018-06-09 20:51:55,500||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:55,502||DEBUG:users-Checking user login
+2018-06-09 20:51:55,504||DEBUG:flashStoriesController- user adding new flash story
+2018-06-09 20:51:55,504||DEBUG:Adding new story for user user
+2018-06-09 20:51:56,511||DEBUG:users-Checking user login
+2018-06-09 20:51:56,517||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:51:56,517||DEBUG:Getting last stories for user
+2018-06-09 20:51:56,518||DEBUG:friends- Getting user friend list
+2018-06-09 20:51:56,519||INFO:Deleting garbage
+2018-06-09 20:51:56,525||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:56,525||INFO:User login mockup
+2018-06-09 20:51:56,526||INFO:Mocking succesful login
+2018-06-09 20:51:56,526||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:56,526||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:56,527||INFO:Mocking user registry
+2018-06-09 20:51:56,527||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:56,529||DEBUG:users-Checking user login
+2018-06-09 20:51:56,533||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:56,533||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:56,535||DEBUG:comments- Adding comment to story fb3fe589-772e-4893-800c-efe91b959a3b
+2018-06-09 20:51:56,538||DEBUG:users-Checking user login
+2018-06-09 20:51:56,541||DEBUG:commentsController- Adding new comment from user to story fb3fe589-772e-4893-800c-efe91b959a3b
+2018-06-09 20:51:56,542||DEBUG:comments-user adding comment: Ese meme si se puede ver to story fb3fe589-772e-4893-800c-efe91b959a3b
+2018-06-09 20:51:56,542||INFO:comments- comment:{'_id': 'b9b236d1-7b03-471d-adde-6099a8595536', 'user': 'user', 'date': '2018-06-09 20:51:56.542565', 'message': 'Ese meme si se puede ver'}
+2018-06-09 20:51:56,548||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:56,548||INFO:User login mockup
+2018-06-09 20:51:56,548||INFO:Mocking succesful login
+2018-06-09 20:51:56,549||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:56,549||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:56,549||INFO:Mocking user registry
+2018-06-09 20:51:56,549||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:56,551||DEBUG:users-Checking user login
+2018-06-09 20:51:56,554||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:56,554||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:56,556||DEBUG:comments- Adding comment to story 282d03ba-4be2-476a-9c5c-e5e30c7c706e
+2018-06-09 20:51:56,559||DEBUG:users-Checking user login
+2018-06-09 20:51:56,561||DEBUG:commentsController- Adding new comment from user to story 282d03ba-4be2-476a-9c5c-e5e30c7c706e
+2018-06-09 20:51:56,562||DEBUG:comments-user adding comment: Ese meme si se puede ver to story 282d03ba-4be2-476a-9c5c-e5e30c7c706e
+2018-06-09 20:51:56,562||INFO:comments- comment:{'_id': 'd080691a-6047-489f-a6f8-dd6c422a720b', 'user': 'user', 'date': '2018-06-09 20:51:56.562116', 'message': 'Ese meme si se puede ver'}
+2018-06-09 20:51:56,564||DEBUG:users-Checking user login
+2018-06-09 20:51:56,566||DEBUG:commentsController- Getting story comments from story 282d03ba-4be2-476a-9c5c-e5e30c7c706e
+2018-06-09 20:51:56,566||DEBUG:comments-Getting comments from story 282d03ba-4be2-476a-9c5c-e5e30c7c706e
+2018-06-09 20:51:56,569||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:56,569||INFO:User login mockup
+2018-06-09 20:51:56,569||INFO:Mocking succesful login
+2018-06-09 20:51:56,569||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:56,569||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:56,569||INFO:Mocking user registry
+2018-06-09 20:51:56,570||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:56,571||DEBUG:users-Checking user login
+2018-06-09 20:51:56,573||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:56,573||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:56,574||DEBUG:comments- Adding comment to story 7fbd2442-c08d-4451-8d1b-d9296f0994fc
+2018-06-09 20:51:56,576||DEBUG:users-Checking user login
+2018-06-09 20:51:56,578||DEBUG:commentsController- Adding new comment from user to story 7fbd2442-c08d-4451-8d1b-d9296f0994fc
+2018-06-09 20:51:56,578||DEBUG:comments-user adding comment: Ese meme si se puede ver to story 7fbd2442-c08d-4451-8d1b-d9296f0994fc
+2018-06-09 20:51:56,578||INFO:comments- comment:{'_id': '0adb9c09-703c-4ea8-ba80-8e6c84e5a80a', 'user': 'user', 'date': '2018-06-09 20:51:56.578916', 'message': 'Ese meme si se puede ver'}
+2018-06-09 20:51:56,584||DEBUG:users-Checking user login
+2018-06-09 20:51:56,586||DEBUG:commentsController- Adding new comment from user to story 7fbd2442-c08d-4451-8d1b-d9296f0994fc
+2018-06-09 20:51:56,586||DEBUG:comments-user adding comment: Buzzfeed es muy normie to story 7fbd2442-c08d-4451-8d1b-d9296f0994fc
+2018-06-09 20:51:56,586||INFO:comments- comment:{'_id': '3ec6ca12-8c0e-4c5a-8b53-c6abf7a6f107', 'user': 'user', 'date': '2018-06-09 20:51:56.586587', 'message': 'Buzzfeed es muy normie'}
+2018-06-09 20:51:56,589||DEBUG:users-Checking user login
+2018-06-09 20:51:56,590||DEBUG:commentsController- Getting story comments from story 7fbd2442-c08d-4451-8d1b-d9296f0994fc
+2018-06-09 20:51:56,591||DEBUG:comments-Getting comments from story 7fbd2442-c08d-4451-8d1b-d9296f0994fc
+2018-06-09 20:51:56,594||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:56,594||INFO:User login mockup
+2018-06-09 20:51:56,594||INFO:Mocking succesful login
+2018-06-09 20:51:56,594||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:56,594||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:56,595||INFO:Mocking user registry
+2018-06-09 20:51:56,595||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:56,598||DEBUG:users-Checking user login
+2018-06-09 20:51:56,600||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:56,600||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:56,601||DEBUG:comments- Adding comment to story fb15dd4e-3f3b-4da1-b493-f3151aa31acd
+2018-06-09 20:51:56,603||DEBUG:users-Checking user login
+2018-06-09 20:51:56,605||DEBUG:commentsController- Adding new comment from user to story fb15dd4e-3f3b-4da1-b493-f3151aa31acd
+2018-06-09 20:51:56,606||DEBUG:comments-user adding comment: Ese meme si se puede ver to story fb15dd4e-3f3b-4da1-b493-f3151aa31acd
+2018-06-09 20:51:56,606||INFO:comments- comment:{'_id': 'eeb776cd-9f59-402e-bc79-488dc4605f04', 'user': 'user', 'date': '2018-06-09 20:51:56.606246', 'message': 'Ese meme si se puede ver'}
+2018-06-09 20:51:56,609||DEBUG:users-Checking user login
+2018-06-09 20:51:56,611||DEBUG:commentsController- Removing comment eeb776cd-9f59-402e-bc79-488dc4605f04 from story fb15dd4e-3f3b-4da1-b493-f3151aa31acd
+2018-06-09 20:51:56,612||DEBUG:comments- Removing comment eeb776cd-9f59-402e-bc79-488dc4605f04 from story fb15dd4e-3f3b-4da1-b493-f3151aa31acd
+2018-06-09 20:51:56,618||DEBUG:users-Checking user login
+2018-06-09 20:51:56,628||DEBUG:commentsController- Getting story comments from story fb15dd4e-3f3b-4da1-b493-f3151aa31acd
+2018-06-09 20:51:56,628||DEBUG:comments-Getting comments from story fb15dd4e-3f3b-4da1-b493-f3151aa31acd
+2018-06-09 20:51:56,632||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:56,632||INFO:User login mockup
+2018-06-09 20:51:56,632||INFO:Mocking succesful login
+2018-06-09 20:51:56,632||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:56,632||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:56,633||INFO:Mocking user registry
+2018-06-09 20:51:56,633||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:56,634||DEBUG:users-Checking user login
+2018-06-09 20:51:56,636||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:56,636||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:56,637||DEBUG:comments- Adding comment to story fc9ad1ad-1d13-4d56-9e6b-6d4c1523af23
+2018-06-09 20:51:56,639||DEBUG:users-Checking user login
+2018-06-09 20:51:56,641||DEBUG:reactionsController- user is adding a reaction to story fc9ad1ad-1d13-4d56-9e6b-6d4c1523af23
+2018-06-09 20:51:56,641||DEBUG:stories- Adding reaction to story
+2018-06-09 20:51:56,644||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:56,644||INFO:User login mockup
+2018-06-09 20:51:56,644||INFO:Mocking succesful login
+2018-06-09 20:51:56,645||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:56,645||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:56,645||INFO:Mocking user registry
+2018-06-09 20:51:56,645||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:56,647||DEBUG:users-Checking user login
+2018-06-09 20:51:56,650||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:56,650||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:56,651||DEBUG:comments- Adding comment to story ef53cc92-2fee-43b5-a8be-73f5a7b8b44e
+2018-06-09 20:51:56,654||DEBUG:users-Checking user login
+2018-06-09 20:51:56,656||DEBUG:reactionsController- user is adding a reaction to story ef53cc92-2fee-43b5-a8be-73f5a7b8b44e
+2018-06-09 20:51:56,656||DEBUG:stories- Adding reaction to story
+2018-06-09 20:51:56,659||DEBUG:users-Checking user login
+2018-06-09 20:51:56,660||DEBUG:reactionsController- user2 is adding a reaction to story ef53cc92-2fee-43b5-a8be-73f5a7b8b44e
+2018-06-09 20:51:56,661||DEBUG:stories- Adding reaction to story
+2018-06-09 20:51:56,665||DEBUG:users-Checking user login
+2018-06-09 20:51:56,669||DEBUG:reactionsController- Getting story ef53cc92-2fee-43b5-a8be-73f5a7b8b44e reactions
+2018-06-09 20:51:56,669||DEBUG:stories- Getting reactions for story: ef53cc92-2fee-43b5-a8be-73f5a7b8b44e
+2018-06-09 20:51:56,672||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:51:56,672||INFO:User login mockup
+2018-06-09 20:51:56,672||INFO:Mocking succesful login
+2018-06-09 20:51:56,673||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:51:56,673||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:51:56,673||INFO:Mocking user registry
+2018-06-09 20:51:56,673||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:51:56,675||DEBUG:users-Checking user login
+2018-06-09 20:51:56,677||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:51:56,677||DEBUG:stories- Adding new story for user user
+2018-06-09 20:51:56,678||DEBUG:comments- Adding comment to story 32451189-1216-407f-9b8e-6c76ee2fa4de
+2018-06-09 20:51:56,680||DEBUG:users-Checking user login
+2018-06-09 20:51:56,682||DEBUG:reactionsController- user is adding a reaction to story 32451189-1216-407f-9b8e-6c76ee2fa4de
+2018-06-09 20:51:56,682||DEBUG:stories- Adding reaction to story
+2018-06-09 20:51:56,684||DEBUG:users-Checking user login
+2018-06-09 20:51:56,686||DEBUG:reactionsController- user is removing his reaction to story 32451189-1216-407f-9b8e-6c76ee2fa4de
+2018-06-09 20:51:56,686||DEBUG:stories- Deleting reaction from user for story: 32451189-1216-407f-9b8e-6c76ee2fa4de
+2018-06-09 20:51:56,688||DEBUG:users-Checking user login
+2018-06-09 20:51:56,690||DEBUG:reactionsController- Getting story 32451189-1216-407f-9b8e-6c76ee2fa4de reactions
+2018-06-09 20:51:56,691||DEBUG:stories- Getting reactions for story: 32451189-1216-407f-9b8e-6c76ee2fa4de
+2018-06-09 20:54:01,963||INFO:users- Users DB in localhost
+2018-06-09 20:54:01,966||INFO:loginnedUsers- Setting logined users
+2018-06-09 20:54:01,966||DEBUG:users- Getting all users
+2018-06-09 20:54:02,038||INFO:Notifications DB in localhost
+2018-06-09 20:54:02,041||INFO:serverAuth-SharedServer found in localhost
+2018-06-09 20:54:02,041||INFO:http://localhost:10010
+2018-06-09 20:54:02,042||INFO:userLogin: Shared Server found in localhost
+2018-06-09 20:54:02,043||INFO:friends- Friends DB in localhost
+2018-06-09 20:54:02,046||INFO:invitations- Invitations DB in localhost
+2018-06-09 20:54:02,051||INFO:notifications- Notifications DB in localhost
+2018-06-09 20:54:02,055||INFO:stories- Stories DB in localhost
+2018-06-09 20:54:02,058||INFO:Comments DB in localhost
+2018-06-09 20:54:02,063||INFO:flashStories - FlashStories DB found in localhost
+2018-06-09 20:54:02,064||INFO:flashStories- TEST_ENV found in os.environ
+2018-06-09 20:54:02,119||DEBUG:usersSignUpController- Authenticating sign up for new user: user
+2018-06-09 20:54:02,119||INFO:Mocking user signup
+2018-06-09 20:54:02,120||INFO:Mocking user signup
+2018-06-09 20:54:02,120||INFO:Mocking new user
+2018-06-09 20:54:02,120||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:54:02,120||INFO:User login mockup
+2018-06-09 20:54:02,120||INFO:Mocking succesful login
+2018-06-09 20:54:02,121||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:54:02,121||DEBUG:Adding new user: user
+2018-06-09 20:54:02,190||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:02,197||DEBUG:usersSignUpController- Authenticating sign up for new user: user2
+2018-06-09 20:54:02,197||INFO:Mocking user signup
+2018-06-09 20:54:02,197||INFO:Mocking user signup
+2018-06-09 20:54:02,197||ERROR:[MOCK01] MOCK: Signup parameters missing
+2018-06-09 20:54:02,197||DEBUG:usersSignUpController- Error while registering user:{'message': 'Parametros de signup faltantes'}
+2018-06-09 20:54:02,198||ERROR:[API01] [userSignUpController.authenticateSignUp]Error at sign up. Response message received: Parametros de signup faltantes
+2018-06-09 20:54:02,200||DEBUG:usersSignUpController- Authenticating sign up for new user: user2
+2018-06-09 20:54:02,211||INFO:Mocking user signup
+2018-06-09 20:54:02,211||INFO:Mocking user signup
+2018-06-09 20:54:02,211||INFO:Mocking new user
+2018-06-09 20:54:02,212||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:54:02,212||INFO:User login mockup
+2018-06-09 20:54:02,212||INFO:Mocking succesful login
+2018-06-09 20:54:02,212||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:54:02,213||DEBUG:Adding new user: user2
+2018-06-09 20:54:02,214||DEBUG:loginnedUsers- User login: user2, token: eTKhUrPGek
+2018-06-09 20:54:02,216||DEBUG:usersLoginController- Validating login for user user2
+2018-06-09 20:54:02,216||INFO:User login mockup
+2018-06-09 20:54:02,216||INFO:Mocking succesful login
+2018-06-09 20:54:02,216||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,216||DEBUG:usersLoginController- Succesful login for user user2
+2018-06-09 20:54:02,217||INFO:Mocking user registry
+2018-06-09 20:54:02,217||DEBUG:loginnedUsers- User login: user2, token: eTKhUrPGek
+2018-06-09 20:54:02,219||DEBUG:usersLoginController- Validating login for user fakeuser
+2018-06-09 20:54:02,219||INFO:User login mockup
+2018-06-09 20:54:02,220||ERROR:[MOCK03] MOCK: Incorrect login information
+2018-06-09 20:54:02,220||DEBUG:usersLoginController- LoginController - response status:401
+2018-06-09 20:54:02,221||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:02,222||INFO:User login mockup
+2018-06-09 20:54:02,222||INFO:Mocking succesful login
+2018-06-09 20:54:02,222||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,222||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:02,223||INFO:Mocking user registry
+2018-06-09 20:54:02,223||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:02,224||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:02,225||INFO:User login mockup
+2018-06-09 20:54:02,225||ERROR:[MOCK03] MOCK: Incorrect login information
+2018-06-09 20:54:02,225||DEBUG:usersLoginController- LoginController - response status:401
+2018-06-09 20:54:02,227||DEBUG:usersSignUpController- Authenticating sign up for new user: user3
+2018-06-09 20:54:02,227||INFO:Mocking user signup
+2018-06-09 20:54:02,227||INFO:Mocking user signup
+2018-06-09 20:54:02,227||INFO:Mocking new user
+2018-06-09 20:54:02,227||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:54:02,228||INFO:User login mockup
+2018-06-09 20:54:02,228||INFO:Mocking succesful login
+2018-06-09 20:54:02,228||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:54:02,228||DEBUG:Adding new user: user3
+2018-06-09 20:54:02,229||DEBUG:loginnedUsers- User login: user3, token: eTKhUrPGek
+2018-06-09 20:54:02,230||DEBUG:usersLoginController- Validating login for user user3
+2018-06-09 20:54:02,231||INFO:User login mockup
+2018-06-09 20:54:02,231||INFO:Mocking succesful login
+2018-06-09 20:54:02,231||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,231||DEBUG:usersLoginController- Succesful login for user user3
+2018-06-09 20:54:02,231||INFO:Mocking user registry
+2018-06-09 20:54:02,231||DEBUG:loginnedUsers- User login: user3, token: eTKhUrPGek
+2018-06-09 20:54:02,233||DEBUG:usersSignUpController- Authenticating sign up for new user: userProfile
+2018-06-09 20:54:02,233||INFO:Mocking user signup
+2018-06-09 20:54:02,234||INFO:Mocking user signup
+2018-06-09 20:54:02,234||INFO:Mocking new user
+2018-06-09 20:54:02,234||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:54:02,234||INFO:User login mockup
+2018-06-09 20:54:02,234||INFO:Mocking succesful login
+2018-06-09 20:54:02,234||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:54:02,235||DEBUG:Adding new user: userProfile
+2018-06-09 20:54:02,235||DEBUG:loginnedUsers- User login: userProfile, token: eTKhUrPGek
+2018-06-09 20:54:02,237||DEBUG:usersLoginController- Validating login for user userProfile
+2018-06-09 20:54:02,237||INFO:User login mockup
+2018-06-09 20:54:02,237||INFO:Mocking succesful login
+2018-06-09 20:54:02,237||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,238||DEBUG:usersLoginController- Succesful login for user userProfile
+2018-06-09 20:54:02,238||INFO:Mocking user registry
+2018-06-09 20:54:02,238||DEBUG:loginnedUsers- User login: userProfile, token: eTKhUrPGek
+2018-06-09 20:54:02,240||DEBUG:users-Checking userProfile login
+2018-06-09 20:54:02,242||DEBUG:profilesController- Updating userProfile profile
+2018-06-09 20:54:02,242||DEBUG:users-Updating userProfile profile
+2018-06-09 20:54:02,246||DEBUG:users-Checking userProfile login
+2018-06-09 20:54:02,248||DEBUG:profilesController- Getting userProfile profile
+2018-06-09 20:54:02,248||DEBUG:users-Getting userProfile profile
+2018-06-09 20:54:02,253||DEBUG:usersLoginController- Validating login for user userProfile
+2018-06-09 20:54:02,254||INFO:User login mockup
+2018-06-09 20:54:02,254||INFO:Mocking succesful login
+2018-06-09 20:54:02,254||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,255||DEBUG:usersLoginController- Succesful login for user userProfile
+2018-06-09 20:54:02,256||INFO:Mocking user registry
+2018-06-09 20:54:02,256||DEBUG:loginnedUsers- User login: userProfile, token: eTKhUrPGek
+2018-06-09 20:54:02,258||DEBUG:users-Checking userProfile login
+2018-06-09 20:54:02,259||DEBUG:profilesController- Updating userProfile profile
+2018-06-09 20:54:02,260||DEBUG:users-Updating userProfile profile
+2018-06-09 20:54:02,262||DEBUG:users-Checking userProfile login
+2018-06-09 20:54:02,264||DEBUG:profilesController- Getting userProfile profile
+2018-06-09 20:54:02,264||DEBUG:users-Getting userProfile profile
+2018-06-09 20:54:02,267||DEBUG:usersSignUpController- Authenticating sign up for new user: userProfile2
+2018-06-09 20:54:02,267||INFO:Mocking user signup
+2018-06-09 20:54:02,267||INFO:Mocking user signup
+2018-06-09 20:54:02,268||INFO:Mocking new user
+2018-06-09 20:54:02,268||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:54:02,268||INFO:User login mockup
+2018-06-09 20:54:02,268||INFO:Mocking succesful login
+2018-06-09 20:54:02,268||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:54:02,268||DEBUG:Adding new user: userProfile2
+2018-06-09 20:54:02,270||DEBUG:loginnedUsers- User login: userProfile2, token: eTKhUrPGek
+2018-06-09 20:54:02,271||DEBUG:usersLoginController- Validating login for user userProfile2
+2018-06-09 20:54:02,271||INFO:User login mockup
+2018-06-09 20:54:02,272||INFO:Mocking succesful login
+2018-06-09 20:54:02,272||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,272||DEBUG:usersLoginController- Succesful login for user userProfile2
+2018-06-09 20:54:02,272||INFO:Mocking user registry
+2018-06-09 20:54:02,272||DEBUG:loginnedUsers- User login: userProfile2, token: eTKhUrPGek
+2018-06-09 20:54:02,273||DEBUG:users-Checking userProfile login
+2018-06-09 20:54:02,275||DEBUG:profilesController- Updating userProfile2 profile
+2018-06-09 20:54:02,275||DEBUG:users-Updating userProfile2 profile
+2018-06-09 20:54:02,278||DEBUG:users-Checking userProfile login
+2018-06-09 20:54:02,280||DEBUG:profilesController- Getting userProfile2 profile
+2018-06-09 20:54:02,280||DEBUG:users-Getting userProfile2 profile
+2018-06-09 20:54:02,283||DEBUG:usersSignUpController- Authenticating sign up for new user: userFriends
+2018-06-09 20:54:02,283||INFO:Mocking user signup
+2018-06-09 20:54:02,285||INFO:Mocking user signup
+2018-06-09 20:54:02,285||INFO:Mocking new user
+2018-06-09 20:54:02,286||DEBUG:usersSignUpController- New user registered in DB
+2018-06-09 20:54:02,286||INFO:User login mockup
+2018-06-09 20:54:02,286||INFO:Mocking succesful login
+2018-06-09 20:54:02,287||DEBUG:usersSignUpController- {'firstname': None, 'lastname': None, 'gender': None, 'age': None, 'birthday': None}
+2018-06-09 20:54:02,287||DEBUG:Adding new user: userFriends
+2018-06-09 20:54:02,288||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,290||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,291||INFO:User login mockup
+2018-06-09 20:54:02,291||INFO:Mocking succesful login
+2018-06-09 20:54:02,291||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,291||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,291||INFO:Mocking user registry
+2018-06-09 20:54:02,291||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,293||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,296||DEBUG:friendsController- Getting userFriends friend list
+2018-06-09 20:54:02,296||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:54:02,301||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,301||INFO:User login mockup
+2018-06-09 20:54:02,302||INFO:Mocking succesful login
+2018-06-09 20:54:02,302||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,303||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,303||INFO:Mocking user registry
+2018-06-09 20:54:02,303||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,307||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,308||DEBUG:friendsController- Adding user to userFriends friend list
+2018-06-09 20:54:02,309||DEBUG:friends- userFriends adding user to friends list
+2018-06-09 20:54:02,310||DEBUG:friends- user adding userFriends to friends list
+2018-06-09 20:54:02,314||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,328||INFO:User login mockup
+2018-06-09 20:54:02,328||INFO:Mocking succesful login
+2018-06-09 20:54:02,329||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,329||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,330||INFO:Mocking user registry
+2018-06-09 20:54:02,331||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,334||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,338||DEBUG:friendsController- Getting userFriends friend list
+2018-06-09 20:54:02,338||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:54:02,342||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,342||INFO:User login mockup
+2018-06-09 20:54:02,342||INFO:Mocking succesful login
+2018-06-09 20:54:02,342||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,342||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,343||INFO:Mocking user registry
+2018-06-09 20:54:02,343||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,345||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,347||DEBUG:friendsController- Getting userFriends friend list
+2018-06-09 20:54:02,347||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:54:02,350||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,356||DEBUG:friendsController- Removing user from userFriends friend list
+2018-06-09 20:54:02,357||DEBUG:friends- userFriends deleting user from friends list
+2018-06-09 20:54:02,362||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,362||INFO:User login mockup
+2018-06-09 20:54:02,362||INFO:Mocking succesful login
+2018-06-09 20:54:02,362||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,362||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,362||INFO:Mocking user registry
+2018-06-09 20:54:02,363||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,364||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,366||DEBUG:friendsController- Adding user to userFriends friend list
+2018-06-09 20:54:02,366||DEBUG:friends- userFriends adding user to friends list
+2018-06-09 20:54:02,368||DEBUG:friends- user adding userFriends to friends list
+2018-06-09 20:54:02,371||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,373||DEBUG:friendsController- Getting user friend list
+2018-06-09 20:54:02,373||DEBUG:friends- Getting user friend list
+2018-06-09 20:54:02,376||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,376||INFO:User login mockup
+2018-06-09 20:54:02,376||INFO:Mocking succesful login
+2018-06-09 20:54:02,376||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,376||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,377||INFO:Mocking user registry
+2018-06-09 20:54:02,377||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,378||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,380||DEBUG:invitationsController- Retrieving invitations for user userFriends
+2018-06-09 20:54:02,380||DEBUG:invitations- Getting user userFriends invitations
+2018-06-09 20:54:02,382||ERROR:[API07] [invitationsController.getUserInvitations]No invitations found for user userFriends
+2018-06-09 20:54:02,385||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,385||INFO:User login mockup
+2018-06-09 20:54:02,385||INFO:Mocking succesful login
+2018-06-09 20:54:02,385||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,385||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,385||INFO:Mocking user registry
+2018-06-09 20:54:02,385||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,387||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:02,387||INFO:User login mockup
+2018-06-09 20:54:02,388||INFO:Mocking succesful login
+2018-06-09 20:54:02,388||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,388||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:02,388||INFO:Mocking user registry
+2018-06-09 20:54:02,388||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:02,390||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,392||DEBUG:invitationsController- userFriends adding user to friend list
+2018-06-09 20:54:02,392||DEBUG:invitations- Adding friend invitation
+2018-06-09 20:54:02,463||DEBUG:users-Checking user login
+2018-06-09 20:54:02,465||DEBUG:invitationsController- Retrieving invitations for user user
+2018-06-09 20:54:02,465||DEBUG:invitations- Getting user user invitations
+2018-06-09 20:54:02,468||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,469||INFO:User login mockup
+2018-06-09 20:54:02,470||INFO:Mocking succesful login
+2018-06-09 20:54:02,470||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,470||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,470||INFO:Mocking user registry
+2018-06-09 20:54:02,470||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,472||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:02,472||INFO:User login mockup
+2018-06-09 20:54:02,472||INFO:Mocking succesful login
+2018-06-09 20:54:02,473||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,473||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:02,473||INFO:Mocking user registry
+2018-06-09 20:54:02,473||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:02,475||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,476||DEBUG:invitationsController- userFriends adding user to friend list
+2018-06-09 20:54:02,477||DEBUG:invitations- Adding friend invitation
+2018-06-09 20:54:02,479||DEBUG:users-Checking user login
+2018-06-09 20:54:02,481||DEBUG:invitationsController- Retrieving invitations for user user
+2018-06-09 20:54:02,481||DEBUG:invitations- Getting user user invitations
+2018-06-09 20:54:02,483||DEBUG:users-Checking user login
+2018-06-09 20:54:02,486||DEBUG:invitationsController- user accepting userFriends friend request
+2018-06-09 20:54:02,486||DEBUG:invitations- Accepting friend invitation: user|userFriends
+2018-06-09 20:54:02,488||DEBUG:friends- user adding userFriends to friends list
+2018-06-09 20:54:02,489||DEBUG:friends- userFriends adding user to friends list
+2018-06-09 20:54:02,492||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,494||DEBUG:friendsController- Getting userFriends friend list
+2018-06-09 20:54:02,494||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:54:02,497||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,497||INFO:User login mockup
+2018-06-09 20:54:02,497||INFO:Mocking succesful login
+2018-06-09 20:54:02,497||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,498||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,498||INFO:Mocking user registry
+2018-06-09 20:54:02,498||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,499||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:02,500||INFO:User login mockup
+2018-06-09 20:54:02,500||INFO:Mocking succesful login
+2018-06-09 20:54:02,500||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,500||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:02,500||INFO:Mocking user registry
+2018-06-09 20:54:02,500||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:02,501||DEBUG:usersLoginController- Validating login for user user2
+2018-06-09 20:54:02,502||INFO:User login mockup
+2018-06-09 20:54:02,502||INFO:Mocking succesful login
+2018-06-09 20:54:02,502||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,502||DEBUG:usersLoginController- Succesful login for user user2
+2018-06-09 20:54:02,502||INFO:Mocking user registry
+2018-06-09 20:54:02,502||DEBUG:loginnedUsers- User login: user2, token: eTKhUrPGek
+2018-06-09 20:54:02,503||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,506||DEBUG:invitationsController- userFriends adding user to friend list
+2018-06-09 20:54:02,506||DEBUG:invitations- Adding friend invitation
+2018-06-09 20:54:02,510||DEBUG:users-Checking user2 login
+2018-06-09 20:54:02,512||DEBUG:invitationsController- user2 adding user to friend list
+2018-06-09 20:54:02,512||DEBUG:invitations- Adding friend invitation
+2018-06-09 20:54:02,515||DEBUG:users-Checking user login
+2018-06-09 20:54:02,517||DEBUG:invitationsController- Retrieving invitations for user user
+2018-06-09 20:54:02,518||DEBUG:invitations- Getting user user invitations
+2018-06-09 20:54:02,525||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:02,525||INFO:User login mockup
+2018-06-09 20:54:02,525||INFO:Mocking succesful login
+2018-06-09 20:54:02,525||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,525||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:02,525||INFO:Mocking user registry
+2018-06-09 20:54:02,526||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:02,527||DEBUG:users-Checking user login
+2018-06-09 20:54:02,529||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:54:02,543||DEBUG:stories- Adding new story for user user
+2018-06-09 20:54:02,606||DEBUG:comments- Adding comment to story 288d675b-2042-4645-84e3-b6a6a6663558
+2018-06-09 20:54:02,612||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:02,613||INFO:User login mockup
+2018-06-09 20:54:02,613||INFO:Mocking succesful login
+2018-06-09 20:54:02,613||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,613||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:02,613||INFO:Mocking user registry
+2018-06-09 20:54:02,614||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:02,615||DEBUG:users-Checking user login
+2018-06-09 20:54:02,617||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:54:02,617||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:54:02,617||DEBUG:friends- Getting user friend list
+2018-06-09 20:54:02,625||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,625||INFO:User login mockup
+2018-06-09 20:54:02,625||INFO:Mocking succesful login
+2018-06-09 20:54:02,625||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,625||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,625||INFO:Mocking user registry
+2018-06-09 20:54:02,625||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,627||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,629||DEBUG:storiesController- Retrieving homepage feed for userFriends
+2018-06-09 20:54:02,629||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:54:02,629||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:54:02,634||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:02,634||INFO:User login mockup
+2018-06-09 20:54:02,634||INFO:Mocking succesful login
+2018-06-09 20:54:02,635||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,635||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:02,635||INFO:Mocking user registry
+2018-06-09 20:54:02,635||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:02,637||DEBUG:users-Checking user login
+2018-06-09 20:54:02,640||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:54:02,640||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:54:02,640||DEBUG:friends- Getting user friend list
+2018-06-09 20:54:02,644||DEBUG:users-Checking user login
+2018-06-09 20:54:02,646||DEBUG:storiesController- Updating story 288d675b-2042-4645-84e3-b6a6a6663558
+2018-06-09 20:54:02,655||DEBUG:stories- Updating story 288d675b-2042-4645-84e3-b6a6a6663558 for user user
+2018-06-09 20:54:02,658||DEBUG:users-Checking user login
+2018-06-09 20:54:02,660||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:54:02,661||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:54:02,661||DEBUG:friends- Getting user friend list
+2018-06-09 20:54:02,665||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,665||INFO:User login mockup
+2018-06-09 20:54:02,665||INFO:Mocking succesful login
+2018-06-09 20:54:02,666||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,666||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,666||INFO:Mocking user registry
+2018-06-09 20:54:02,666||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,668||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,671||DEBUG:storiesController- Adding story for user userFriends
+2018-06-09 20:54:02,671||DEBUG:stories- Adding new story for user userFriends
+2018-06-09 20:54:02,672||DEBUG:comments- Adding comment to story 23f0b574-482f-4c3e-826e-574d18826b98
+2018-06-09 20:54:02,675||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,675||INFO:User login mockup
+2018-06-09 20:54:02,675||INFO:Mocking succesful login
+2018-06-09 20:54:02,676||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,676||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,676||INFO:Mocking user registry
+2018-06-09 20:54:02,676||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,678||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,681||DEBUG:storiesController- Retrieving homepage feed for userFriends
+2018-06-09 20:54:02,681||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:54:02,681||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:54:02,688||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:02,689||INFO:User login mockup
+2018-06-09 20:54:02,691||INFO:Mocking succesful login
+2018-06-09 20:54:02,692||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,692||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:02,692||INFO:Mocking user registry
+2018-06-09 20:54:02,692||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:02,694||DEBUG:users-Checking user login
+2018-06-09 20:54:02,696||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:54:02,696||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:54:02,697||DEBUG:friends- Getting user friend list
+2018-06-09 20:54:02,702||DEBUG:users-Checking user login
+2018-06-09 20:54:02,707||DEBUG:storiesController- Deleting story 288d675b-2042-4645-84e3-b6a6a6663558
+2018-06-09 20:54:02,707||DEBUG:stories- Deleting story 288d675b-2042-4645-84e3-b6a6a6663558
+2018-06-09 20:54:02,709||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,709||INFO:User login mockup
+2018-06-09 20:54:02,710||INFO:Mocking succesful login
+2018-06-09 20:54:02,710||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,710||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,710||INFO:Mocking user registry
+2018-06-09 20:54:02,711||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,713||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,715||DEBUG:storiesController- Retrieving homepage feed for user
+2018-06-09 20:54:02,716||DEBUG:stories- Retrieving last 10stories
+2018-06-09 20:54:02,716||DEBUG:friends- Getting user friend list
+2018-06-09 20:54:02,720||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,722||DEBUG:storiesController- Deleting story 23f0b574-482f-4c3e-826e-574d18826b98
+2018-06-09 20:54:02,722||DEBUG:stories- Deleting story 23f0b574-482f-4c3e-826e-574d18826b98
+2018-06-09 20:54:02,724||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:02,724||INFO:User login mockup
+2018-06-09 20:54:02,725||INFO:Mocking succesful login
+2018-06-09 20:54:02,725||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,725||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:02,725||INFO:Mocking user registry
+2018-06-09 20:54:02,725||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:02,727||DEBUG:users-Checking user login
+2018-06-09 20:54:02,729||DEBUG:flashStoriesController- user adding new flash story
+2018-06-09 20:54:02,730||DEBUG:Adding new story for user user
+2018-06-09 20:54:02,735||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:02,735||INFO:User login mockup
+2018-06-09 20:54:02,735||INFO:Mocking succesful login
+2018-06-09 20:54:02,735||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,736||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:02,736||INFO:Mocking user registry
+2018-06-09 20:54:02,736||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:02,739||DEBUG:users-Checking user login
+2018-06-09 20:54:02,743||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:54:02,743||DEBUG:Getting last stories for user
+2018-06-09 20:54:02,743||DEBUG:friends- Getting user friend list
+2018-06-09 20:54:02,744||INFO:Deleting garbage
+2018-06-09 20:54:02,748||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,748||INFO:User login mockup
+2018-06-09 20:54:02,748||INFO:Mocking succesful login
+2018-06-09 20:54:02,748||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,749||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,749||INFO:Mocking user registry
+2018-06-09 20:54:02,749||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,751||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,752||DEBUG:flashStoriesController- getting userFriends homepage feed
+2018-06-09 20:54:02,753||DEBUG:Getting last stories for userFriends
+2018-06-09 20:54:02,753||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:54:02,754||INFO:Deleting garbage
+2018-06-09 20:54:02,757||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:02,766||INFO:User login mockup
+2018-06-09 20:54:02,766||INFO:Mocking succesful login
+2018-06-09 20:54:02,767||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,767||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:02,767||INFO:Mocking user registry
+2018-06-09 20:54:02,767||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:02,769||DEBUG:users-Checking user login
+2018-06-09 20:54:02,772||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:54:02,772||DEBUG:Getting last stories for user
+2018-06-09 20:54:02,772||DEBUG:friends- Getting user friend list
+2018-06-09 20:54:02,774||INFO:Deleting garbage
+2018-06-09 20:54:02,778||DEBUG:users-Checking user login
+2018-06-09 20:54:02,780||DEBUG:flashStoriesController- user updating flash story340c847e-1a94-4a85-8021-4c0d5cc58942
+2018-06-09 20:54:02,781||DEBUG:Updating story 340c847e-1a94-4a85-8021-4c0d5cc58942 from user user
+2018-06-09 20:54:02,783||DEBUG:users-Checking user login
+2018-06-09 20:54:02,785||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:54:02,786||DEBUG:Getting last stories for user
+2018-06-09 20:54:02,786||DEBUG:friends- Getting user friend list
+2018-06-09 20:54:02,790||INFO:Deleting garbage
+2018-06-09 20:54:02,795||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,796||INFO:User login mockup
+2018-06-09 20:54:02,796||INFO:Mocking succesful login
+2018-06-09 20:54:02,796||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,796||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,796||INFO:Mocking user registry
+2018-06-09 20:54:02,796||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,798||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,801||DEBUG:flashStoriesController- userFriends adding new flash story
+2018-06-09 20:54:02,801||DEBUG:Adding new story for user userFriends
+2018-06-09 20:54:02,804||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,805||INFO:User login mockup
+2018-06-09 20:54:02,805||INFO:Mocking succesful login
+2018-06-09 20:54:02,805||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,805||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,805||INFO:Mocking user registry
+2018-06-09 20:54:02,805||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,807||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,809||DEBUG:flashStoriesController- getting userFriends homepage feed
+2018-06-09 20:54:02,809||DEBUG:Getting last stories for userFriends
+2018-06-09 20:54:02,809||DEBUG:friends- Getting userFriends friend list
+2018-06-09 20:54:02,810||INFO:Deleting garbage
+2018-06-09 20:54:02,813||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:02,814||INFO:User login mockup
+2018-06-09 20:54:02,814||INFO:Mocking succesful login
+2018-06-09 20:54:02,814||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,814||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:02,814||INFO:Mocking user registry
+2018-06-09 20:54:02,815||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:02,816||DEBUG:users-Checking user login
+2018-06-09 20:54:02,819||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:54:02,820||DEBUG:Getting last stories for user
+2018-06-09 20:54:02,820||DEBUG:friends- Getting user friend list
+2018-06-09 20:54:02,822||INFO:Deleting garbage
+2018-06-09 20:54:02,825||DEBUG:users-Checking user login
+2018-06-09 20:54:02,828||DEBUG:flashStoriesController- removing story 340c847e-1a94-4a85-8021-4c0d5cc58942
+2018-06-09 20:54:02,829||DEBUG:Deleting story 340c847e-1a94-4a85-8021-4c0d5cc58942
+2018-06-09 20:54:02,831||DEBUG:usersLoginController- Validating login for user userFriends
+2018-06-09 20:54:02,831||INFO:User login mockup
+2018-06-09 20:54:02,831||INFO:Mocking succesful login
+2018-06-09 20:54:02,831||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,832||DEBUG:usersLoginController- Succesful login for user userFriends
+2018-06-09 20:54:02,832||INFO:Mocking user registry
+2018-06-09 20:54:02,832||DEBUG:loginnedUsers- User login: userFriends, token: eTKhUrPGek
+2018-06-09 20:54:02,833||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,835||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:54:02,836||DEBUG:Getting last stories for user
+2018-06-09 20:54:02,836||DEBUG:friends- Getting user friend list
+2018-06-09 20:54:02,839||INFO:Deleting garbage
+2018-06-09 20:54:02,844||DEBUG:users-Checking userFriends login
+2018-06-09 20:54:02,846||DEBUG:flashStoriesController- removing story bae227e3-2a04-42b8-90b6-202215d8e07b
+2018-06-09 20:54:02,847||DEBUG:Deleting story bae227e3-2a04-42b8-90b6-202215d8e07b
+2018-06-09 20:54:02,849||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:02,849||INFO:User login mockup
+2018-06-09 20:54:02,849||INFO:Mocking succesful login
+2018-06-09 20:54:02,849||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:02,849||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:02,849||INFO:Mocking user registry
+2018-06-09 20:54:02,850||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:02,852||DEBUG:users-Checking user login
+2018-06-09 20:54:02,856||DEBUG:flashStoriesController- user adding new flash story
+2018-06-09 20:54:02,856||DEBUG:Adding new story for user user
+2018-06-09 20:54:03,864||DEBUG:users-Checking user login
+2018-06-09 20:54:03,869||DEBUG:flashStoriesController- getting user homepage feed
+2018-06-09 20:54:03,870||DEBUG:Getting last stories for user
+2018-06-09 20:54:03,870||DEBUG:friends- Getting user friend list
+2018-06-09 20:54:03,872||INFO:Deleting garbage
+2018-06-09 20:54:03,878||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:03,879||INFO:User login mockup
+2018-06-09 20:54:03,879||INFO:Mocking succesful login
+2018-06-09 20:54:03,879||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:03,880||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:03,880||INFO:Mocking user registry
+2018-06-09 20:54:03,880||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:03,883||DEBUG:users-Checking user login
+2018-06-09 20:54:03,886||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:54:03,886||DEBUG:stories- Adding new story for user user
+2018-06-09 20:54:03,888||DEBUG:comments- Adding comment to story 02e15390-ad57-47a3-ac87-1a08c73cfcda
+2018-06-09 20:54:03,892||DEBUG:users-Checking user login
+2018-06-09 20:54:03,895||DEBUG:commentsController- Adding new comment from user to story 02e15390-ad57-47a3-ac87-1a08c73cfcda
+2018-06-09 20:54:03,895||DEBUG:comments-user adding comment: Ese meme si se puede ver to story 02e15390-ad57-47a3-ac87-1a08c73cfcda
+2018-06-09 20:54:03,896||INFO:comments- comment:{'_id': '69e95dc9-e534-4365-86fa-c9d9b2da6bec', 'user': 'user', 'date': '2018-06-09 20:54:03.896314', 'message': 'Ese meme si se puede ver'}
+2018-06-09 20:54:03,901||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:03,902||INFO:User login mockup
+2018-06-09 20:54:03,902||INFO:Mocking succesful login
+2018-06-09 20:54:03,902||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:03,902||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:03,903||INFO:Mocking user registry
+2018-06-09 20:54:03,903||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:03,906||DEBUG:users-Checking user login
+2018-06-09 20:54:03,909||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:54:03,909||DEBUG:stories- Adding new story for user user
+2018-06-09 20:54:03,910||DEBUG:comments- Adding comment to story f3a1ac82-4e41-41bb-a5a2-b6537efc085f
+2018-06-09 20:54:03,913||DEBUG:users-Checking user login
+2018-06-09 20:54:03,915||DEBUG:commentsController- Adding new comment from user to story f3a1ac82-4e41-41bb-a5a2-b6537efc085f
+2018-06-09 20:54:03,915||DEBUG:comments-user adding comment: Ese meme si se puede ver to story f3a1ac82-4e41-41bb-a5a2-b6537efc085f
+2018-06-09 20:54:03,916||INFO:comments- comment:{'_id': '62fe8caf-8d53-42ac-8318-c5bbdd9e7aee', 'user': 'user', 'date': '2018-06-09 20:54:03.916089', 'message': 'Ese meme si se puede ver'}
+2018-06-09 20:54:03,918||DEBUG:users-Checking user login
+2018-06-09 20:54:03,920||DEBUG:commentsController- Getting story comments from story f3a1ac82-4e41-41bb-a5a2-b6537efc085f
+2018-06-09 20:54:03,920||DEBUG:comments-Getting comments from story f3a1ac82-4e41-41bb-a5a2-b6537efc085f
+2018-06-09 20:54:03,927||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:03,934||INFO:User login mockup
+2018-06-09 20:54:03,934||INFO:Mocking succesful login
+2018-06-09 20:54:03,935||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:03,935||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:03,935||INFO:Mocking user registry
+2018-06-09 20:54:03,935||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:03,937||DEBUG:users-Checking user login
+2018-06-09 20:54:03,940||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:54:03,940||DEBUG:stories- Adding new story for user user
+2018-06-09 20:54:03,941||DEBUG:comments- Adding comment to story 553dbf12-114c-4083-8635-0554d2dc9de2
+2018-06-09 20:54:03,943||DEBUG:users-Checking user login
+2018-06-09 20:54:03,945||DEBUG:commentsController- Adding new comment from user to story 553dbf12-114c-4083-8635-0554d2dc9de2
+2018-06-09 20:54:03,945||DEBUG:comments-user adding comment: Ese meme si se puede ver to story 553dbf12-114c-4083-8635-0554d2dc9de2
+2018-06-09 20:54:03,946||INFO:comments- comment:{'_id': 'f841667d-11e8-4c15-b355-73108d8e41c7', 'user': 'user', 'date': '2018-06-09 20:54:03.945979', 'message': 'Ese meme si se puede ver'}
+2018-06-09 20:54:03,948||DEBUG:users-Checking user login
+2018-06-09 20:54:03,951||DEBUG:commentsController- Adding new comment from user to story 553dbf12-114c-4083-8635-0554d2dc9de2
+2018-06-09 20:54:03,951||DEBUG:comments-user adding comment: Buzzfeed es muy normie to story 553dbf12-114c-4083-8635-0554d2dc9de2
+2018-06-09 20:54:03,952||INFO:comments- comment:{'_id': '86c76f6a-1e1f-4723-b4de-d1e8efafd0ae', 'user': 'user', 'date': '2018-06-09 20:54:03.951942', 'message': 'Buzzfeed es muy normie'}
+2018-06-09 20:54:03,954||DEBUG:users-Checking user login
+2018-06-09 20:54:03,956||DEBUG:commentsController- Getting story comments from story 553dbf12-114c-4083-8635-0554d2dc9de2
+2018-06-09 20:54:03,957||DEBUG:comments-Getting comments from story 553dbf12-114c-4083-8635-0554d2dc9de2
+2018-06-09 20:54:03,960||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:03,960||INFO:User login mockup
+2018-06-09 20:54:03,961||INFO:Mocking succesful login
+2018-06-09 20:54:03,961||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:03,961||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:03,961||INFO:Mocking user registry
+2018-06-09 20:54:03,961||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:03,963||DEBUG:users-Checking user login
+2018-06-09 20:54:03,964||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:54:03,965||DEBUG:stories- Adding new story for user user
+2018-06-09 20:54:03,965||DEBUG:comments- Adding comment to story 4b1fe699-42c8-4eef-994d-521df810fcbf
+2018-06-09 20:54:03,968||DEBUG:users-Checking user login
+2018-06-09 20:54:03,969||DEBUG:commentsController- Adding new comment from user to story 4b1fe699-42c8-4eef-994d-521df810fcbf
+2018-06-09 20:54:03,970||DEBUG:comments-user adding comment: Ese meme si se puede ver to story 4b1fe699-42c8-4eef-994d-521df810fcbf
+2018-06-09 20:54:03,970||INFO:comments- comment:{'_id': '37631d5d-faa5-436d-b1f7-01ebe9299aed', 'user': 'user', 'date': '2018-06-09 20:54:03.970278', 'message': 'Ese meme si se puede ver'}
+2018-06-09 20:54:03,974||DEBUG:users-Checking user login
+2018-06-09 20:54:03,977||DEBUG:commentsController- Removing comment 37631d5d-faa5-436d-b1f7-01ebe9299aed from story 4b1fe699-42c8-4eef-994d-521df810fcbf
+2018-06-09 20:54:03,978||DEBUG:comments- Removing comment 37631d5d-faa5-436d-b1f7-01ebe9299aed from story 4b1fe699-42c8-4eef-994d-521df810fcbf
+2018-06-09 20:54:03,980||DEBUG:users-Checking user login
+2018-06-09 20:54:03,982||DEBUG:commentsController- Getting story comments from story 4b1fe699-42c8-4eef-994d-521df810fcbf
+2018-06-09 20:54:03,982||DEBUG:comments-Getting comments from story 4b1fe699-42c8-4eef-994d-521df810fcbf
+2018-06-09 20:54:03,985||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:03,985||INFO:User login mockup
+2018-06-09 20:54:03,986||INFO:Mocking succesful login
+2018-06-09 20:54:03,986||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:03,986||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:03,986||INFO:Mocking user registry
+2018-06-09 20:54:03,986||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:03,988||DEBUG:users-Checking user login
+2018-06-09 20:54:03,991||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:54:03,991||DEBUG:stories- Adding new story for user user
+2018-06-09 20:54:03,992||DEBUG:comments- Adding comment to story 02c7a010-b2f1-4507-bc2a-5f47afbaa810
+2018-06-09 20:54:03,994||DEBUG:users-Checking user login
+2018-06-09 20:54:03,996||DEBUG:reactionsController- user is adding a reaction to story 02c7a010-b2f1-4507-bc2a-5f47afbaa810
+2018-06-09 20:54:03,996||DEBUG:stories- Adding reaction to story
+2018-06-09 20:54:03,999||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:03,999||INFO:User login mockup
+2018-06-09 20:54:04,000||INFO:Mocking succesful login
+2018-06-09 20:54:04,000||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:04,000||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:04,000||INFO:Mocking user registry
+2018-06-09 20:54:04,000||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:04,002||DEBUG:users-Checking user login
+2018-06-09 20:54:04,005||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:54:04,005||DEBUG:stories- Adding new story for user user
+2018-06-09 20:54:04,006||DEBUG:comments- Adding comment to story 04420e4f-87e8-4a55-b407-804ce82495e4
+2018-06-09 20:54:04,009||DEBUG:users-Checking user login
+2018-06-09 20:54:04,010||DEBUG:reactionsController- user is adding a reaction to story 04420e4f-87e8-4a55-b407-804ce82495e4
+2018-06-09 20:54:04,011||DEBUG:stories- Adding reaction to story
+2018-06-09 20:54:04,013||DEBUG:users-Checking user login
+2018-06-09 20:54:04,015||DEBUG:reactionsController- user2 is adding a reaction to story 04420e4f-87e8-4a55-b407-804ce82495e4
+2018-06-09 20:54:04,015||DEBUG:stories- Adding reaction to story
+2018-06-09 20:54:04,017||DEBUG:users-Checking user login
+2018-06-09 20:54:04,019||DEBUG:reactionsController- Getting story 04420e4f-87e8-4a55-b407-804ce82495e4 reactions
+2018-06-09 20:54:04,019||DEBUG:stories- Getting reactions for story: 04420e4f-87e8-4a55-b407-804ce82495e4
+2018-06-09 20:54:04,022||DEBUG:usersLoginController- Validating login for user user
+2018-06-09 20:54:04,022||INFO:User login mockup
+2018-06-09 20:54:04,022||INFO:Mocking succesful login
+2018-06-09 20:54:04,023||DEBUG:usersLoginController- LoginController - response status:200
+2018-06-09 20:54:04,024||DEBUG:usersLoginController- Succesful login for user user
+2018-06-09 20:54:04,024||INFO:Mocking user registry
+2018-06-09 20:54:04,024||DEBUG:loginnedUsers- User login: user, token: eTKhUrPGek
+2018-06-09 20:54:04,028||DEBUG:users-Checking user login
+2018-06-09 20:54:04,031||DEBUG:storiesController- Adding story for user user
+2018-06-09 20:54:04,031||DEBUG:stories- Adding new story for user user
+2018-06-09 20:54:04,032||DEBUG:comments- Adding comment to story 6d84593d-f6ed-47fb-834b-c50452d24c66
+2018-06-09 20:54:04,034||DEBUG:users-Checking user login
+2018-06-09 20:54:04,036||DEBUG:reactionsController- user is adding a reaction to story 6d84593d-f6ed-47fb-834b-c50452d24c66
+2018-06-09 20:54:04,036||DEBUG:stories- Adding reaction to story
+2018-06-09 20:54:04,039||DEBUG:users-Checking user login
+2018-06-09 20:54:04,052||DEBUG:reactionsController- user is removing his reaction to story 6d84593d-f6ed-47fb-834b-c50452d24c66
+2018-06-09 20:54:04,053||DEBUG:stories- Deleting reaction from user for story: 6d84593d-f6ed-47fb-834b-c50452d24c66
+2018-06-09 20:54:04,055||DEBUG:users-Checking user login
+2018-06-09 20:54:04,061||DEBUG:reactionsController- Getting story 6d84593d-f6ed-47fb-834b-c50452d24c66 reactions
+2018-06-09 20:54:04,061||DEBUG:stories- Getting reactions for story: 6d84593d-f6ed-47fb-834b-c50452d24c66

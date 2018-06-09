@@ -84,7 +84,7 @@ class InvitationsTestCase(unittest.TestCase):
         dataDict = json.loads(get_result.data)
         print (dataDict, "\n\n\n")
         self.assertEqual(get_result.status_code, 200)
-        self.assertTrue("userFriends" in dataDict)
+        self.assertTrue("userFriends" in dataDict['invitations'])
 
     def test_3_accept_invitation(self):
         # Asume userFriends exists
@@ -131,7 +131,7 @@ class InvitationsTestCase(unittest.TestCase):
         # Assert a correct get of invitations
         dataDict = json.loads(get_result.data)
         self.assertEqual(get_result.status_code, 200)
-        self.assertTrue("userFriends" in dataDict)
+        self.assertTrue("userFriends" in dataDict['invitations'])
 
         accept_info = {
             "friend": "userFriends",
@@ -221,4 +221,4 @@ class InvitationsTestCase(unittest.TestCase):
         dataDict = json.loads(get_result.data)
         print (dataDict, "\n\n\n")
         self.assertEqual(get_result.status_code, 200)
-        self.assertTrue("userFriends" in dataDict)
+        self.assertTrue("userFriends" in dataDict['invitations'])
