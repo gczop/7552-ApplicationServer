@@ -12,7 +12,7 @@ def getUserFriends(request):
 	if(username == None):
 		logErrorCode("API13")
 		return {"Error": "Falta de informacion en header (Error code: 13)"}, 400
-	return friendsDb.getUserFriends(username)
+	return { "friends": friendsDb.getUserFriends(username)}
 
 #For testing purposes
 def addFriend(request):
