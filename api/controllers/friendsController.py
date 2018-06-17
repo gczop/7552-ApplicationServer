@@ -55,4 +55,4 @@ def getSpecificUserFriends(username):
     if(userFriends == None):
         logErrorCode("API17")
         return {"Error": "Usuario no registrado o aun sin amigos agregados (Error code: 17)"}, 400
-    return userFriends
+    return {"friends" : userFriends}

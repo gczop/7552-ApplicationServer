@@ -29,6 +29,23 @@ def getHomepageFeed(request):
 		story['storyDetail']['url']= responseData['resource']
 	return { "feedStories" : storyList}, 200
 
+def getSpecificUserStories(username):
+	logDebug("Stories controller- Getting "+str(username)+" stories")
+	if(username == None):
+		#logErrorCode("API16")
+		return {"Error": "Usuario no especificado (Error code: 16)"}, 400
+	userStories = storiesDb.getUserStories(username)
+	if(userStories == None):
+		#logErrorCode("API17")
+		return {"Error": "Usuario no registrado (Error code: 17)"}, 400
+	for story in userStories:
+		response = getFirebaseUrl(story['storyDetail']['url'])
+		if(response.status_code != 200):
+			return {"Error": "Error inesperado obteniendo la url de una imagen del feed" + story["storyDetail"]["url"]} , 400
+		responseData = json.loads(response.text)
+		story['storyDetail']['url']= responseData['resource']
+	return { "userStories" : userStories}, 200
+
 def addNewStory(request):
 	username = getRequestHeader(request,"username")
 	storyInfo = getRequestData(request)

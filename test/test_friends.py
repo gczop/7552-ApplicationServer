@@ -90,7 +90,7 @@ class FriendsTestCase(unittest.TestCase):
         # Assert a correct get of friends
         self.assertEqual(result.status_code, 200)
         # Assert new friend is in the list
-        self.assertTrue("user" in dataDict)
+        self.assertTrue("user" in dataDict["friends"])
 
     def test_4_remove_my_new_friend(self):
         # Asume userFriends exists
@@ -123,12 +123,14 @@ class FriendsTestCase(unittest.TestCase):
 
         result = self.client.delete('/api/friends', headers=headers ,data=json.dumps(friendToDelete), content_type='application/json')
 
+        result = self.client.get('/api/friends', headers=headers ,data=json.dumps(info), content_type='application/json')
+
         dataDict = json.loads(result.data)
         print (dataDict)
         # Assert a correct get of friends
         self.assertEqual(result.status_code, 200)
         # Assert new friend is in the list
-        self.assertFalse("user" in dataDict)
+        self.assertFalse("user" in dataDict["friends"])
 
     def test_5_add_a_friend_and_check_his_list(self):
         # Asume userFriends exists
@@ -161,4 +163,4 @@ class FriendsTestCase(unittest.TestCase):
         # Assert a correct get of friends
         self.assertEqual(result.status_code, 200)
         # Assert I'm in the list
-        self.assertTrue("userFriends" in dataDict)
+        self.assertTrue("userFriends" in dataDict["friends"])

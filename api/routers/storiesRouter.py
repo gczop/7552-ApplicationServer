@@ -1,7 +1,7 @@
 from flask_restful import Resource
 from flask_httpauth import HTTPBasicAuth
 from flask import request
-from api.controllers.storiesController import getHomepageFeed, addNewStory, updateStory, removeStory
+from api.controllers.storiesController import getHomepageFeed, addNewStory, updateStory, removeStory, getSpecificUserStories
 from SharedServerRequests.userLogin import *
 from databases.users import *
 from databases.loginedUsers import loginedUsers
@@ -65,3 +65,7 @@ class StoriesRouter(Resource):
 	def delete(self):
 		return removeStory(request)
 		
+class SpecificStoriesRouter(Resource):
+    @requires_auth
+    def get(self, username):
+        return getSpecificUserStories(username)

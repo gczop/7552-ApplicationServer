@@ -149,7 +149,7 @@ class InvitationsTestCase(unittest.TestCase):
         # Assert a correct get of friends
         self.assertEqual(result.status_code, 200)
         # Assert new friend is in the list
-        self.assertTrue("user" in dataDict)
+        self.assertTrue("user" in dataDict["friends"])
 
     def test_4_get_2invitations(self):
         # Asume userFriends exists

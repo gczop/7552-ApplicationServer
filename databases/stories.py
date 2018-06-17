@@ -82,11 +82,16 @@ class StoriesDb(Singleton):
         # print (list(self.storiesList.find()),"\n\n")
         return list(self.storiesList.find({ "username": {"$in" : friends }}).sort("createdAt",fromNewToOld).limit(number))
 
+    def getUserStories(self, username, number = 5):
+        logDebug("stories- Retrieving last "+str(number)+ "stories from "+ username)
+        fromNewToOld = -1
+        return list(self.storiesList.find({ "username": username}).sort("createdAt",fromNewToOld).limit(number))
+
     def addNewStory(self, username, storyInfo):
         logDebug("stories- Adding new story for user "+str(username))
         storyDict = createStoryDocument(storyInfo)
         id = str(uuid.uuid4())
-        self.storiesList.insert_one({"_id":id , "username":username,"storyDetail":storyDict, "createdAt":str(datetime.datetime.now()), "updatedAt":str(datetime.datetime.now()),"reactions": {}})
+        self.storiesList.insert_one({"_id":id , "username":username,"storyDetail":storyDict, "createdAt":str(datetime.datetime.now()), "updatedAt":str(datetime.datetime.now()),"reactions": []})
         return id
 
     def updateStory(self, username, id, updateInfo):
@@ -109,18 +114,18 @@ class StoriesDb(Singleton):
 
     def getStoryReactions(self, storyId):
         logDebug("stories- Getting reactions for story: "+str(storyId))
-        return self.storiesList.find_one({ "storyId": storyId })["reactions"]
+        return self.storiesList.find_one({ "_id": storyId })["reactions"]
 
     def addStoryReaction(self, storyId, username ,reaction):
         logDebug("stories- Adding reaction to story")
         reactionData = { "reacter": username , "reaction": reaction }
 
-        self.storiesList.find_one_and_update({"storyId": storyId} ,{"$push": {"reactions" : reactionData }} , projection={'_id':False} ,upsert=True)
+        self.storiesList.find_one_and_update({"_id": storyId} ,{"$push": {"reactions" : reactionData }} , projection={'_id':False} ,upsert=True)
         return "Okey"
 
     def deleteStoryReaction(self, storyId, username):
         logDebug("stories- Deleting reaction from "+str(username)+" for story: "+str(storyId))
-        self.storiesList.find_one_and_update({"storyId": storyId } ,{"$pull": {"reactions" : {"reacter": username} }})
+        self.storiesList.find_one_and_update({"_id": storyId } ,{"$pull": {"reactions" : {"reacter": username} }})
         return "Okey"
 
 
