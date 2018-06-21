@@ -12,7 +12,7 @@ def getStoryReactions(request):
 	if (storyID == None):
 		logErrorCode("API42")
 		return {"Error": "Falta de informacion en header. Story id no especificado (Error code: 42)"}, 400
-	return storiesDb.getStoryReactions(storyID)
+	return { "reactions": storiesDb.getStoryReactions(storyID)}
 
 def addNewReaction(request):
 	storyID = getRequestHeader(request,"story-id")
@@ -29,7 +29,7 @@ def addNewReaction(request):
 	if (reaction == None):
 		logErrorCode("API29")
 		return {"Error": "Falta de informacion en header. Reaccion no especificada (Error code: 29)"}, 400
-	return storiesDb.addStoryReaction(storyID,username,reaction)
+	return { "reactions": storiesDb.addStoryReaction(storyID,username,reaction)}
 		
 
 def removeReaction(request):
@@ -42,5 +42,5 @@ def removeReaction(request):
 	if (username == None):
 		logErrorCode("API31")
 		return {"Error": "Falta de informacion en header. Username no especificado (Error code: 31)"}, 400
-	return storiesDb.deleteStoryReaction(storyID,username)
+	return { "reactions": storiesDb.deleteStoryReaction(storyID,username)}
 

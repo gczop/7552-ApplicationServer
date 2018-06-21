@@ -6,6 +6,7 @@ from pymongo import MongoClient
 from logger.log import *
 
 from databases.friends import friendsDb
+from databases.trending import trendingsDb
 
 import pymongo
 
@@ -90,6 +91,7 @@ class StoriesDb(Singleton):
     def addNewStory(self, username, storyInfo):
         logDebug("stories- Adding new story for user "+str(username))
         storyDict = createStoryDocument(storyInfo)
+        trendingsDb.registerNewPost(username)
         id = str(uuid.uuid4())
         self.storiesList.insert_one({"_id":id , "username":username,"storyDetail":storyDict, "createdAt":str(datetime.datetime.now()), "updatedAt":str(datetime.datetime.now()),"reactions": []})
         return id
@@ -119,7 +121,8 @@ class StoriesDb(Singleton):
     def addStoryReaction(self, storyId, username ,reaction):
         logDebug("stories- Adding reaction to story")
         reactionData = { "reacter": username , "reaction": reaction }
-
+        postOwner = self.storiesList.find_one({"_id":storyId})["username"]
+        trendingsDb.registerNewReaction(postOwner)
         self.storiesList.find_one_and_update({"_id": storyId} ,{"$push": {"reactions" : reactionData }} , projection={'_id':False} ,upsert=True)
         return "Okey"
 

@@ -112,7 +112,7 @@ class StoriesTestCase(unittest.TestCase):
         print (dataDict)
 
         self.assertEqual(result.status_code,200)
-        self.assertEqual(dataDict,[{'reacter': 'user', 'reaction': 'me gusta'}, {'reacter': 'user2', 'reaction': 'me aburre'}])
+        self.assertEqual(dataDict['reactions'],[{'reacter': 'user', 'reaction': 'me gusta'}, {'reacter': 'user2', 'reaction': 'me aburre'}])
 
 
     def test_3_delete_reaction(self):
@@ -171,4 +171,4 @@ class StoriesTestCase(unittest.TestCase):
         print (dataDict)
 
         self.assertEqual(result.status_code,200)
-        self.assertEqual(dataDict,[])
+        self.assertEqual(dataDict['reactions'],[])
