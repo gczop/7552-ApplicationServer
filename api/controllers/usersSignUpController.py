@@ -29,6 +29,9 @@ def authenticateSignUp(request):
 		return {"Error": "(Error code: 1)", "Message":signUpResponse["message"]}, 401
 	else:
 		logDebug("usersSignUpController- New user registered in DB")
+		fbUser = False
+		if(fbToken):
+			fbUser = True
 		sentPassword = password or fbToken
 		response = authenticateUserLogin(user,sentPassword)
 		loginResponse = json.loads(response.text)
@@ -38,7 +41,7 @@ def authenticateSignUp(request):
 			return {"Error": loginResponse['message'] + "(Error code: 41)"}, response.status_code
 		else:
 			logDebug("usersSignUpController- "+str(personalInfo))
-			usersDb.addNewUser(user,loginResponse["token"],personalInfo)
+			usersDb.addNewUser(user,loginResponse["token"],personalInfo,fbUser)
 			loginedUsers.userLogin(user,loginResponse["token"])
 			return {"Message": "Bienvenido {}".format(user), "Token":loginResponse["token"]}	
 		

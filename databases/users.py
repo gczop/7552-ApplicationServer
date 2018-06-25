@@ -56,11 +56,15 @@ class UsersDB(Singleton):
         else:
             self.addNewUser(user,token)
 
-    def addNewUser(self,username= None,token= None,personalInfo=None):
+    def addNewUser(self,username= None,token= None,personalInfo=None,fbUser=False):
         if(username == None):
             logError("users-No username received")
             return
         logDebug("Adding new user: "+username)
+        existingUser = self.users.find_one({"username":username})
+        if(existingUser and fbUser):
+            self.users.find_one_and_update({"username":username},{"$set":{"token":token}})
+            return
         self.users.insert_one({"username":username,"token":token, "expiration": datetime.now()+timedelta(hours=12),"personalInformation": personalInfo or {}})
 
     def getUserProfile(self, username):

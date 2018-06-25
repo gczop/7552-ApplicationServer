@@ -17,7 +17,7 @@ class UsersDBMockUp(Singleton):
     def registerUserToken(self,user, token):
     	self.users[user]["token"] = token
 
-    def addNewUser(self,username= None,token= None):
+    def addNewUser(self,username= None,token= None,fbToken=False):
         if(username == None):
             return
         self.users[username]= {

@@ -12,7 +12,7 @@ def searchForPerson(request):
 	if(searchedFor == None):
 		logErrorCode("API04")
 		return {"Error": "Falta de informacion en header (Error code: 4)"}, 400
-	return usersDb.searchForUsers(searchedFor)
+	return {"people": usersDb.searchForUsers(searchedFor)}
 
 def searchForSinglePerson(username):
 	user = usersDb.searchForSingleUser(username)
@@ -20,4 +20,4 @@ def searchForSinglePerson(username):
 	if(user == None):
 		logErrorCode("API05")
 		return {"Error": "Username del usuario incorrecto (Error code: 5)"}, 400
-	return user
+	return { "people": user}
