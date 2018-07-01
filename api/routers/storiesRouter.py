@@ -72,9 +72,8 @@ class SpecificStoriesRouter(Resource):
 
 class GeolocationStoriesRouter(Resource):
     @requires_auth
-    def get(self, username):
+    def get(self):
         return getLocationStories(request)
 
 
 
-        
