@@ -148,6 +148,8 @@ def createStoryDocument(storyInfo):
     document["title"] = storyInfo["title"]
     document["state"]= storyInfo["state"]
     document["url"]= storyInfo["url"]
+    document["lat"]= storyInfo["lat"]
+    document["long"]= storyInfo["long"]
     return document
 
 def createdUpdatedDictionary(newInformation, oldInormation):
