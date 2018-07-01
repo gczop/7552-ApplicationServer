@@ -74,6 +74,16 @@ class Singleton(object):
 class StoriesDb(Singleton):
     storiesList = storiesCollection
 
+
+    def getUserLastNGeoStories(self, username, number = 5):
+        logDebug("stories- Retrieving last "+str(number)+ "stories")
+        fromNewToOld = -1
+        friends = friendsDb.getUserFriends(username);
+        friends.append(username);
+        # print (friends,"\n\n")
+        # print (list(self.storiesList.find()),"\n\n")
+        return list(self.storiesList.find({ "username": {"$in" : friends }}).sort("createdAt",fromNewToOld).limit(number))
+
     def getUserLastNStories(self, username, number = 5):
         logDebug("stories- Retrieving last "+str(number)+ "stories")
         fromNewToOld = -1

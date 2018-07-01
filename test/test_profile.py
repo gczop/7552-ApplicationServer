@@ -43,7 +43,8 @@ class ProfileTestCase(unittest.TestCase):
         }
 
         result = self.client.put('/api/profile', headers=headers ,data=json.dumps(profileInfo), content_type='application/json')
-
+        print("AAAAaaaaaa")
+        print(result.data)
         dataDict = json.loads(result.data)
         print(dataDict)
 
