@@ -82,7 +82,7 @@ class StoriesDb(Singleton):
         friends.append(username);
         # print (friends,"\n\n")
         # print (list(self.storiesList.find()),"\n\n")
-        return list(self.storiesList.find({ "username": {"$in" : friends }}).sort("createdAt",fromNewToOld).limit(number))
+        return list(self.storiesList.find({ "username": {"$in" : friends }, "storyDetail.lat": {"$ne": None}, "storyDetail.long": {"$ne": None},}).sort("createdAt",fromNewToOld).limit(number))
 
     def getUserLastNStories(self, username, number = 5):
         logDebug("stories- Retrieving last "+str(number)+ "stories")
