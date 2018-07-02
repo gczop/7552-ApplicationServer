@@ -14,6 +14,20 @@ else:
 
 numberOfStoriesToSee = 10
 
+def getPublicGeoStories(request):
+	username = getRequestHeader(request,"username")
+	logDebug("storiesController- Retrieving homepage feed for "+str(username))
+	if(username == None):
+		logErrorCode("API21")
+		return {"Error": "Falta de informacion en header username no especificado (Error code: 21)"}, 400
+	storyList = storiesDb.getUserLastNGeoPublicStories(username,numberOfStoriesToSee)
+	for story in storyList:
+		response = getFirebaseUrl(story['storyDetail']['url'])
+		if(response.status_code != 200):
+			return {"Error": "Error inesperado obteniendo la url de una imagen del feed" + story["storyDetail"]["url"]} , 400
+		responseData = json.loads(response.text)
+		story['storyDetail']['url']= responseData['resource']
+	return { "feedStories" : storyList}, 200
 
 def getLocationStories(request):
 	username = getRequestHeader(request,"username")
@@ -30,7 +44,21 @@ def getLocationStories(request):
 		story['storyDetail']['url']= responseData['resource']
 	return { "feedStories" : storyList}, 200
 
-	
+def getPublicStories(request):
+	username = getRequestHeader(request,"username")
+	logDebug("storiesController- Retrieving homepage feed for "+str(username))
+	if(username == None):
+		logErrorCode("API21")
+		return {"Error": "Falta de informacion en header username no especificado (Error code: 21)"}, 400
+	storyList = storiesDb.getLastNPublicStories(username,numberOfStoriesToSee)
+	for story in storyList:
+		response = getFirebaseUrl(story['storyDetail']['url'])
+		if(response.status_code != 200):
+			return {"Error": "Error inesperado obteniendo la url de una imagen del feed" + story["storyDetail"]["url"]} , 400
+		responseData = json.loads(response.text)
+		story['storyDetail']['url']= responseData['resource']
+	return { "feedStories" : storyList}, 200
+
 def getHomepageFeed(request):
 	username = getRequestHeader(request,"username")
 	logDebug("storiesController- Retrieving homepage feed for "+str(username))

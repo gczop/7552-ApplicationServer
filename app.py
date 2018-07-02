@@ -12,7 +12,7 @@ from api.routers.invitationsRouter import InvitationsRouter
 from api.routers.peopleRouter import PeopleRouter, SinglePeopleRouter
 from api.routers.notificationsRouter import NotificationsRouter
 from api.routers.profilesRouter import ProfilesRouter
-from api.routers.storiesRouter import StoriesRouter, SpecificStoriesRouter, GeolocationStoriesRouter
+from api.routers.storiesRouter import StoriesRouter, SpecificStoriesRouter, GeolocationStoriesRouter, PublicStoriesRouter, PublicGeolocationStoriesRouter
 from api.routers.flashStoriesRouter import FlashStoriesRouter
 from api.routers.reactionsRouter import ReactionsRouter
 from api.routers.commentsRouter import CommentsRouter
@@ -36,6 +36,8 @@ api.add_resource(NotificationsRouter,'/notifications')
 api.add_resource(ProfilesRouter,'/profile')
 api.add_resource(StoriesRouter,'/stories')
 api.add_resource(GeolocationStoriesRouter,'/geolocation/stories')
+api.add_resource(PublicGeolocationStoriesRouter,'public/geolocation/stories')
+api.add_resource(PublicStoriesRouter,'/public/stories')
 api.add_resource(SpecificStoriesRouter,'/stories/<string:username>')
 api.add_resource(FlashStoriesRouter,'/flashstories')
 api.add_resource(ReactionsRouter,'/reactions')

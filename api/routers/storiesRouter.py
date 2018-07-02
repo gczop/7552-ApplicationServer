@@ -1,7 +1,7 @@
 from flask_restful import Resource
 from flask_httpauth import HTTPBasicAuth
 from flask import request
-from api.controllers.storiesController import getHomepageFeed, addNewStory, updateStory, removeStory, getSpecificUserStories, getLocationStories
+from api.controllers.storiesController import getHomepageFeed, addNewStory, updateStory, removeStory, getSpecificUserStories, getLocationStories, getPublicStories
 from SharedServerRequests.userLogin import *
 from databases.users import *
 from databases.loginedUsers import loginedUsers
@@ -74,6 +74,11 @@ class GeolocationStoriesRouter(Resource):
     @requires_auth
     def get(self):
         return getLocationStories(request)
+
+class PublicStoriesRouter(Resource):
+    @requires_auth
+    def get(self):
+        return getPublicStories(request)
 
 
 

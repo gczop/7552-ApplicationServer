@@ -74,6 +74,21 @@ class Singleton(object):
 class StoriesDb(Singleton):
     storiesList = storiesCollection
 
+    def getLastNPublicStories(self, username, number = 5):
+        logDebug("stories- Retrieving last "+str(number)+ "stories")
+        fromNewToOld = -1
+        # print (friends,"\n\n")
+        # print (list(self.storiesList.find()),"\n\n")
+        return list(self.storiesList.find({ "storyDetail.state": "Public"}).sort("createdAt",fromNewToOld).limit(number))
+
+    def getUserLastNGeoPublicStories(self, username, number = 5):
+        logDebug("stories- Retrieving last "+str(number)+ "stories")
+        fromNewToOld = -1
+        friends = friendsDb.getUserFriends(username);
+        friends.append(username);
+        # print (friends,"\n\n")
+        # print (list(self.storiesList.find()),"\n\n")
+        return list(self.storiesList.find({  "storyDetail.state": "Public", "storyDetail.lat": {"$ne": None}, "storyDetail.long": {"$ne": None},}).sort("createdAt",fromNewToOld).limit(number))
 
     def getUserLastNGeoStories(self, username, number = 5):
         logDebug("stories- Retrieving last "+str(number)+ "stories")
