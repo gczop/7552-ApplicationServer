@@ -74,12 +74,13 @@ def getHomepageFeed(request):
 		story['storyDetail']['url']= responseData['resource']
 	return { "feedStories" : storyList}, 200
 
-def getSpecificUserStories(username):
-	logDebug("Stories controller- Getting "+str(username)+" stories")
-	if(username == None):
+def getSpecificUserStories(request, userRequested):
+	user = getRequestHeader(request,"username")
+	logDebug("Stories controller- Getting "+str(userRequested)+" stories")
+	if(userRequested == None):
 		#logErrorCode("API16")
 		return {"Error": "Usuario no especificado (Error code: 16)"}, 400
-	userStories = storiesDb.getUserStories(username)
+	userStories = storiesDb.getUserStories(user,userRequested)
 	if(userStories == None):
 		#logErrorCode("API17")
 		return {"Error": "Usuario no registrado (Error code: 17)"}, 400

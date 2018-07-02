@@ -108,9 +108,12 @@ class StoriesDb(Singleton):
         # print (list(self.storiesList.find()),"\n\n")
         return list(self.storiesList.find({ "username": {"$in" : friends }}).sort("createdAt",fromNewToOld).limit(number))
 
-    def getUserStories(self, username, number = 5):
-        logDebug("stories- Retrieving last "+str(number)+ "stories from "+ username)
+    def getUserStories(self, user ,userRequested, number = 5):
+        logDebug("stories- Retrieving last "+str(number)+ "stories from "+ userRequested)
+        friends = friendsDb.getUserFriends(username);
         fromNewToOld = -1
+        if(not user in friends):
+            return list(self.storiesList.find({ "username": username , "storyDetail.state": "Public"}).sort("createdAt",fromNewToOld).limit(number))    
         return list(self.storiesList.find({ "username": username}).sort("createdAt",fromNewToOld).limit(number))
 
     def addNewStory(self, username, storyInfo):

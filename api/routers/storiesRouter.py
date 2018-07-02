@@ -68,7 +68,7 @@ class StoriesRouter(Resource):
 class SpecificStoriesRouter(Resource):
     @requires_auth
     def get(self, username):
-        return getSpecificUserStories(username)
+        return getSpecificUserStories(request,username)
 
 class GeolocationStoriesRouter(Resource):
     @requires_auth
