@@ -80,5 +80,10 @@ class PublicStoriesRouter(Resource):
     def get(self):
         return getPublicStories(request)
 
+class PublicGeolocationStoriesRouter(Resource):
+    @requires_auth
+    def get(self):
+        return getPublicGeoStories(request)
+
 
 
