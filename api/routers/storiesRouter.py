@@ -1,7 +1,7 @@
 from flask_restful import Resource
 from flask_httpauth import HTTPBasicAuth
 from flask import request
-from api.controllers.storiesController import getHomepageFeed, addNewStory, updateStory, removeStory, getSpecificUserStories, getLocationStories, getPublicStories
+from api.controllers.storiesController import getHomepageFeed, addNewStory, updateStory, removeStory, getSpecificUserStories, getLocationStories, getPublicStories, getPublicGeoStories
 from SharedServerRequests.userLogin import *
 from databases.users import *
 from databases.loginedUsers import loginedUsers
