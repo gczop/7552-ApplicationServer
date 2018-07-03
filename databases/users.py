@@ -32,6 +32,8 @@ else:
 #     "birthday": birthday
 # }
 userCollection = db.User
+storiesCollection = db.Stories
+userInterestsMax = 25 
 
 class Singleton(object):
     _instance = None
@@ -56,6 +58,23 @@ class UsersDB(Singleton):
         else:
             self.addNewUser(user,token)
 
+    def getUserRelevance(self,username, otherUsername):
+        userInterests = self.users.find_one({"username":username}).get("userInterests")
+        return userInterests.count(otherUsername)/len(userInterests)*25
+
+    def addNewUserInteraction(self,username,storyId):
+        print("SSAFSAIUHFUISF",storyId)
+        story = storiesCollection.find_one({"_id":"storyId"})
+        if(story is None):
+            return
+        story.get("username")
+        userInterests = self.users.find_one({"username":username}).get("userInterests")
+        if(len(userInterests)>userInterestsMax):
+            userInterests.pop(0)
+        userInterests.append(otherUser)
+        self.users.find_one_and_update({"username":username},{"$set":{"userInterests":userInterests}})
+
+
     def addNewUser(self,username= None,token= None,personalInfo=None,fbUser=False):
         if(username == None):
             logError("users-No username received")
@@ -65,7 +84,7 @@ class UsersDB(Singleton):
         if(existingUser and fbUser):
             self.users.find_one_and_update({"username":username},{"$set":{"token":token}})
             return
-        self.users.insert_one({"username":username,"token":token, "expiration": datetime.now()+timedelta(hours=12),"personalInformation": personalInfo or {}})
+        self.users.insert_one({"username":username,"token":token, "userInterests":[], "expiration": datetime.now()+timedelta(hours=12),"personalInformation": personalInfo or {}})
 
     def getUserProfile(self, username):
         logDebug("users-Getting "+str(username)+" profile")

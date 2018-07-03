@@ -4,7 +4,6 @@ import pymongo
 import datetime
 from pymongo import MongoClient
 from logger.log import *
-
 from databases.friends import friendsDb
 from databases.trending import trendingsDb
 
@@ -29,6 +28,7 @@ else:
 
 
 storiesCollection = db.Stories
+usersCollection = db.User
 
 
 """    DATABASES JSONs DEFINITIONS
@@ -79,7 +79,7 @@ class StoriesDb(Singleton):
         fromNewToOld = -1
         # print (friends,"\n\n")
         # print (list(self.storiesList.find()),"\n\n")
-        return list(self.storiesList.find({ "storyDetail.state": "Public"}).sort("createdAt",fromNewToOld).limit(number))
+        return orderStoriesRelevance(username, list(self.storiesList.find({ "storyDetail.state": "Public"}).sort("createdAt",fromNewToOld).limit(number)))
 
     def getUserLastNGeoPublicStories(self, username, number = 5):
         logDebug("stories- Retrieving last "+str(number)+ "stories")
@@ -90,6 +90,10 @@ class StoriesDb(Singleton):
         # print (list(self.storiesList.find()),"\n\n")
         return list(self.storiesList.find({  "storyDetail.state": "Public", "storyDetail.lat": {"$ne": None}, "storyDetail.long": {"$ne": None},}).sort("createdAt",fromNewToOld).limit(number))
 
+
+    def getStoryOwner(self, storyId):
+        return self.storiesList.find_one({"_id": storyId}).get("username")
+
     def getUserLastNGeoStories(self, username, number = 5):
         logDebug("stories- Retrieving last "+str(number)+ "stories")
         fromNewToOld = -1
@@ -99,6 +103,14 @@ class StoriesDb(Singleton):
         # print (list(self.storiesList.find()),"\n\n")
         return list(self.storiesList.find({ "username": {"$in" : friends }, "storyDetail.lat": {"$ne": None}, "storyDetail.long": {"$ne": None},}).sort("createdAt",fromNewToOld).limit(number))
 
+
+    def addNewComment(self,storyId):
+        storiesCollection.update({ "_id" : storyId }, { "$inc": {"comments": 1}})
+
+    def addNewLike(self,storyId):
+        storiesCollection.update({ "_id" : storyId }, { "$inc": {"likes": 1}})
+
+
     def getUserLastNStories(self, username, number = 5):
         logDebug("stories- Retrieving last "+str(number)+ "stories")
         fromNewToOld = -1
@@ -106,11 +118,12 @@ class StoriesDb(Singleton):
         friends.append(username);
         # print (friends,"\n\n")
         # print (list(self.storiesList.find()),"\n\n")
-        return list(self.storiesList.find({ "username": {"$in" : friends }}).sort("createdAt",fromNewToOld).limit(number))
+        return orderStoriesRelevance(username, list(self.storiesList.find({ "username": {"$in" : friends }}).sort("createdAt",fromNewToOld).limit(number)))
 
     def getUserStories(self, user ,userRequested, number = 5):
         logDebug("stories- Retrieving last "+str(number)+ "stories from "+ userRequested)
         friends = friendsDb.getUserFriends(userRequested);
+        friends.append(userRequested);
         fromNewToOld = -1
         if(not user in friends):
             return list(self.storiesList.find({ "username": userRequested , "storyDetail.state": "Public"}).sort("createdAt",fromNewToOld).limit(number))    
@@ -121,7 +134,7 @@ class StoriesDb(Singleton):
         storyDict = createStoryDocument(storyInfo)
         trendingsDb.registerNewPost(username)
         id = str(uuid.uuid4())
-        self.storiesList.insert_one({"_id":id , "username":username,"storyDetail":storyDict, "createdAt":str(datetime.datetime.now()), "updatedAt":str(datetime.datetime.now()),"reactions": []})
+        self.storiesList.insert_one({"_id":id , "username":username,"likes": 0, "comments": 0,"storyDetail":storyDict, "createdAt":str(datetime.datetime.now()), "updatedAt":str(datetime.datetime.now()),"reactions": []})
         return id
 
     def updateStory(self, username, id, updateInfo):
@@ -152,6 +165,7 @@ class StoriesDb(Singleton):
         postOwner = self.storiesList.find_one({"_id":storyId})["username"]
         trendingsDb.registerNewReaction(postOwner)
         self.storiesList.find_one_and_update({"_id": storyId} ,{"$push": {"reactions" : reactionData }} , projection={'_id':False} ,upsert=True)
+        self.addNewLike(storyId)
         return "Okey"
 
     def deleteStoryReaction(self, storyId, username):
@@ -179,4 +193,21 @@ def createdUpdatedDictionary(newInformation, oldInormation):
 def createReaction(username, reaction):
     return
 
+def getUserRelevance(username, otherUsername):
+        userInterests = usersCollection.find_one({"username":username}).get("userInterests")
+        if(len(userInterests)*25 == 0):
+            return 1
+        return userInterests.count(otherUsername)/len(userInterests)*25
+
+def orderStoriesRelevance(user, stories):
+    likesImportance = 0.7
+    commentsImportance = 0.5
+    print("AAAAAAASSDASDHJSKBDBJK")
+    for story in stories:
+        print(story)
+        story["importance"] = story["likes"]* likesImportance + story["comments"]* commentsImportance
+        story["importance"] += trendingsDb.getPostsProportion(story["username"]) + trendingsDb.getReactionsProportion(story["username"])
+        story["importance"] *= getUserRelevance(user,story["username"])
+    newlist = sorted(stories, key=lambda k: k['importance'],reverse= True)
+    return newlist
 storiesDb = StoriesDb()

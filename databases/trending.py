@@ -70,11 +70,11 @@ class TrendingDb(Singleton):
 
     def getPostsProportion(self,username):
         postRegister = trendingCollection.find_one({"variable":"posts"})["postsAuthors"]
-        return postRegister.count(username)/len(postRegister)
+        return postRegister.count(username)/len(postRegister)*15
 
-    def getPostsProportion(self,username):
+    def getReactionsProportion(self,username):
         reactionsRegister = trendingCollection.find_one({"variable":"reactions"})["reactionReceiver"]
-        return reactionsRegister.count(username)/len(reactionsRegister)
+        return reactionsRegister.count(username)/len(reactionsRegister)*35
         
 
    

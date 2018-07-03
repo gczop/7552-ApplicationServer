@@ -3,6 +3,7 @@ from flask import request
 from api.utils import *
 from SharedServerRequests.userLogin import *
 from databases.stories import storiesDb
+from databases.users import usersDb
 from databases.loginedUsers import loginedUsers
 from logger.log import *
 
@@ -29,6 +30,7 @@ def addNewReaction(request):
 	if (reaction == None):
 		logErrorCode("API29")
 		return {"Error": "Falta de informacion en header. Reaccion no especificada (Error code: 29)"}, 400
+	usersDb.addNewUserInteraction(username,storyID)
 	return { "reactions": storiesDb.addStoryReaction(storyID,username,reaction)}
 		
 

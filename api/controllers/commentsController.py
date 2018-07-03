@@ -3,6 +3,7 @@ from flask import request
 from SharedServerRequests.userLogin import *
 from api.utils import *
 from databases.comments import commentsDb
+from databases.users import usersDb
 from databases.loginedUsers import loginedUsers
 from logger.log import *
 
@@ -28,6 +29,7 @@ def addNewComment(request):
 	if (comment == None):
 		logErrorCode("API35")
 		return {"Error": "Falta de informacion en header. Comentario no especificado (Error code: 35)"}, 400	
+	usersDb.addNewUserInteraction(username,storyId)
 	return { "id": commentsDb.addNewComment(storyId, username, comment) } , 200
 
 def removeComment(request):

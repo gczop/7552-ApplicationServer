@@ -4,7 +4,7 @@ import pymongo
 import datetime
 from pymongo import MongoClient
 from logger.log import *
-
+from databases.stories import storiesDb
 import pymongo
 import uuid
 
@@ -67,6 +67,7 @@ class CommentsDb(Singleton):
         logInfo("comments- comment:"+str(storyComment))
         #self.commentsList.insert_one({"storyId":storyID},{"$push": {"content": storyComment }})
         self.commentsList.find_one_and_update({"storyId": storyID}, {"$push": {"content": storyComment}})
+        storiesDb.addNewComment(storyID)
         return storyComment["_id"]
 
     def removeComment(self, storyId, commentID):
