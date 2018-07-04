@@ -2,7 +2,7 @@ import os
 import pymongo
 from pymongo import MongoClient
 from logger.log import *
-
+from config import *
 import pymongo
 
 MONGO_URL = os.environ.get('MONGODB_URI')
@@ -18,8 +18,8 @@ if MONGO_URL:
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
     logInfo("invitations- Invitations DB in localhost")
-    conn = pymongo.MongoClient('localhost', 27017)
-    #conn = pymongo.MongoClient('mongo', 27017)#DOCKER-TAG
+    #conn = pymongo.MongoClient('localhost', 27017)
+    conn = pymongo.MongoClient(getMongoHost(), 27017)#DOCKER-TAG
     db = conn['StoriesAppServer']
 
 

@@ -5,6 +5,7 @@ import datetime
 from pymongo import MongoClient
 from logger.log import *
 from databases.stories import storiesDb
+from config import *
 import pymongo
 import uuid
 
@@ -21,7 +22,7 @@ if MONGO_URL:
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
     logInfo("Comments DB in localhost")
-    conn = pymongo.MongoClient('localhost', 27017)
+    conn = pymongo.MongoClient(getMongoHost(), 27017)
     #conn = pymongo.MongoClient('mongo', 27017) #DOCKER-TAG
     db = conn['StoriesAppServer']
 

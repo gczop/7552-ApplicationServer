@@ -4,6 +4,7 @@ import pymongo
 import datetime
 from pymongo import MongoClient
 from logger.log import *
+from config import *
 from databases.friends import friendsDb
 
 import pymongo
@@ -21,8 +22,8 @@ if MONGO_URL:
 else:
     # Not on an app with the MongoHQ add-on, do some localhost action
     logInfo("flashStories - FlashStories DB found in localhost")
-    conn = pymongo.MongoClient('localhost', 27017)
-    #conn = pymongo.MongoClient('mongo', 27017)#DOCKER-TAG
+    #conn = pymongo.MongoClient('localhost', 27017)
+    conn = pymongo.MongoClient(getMongoHost(), 27017)#DOCKER-TAG
     db = conn['StoriesAppServer']
 
 if 'TEST_ENV' in os.environ:

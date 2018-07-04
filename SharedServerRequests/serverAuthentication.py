@@ -3,6 +3,7 @@ import os
 import json
 from logger.log import *
 from databases.auth import authenticationsDb
+from config import *
 
 MONGO_URL = os.environ.get('MONGODB_URI')
 TRAVIS_URL = os.environ.get('TRAVIS_URI')
@@ -15,8 +16,9 @@ if MONGO_URL:
 else:
 	#sharedServerDir = "https://blooming-lowlands-52198.herokuapp.com"
     logInfo("serverAuth-SharedServer found in localhost")
-    sharedServerDir = "http://localhost:10010"
+    #sharedServerDir = "http://localhost:10010"
     #sharedServerDir = "http://web-shared:10010" #DOCKER-TAG
+    sharedServerDir = getSharedServerHost()
     logInfo(sharedServerDir)
 
 

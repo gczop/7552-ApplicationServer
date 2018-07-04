@@ -2,6 +2,7 @@ import requests
 from requests.auth import HTTPBasicAuth as ReqAuth
 from SharedServerRequests.serverAuthentication import serverAuthenticator
 from logger.log import *
+from config import *
 import os
 import datetime
 
@@ -21,9 +22,9 @@ elif TRAVIS_URL:
 else:
     logInfo("mediaRequests- SharedServer found in localhost")
     #sharedServerDir = "https://blooming-lowlands-52198.herokuapp.com"
-    sharedServerDir = "http://localhost:10010"
+    #sharedServerDir = "http://localhost:10010"
     #sharedServerDir = "http://web-shared:10010" #DOCKER-TAG
-
+    sharedServerDir = getSharedServerHost()
 
 def uploadNewFile(username,fileUrl):
     logInfo("mediaRequests- Uploading new file")

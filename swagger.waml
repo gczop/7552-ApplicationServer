@@ -1,0 +1,36 @@
+swagger: '2.0'
+info:
+	title: Stories - Application Server API
+	version: 1.0
+	description: API para el app server de Stories
+basePath: /api
+host: localhost:10010 
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+	/users/login:
+		post:
+			summary:
+			description:
+			parameters:
+				-	description:
+				
+			responses:
+
+
+
+
+{
+	"swagger":"2.0",
+	"info":{
+		"title":"Stories - Application Server API",
+		"version": "1.0",
+		"description": "Api para el app server de Stories"
+	}
+
+
+}

@@ -4,6 +4,7 @@ from databases.auth import authenticationsDb
 from SharedServerRequests.serverAuthentication import serverAuthenticator
 import os
 from logger.log import *
+from config import *
 
 MONGO_URL = os.environ.get('MONGODB_URI')
 TRAVIS_URL = os.environ.get('TRAVIS_URI')
@@ -20,8 +21,9 @@ else:
     # Not on an app with the MongoHQ add-on, do some localhost action
     logInfo("userLogin: Shared Server found in localhost")
     #sharedServerDir = "https://blooming-lowlands-52198.herokuapp.com"
-    sharedServerDir = "http://localhost:10010"
+    #sharedServerDir = "http://localhost:10010"
     #sharedServerDir = "http://web-shared:10010" #DOCKER-TAG
+    sharedServerDir = getSharedServerHost()
 
 def authenticateUserLogin(username,password):
     logInfo("userLogin- Shared server request: authenticate login user")
