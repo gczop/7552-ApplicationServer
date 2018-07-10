@@ -1,0 +1,1980 @@
+{
+    "swagger":"2.0",
+    "info":{
+        "title":"Stories - Application Server API",
+        "version": "1.0",
+        "description": "Api para el app server de Stories"
+    },
+	"basePath":"/api",
+	"host":"localhost:5000",
+	"schemes":["http"],
+	"consumes":["application/json"],
+	"produces":["application/json"],
+	"securityDefinitions":{
+		"LoginUser":{
+			"type":"apiKey",
+			"in":"header",
+			"name":"token"
+		}
+	},
+	"paths":{
+		"/users/login":{
+			"post":{
+				"summary":"Login de usuario",
+				"description":"Servicio de login a la red social",
+				"parameters":[
+					{
+						"name":"Login parameters",
+						"description":"parametros de login",
+						"in":"body",
+						"required":true,
+						"schema":{
+							"$ref":"#/definitions/UserLoginParameters"
+						}
+					}
+				],
+				"responses":{
+					"200":{
+						"description":"Login exitoso",
+						"schema":{
+							"$ref":"#/definitions/LoginInformation"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					}	
+				}
+			}
+		},
+		"/users/signup":{
+			"post":{
+				"summary":"Sign up de usuario",
+				"description":"Servicio de sign up para nuevos usuarios de la red social.",
+				"parameters":[
+					{
+						"name":"body",
+						"description":"Parametros de sign up",
+						"in":"body",
+						"required":true,
+						"schema":{
+							"$ref":"#/definitions/UserSignUpParameters"
+						}
+					}
+				
+				],
+				"responses":{
+					"200":{
+						"description":"Login exitoso",
+						"schema":{
+							"$ref":"#/definitions/LoginInformation"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					}				
+				}
+			}
+		},
+		"/friends":{
+			"post":{
+				"summary":"Agrega un amigo",
+				"description":"Servicio para agregar un amigo en la red social.",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"ID del usuario que agrega un amigo.",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					},
+					{
+						"name":"friend",
+						"description":"ID del usuario que se agrega como amigo.",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object"
+						}
+					}			
+				
+				}
+			},
+			"get":{
+				"summary":"Consigue los amigos",
+				"description":"Servicio para obtener un listado de los amigos de un usuario",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"ID del usuario de quien se buscara la lista de amigos",
+						"in":"header",
+						"required":true,
+						"type": "string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"properties":{
+								"friends":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"username":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						}
+					}				
+				}
+			},
+			"delete":{
+				"summary":"Elimina un amigo",
+				"description":"Servicio para eliminar a un amigo determinado de la lista de amistades.",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"ID del usuario que elimina un amigo.",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					},
+					{
+						"name":"friend",
+						"description":"ID del usuario que se desea eliminar de los amigos.",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"string"
+						}
+					}
+				
+				}
+			}
+		},
+		"/friends/{userid}":{
+			"get":{
+				"summary":"Obtiene informacion de un amigo",
+				"description":"Servicio para obtener el perfil de un amigo del usuario",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"userid",
+						"description":"ID del usuario a buscar",
+						"in":"path",
+						"required":true,
+						"type":"string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					}
+				}
+			}
+		},
+		"/invitations":{
+			"post":{
+				"summary":"Enviar solicitud de amistad",
+				"description":"Servicio para enviar una solicitud de amistad a un usuario de la red social.",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"body",
+						"description":"Parametros necesarios para enviar una nueva solicitud",
+						"in":"body",
+						"required":true,
+						"schema":{
+							"$ref":"#/definitions/InvitationParameters"
+						}
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description": "Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"invitations":{
+									"type":"string"
+								}
+							}
+						}
+					}
+				}
+			},
+			"get":{
+				"summary":"Cosneguir las solicitudes de amistad",
+				"description":"Servicio para obtener un listado de las solicitudes de amistad de un usuario",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"Usuario de quien se buscaran las invitaciones de amistad",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"properties":{
+								"invitations":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"username":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+									
+				}
+			},
+			"put":{
+				"summary":"Aceptar una solicitud",
+				"description":"Servicio para aceptar una solicitud de amistad.",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"body",
+						"description":"Parametros para aceptar una solicitud",
+						"in":"body",
+						"required":true,
+						"schema":{
+							"$ref":"#/definitions/InvitationParameters"
+						}
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description": "Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"invitations":{
+									"type":"string"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/people":{
+			"get":{
+				"summary":"Busqueda de personas",
+				"description":"Servicio para buscar usuarios de la red social con un nombre determinado.",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"searchedFor",
+						"description":"Nombre de los usuarios a devolver",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"username":{
+										"type":"string"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/people/{username}":{
+			"get":{
+				"summary":"Busqueda de usuario",
+				"description":"Servicio para buscar un usuario especifico",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"ID de la persona a buscar",
+						"in":"path",
+						"required":true,
+						"type":"string"
+					}
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"$ref": "#/definitions/UserProfile"
+						}
+					}
+				}
+			}
+		},
+		"/profiles":{
+			"get":{
+				"summary":"Obtener perfil",
+				"description":"Servicio para obtener el perfil de un usuario de la red",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"Usuario del cual devolver el perfil",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description": "Operacion exitosa",
+						"schema":{
+							"$ref": "#/definitions/UserProfile"
+						}
+					}
+				}
+			},
+			"put":{
+				"summary":"Actualizar perfil",
+				"description":"Servicio para actualizar un perfil de la red",
+				"security":[{"LoginUser":[]}],				
+				"parameters":[
+					{
+						"name":"body",
+						"description":"Parametros para actualizar un perfil",
+						"in":"body",
+						"required":true,
+						"schema":{
+							"$ref":"#/definitions/ProfilesPutParameters"
+						}
+					},
+					{
+						"name":"username",
+						"description":"Usuario cuyo perfil se actualizara",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description": "Operacion exitosa",
+						"schema":{
+							"type":"object"
+						}
+					}
+				}
+			}
+		},
+		"/stories":{
+			"get":{
+				"summary":"Obtener historias",
+				"description":"Servicio para obtener las historias a mostrar para un usuario.",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"Usuario a quien mostrar las historias",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"feedStories":{
+									"type":"array",
+									"items":{
+										"$ref":"#/definitions/Stories"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post":{
+				"summary":"Publicar nueva historia",
+				"description":"Servicio para agregar una nueva historia",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"Usuario a quien mostrar las historias",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					},
+					{
+						"name":"story info",
+						"description":"Informacion de la historia",
+						"in":"body",
+						"required":true,
+						"schema":{
+							"$ref":"#/definitions/StoriesPostParameters"
+						}
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"storyId":{
+									"type":"string"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put":{
+				"summary":"Actualizar una historia",
+				"description":"Servicio para actualizar una historia de usuario",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"Usuario a quien pertenece la historias",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					},
+					{
+						"name":"story info",
+						"description":"Informacion de la historia",
+						"in":"body",
+						"required":true,
+						"schema":{
+							"$ref":"#/definitions/StoriesPutParameters"
+						}
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"storyId":{
+									"type":"string"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete":{
+				"summary":"Eliminar historia",
+				"description":"Servicio para eliminar una historia en la red social",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"id",
+						"description":"ID de la historia a borrar",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"state":{
+									"type":"string"
+								}
+							}
+						}
+					}
+				}
+			}			
+		},
+		"/geolocation/stories":{
+			"get":{
+				"summary":"Obtener historias geograficas",
+				"description":"Servicio para obtener las historias a mostrar para un usuario.",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"Usuario a quien mostrar las historias",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"feedStories":{
+									"type":"array",
+									"items":{
+										"$ref":"#/definitions/Stories"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},		
+		"/public/stories":{
+			"get":{
+				"summary":"Obtener historias geograficas",
+				"description":"Servicio para obtener las historias a mostrar para un usuario.",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"Usuario a quien mostrar las historias",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"feedStories":{
+									"type":"array",
+									"items":{
+										"$ref":"#/definitions/Stories"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},	
+		"/public/geolocation/stories":{
+			"get":{
+				"summary":"Obtener historias geograficas",
+				"description":"Servicio para obtener las historias a mostrar para un usuario.",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"Usuario a quien mostrar las historias",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"feedStories":{
+									"type":"array",
+									"items":{
+										"$ref":"#/definitions/Stories"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},			
+		"/stories/{username}":{
+			"get":{
+				"summary":"Obtener historias particulares",
+				"description":"Servicio para obtener las historias de un usuario particular de la red social",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"ID del usuario del cual se obtendran las historias",
+						"in":"path",
+						"required":true,
+						"type":"string"
+					}
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"userStories":{
+									"type":"array",
+									"items":{
+										"$ref":"#/definitions/Stories"
+									}
+								}
+							}
+						}
+					}
+				
+				}
+			}
+		},
+		"/flashstories":{
+			"get":{
+				"summary":"Obtener historias flash",
+				"description":"Servicio para obtener las historias flash a mostrar para un usuario.",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"Usuario para quien buscar las historias flash",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"feedStories":{
+									"type":"array",
+									"items":{
+										"$ref":"#/definitions/FlashStory"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post":{
+				"summary":"Publicar nueva historia flash",
+				"description":"Servicio para agregar una nueva historia flash a la red",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"Usuario dueño de la nueva historia",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					},
+					{
+						"name":"body",
+						"description":"Parametros necesarios para subir una nueva historia flash",
+						"in":"body",
+						"required":true,
+						"schema":{
+							"$ref":"#/definitions/FlashStoriesPostParameters"
+						}
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"storyId":{
+									"type":"string"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put":{
+				"summary":"Actualizar una historia flash",
+				"description":"Servicio para actualiza una historia flash de un usuario",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"username",
+						"description":"Usuario que actualizar la historia",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					},
+					{
+						"name":"body",
+						"description":"Parametros para actualizar una historia flash",
+						"in":"body",
+						"required":true,
+						"schema":{
+							"$ref":"#/definitions/FlashStoriesPutParameters"
+						}
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"storyId":{
+									"type":"string"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete":{
+				"summary":"Eliminar historia flash",
+				"description":"Servicio para eliminar una historia flash de la red social",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"id",
+						"description":"ID de la historia a borrar",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"state":{
+									"type":"string"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/reactions":{
+			"get":{
+				"summary":"Obtener reacciones de historia",
+				"description":"Servicio para obtener las reacciones de una historia de la red",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"story-id",
+						"description":"ID de la historia de la cual se obtendran las reacciones",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"reactions":{
+									"type":"array",
+									"items":{
+											"$ref":"#/definitions/Reaction"
+									}
+								}
+							}
+							
+						}
+					}
+				}
+			},
+			"put":{
+				"summary":"Agregar una reaccion",
+				"description":"Servicio para agregar una reaccion a una historia",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"story-id",
+						"description":"ID de la historia en la cual se reacciona",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					},
+					{
+						"name":"username",
+						"description":"Usuario que reacciona",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					},
+					{
+						"name":"reaction",
+						"description":"Reaccion del usuario",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description": "Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"reactions":{
+									"type":"string"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete":{
+				"summary":"Eliminar reaccion",
+				"description":"Servicio para eliminar una reaccion de una historia",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"story-id",
+						"description":"ID de la historia en la cual se elimina la reaccion",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					},
+					{
+						"name":"username",
+						"description":"Usuario del cual eliminar la reaccion",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description": "Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"reactions":{
+									"type":"string"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/comments":{
+			"get":{
+				"summary":"Obtener comentarios",
+				"description":"Servicio para obtener comentarios de una publicacion",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"story-id",
+						"description":"ID de la historia cuyos comentarios seran devueltos",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"comments":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"_id":{
+												"type":"string"
+											},
+											"user":{
+												"type":"string"
+											},
+											"date":{
+												"type":"string"
+											},
+											"message":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"put":{
+				"summary":"Agregar comentario",
+				"description":"Servicio para agregar un nuevo comentario a una publicacion",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"story-id",
+						"description":"ID de la historia donde se agregara el comentario",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					},
+					{
+						"name":"username",
+						"description":"Usuario que agrega el comentario",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					},
+					{
+						"name":"body",
+						"description":"Informacion del comentario",
+						"in":"body",
+						"required":true,
+						"schema":{
+							"$ref":"#/definitions/CommentsPutParameters"
+						}
+					}
+				
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"id":{
+									"type":"string"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete":{
+				"summary":"Eliminar comentario",
+				"description":"Parametros para eliminar un comentario",
+				"security":[{"LoginUser":[]}],
+				"parameters":[
+					{
+						"name":"story-id",
+						"description":"ID de la historia donde se borrara el comentario",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					},
+					{
+						"name":"comment-id",
+						"description":"ID del comentario a borrar",
+						"in":"header",
+						"required":true,
+						"type":"string"
+					}
+				],
+				"responses":{
+					"409":{
+						"description":"Token expirado",
+						"schema":{
+							"$ref":"#/definitions/TokenExpiration"
+						}
+					},
+					"400":{
+						"description":"Error de validacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"401":{
+						"description":"Error de autenticacion",
+						"schema":{
+							"$ref":"#/definitions/ValidationError"
+						}
+					},
+					"200":{
+						"description":"Operacion exitosa",
+						"schema":{
+							"type":"object",
+							"properties":{
+								"state":{
+									"type":"string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}		
+	},		
+	
+	"definitions":{
+		"UserLoginParameters":{
+			"type":"object",
+			"properties":{
+				"username":{
+					"description":"Username del usuario",
+					"type":"string"
+				},
+				"password":{
+					"description":"Password del usuario. Usar o este parametro o fbToken, no ambos",
+					"type":"string",
+					"format":"password"
+				},
+				"fbToken":{
+					"description":"Token devuelto por la API de Facebook. Usar o este parametro o password, no ambos.",
+					"type":"string"
+				}
+			}
+		},
+		"UserSignUpParameters":{
+			"type":"object",
+			"properties":{
+				"username":{
+					"description":"Nombre a utilizar dentro de la red social",
+					"type":"string"
+				},
+				"password":{
+					"description":"Password del usuario. Usar o este parametro o fbToken, no ambos",
+					"type":"string",
+					"format":"password"
+				},
+				"fbToken":{
+					"description":"Token devuelto por la API de Facebook. Usar o este parametro o password, no ambos.",
+					"type":"string"
+				},
+				"firstname":{
+					"description": "Nombre de pila del usuario",
+					"type":"string"
+				},
+				"lastname":{
+					"description":"Apellido del usuario",
+					"type":"string"
+				},
+				"gender":{
+					"description":"Genero del usuario",
+					"type":"string"
+				},
+				"age":{
+					"description":"Edad del usuario",
+					"type":"string"
+				},
+				"birthday":{
+					"description":"Fecha de cumpleaños del usuario",
+					"type":"string"
+				}
+			}
+		},
+		"ProfilesPutParameters":{
+			"type":"object",
+			"properties":{
+				"firstname":{
+					"description": "Nombre de pila del usuario",
+					"type":"string"
+				},
+				"lastname":{
+					"description":"Apellido del usuario",
+					"type":"string"
+				},
+				"gender":{
+					"description":"Genero del usuario",
+					"type":"string"
+				},
+				"age":{
+					"description":"Edad del usuario",
+					"type":"string"
+				},
+				"birthday":{
+					"description":"Fecha de cumpleaños del usuario",
+					"type":"string"
+				}
+			}
+		},		
+		"InvitationParameters":{
+			"type":"object",
+			"properties":{
+				"username":{
+					"description":"ID del usuario que realiza la operacion",
+					"type":"string"
+				},
+				"friend":{
+					"description":"ID del usuario a quien se envia/acepta la solicitud",
+					"type":"string"
+				}
+			}
+		},
+		"StoriesPostParameters":{
+			"type":"object",
+			"properties":{
+				"url":{
+					"description":"Url de la historia",
+					"type":"string"
+				},
+				"title":{
+					"description":"Titulo de la historia",
+					"type":"string"
+				},
+				"state":{
+					"description":"Estado de la historia",
+					"type":"string"
+				},
+				"description":{
+					"description":"Descripcion de la historia",
+					"type":"string"
+				}
+			}
+		},
+		"StoriesPutParameters":{
+			"type":"object",
+			"properties":{
+				"url":{
+					"description":"Url de la historia",
+					"type":"string"
+				},
+				"title":{
+					"description":"Titulo de la historia",
+					"type":"string"
+				},
+				"state":{
+					"description":"Estado de la historia",
+					"type":"string"
+				},
+				"description":{
+					"description":"Descripcion de la historia",
+					"type":"string"
+				},
+				"id":{
+					"description":"ID de la historia a modificar",
+					"type":"string"
+				}
+			}
+		},
+		"FlashStoriesPostParameters":{
+			"type":"object",
+			"properties":{
+				"url":{
+					"description":"Url de la historia",
+					"type":"string"
+				},
+				"title":{
+					"description":"Titulo de la historia",
+					"type":"string"
+				},
+				"state":{
+					"description":"Estado de la historia",
+					"type":"string"
+				},
+				"description":{
+					"description":"Descripcion de la historia",
+					"type":"string"
+				}
+			}
+		},
+		"FlashStoriesPutParameters":{
+			"type":"object",
+			"properties":{
+				"url":{
+					"description":"Url de la historia",
+					"type":"string"
+				},
+				"title":{
+					"description":"Titulo de la historia",
+					"type":"string"
+				},
+				"state":{
+					"description":"Estado de la historia",
+					"type":"string"
+				},
+				"description":{
+					"description":"Descripcion de la historia",
+					"type":"string"
+				},
+				"id":{
+					"description":"ID de la historia a modificar",
+					"type":"string"
+				}
+			}
+		},
+		"CommentsPutParameters":{
+			"type":"object",
+			"properties":{
+				"comment":{
+					"description":"Comentario",
+					"type":"string"
+				}
+			}
+		},
+		"ValidationError":{
+			"type":"object",
+			"properties":{
+				"Error":{
+					"description":"Mensaje de error",
+					"type":"string"
+				}
+			}
+		},
+		"LoginInformation":{
+			"type":"object",
+			"properties":{
+				"Message":{
+					"description":"Mensaje de retorno",
+					"type":"string"
+				},
+				"Token":{
+					"description":"token de usuario",
+					"type":"object",
+					"properties":{
+						"token": {
+							"type":"string"
+						},
+						"expiresAt":{
+							"type":"integer"
+						}
+					}
+				}
+			}
+		},
+		"TokenExpiration":{
+			"type":"object",
+			"properties":{
+				"message":{
+					"description":"Mensaje de error",
+					"type":"string"
+				},
+				"responseObject":{
+					"type":"object",
+					"properties":{
+						"WWW-Authenticate": {
+							"type":"string"
+						}
+					}
+				}
+			}
+		},
+		"UserProfile":{
+			"type":"object",
+			"properties":{
+				"username":{
+					"description":"Nombre a utilizar dentro de la red social",
+					"type":"string"
+				},
+				"first_name":{
+					"description": "Nombre de pila del usuario",
+					"type":"string"
+				},
+				"last_name":{
+					"description":"Apellido del usuario",
+					"type":"string"
+				},
+				"gender":{
+					"description":"Genero del usuario",
+					"type":"string"
+				},
+				"age":{
+					"description":"Edad del usuario",
+					"type":"string"
+				},
+				"birthday":{
+					"description":"Fecha de cumpleaños del usuario",
+					"type":"string"
+				}
+			}
+		},
+		"Reaction":{
+			"type":"object",
+			"properties":{
+				"reacter":{
+					"description":"Usuario que reacciona",
+					"type":"string"
+				},
+				"reaction":{
+					"description": "Reaccion",
+					"type":"string"
+				}
+			}
+		},
+		"Stories":{
+			"type":"object",
+			"properties":{
+				"_id":{
+					"description":"Id de la historia",
+					"type":"string"
+				},
+				"username":{
+					"description":"Usuario que subio la historia",
+					"type":"string"
+				},
+				"storyDetail":{
+					"description":"Detalles de la historia",
+					"type":"object",
+					"properties":{
+						"url":{
+							"description":"Url de la historia",
+							"type":"string"
+						},
+						"title":{
+							"description":"Titulo de la historia",
+							"type":"string"
+						},
+						"state":{
+							"description":"Estado de la historia",
+							"type":"string"
+						},
+						"description":{
+							"description":"Descripcion de la historia",
+							"type":"string"
+						},
+						"lat":{
+							"description":"Latitud geografica de donde se sube la historia",
+							"type":"string"
+						},
+						"long":{
+							"description":"Longitud geografica de donde se sube la historia",
+							"type":"string"
+						}
+					}
+				},
+				"createdAt":{
+					"description":"Fecha de la historia",
+					"type":"string"
+				},
+				"updatedAt":{
+					"description":"Fecha de actualizacion",
+					"type":"string"
+				},
+				"reactions":{
+					"description":"Reacciones de la historia",
+					"type":"array",
+					"items":{
+						"$ref":"#/definitions/Reaction"
+					}
+				}
+				
+			}
+		},
+		"FlashStory":{
+			"type":"object",
+			"properties":{
+				"_id":{
+					"description":"Id de la historia",
+					"type":"string"
+				},
+				"username":{
+					"description":"Usuario que subio la historia",
+					"type":"string"
+				},
+				"storyDetail":{
+					"description":"Detalles de la historia",
+					"type":"object",
+					"properties":{
+						"url":{
+							"description":"Url de la historia",
+							"type":"string"
+						},
+						"title":{
+							"description":"Titulo de la historia",
+							"type":"string"
+						},
+						"state":{
+							"description":"Estado de la historia",
+							"type":"string"
+						},
+						"description":{
+							"description":"Descripcion de la historia",
+							"type":"string"
+						}
+					}
+				},
+				"createdAt":{
+					"description":"Fecha de la historia",
+					"type":"string"
+				},
+				"updatedAt":{
+					"description":"Fecha de actualizacion",
+					"type":"string"
+				},
+				"reactions":{
+					"description":"Reacciones de la historia",
+					"type":"array",
+					"items":{
+						"$ref":"#/definitions/Reaction"
+					}
+				}
+				
+			}
+		}
+	}
+}
